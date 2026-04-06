@@ -219,6 +219,48 @@ const galleryItems: GalleryItem[] = [
     title: "Macatawa Completed Landscape",
     description: "Full landscape completion in Macatawa Legends community",
   },
+  {
+    src: "/images/golf/macatawa-legends-fairway.webp",
+    alt: "Macatawa Legends fairway hydroseeding",
+    category: "Golf Courses",
+    title: "Macatawa Legends — Fairway Restoration",
+    description: "Hydroseeding for fairway turf restoration at Macatawa Legends Golf Club",
+  },
+  {
+    src: "/images/golf/macatawa-legends-tee-box.webp",
+    alt: "Macatawa Legends tee box hydroseeding",
+    category: "Golf Courses",
+    title: "Macatawa Legends — Tee Box Renovation",
+    description: "Precision tee box hydroseeding for consistent, durable turf",
+  },
+  {
+    src: "/images/golf/macatawa-legends-green-surround.webp",
+    alt: "Macatawa Legends green surround hydroseeding",
+    category: "Golf Courses",
+    title: "Macatawa Legends — Green Surrounds",
+    description: "Hydroseeded green surrounds and approach areas for seamless turf transition",
+  },
+  {
+    src: "/images/golf/golf-course-erosion-control.webp",
+    alt: "Golf course erosion control hydroseeding",
+    category: "Golf Courses",
+    title: "Course Erosion Control",
+    description: "Slope stabilization and erosion control along cart paths and waterways",
+  },
+  {
+    src: "/images/golf/macatawa-legends-bunker-surround.webp",
+    alt: "Macatawa Legends bunker surround hydroseeding",
+    category: "Golf Courses",
+    title: "Macatawa Legends — Bunker Surrounds",
+    description: "Clean bunker edge hydroseeding for a polished, professional finish",
+  },
+  {
+    src: "/images/golf/golf-course-cart-path.webp",
+    alt: "Golf course cart path hydroseeding",
+    category: "Golf Courses",
+    title: "Cart Path Restoration",
+    description: "Cart path shoulder and border hydroseeding for course-wide consistency",
+  },
 ];
 
 export default function GalleryPage() {

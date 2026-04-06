@@ -225,8 +225,8 @@ export default function Home() {
       {/* ── ABOUT / TRUST ── */}
       <section className="relative overflow-hidden">
         <Image
-          src="/images/portfolio/pool-landscape-design.webp"
-          alt="Landscape project background"
+          src="/images/portfolio/full-property-hydroseeding.webp"
+          alt="Full property hydroseeding project background"
           fill
           className="object-cover"
           sizes="100vw"
@@ -255,8 +255,8 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
-                      src="/images/portfolio/pool-landscape-design.webp"
-                      alt="Pool area landscaping project"
+                      src="/images/services/hydroseeding-coverage.webp"
+                      alt="Hydroseeding coverage in progress"
                       width={400}
                       height={500}
                       className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
@@ -284,8 +284,8 @@ export default function Home() {
                   </div>
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
-                      src="/images/portfolio/natural-stone-wall.webp"
-                      alt="Natural stone retaining wall"
+                      src="/images/portfolio/subdivision-lawn-install.webp"
+                      alt="Subdivision lawn hydroseeding installation"
                       width={400}
                       height={500}
                       className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
@@ -321,6 +321,87 @@ export default function Home() {
             <div className="mt-10 text-center">
               <Button href="/gallery" variant="outline">
                 View Full Gallery
+              </Button>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* ── GOLF COURSES ── */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/golf/macatawa-legends-fairway.webp"
+          alt="Macatawa Legends golf course hydroseeding by Fraaza Enterprises"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/80" />
+        <Container className="relative z-10 py-24 sm:py-32">
+          <FadeIn>
+            <SectionHeading
+              light
+              eyebrow="Golf Course Hydroseeding"
+              title="Trusted by West Michigan's top courses"
+              description="From fairways and tee boxes to bunker surrounds and cart paths — we deliver the premium turf establishment that golf courses demand. Macatawa Legends and other premier courses trust Fraaza Enterprises for hydroseeding that performs under the highest standards."
+              centered
+            />
+          </FadeIn>
+
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                src: "/images/golf/macatawa-legends-fairway.webp",
+                alt: "Macatawa Legends fairway hydroseeding",
+                title: "Macatawa Legends — Fairway Restoration",
+                description: "Hydroseeding for fairway turf restoration at Macatawa Legends Golf Club",
+              },
+              {
+                src: "/images/golf/macatawa-legends-tee-box.webp",
+                alt: "Macatawa Legends tee box hydroseeding",
+                title: "Macatawa Legends — Tee Box Renovation",
+                description: "Precision tee box hydroseeding for consistent, durable turf",
+              },
+              {
+                src: "/images/golf/macatawa-legends-green-surround.webp",
+                alt: "Macatawa Legends green surround hydroseeding",
+                title: "Macatawa Legends — Green Surrounds",
+                description: "Hydroseeded green surrounds and approach areas for seamless turf transition",
+              },
+              {
+                src: "/images/golf/golf-course-erosion-control.webp",
+                alt: "Golf course erosion control hydroseeding",
+                title: "Course Erosion Control",
+                description: "Slope stabilization and erosion control along cart paths and waterways",
+              },
+              {
+                src: "/images/golf/macatawa-legends-bunker-surround.webp",
+                alt: "Macatawa Legends bunker surround hydroseeding",
+                title: "Macatawa Legends — Bunker Surrounds",
+                description: "Clean bunker edge hydroseeding for a polished, professional finish",
+              },
+              {
+                src: "/images/golf/golf-course-cart-path.webp",
+                alt: "Golf course cart path hydroseeding",
+                title: "Cart Path Restoration",
+                description: "Cart path shoulder and border hydroseeding for course-wide consistency",
+              },
+            ].map((item, idx) => (
+              <FadeIn key={item.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <GalleryCard
+                  item={{ ...item, category: "Golf Courses" }}
+                />
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={2}>
+            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Button href="/gallery" variant="outline">
+                View Full Gallery
+              </Button>
+              <Button href="/quote" variant="primary">
+                Get a Course Estimate
               </Button>
             </div>
           </FadeIn>

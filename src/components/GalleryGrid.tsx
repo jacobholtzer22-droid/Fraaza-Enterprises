@@ -8,6 +8,7 @@ import type { GalleryItem } from "@/components/GalleryCard";
 const CATEGORIES = [
   "All Projects",
   "Hydroseeding",
+  "Golf Courses",
   "Landscaping",
   "Soil Prep",
   "Snow Plowing",
