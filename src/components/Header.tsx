@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Container } from "@/components/Container";
 import { SITE } from "@/lib/site";
@@ -19,32 +20,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md">
       <Container className="flex h-18 items-center justify-between">
-        <Link href="/" className="group inline-flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--bg-green)]">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--bg-cream)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M7 20h10" />
-              <path d="M10 20c5.5-2.5.8-6.4 3-10" />
-              <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" />
-              <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" />
-            </svg>
-          </span>
-          <div className="leading-tight">
-            <div className="font-[family-name:var(--font-playfair)] text-base font-semibold tracking-tight text-[var(--bg-green)]">
-              {SITE.name}
-            </div>
-            <div className="text-[11px] tracking-wide text-[var(--text-muted)] uppercase">
-              {SITE.motto}
-            </div>
-          </div>
+        <Link href="/" className="group inline-flex items-center">
+          <Image
+            src="/images/fraaza-logo.png"
+            alt={SITE.name}
+            width={180}
+            height={100}
+            className="h-[44px] w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -49,6 +49,7 @@ export default function ServicesPage() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Hydroseeding"
+                emoji={"\uD83C\uDF31"}
                 description="New lawn installation, erosion control, roadside, new development, and commercial properties. Fast, even coverage with professional-grade equipment."
                 href="/services/hydroseeding"
                 imageSrc="/images/services/hydroseeding-mulch-application.jpg"
@@ -58,6 +59,7 @@ export default function ServicesPage() {
             <FadeIn delay={2}>
               <ServiceCard
                 title="Landscaping"
+                emoji={"\uD83C\uDFD7\uFE0F"}
                 description="Sod installation, retaining walls, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
                 href="/services/landscaping"
                 imageSrc="/images/portfolio/stone-retaining-wall-planting.jpg"
@@ -67,6 +69,7 @@ export default function ServicesPage() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Soil Preparation"
+                emoji={"\uD83C\uDF0D"}
                 description="Soil testing, grading and leveling, amendments, sod removal, and topsoil/compost install. The right foundation for a healthy, thriving lawn."
                 href="/services/soil-preparation"
                 imageSrc="/images/services/soil-prep-boulder-edging.jpg"
@@ -76,6 +79,7 @@ export default function ServicesPage() {
             <FadeIn delay={2}>
               <ServiceCard
                 title="Snow Plowing"
+                emoji={"\u2744\uFE0F"}
                 description="Plowing, salting, sidewalks, loader plowing, and snow blowing. Dependable winter service to keep your property safe and accessible."
                 href="/services/snow-plowing"
                 imageSrc="/images/services/snow-plow-truck.jpg"

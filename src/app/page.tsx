@@ -19,11 +19,47 @@ export const metadata: Metadata = {
   },
 };
 
+const portfolioItems = [
+  { src: "/images/heroes/craftsman-home-hydroseeding.jpg", alt: "Craftsman home with fresh hydroseeding", category: "Hydroseeding" },
+  { src: "/images/portfolio/retaining-wall-hydroseeding.jpg", alt: "Retaining wall with hydroseeded lawn", category: "Retaining Wall" },
+  { src: "/images/heroes/new-build-landscaping.jpg", alt: "New build with complete landscaping", category: "Landscaping" },
+  { src: "/images/portfolio/river-rock-landscaping.jpg", alt: "River rock landscaping detail", category: "Landscaping" },
+  { src: "/images/services/roadside-hydroseeding.jpg", alt: "Roadside hydroseeding project", category: "Hydroseeding" },
+  { src: "/images/portfolio/lawn-growth-14-days.jpg", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding" },
+];
+
+const whyChooseUs = [
+  {
+    emoji: "\u2B50",
+    title: "Superior Quality",
+    description: "Professional-grade equipment and premium materials for results that last.",
+    image: "/images/portfolio/premium-landscaping.jpg",
+  },
+  {
+    emoji: "\uD83E\uDD1D",
+    title: "Owner-Operated",
+    description: "Chad Fraaza is on every job — ensuring personal accountability and attention to detail.",
+    image: "/images/services/hydroseeder-truck-jobsite.jpg",
+  },
+  {
+    emoji: "\u23F0",
+    title: "Since 2004",
+    description: "Over two decades of trusted service across West Michigan communities.",
+    image: "/images/portfolio/estate-hydroseeding.jpg",
+  },
+  {
+    emoji: "\uD83D\uDEE1\uFE0F",
+    title: "Licensed & Insured",
+    description: "Fully licensed and insured for your peace of mind on every project.",
+    image: "/images/portfolio/commercial-site-work.jpg",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.jpg"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
@@ -32,7 +68,7 @@ export default function Home() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/85 via-[var(--bg-green)]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[var(--bg-green)]/70 to-black/30" />
         <Container className="relative z-10 py-20">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
@@ -42,7 +78,7 @@ export default function Home() {
             <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
               {SITE.tagline}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white/75">
+            <p className="mt-6 text-lg leading-8 text-white/80">
               Premium hydroseeding and landscaping for West Michigan homeowners and businesses. Quality work done right, every time.
             </p>
 
@@ -52,13 +88,29 @@ export default function Home() {
                 <span className="text-white/80 hover:text-white">Explore Our Services &rarr;</span>
               </Button>
             </div>
+
+            {/* Stats Bar */}
+            <div className="mt-12 flex gap-8 sm:gap-12 pt-8 border-t border-white/15">
+              <div>
+                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">20+</div>
+                <div className="mt-1 text-sm text-gray-300">Years Experience</div>
+              </div>
+              <div>
+                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">500+</div>
+                <div className="mt-1 text-sm text-gray-300">Happy Clients</div>
+              </div>
+              <div>
+                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">5.0</div>
+                <div className="mt-1 text-sm text-gray-300">Average Rating</div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
 
       {/* ── SERVICES ── */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
               eyebrow="What We Do"
@@ -71,6 +123,7 @@ export default function Home() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Hydroseeding"
+                emoji={"\uD83C\uDF31"}
                 description="Fast, even application for new lawns, erosion control, and large-scale projects."
                 href="/services/hydroseeding"
                 imageSrc="/images/services/hydroseeding-mulch-application.jpg"
@@ -80,6 +133,7 @@ export default function Home() {
             <FadeIn delay={2}>
               <ServiceCard
                 title="Landscaping"
+                emoji={"\uD83C\uDFD7\uFE0F"}
                 description="Sod, retaining walls, planting, and finishing touches that elevate your property."
                 href="/services/landscaping"
                 imageSrc="/images/portfolio/stone-retaining-wall-planting.jpg"
@@ -88,20 +142,22 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={3}>
               <ServiceCard
-                title="Soil Preparation"
-                description="Grading, amendments, and site prep that sets the foundation for success."
-                href="/services/soil-preparation"
-                imageSrc="/images/services/soil-prep-boulder-edging.jpg"
-                imageAlt="Soil preparation with boulder edging"
-              />
-            </FadeIn>
-            <FadeIn delay={4}>
-              <ServiceCard
                 title="Snow Plowing"
+                emoji={"\u2744\uFE0F"}
                 description="Reliable plowing and salting to keep your property safe and accessible."
                 href="/services/snow-plowing"
                 imageSrc="/images/services/snow-plow-truck.jpg"
                 imageAlt="Fraaza Enterprises snow plow truck"
+              />
+            </FadeIn>
+            <FadeIn delay={4}>
+              <ServiceCard
+                title="Soil Preparation"
+                emoji={"\uD83C\uDF0D"}
+                description="Grading, amendments, and site prep that sets the foundation for success."
+                href="/services/soil-preparation"
+                imageSrc="/images/services/soil-prep-boulder-edging.jpg"
+                imageAlt="Soil preparation with boulder edging"
               />
             </FadeIn>
           </div>
@@ -110,7 +166,7 @@ export default function Home() {
 
       {/* ── ABOUT / TRUST STRIP ── */}
       <section className="bg-[var(--bg-green)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-24 sm:py-32">
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
             <FadeIn>
               <SectionHeading
@@ -178,7 +234,7 @@ export default function Home() {
 
       {/* ── FEATURED WORK ── */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
               eyebrow="Our Work"
@@ -188,16 +244,9 @@ export default function Home() {
             />
           </FadeIn>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { src: "/images/heroes/craftsman-home-hydroseeding.jpg", alt: "Craftsman home with fresh hydroseeding" },
-              { src: "/images/portfolio/retaining-wall-hydroseeding.jpg", alt: "Retaining wall with hydroseeded lawn" },
-              { src: "/images/heroes/new-build-landscaping.jpg", alt: "New build with complete landscaping" },
-              { src: "/images/portfolio/river-rock-landscaping.jpg", alt: "River rock landscaping detail" },
-              { src: "/images/services/roadside-hydroseeding.jpg", alt: "Roadside hydroseeding project" },
-              { src: "/images/portfolio/lawn-growth-14-days.jpg", alt: "Lawn growth 14 days after hydroseeding" },
-            ].map((photo, idx) => (
+            {portfolioItems.map((photo, idx) => (
               <FadeIn key={photo.src} delay={(idx % 3 + 1) as 1 | 2 | 3}>
-                <div className="img-zoom overflow-hidden rounded-2xl">
+                <div className="group relative img-zoom overflow-hidden rounded-2xl">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -205,6 +254,11 @@ export default function Home() {
                     height={400}
                     className="aspect-[3/2] w-full object-cover"
                   />
+                  <div className="absolute bottom-3 left-3">
+                    <span className="inline-block rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                      {photo.category}
+                    </span>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -219,9 +273,50 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ── REVIEWS ── */}
+      {/* ── WHY CHOOSE US ── */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-24 sm:py-32">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Why Choose Us"
+              title="Built on trust, backed by results"
+              description="When you choose Fraaza Enterprises, you're choosing quality craftsmanship, personal accountability, and over two decades of proven expertise."
+              centered
+            />
+          </FadeIn>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whyChooseUs.map((item, idx) => (
+              <FadeIn key={item.title} delay={((idx % 4) + 1) as 1 | 2 | 3 | 4}>
+                <div className="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/65 group-hover:bg-black/55 transition-colors duration-300" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center">
+                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
+                      <span className="text-3xl">{item.emoji}</span>
+                    </div>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-300 max-w-[200px]">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── REVIEWS ── */}
+      <section className="bg-[var(--bg-white)]">
+        <Container className="py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
               eyebrow="Testimonials"
@@ -252,7 +347,7 @@ export default function Home() {
               },
             ].map((r, idx) => (
               <FadeIn key={r.location} delay={(idx + 1) as 1 | 2 | 3}>
-                <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <div className="rounded-2xl bg-[var(--bg-cream)] p-8 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
                   <svg className="h-8 w-8 text-[var(--accent)]/40" viewBox="0 0 32 32" fill="currentColor">
                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
                   </svg>
@@ -277,14 +372,14 @@ export default function Home() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/80" />
-        <Container className="relative z-10 py-20 sm:py-28">
+        <div className="absolute inset-0 bg-black/70" />
+        <Container className="relative z-10 py-24 sm:py-32">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
                 Ready to transform your property?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-white/70">
+              <p className="mt-5 text-lg leading-8 text-gray-300">
                 Tell us about your project and we&apos;ll follow up with a plan and a free estimate.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
