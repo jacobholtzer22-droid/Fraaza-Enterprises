@@ -126,8 +126,6 @@ export default function Home() {
                 emoji={"\uD83C\uDF31"}
                 description="Fast, even application for new lawns, erosion control, and large-scale projects."
                 href="/services/hydroseeding"
-                imageSrc="/images/services/hydroseeding-mulch-application.jpg"
-                imageAlt="Hydroseeding application on a residential lawn"
               />
             </FadeIn>
             <FadeIn delay={2}>
@@ -136,8 +134,6 @@ export default function Home() {
                 emoji={"\uD83C\uDFD7\uFE0F"}
                 description="Sod, retaining walls, planting, and finishing touches that elevate your property."
                 href="/services/landscaping"
-                imageSrc="/images/portfolio/stone-retaining-wall-planting.jpg"
-                imageAlt="Stone retaining wall with professional planting"
               />
             </FadeIn>
             <FadeIn delay={3}>
@@ -146,8 +142,6 @@ export default function Home() {
                 emoji={"\u2744\uFE0F"}
                 description="Reliable plowing and salting to keep your property safe and accessible."
                 href="/services/snow-plowing"
-                imageSrc="/images/services/snow-plow-truck.jpg"
-                imageAlt="Fraaza Enterprises snow plow truck"
               />
             </FadeIn>
             <FadeIn delay={4}>
@@ -156,8 +150,6 @@ export default function Home() {
                 emoji={"\uD83C\uDF0D"}
                 description="Grading, amendments, and site prep that sets the foundation for success."
                 href="/services/soil-preparation"
-                imageSrc="/images/services/soil-prep-boulder-edging.jpg"
-                imageAlt="Soil preparation with boulder edging"
               />
             </FadeIn>
           </div>

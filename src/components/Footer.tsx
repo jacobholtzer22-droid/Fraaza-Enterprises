@@ -42,9 +42,9 @@ export function Footer() {
               <Image
                 src="/images/fraaza-logo.png"
                 alt={SITE.name}
-                width={360}
-                height={200}
-                className="h-20 w-auto brightness-0 invert"
+                width={324}
+                height={181}
+                className="h-20 w-auto rounded-lg"
               />
               <div className="mt-4 text-sm text-white/60">{SITE.tagline}</div>
               <div className="mt-6 text-sm text-white/60">
