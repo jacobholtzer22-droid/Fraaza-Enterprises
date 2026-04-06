@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
+import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,60 +21,92 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <section className="bg-[var(--bg-0)]">
-        <Container className="py-14 sm:py-20">
+      {/* Hero */}
+      <section className="relative h-72 sm:h-96 flex items-center">
+        <Image
+          src="/images/services/hydroseeder-truck-jobsite.jpg"
+          alt="Fraaza Enterprises hydroseeder truck"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <Container className="relative z-10">
           <SectionHeading
+            light
             eyebrow="About"
             title={`Proudly serving West Michigan since ${SITE.since}`}
-            description={`${SITE.name} is owned and operated by ${SITE.owner}. We specialize in hydroseeding and soil preparation for residential, commercial, and industrial projects — with a customer-first approach and quality work done right the first time.`}
+            description={`${SITE.name} is owned and operated by ${SITE.owner}. We specialize in hydroseeding and soil preparation for residential, commercial, and industrial projects.`}
           />
+        </Container>
+      </section>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
-              <div className="text-sm font-semibold text-white/85">
-                What we’re known for
+      {/* Content */}
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-24">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <FadeIn>
+              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                  What we&apos;re known for
+                </h3>
+                <ul className="mt-6 space-y-4 text-sm text-[var(--text-secondary)]">
+                  {[
+                    "Hydroseeding for new lawns, erosion control, and large areas",
+                    "Soil testing, grading, amendments, and topsoil/compost installs",
+                    "Clear communication and dependable scheduling",
+                    "Residential, commercial, and industrial experience",
+                    "Member of the International Association of Hydroseeding Professionals (IAHP)",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="mt-4 space-y-3 text-sm text-white/65">
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Hydroseeding for new lawns, erosion control, and large areas
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Soil testing, grading, amendments, and topsoil/compost installs
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Clear communication and dependable scheduling
-                </li>
-              </ul>
-            </div>
+            </FadeIn>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
-              <div className="text-sm font-semibold text-white/85">
-                Professional standards
+            <FadeIn delay={2}>
+              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                  Professional standards
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                  We&apos;re a proud member of the International Association of
+                  Hydroseeding Professionals (IAHP) and stay committed to best
+                  practices that protect your property and deliver consistent
+                  results.
+                </p>
+                <div className="mt-6 rounded-xl bg-[var(--bg-cream)] px-5 py-4 text-sm text-[var(--text-secondary)]">
+                  <span className="font-semibold text-[var(--bg-green)]">Our motto:</span>{" "}
+                  {SITE.motto}
+                </div>
               </div>
-              <p className="mt-3 text-sm leading-7 text-white/65">
-                We’re a proud member of the International Association of
-                Hydroseeding Professionals (IAHP) and stay committed to best
-                practices that protect your property and deliver consistent
-                results.
-              </p>
-              <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
-                Motto: <span className="font-semibold text-white">{SITE.motto}</span>
+
+              <div className="mt-6 overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/portfolio/macatawa-lawn-established.jpg"
+                  alt="Established lawn at Macatawa Legends"
+                  width={600}
+                  height={400}
+                  className="w-full object-cover aspect-[3/2]"
+                />
               </div>
-            </div>
+            </FadeIn>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button href="/contact#quote-form">Request a free quote</Button>
-            <Button href="/services" variant="secondary">
-              View services
-            </Button>
-          </div>
+          <FadeIn>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Button href="/contact#quote-form">Request a free quote</Button>
+              <Button href="/services" variant="outline">
+                View services
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </section>
     </div>
   );
 }
-

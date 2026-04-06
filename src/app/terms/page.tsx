@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div>
-      <section className="bg-[var(--bg-0)]">
-        <Container className="py-14 sm:py-20">
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-24">
           <SectionHeading
             eyebrow="Legal"
             title="Terms of Service"
             description="Placeholder content — final terms will be added."
           />
-          <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-7 text-white/70">
+          <div className="mt-10 rounded-2xl bg-white p-8 text-sm leading-7 text-[var(--text-secondary)] shadow-[var(--shadow-sm)]">
             <p>
               By using this website, you agree that the content is provided for
               informational purposes and may change without notice.
@@ -38,4 +38,3 @@ export default function TermsPage() {
     </div>
   );
 }
-

@@ -12,7 +12,10 @@ type ServiceType =
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
-export function ContactForm({ className }: { className?: string }) {
+const inputCls =
+  "mt-2 w-full rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-sm text-[var(--text-primary)] outline-none transition-all duration-300 placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20";
+
+export function ContactForm({ className, dark }: { className?: string; dark?: boolean }) {
   const [state, setState] = useState<FormState>("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -69,26 +72,36 @@ export function ContactForm({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8",
+        "rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-md)]",
+        dark
+          ? "bg-[var(--bg-green)] text-white"
+          : "bg-white border border-[var(--border)]",
         className,
       )}
     >
-      <div className="text-base font-semibold tracking-tight text-white">
+      <div className={cn(
+        "font-[family-name:var(--font-playfair)] text-xl font-semibold",
+        dark ? "text-white" : "text-[var(--bg-green)]",
+      )}>
         Request a Free Quote
       </div>
-      <p className="mt-2 text-sm leading-6 text-white/65">
-        Tell us about your project and we’ll get back to you as soon as possible.
+      <p className={cn(
+        "mt-2 text-sm leading-6",
+        dark ? "text-white/60" : "text-[var(--text-muted)]",
+      )}>
+        Tell us about your project and we&apos;ll get back to you as soon as possible.
       </p>
 
       <form className="mt-6 space-y-4" onSubmit={onSubmit}>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Name" name="name" required placeholder="Your name" />
+          <Field label="Name" name="name" required placeholder="Your name" dark={dark} />
           <Field
             label="Email"
             name="email"
             type="email"
             required
             placeholder="you@example.com"
+            dark={dark}
           />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -97,14 +110,18 @@ export function ContactForm({ className }: { className?: string }) {
             name="phone"
             required
             placeholder="(616) 555-1234"
+            dark={dark}
           />
           <div>
-            <label className="text-xs font-semibold text-white/75">
+            <label className={cn(
+              "text-xs font-semibold",
+              dark ? "text-white/70" : "text-[var(--text-secondary)]",
+            )}>
               Service Type
             </label>
             <select
               name="serviceType"
-              className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-white/20"
+              className={cn(inputCls, dark && "bg-white/10 border-white/15 text-white")}
               defaultValue="Not Sure"
             >
               {serviceOptions.map((opt) => (
@@ -117,21 +134,35 @@ export function ContactForm({ className }: { className?: string }) {
         </div>
 
         <div>
-          <label className="text-xs font-semibold text-white/75">Message</label>
+          <label className={cn(
+            "text-xs font-semibold",
+            dark ? "text-white/70" : "text-[var(--text-secondary)]",
+          )}>
+            Message
+          </label>
           <textarea
             name="message"
             required
-            rows={6}
-            placeholder="Tell us what you’re looking to do, where you’re located, and your timeline."
-            className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-0 transition placeholder:text-white/35 focus:border-white/20"
+            rows={5}
+            placeholder="Tell us what you're looking to do, where you're located, and your timeline."
+            className={cn(
+              inputCls,
+              "resize-none",
+              dark && "bg-white/10 border-white/15 text-white placeholder:text-white/30",
+            )}
           />
         </div>
 
-        <label className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+        <label className={cn(
+          "flex items-start gap-3 rounded-xl border px-4 py-3 text-sm cursor-pointer transition-colors",
+          dark
+            ? "border-white/15 text-white/60 hover:bg-white/5"
+            : "border-[var(--border)] text-[var(--text-muted)] hover:bg-[var(--bg-cream)]/50",
+        )}>
           <input
             type="checkbox"
             name="smsConsent"
-            className="mt-1 h-4 w-4 rounded border-white/20 bg-black/40 accent-[var(--accent)]"
+            className="mt-1 h-4 w-4 rounded accent-[var(--accent)]"
           />
           <span>
             I agree to receive text messages about my quote request. Message and
@@ -140,12 +171,12 @@ export function ContactForm({ className }: { className?: string }) {
         </label>
 
         {state === "success" ? (
-          <div className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/10 px-4 py-3 text-sm text-white">
-            Thanks! Your request was sent. We’ll be in touch soon.
+          <div className="rounded-xl border border-[var(--bg-green)]/30 bg-[var(--bg-green)]/10 px-4 py-3 text-sm text-[var(--bg-green)]">
+            Thanks! Your request was sent. We&apos;ll be in touch soon.
           </div>
         ) : null}
         {state === "error" ? (
-          <div className="rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-white">
+          <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-700">
             {error || "Something went wrong. Please try again."}
           </div>
         ) : null}
@@ -153,9 +184,9 @@ export function ContactForm({ className }: { className?: string }) {
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-black transition hover:bg-[var(--accent-3)] disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--accent-hover)] hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {state === "submitting" ? "Sending…" : "Send Request"}
+          {state === "submitting" ? "Sending\u2026" : "Send Request"}
         </button>
       </form>
     </div>
@@ -168,16 +199,21 @@ function Field({
   type = "text",
   required,
   placeholder,
+  dark,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   placeholder?: string;
+  dark?: boolean;
 }) {
   return (
     <div>
-      <label className="text-xs font-semibold text-white/75" htmlFor={name}>
+      <label className={cn(
+        "text-xs font-semibold",
+        dark ? "text-white/70" : "text-[var(--text-secondary)]",
+      )} htmlFor={name}>
         {label}
       </label>
       <input
@@ -186,9 +222,11 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-0 transition placeholder:text-white/35 focus:border-white/20"
+        className={cn(
+          inputCls,
+          dark && "bg-white/10 border-white/15 text-white placeholder:text-white/30",
+        )}
       />
     </div>
   );
 }
-

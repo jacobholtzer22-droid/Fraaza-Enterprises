@@ -2,84 +2,107 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
+import { FadeIn } from "@/components/FadeIn";
+import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "View hydroseeding, landscaping, and soil preparation project photos from Fraaza Enterprises serving Holland, MI and West Michigan. (Placeholder images for now.)",
+    "View hydroseeding, landscaping, soil preparation, and retaining wall project photos from Fraaza Enterprises serving Holland, MI and West Michigan.",
   openGraph: {
     title: "Gallery | Fraaza Enterprises",
     description:
-      "Hydroseeding, landscaping, and soil preparation project gallery (placeholders for now).",
+      "Hydroseeding, landscaping, and soil preparation project gallery.",
     url: "/gallery",
   },
 };
 
-const photos = [
-  {
-    src: "/images/client/placeholder-hydroseeding.svg",
-    alt: "Hydroseeding application on a prepared lawn area",
-  },
-  {
-    src: "/images/client/placeholder-landscaping.svg",
-    alt: "Landscaping project with fresh sod and planting",
-  },
-  {
-    src: "/images/client/placeholder-soil-prep.svg",
-    alt: "Soil preparation and grading work for a new lawn",
-  },
-  {
-    src: "/images/client/placeholder-hydroseeding.svg",
-    alt: "Erosion control hydroseeding on a slope near a roadside",
-  },
-  {
-    src: "/images/client/placeholder-landscaping.svg",
-    alt: "Retaining wall and landscaping installation detail",
-  },
-  {
-    src: "/images/client/placeholder-soil-prep.svg",
-    alt: "Topsoil and compost installation during site prep",
-  },
-] as const;
+const photos: { src: string; alt: string; tall?: boolean }[] = [
+  { src: "/images/heroes/luxury-home-hydroseeding.jpg", alt: "Luxury home with fresh hydroseeding", tall: true },
+  { src: "/images/portfolio/pool-landscape-design.jpg", alt: "Pool area with professional landscaping", tall: true },
+  { src: "/images/heroes/craftsman-home-hydroseeding.jpg", alt: "Craftsman home hydroseeding project" },
+  { src: "/images/portfolio/stone-retaining-wall-planting.jpg", alt: "Stone retaining wall with planting beds" },
+  { src: "/images/portfolio/retaining-wall-hydroseeding.jpg", alt: "Retaining wall with fresh hydroseeding" },
+  { src: "/images/heroes/lakefront-hydroseeding.jpg", alt: "Lakefront property hydroseeding" },
+  { src: "/images/portfolio/natural-stone-wall.jpg", alt: "Natural stone retaining wall", tall: true },
+  { src: "/images/services/hydroseeding-mulch-application.jpg", alt: "Hydroseeding mulch application" },
+  { src: "/images/heroes/new-build-landscaping.jpg", alt: "New build with landscaping and stone wall" },
+  { src: "/images/portfolio/river-rock-landscaping.jpg", alt: "River rock and landscaping borders" },
+  { src: "/images/services/roadside-hydroseeding.jpg", alt: "Roadside hydroseeding with equipment", tall: true },
+  { src: "/images/portfolio/lawn-growth-14-days.jpg", alt: "Lawn growth 14 days after hydroseeding" },
+  { src: "/images/services/hydroseeder-truck-jobsite.jpg", alt: "Hydroseeder truck on job site" },
+  { src: "/images/portfolio/estate-hydroseeding.jpg", alt: "Estate property hydroseeding" },
+  { src: "/images/services/snow-plow-truck.jpg", alt: "Snow plow truck in action" },
+  { src: "/images/portfolio/new-construction-lawn.jpg", alt: "New construction lawn installation" },
+  { src: "/images/gallery/backyard-patio-hydroseeding.jpg", alt: "Backyard patio with hydroseeding" },
+  { src: "/images/portfolio/macatawa-finished-lawn.jpg", alt: "Macatawa Legends finished lawn", tall: true },
+  { src: "/images/services/commercial-hydroseeding-1.jpg", alt: "Large-scale commercial hydroseeding" },
+  { src: "/images/gallery/ornamental-tree-planting.jpg", alt: "Ornamental tree planting with mulch bed" },
+  { src: "/images/portfolio/subdivision-lawn-install.jpg", alt: "Subdivision lawn installation" },
+  { src: "/images/portfolio/premium-landscaping.jpg", alt: "Premium landscaping project" },
+  { src: "/images/portfolio/full-property-hydroseeding.jpg", alt: "Full property hydroseeding coverage" },
+  { src: "/images/services/hydroseeder-landscaping-project.jpg", alt: "Hydroseeder at landscaping project", tall: true },
+  { src: "/images/gallery/new-retaining-wall-1.jpg", alt: "New retaining wall installation" },
+  { src: "/images/gallery/completed-wall-project-1.jpg", alt: "Completed retaining wall project" },
+  { src: "/images/services/topsoil-delivery.jpg", alt: "Topsoil delivery for site preparation" },
+  { src: "/images/portfolio/macatawa-completed-landscape.jpg", alt: "Macatawa Legends completed landscape" },
+];
 
 export default function GalleryPage() {
   return (
     <div>
-      <section className="bg-[var(--bg-0)]">
-        <Container className="py-14 sm:py-20">
+      {/* Hero banner */}
+      <section className="relative h-72 sm:h-96 flex items-center">
+        <Image
+          src="/images/heroes/hydroseeding-new-home.jpg"
+          alt="Hydroseeding project by Fraaza Enterprises"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <Container className="relative z-10">
           <SectionHeading
+            light
             eyebrow="Gallery"
-            title="Work we’re proud of"
-            description="Placeholder images are shown for now. Real project photos will be added soon."
+            title="Work we're proud of"
+            description="Browse our portfolio of hydroseeding, landscaping, soil preparation, and retaining wall projects across West Michigan."
           />
+        </Container>
+      </section>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Gallery grid */}
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-24">
+          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
             {photos.map((p, idx) => (
-              <div
-                key={`${p.alt}-${idx}`}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5"
-              >
-                <div className="relative aspect-[4/3]">
+              <FadeIn key={p.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <div className="mb-4 break-inside-avoid img-zoom overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-lg)]">
                   <Image
                     src={p.src}
                     alt={p.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-[1.03]"
+                    width={600}
+                    height={p.tall ? 700 : 400}
+                    className={`w-full object-cover ${p.tall ? "aspect-[3/4]" : "aspect-[4/3]"}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                </div>
-                <div className="p-5">
-                  <div className="text-sm font-semibold text-white/85">
-                    {p.alt}
+                  <div className="px-4 py-3">
+                    <div className="text-sm font-medium text-[var(--text-secondary)]">{p.alt}</div>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
+
+          <FadeIn>
+            <div className="mt-16 text-center">
+              <Button href="/contact" variant="primary">
+                Start Your Project
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </section>
     </div>
   );
 }
-

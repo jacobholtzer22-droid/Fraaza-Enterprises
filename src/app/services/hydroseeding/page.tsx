@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
+import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
@@ -18,112 +20,122 @@ export const metadata: Metadata = {
 export default function HydroseedingPage() {
   return (
     <div>
-      <section className="bg-[var(--bg-0)]">
-        <Container className="py-14 sm:py-20">
+      {/* Hero */}
+      <section className="relative h-72 sm:h-96 flex items-center">
+        <Image
+          src="/images/heroes/craftsman-home-hydroseeding.jpg"
+          alt="Hydroseeding application on a new home lawn"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <Container className="relative z-10">
           <SectionHeading
+            light
             eyebrow="Services"
             title="Hydroseeding"
             description="A fast, even application that helps establish healthy grass — perfect for new lawns, erosion control, and large areas."
           />
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/quote">Get a Free Quote</Button>
-            <Button href="/contact" variant="secondary">
-              Ask a question
+            <Button href="/contact" variant="ghost">
+              <span className="text-white/80 hover:text-white">Ask a question</span>
             </Button>
           </div>
         </Container>
       </section>
 
-      <section className="bg-[var(--bg-1)]">
-        <Container className="py-14 sm:py-20">
-          <div className="grid gap-10 md:grid-cols-2 md:items-start">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <div className="text-sm font-semibold text-white/85">
-                What is hydroseeding?
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-24">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <FadeIn>
+              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                  What is hydroseeding?
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                  Hydroseeding is a process where seed, fertilizer, water, and a
+                  protective fiber mulch are mixed into a slurry and sprayed over
+                  prepared soil. The mulch helps the seed stay in place and retain
+                  moisture — supporting more consistent germination.
+                </p>
               </div>
-              <p className="mt-3 text-sm leading-7 text-white/65">
-                Hydroseeding is a process where seed, fertilizer, water, and a
-                protective fiber mulch are mixed into a slurry and sprayed over
-                prepared soil. The mulch helps the seed stay in place and retain
-                moisture — supporting more consistent germination.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <div className="text-sm font-semibold text-white/85">
-                Benefits vs. sod
+            </FadeIn>
+            <FadeIn delay={2}>
+              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                  Benefits vs. sod
+                </h3>
+                <ul className="mt-4 space-y-3 text-sm text-[var(--text-secondary)]">
+                  {[
+                    "More cost-effective for larger areas",
+                    "Even coverage and custom seed blends",
+                    "Great for slopes and erosion control",
+                    "Establishes strong roots when paired with proper watering",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="mt-3 space-y-2 text-sm text-white/65">
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  More cost-effective for larger areas
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Even coverage and custom seed blends
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Great for slopes and erosion control
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-                  Establishes strong roots when paired with proper watering
-                </li>
-              </ul>
-            </div>
+            </FadeIn>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-white/10 bg-black/20 p-6">
-            <div className="text-sm font-semibold text-white/85">
-              Hydroseeding services
+          {/* Project photos */}
+          <FadeIn>
+            <div className="mt-12 grid gap-4 sm:grid-cols-3">
+              <div className="overflow-hidden rounded-2xl">
+                <Image src="/images/services/hydroseeding-mulch-application.jpg" alt="Hydroseeding application" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+              </div>
+              <div className="overflow-hidden rounded-2xl">
+                <Image src="/images/services/hydroseeding-coverage.jpg" alt="Even hydroseeding coverage" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+              </div>
+              <div className="overflow-hidden rounded-2xl">
+                <Image src="/images/portfolio/lawn-growth-14-days.jpg" alt="Lawn growth 14 days after hydroseeding" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+              </div>
             </div>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              {[
-                {
-                  title: "New lawn installation",
-                  desc: "Full prep and hydroseed application for brand-new lawns.",
-                },
-                {
-                  title: "Erosion control",
-                  desc: "Coverage on slopes and disturbed soil to help reduce washouts.",
-                },
-                {
-                  title: "Roadside",
-                  desc: "Hydroseeding for right-of-way and roadside stabilization.",
-                },
-                {
-                  title: "New development",
-                  desc: "Reliable scheduling and scale for subdivision and build sites.",
-                },
-                {
-                  title: "Commercial properties",
-                  desc: "Durable, professional results for businesses and facilities.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                >
-                  <div className="text-sm font-semibold text-white">
-                    {item.title}
-                  </div>
-                  <div className="mt-2 text-sm leading-6 text-white/65">
-                    {item.desc}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          </FadeIn>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button href="/contact#quote-form">Request hydroseeding quote</Button>
-            <Button href="/services" variant="secondary">
-              Back to services
-            </Button>
-          </div>
+          {/* Services list */}
+          <FadeIn>
+            <div className="mt-12 rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                Hydroseeding services
+              </h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {[
+                  { title: "New lawn installation", desc: "Full prep and hydroseed application for brand-new lawns." },
+                  { title: "Erosion control", desc: "Coverage on slopes and disturbed soil to help reduce washouts." },
+                  { title: "Roadside", desc: "Hydroseeding for right-of-way and roadside stabilization." },
+                  { title: "New development", desc: "Reliable scheduling and scale for subdivision and build sites." },
+                  { title: "Commercial properties", desc: "Durable, professional results for businesses and facilities." },
+                ].map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-xl bg-[var(--bg-cream)] p-5 transition-shadow duration-300 hover:shadow-[var(--shadow-sm)]"
+                  >
+                    <div className="text-sm font-semibold text-[var(--bg-green)]">{item.title}</div>
+                    <div className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button href="/contact#quote-form">Request hydroseeding quote</Button>
+              <Button href="/services" variant="outline">
+                Back to services
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </section>
     </div>
   );
 }
-
