@@ -135,3 +135,48 @@ body {
     grid-template-rows: masonry;
   }
 }
+
+/* Button shimmer sweep on hover */
+.btn-shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 45%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.25) 55%,
+    transparent 60%
+  );
+  translate: -100% 0;
+  transition: none;
+}
+.btn-shimmer:hover::before {
+  animation: btn-shimmer-sweep 0.6s ease-out forwards;
+}
+
+@keyframes btn-shimmer-sweep {
+  to {
+    translate: 100% 0;
+  }
+}
+
+/* Dropdown entrance animation */
+.dropdown-enter {
+  animation: dropdown-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    scale: 0.95;
+    translate: 0 -4px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
