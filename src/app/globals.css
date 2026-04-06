@@ -24,7 +24,8 @@
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.16);
 }
 
 @theme inline {
@@ -44,6 +45,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,7 +61,7 @@ body {
   color: var(--text-primary);
 }
 
-/* Scroll-triggered fade-in animation */
+/* ── Scroll-triggered fade-in ── */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -85,12 +87,20 @@ body {
   transition-delay: 0.48s;
 }
 
-/* Organic leaf/curve decorative shapes */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Organic shapes ── */
 .organic-shape {
   border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
 }
 
-/* Smooth image hover zoom */
+/* ── Smooth image hover zoom ── */
 .img-zoom {
   overflow: hidden;
 }
@@ -101,7 +111,25 @@ body {
   transform: scale(1.08);
 }
 
-/* Gold/terracotta underline accent for headings */
+/* Gallery image with shadow lift */
+.gallery-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+.gallery-card img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ── Heading accent underline ── */
 .heading-accent {
   position: relative;
   display: inline-block;
@@ -117,7 +145,7 @@ body {
   border-radius: 2px;
 }
 
-/* Photo mosaic strip */
+/* ── Photo mosaic strip ── */
 .photo-mosaic {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -129,14 +157,27 @@ body {
   }
 }
 
-/* Masonry-like grid helper */
-@supports (grid-template-rows: masonry) {
+/* ── Masonry-like staggered grid ── */
+.masonry-grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
   .masonry-grid {
-    grid-template-rows: masonry;
+    columns: 2;
   }
 }
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
 
-/* Button shimmer sweep on hover */
+/* ── Button shimmer sweep ── */
 .btn-shimmer::before {
   content: "";
   position: absolute;
@@ -162,7 +203,7 @@ body {
   }
 }
 
-/* Dropdown entrance animation */
+/* ── Dropdown entrance ── */
 .dropdown-enter {
   animation: dropdown-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transform-origin: top center;
@@ -179,4 +220,24 @@ body {
     scale: 1;
     translate: 0 0;
   }
+}
+
+/* ── Subtle texture background ── */
+.bg-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D4A2D' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── Navbar scroll state ── */
+.header-scrolled {
+  background: rgba(26, 26, 26, 0.85) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.header-scrolled a,
+.header-scrolled button {
+  color: rgba(255, 255, 255, 0.8);
+}
+.header-scrolled a:hover,
+.header-scrolled button:hover {
+  color: #fff;
 }

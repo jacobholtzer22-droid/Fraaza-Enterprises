@@ -7,16 +7,16 @@ import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact | Holland, MI",
+  title: "Contact West Michigan's Hydroseeding Experts | Holland, MI",
   description:
-    "Contact Fraaza Enterprises for hydroseeding, landscaping, soil preparation, and snow plowing in Holland, MI and across West Michigan. Call (616) 875-2293 or request a free quote.",
+    "Contact Fraaza Enterprises — West Michigan's hydroseeding specialists. Call (616) 875-2293 or request a free quote for hydroseeding, soil preparation, landscaping, or snow plowing in Holland, MI.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact | Fraaza Enterprises",
     description:
-      "Request a free quote for hydroseeding, landscaping, soil preparation, or snow plowing in West Michigan.",
+      "Contact West Michigan's hydroseeding experts. Request a free quote for hydroseeding, soil preparation, and more.",
     url: "/contact",
   },
 };

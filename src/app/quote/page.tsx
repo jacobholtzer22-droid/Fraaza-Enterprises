@@ -6,16 +6,16 @@ import { ContactForm } from "@/components/ContactForm";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Free Quote | Holland, MI",
+  title: "Free Hydroseeding Quote | Holland, MI",
   description:
-    "Request a free quote from Fraaza Enterprises for hydroseeding, landscaping, soil preparation, or snow plowing across West Michigan.",
+    "Request a free quote from West Michigan's hydroseeding experts. Fraaza Enterprises specializes in hydroseeding — also offering soil preparation, landscaping, and snow plowing.",
   alternates: {
     canonical: "/quote",
   },
   openGraph: {
     title: "Free Quote | Fraaza Enterprises",
     description:
-      "Request a free quote for hydroseeding, landscaping, soil preparation, or snow plowing in West Michigan.",
+      "Request a free quote from West Michigan's hydroseeding specialists. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/quote",
   },
 };

@@ -5,53 +5,88 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { FadeIn } from "@/components/FadeIn";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { GalleryCard } from "@/components/GalleryCard";
+import type { GalleryItem } from "@/components/GalleryCard";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding & Landscaping | Holland, MI | Fraaza Enterprises",
+  title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises",
   description:
-    "Hydroseeding and landscaping in Holland, MI and across West Michigan. Fraaza Enterprises delivers hydroseeding, soil preparation, landscaping, and snow plowing — owner-operated since 2004.",
+    "West Michigan's hydroseeding specialists since 2004. Fraaza Enterprises delivers professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, MI. Owner-operated.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Hydroseeding & Landscaping | Holland, MI | Fraaza Enterprises",
+    title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises",
     description:
-      "Hydroseeding and landscaping in Holland, MI and across West Michigan. Owner-operated since 2004.",
+      "West Michigan's hydroseeding specialists since 2004. Professional hydroseeding, soil preparation, and more — owner-operated in Holland, MI.",
     url: "/",
   },
 };
 
-const portfolioItems = [
-  { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home with fresh hydroseeding", category: "Hydroseeding" },
-  { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn", category: "Retaining Wall" },
-  { src: "/images/heroes/new-build-landscaping.webp", alt: "New build with complete landscaping", category: "Landscaping" },
-  { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping detail", category: "Landscaping" },
-  { src: "/images/services/roadside-hydroseeding.webp", alt: "Roadside hydroseeding project", category: "Hydroseeding" },
-  { src: "/images/portfolio/lawn-growth-14-days.webp", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding" },
+const portfolioItems: GalleryItem[] = [
+  {
+    src: "/images/heroes/craftsman-home-hydroseeding.webp",
+    alt: "Craftsman home with fresh hydroseeding",
+    category: "Hydroseeding",
+    title: "Craftsman Home Hydroseeding",
+    description: "New lawn installation for craftsman-style home build",
+  },
+  {
+    src: "/images/portfolio/retaining-wall-hydroseeding.webp",
+    alt: "Retaining wall with hydroseeded lawn",
+    category: "Landscaping",
+    title: "Retaining Wall Hydroseed",
+    description: "Hydroseeded lawn with new retaining wall integration",
+  },
+  {
+    src: "/images/heroes/new-build-landscaping.webp",
+    alt: "New build with complete landscaping",
+    category: "Landscaping",
+    title: "New Build Landscaping",
+    description: "Full landscaping package with stone wall for new construction",
+  },
+  {
+    src: "/images/portfolio/river-rock-landscaping.webp",
+    alt: "River rock landscaping detail",
+    category: "Landscaping",
+    title: "River Rock Borders",
+    description: "Decorative river rock with landscape border detail",
+  },
+  {
+    src: "/images/services/roadside-hydroseeding.webp",
+    alt: "Roadside hydroseeding project",
+    category: "Hydroseeding",
+    title: "Commercial Roadside Project",
+    description: "Large-scale roadside erosion control and seeding",
+  },
+  {
+    src: "/images/portfolio/lawn-growth-14-days.webp",
+    alt: "Lawn growth 14 days after hydroseeding",
+    category: "Hydroseeding",
+    title: "14-Day Growth Results",
+    description: "Healthy lawn growth just two weeks after hydroseeding",
+  },
 ];
 
 const whyChooseUs = [
   {
-    emoji: "\u2B50",
     title: "Superior Quality",
     description: "Professional-grade equipment and premium materials for results that last.",
     image: "/images/portfolio/premium-landscaping.webp",
   },
   {
-    emoji: "\uD83E\uDD1D",
     title: "Owner-Operated",
     description: "Chad Fraaza is on every job — ensuring personal accountability and attention to detail.",
     image: "/images/services/hydroseeder-truck-jobsite.webp",
   },
   {
-    emoji: "\u23F0",
     title: "Since 2004",
     description: "Over two decades of trusted service across West Michigan communities.",
     image: "/images/portfolio/estate-hydroseeding.webp",
   },
   {
-    emoji: "\uD83D\uDEE1\uFE0F",
     title: "Licensed & Insured",
     description: "Fully licensed and insured for your peace of mind on every project.",
     image: "/images/portfolio/commercial-site-work.webp",
@@ -62,7 +97,7 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[92vh] flex items-center">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
@@ -74,36 +109,50 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[var(--bg-green)]/70 to-black/30" />
         <Container className="relative z-10 py-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
-              Owner-operated since {SITE.since}
-            </div>
-            <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
-              {SITE.tagline}
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-white/80">
-              Premium hydroseeding and landscaping for West Michigan homeowners and businesses. Quality work done right, every time.
-            </p>
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
+                <span className="h-2 w-2 rounded-full bg-[var(--accent)] animate-pulse" />
+                Owner-operated since {SITE.since}
+              </div>
+            </FadeIn>
+            <FadeIn delay={1}>
+              <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
+                {SITE.tagline}
+              </h1>
+            </FadeIn>
+            <FadeIn delay={2}>
+              <p className="mt-6 text-lg leading-8 text-white/80">
+                Specializing in hydroseeding for new lawns, erosion control, and large-scale projects since 2004. We also offer soil preparation, landscaping, and snow plowing across West Michigan.
+              </p>
+            </FadeIn>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
-              <Button href="/services" variant="ghost" className="w-full sm:w-auto">
-                <span className="text-white/80 hover:text-white">Explore Our Services &rarr;</span>
-              </Button>
-            </div>
+            <FadeIn delay={3}>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+                <Button href="/services" variant="ghost" className="w-full sm:w-auto">
+                  <span className="text-white/80 hover:text-white">Explore Our Services &rarr;</span>
+                </Button>
+              </div>
+            </FadeIn>
 
             {/* Stats Bar */}
             <div className="mt-12 flex gap-6 sm:gap-12 pt-8 border-t border-white/15">
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">20+</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+                  <AnimatedCounter target={20} suffix="+" />
+                </div>
                 <div className="mt-1 text-xs text-gray-300 sm:text-sm">Years Experience</div>
               </div>
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">500+</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+                  <AnimatedCounter target={500} suffix="+" />
+                </div>
                 <div className="mt-1 text-xs text-gray-300 sm:text-sm">Happy Clients</div>
               </div>
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">5.0</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+                  <AnimatedCounter target={5.0} suffix="" decimals={1} />
+                </div>
                 <div className="mt-1 text-xs text-gray-300 sm:text-sm">Average Rating</div>
               </div>
             </div>
@@ -112,13 +161,22 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="bg-[var(--bg-cream)]">
-        <Container className="py-24 sm:py-32">
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/heroes/lakefront-hydroseeding.webp"
+          alt="Hydroseeding project background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-green)]/90" />
+        <Container className="relative z-10 py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
-              eyebrow="What We Do"
-              title="Crafted landscapes, lasting results"
-              description="From seed to snow, we care for West Michigan properties with precision, pride, and over two decades of hands-on experience."
+              light
+              eyebrow="Our Specialty"
+              title="Hydroseeding is what we do best"
+              description="With over 20 years of dedicated hydroseeding experience, we deliver fast, even coverage for new lawns, erosion control, and large-scale projects across West Michigan."
               centered
             />
           </FadeIn>
@@ -126,49 +184,62 @@ export default function Home() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Hydroseeding"
-                emoji={"\uD83C\uDF31"}
-                description="Fast, even application for new lawns, erosion control, and large-scale projects."
+                description="Our core specialty. Fast, even application for new lawns, erosion control, and large-scale projects — backed by 20+ years of expertise."
                 href="/services/hydroseeding"
+                image="/images/heroes/craftsman-home-hydroseeding.webp"
+                featured
+                className="sm:col-span-2 lg:col-span-2 lg:row-span-2"
               />
             </FadeIn>
             <FadeIn delay={2}>
               <ServiceCard
-                title="Landscaping"
-                emoji={"\uD83C\uDFD7\uFE0F"}
-                description="Sod, retaining walls, planting, and finishing touches that elevate your property."
-                href="/services/landscaping"
+                title="Soil Preparation"
+                description="Grading, amendments, and site prep that sets the foundation for success."
+                href="/services/soil-preparation"
+                image="/images/portfolio/estate-hydroseeding.webp"
               />
             </FadeIn>
             <FadeIn delay={3}>
               <ServiceCard
-                title="Snow Plowing"
-                emoji={"\u2744\uFE0F"}
-                description="Reliable plowing and salting to keep your property safe and accessible."
-                href="/services/snow-plowing"
+                title="Landscaping"
+                description="Sod, retaining walls, planting, and finishing touches that elevate your property."
+                href="/services/landscaping"
+                image="/images/heroes/new-build-landscaping.webp"
               />
             </FadeIn>
             <FadeIn delay={4}>
               <ServiceCard
-                title="Soil Preparation"
-                emoji={"\uD83C\uDF0D"}
-                description="Grading, amendments, and site prep that sets the foundation for success."
-                href="/services/soil-preparation"
+                title="Snow Plowing"
+                description="Reliable plowing and salting to keep your property safe and accessible."
+                href="/services/snow-plowing"
+                image="/images/portfolio/commercial-site-work.webp"
               />
             </FadeIn>
           </div>
+          <FadeIn delay={2}>
+            <p className="mt-6 text-center text-sm text-white/50 tracking-wide uppercase">We also offer soil preparation, landscaping &amp; snow plowing</p>
+          </FadeIn>
         </Container>
       </section>
 
-      {/* ── ABOUT / TRUST STRIP ── */}
-      <section className="bg-[var(--bg-green)]">
-        <Container className="py-24 sm:py-32">
+      {/* ── ABOUT / TRUST ── */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/portfolio/pool-landscape-design.webp"
+          alt="Landscape project background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <Container className="relative z-10 py-24 sm:py-32">
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
             <FadeIn>
               <SectionHeading
                 light
                 eyebrow="About Us"
-                title="Local, owner-operated, and built on pride"
-                description={`${SITE.name} is owned and operated by ${SITE.owner}. Since ${SITE.since}, we've helped homeowners and businesses across West Michigan establish healthy lawns and beautiful outdoor spaces.`}
+                title="Hydroseeding specialists since 2004"
+                description={`${SITE.name} is owned and operated by ${SITE.owner}, specializing in hydroseeding since ${SITE.since}. We've helped hundreds of homeowners and businesses across West Michigan establish healthy, beautiful lawns. We also provide soil preparation, landscaping, and snow plowing services.`}
               />
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button href="/about" variant="primary" className="w-full sm:w-auto">
@@ -182,42 +253,42 @@ export default function Home() {
             <FadeIn delay={2}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="overflow-hidden rounded-2xl">
+                  <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
                       src="/images/portfolio/pool-landscape-design.webp"
                       alt="Pool area landscaping project"
                       width={400}
                       height={500}
-                      className="h-64 w-full object-cover"
+                      className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-2xl">
+                  <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
                       src="/images/services/hydroseeder-truck-jobsite.webp"
                       alt="Hydroseeder truck on job site"
                       width={400}
                       height={300}
-                      className="h-40 w-full object-cover"
+                      className="h-40 w-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="overflow-hidden rounded-2xl">
+                  <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
                       src="/images/heroes/lakefront-hydroseeding.webp"
                       alt="Lakefront hydroseeding project"
                       width={400}
                       height={300}
-                      className="h-40 w-full object-cover"
+                      className="h-40 w-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-2xl">
+                  <div className="overflow-hidden rounded-2xl shadow-lg">
                     <Image
                       src="/images/portfolio/natural-stone-wall.webp"
                       alt="Natural stone retaining wall"
                       width={400}
                       height={500}
-                      className="h-64 w-full object-cover"
+                      className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
                 </div>
@@ -228,33 +299,21 @@ export default function Home() {
       </section>
 
       {/* ── FEATURED WORK ── */}
-      <section className="bg-[var(--bg-white)]">
+      <section className="bg-[var(--bg-dark)] bg-texture">
         <Container className="py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
+              light
               eyebrow="Our Work"
               title="Projects we're proud of"
               description="From residential lawns to commercial landscapes, every project gets our full attention and professional-grade results."
               centered
             />
           </FadeIn>
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {portfolioItems.map((photo, idx) => (
-              <FadeIn key={photo.src} delay={(idx % 3 + 1) as 1 | 2 | 3}>
-                <div className="group relative img-zoom overflow-hidden rounded-2xl">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    width={600}
-                    height={400}
-                    className="aspect-[3/2] w-full object-cover"
-                  />
-                  <div className="absolute bottom-3 left-3">
-                    <span className="inline-block rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                      {photo.category}
-                    </span>
-                  </div>
-                </div>
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {portfolioItems.map((item, idx) => (
+              <FadeIn key={item.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <GalleryCard item={item} />
               </FadeIn>
             ))}
           </div>
@@ -268,37 +327,39 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ── WHY CHOOSE US ── */}
-      <section className="bg-[var(--bg-cream)]">
+      {/* ── WHY CHOOSE US — alternating rows ── */}
+      <section className="bg-[var(--bg-cream)] bg-texture">
         <Container className="py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
               eyebrow="Why Choose Us"
               title="Built on trust, backed by results"
-              description="When you choose Fraaza Enterprises, you're choosing quality craftsmanship, personal accountability, and over two decades of proven expertise."
+              description="When you choose Fraaza Enterprises, you're choosing West Michigan's dedicated hydroseeding specialists — with quality craftsmanship, personal accountability, and over two decades of proven results."
               centered
             />
           </FadeIn>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 space-y-8">
             {whyChooseUs.map((item, idx) => (
-              <FadeIn key={item.title} delay={((idx % 4) + 1) as 1 | 2 | 3 | 4}>
-                <div className="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/65 group-hover:bg-black/55 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
-                      <span className="text-3xl">{item.emoji}</span>
-                    </div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+              <FadeIn key={item.title} delay={(idx % 2 + 1) as 1 | 2}>
+                <div
+                  className={`group relative overflow-hidden rounded-2xl shadow-lg ${
+                    idx % 2 === 0 ? "" : "lg:flex-row-reverse"
+                  } flex flex-col lg:flex-row`}
+                >
+                  <div className="relative lg:w-1/2 min-h-[240px] lg:min-h-[320px]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center bg-[var(--bg-green)] p-8 sm:p-12 lg:w-1/2">
+                    <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white sm:text-3xl">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-300 max-w-[200px]">
+                    <p className="mt-3 text-base leading-relaxed text-white/70 max-w-md">
                       {item.description}
                     </p>
                   </div>
@@ -309,11 +370,20 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ── REVIEWS ── */}
-      <section className="bg-[var(--bg-white)]">
-        <Container className="py-24 sm:py-32">
+      {/* ── TESTIMONIALS ── */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/heroes/hydroseeding-new-home.webp"
+          alt="Beautiful hydroseeded lawn background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/65" />
+        <Container className="relative z-10 py-24 sm:py-32">
           <FadeIn>
             <SectionHeading
+              light
               eyebrow="Testimonials"
               title="What our clients say"
               description="Real feedback from homeowners and property managers across West Michigan."
@@ -342,14 +412,14 @@ export default function Home() {
               },
             ].map((r, idx) => (
               <FadeIn key={r.location} delay={(idx + 1) as 1 | 2 | 3}>
-                <div className="rounded-2xl bg-[var(--bg-cream)] p-8 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
-                  <svg className="h-8 w-8 text-[var(--accent)]/40" viewBox="0 0 32 32" fill="currentColor">
+                <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-xl">
+                  <svg className="h-8 w-8 text-[var(--accent-light)]/60" viewBox="0 0 32 32" fill="currentColor">
                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
                   </svg>
-                  <div className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">{r.quote}</div>
-                  <div className="mt-6 border-t border-[var(--border)] pt-4">
-                    <div className="text-sm font-semibold text-[var(--text-primary)]">{r.name}</div>
-                    <div className="text-xs text-[var(--text-muted)]">{r.location}</div>
+                  <div className="mt-4 text-sm leading-7 text-white/80">{r.quote}</div>
+                  <div className="mt-6 border-t border-white/15 pt-4">
+                    <div className="text-sm font-semibold text-white">{r.name}</div>
+                    <div className="text-xs text-white/50">{r.location}</div>
                   </div>
                 </div>
               </FadeIn>
@@ -361,13 +431,13 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="relative overflow-hidden">
         <Image
-          src="/images/heroes/hydroseeding-new-home.webp"
-          alt="Beautiful home with hydroseeded lawn"
+          src="/images/services/roadside-hydroseeding.webp"
+          alt="Professional hydroseeding in action"
           fill
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/90 to-black/70" />
         <Container className="relative z-10 py-24 sm:py-32">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">

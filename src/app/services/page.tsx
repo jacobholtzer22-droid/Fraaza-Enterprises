@@ -8,16 +8,16 @@ import { Button } from "@/components/Button";
 
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Hydroseeding Services & More | Holland, MI",
   description:
-    "Hydroseeding, landscaping, soil preparation, and snow plowing services in Holland, MI and West Michigan. Explore service details and request a free quote.",
+    "West Michigan's hydroseeding experts. Professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, MI. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Services | Fraaza Enterprises",
+    title: "Hydroseeding Experts | Fraaza Enterprises",
     description:
-      "Hydroseeding, landscaping, soil preparation, and snow plowing services in Holland, MI and West Michigan.",
+      "Professional hydroseeding specialists in Holland, MI and West Michigan. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/services",
   },
 };
@@ -35,52 +35,73 @@ export default function ServicesPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 to-[var(--bg-green)]/70" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
             light
             eyebrow="Our Services"
-            title="Everything your property needs"
-            description="From hydroseeding and landscaping to soil preparation and winter care — quality work done right the first time."
+            title="West Michigan's hydroseeding specialists"
+            description="Hydroseeding is our core expertise — it's what we've built our reputation on since 2004. We also offer professional soil preparation, landscaping, and winter plowing."
           />
         </Container>
       </section>
 
-      {/* Service cards */}
-      <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
-          <div className="grid gap-8 md:grid-cols-2">
-            <FadeIn delay={1}>
-              <ServiceCard
-                title="Hydroseeding"
-                emoji={"\uD83C\uDF31"}
-                description="New lawn installation, erosion control, roadside, new development, and commercial properties. Fast, even coverage with professional-grade equipment."
-                href="/services/hydroseeding"
-              />
-            </FadeIn>
-            <FadeIn delay={2}>
-              <ServiceCard
-                title="Landscaping"
-                emoji={"\uD83C\uDFD7\uFE0F"}
-                description="Sod installation, retaining walls, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
-                href="/services/landscaping"
-              />
-            </FadeIn>
-            <FadeIn delay={1}>
+      {/* Featured: Hydroseeding */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/heroes/lakefront-hydroseeding.webp"
+          alt="Project background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-dark)]/90" />
+        <Container className="relative z-10 py-16 sm:py-24">
+          <FadeIn delay={1}>
+            <ServiceCard
+              title="Hydroseeding"
+              description="Our core specialty. New lawn installation, erosion control, roadside, new development, and commercial properties. Fast, even coverage with professional-grade equipment — backed by 20+ years of dedicated experience."
+              href="/services/hydroseeding"
+              image="/images/heroes/craftsman-home-hydroseeding.webp"
+              featured
+            />
+          </FadeIn>
+
+          <FadeIn delay={2}>
+            <div className="mt-10">
               <ServiceCard
                 title="Soil Preparation"
-                emoji={"\uD83C\uDF0D"}
-                description="Soil testing, grading and leveling, amendments, sod removal, and topsoil/compost install. The right foundation for a healthy, thriving lawn."
+                description="Soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. The right foundation for a healthy, thriving lawn."
                 href="/services/soil-preparation"
+                image="/images/portfolio/estate-hydroseeding.webp"
+              />
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="mt-16 mb-8 text-center">
+              <span className="inline-block rounded-full border border-white/20 bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/60 backdrop-blur-sm">
+                Additional Services
+              </span>
+            </div>
+          </FadeIn>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <FadeIn delay={1}>
+              <ServiceCard
+                title="Landscaping"
+                description="Sod installation, retaining walls, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
+                href="/services/landscaping"
+                image="/images/heroes/new-build-landscaping.webp"
               />
             </FadeIn>
             <FadeIn delay={2}>
               <ServiceCard
                 title="Snow Plowing"
-                emoji={"\u2744\uFE0F"}
                 description="Plowing, salting, sidewalks, loader plowing, and snow blowing. Dependable winter service to keep your property safe and accessible."
                 href="/services/snow-plowing"
+                image="/images/portfolio/commercial-site-work.webp"
               />
             </FadeIn>
           </div>
@@ -88,8 +109,16 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[var(--bg-green)]">
-        <Container className="py-16 sm:py-20">
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/services/hydroseeder-truck-jobsite.webp"
+          alt="Hydroseeder truck on location"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--bg-green)]/85" />
+        <Container className="relative z-10 py-16 sm:py-20">
           <FadeIn>
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
               <div className="flex-1">

@@ -8,17 +8,17 @@ import { SITE } from "@/lib/site";
 import { Button } from "@/components/Button";
 
 const hydroseedingDropdown = [
-  { href: "/hydroseeding", label: "What is Hydroseeding", icon: "\u{1F331}" },
+  { href: "/hydroseeding", label: "What is Hydroseeding", icon: "💧" },
   { href: "/erosion-control", label: "Erosion Control", icon: "\u{1F6E1}\u{FE0F}" },
   { href: "/faq", label: "FAQ", icon: "\u{2753}" },
   { href: "/care-and-watering", label: "Care & Watering", icon: "\u{1F4A7}" },
 ] as const;
 
 const servicesDropdown = [
-  { href: "/services/hydroseeding", label: "Hydroseeding", icon: "\u{1F331}" },
-  { href: "/services/landscaping", label: "Landscaping", icon: "\u{1F3D7}\u{FE0F}" },
+  { href: "/services/hydroseeding", label: "Hydroseeding", icon: "💧" },
+  { href: "/services/landscaping", label: "Landscaping", icon: "🌿" },
   { href: "/services/snow-plowing", label: "Snow Plowing", icon: "\u{2744}\u{FE0F}" },
-  { href: "/services/soil-preparation", label: "Soil Preparation", icon: "\u{1F30D}" },
+  { href: "/services/soil-preparation", label: "Soil Preparation", icon: "⛏️" },
 ] as const;
 
 const nav = [
@@ -92,6 +92,7 @@ function DesktopDropdown({
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<DropdownId>(null);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileHydroseedingOpen, setMobileHydroseedingOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -111,6 +112,13 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [closeAll]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const handleMouseEnter = (id: DropdownId) => {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
@@ -126,7 +134,13 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-500 ${
+        scrolled
+          ? "header-scrolled"
+          : "border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md"
+      }`}
+    >
       <Container className="flex h-18 items-center justify-between">
         <Link href="/" className="group inline-flex items-center">
           <Image
@@ -148,7 +162,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "hydroseeding" ? null : "hydroseeding")}
-              className="inline-flex items-center gap-1 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--bg-green)]"
+              className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-[var(--accent)]"
             >
               Hydroseeding
               <ChevronDown open={activeDropdown === "hydroseeding"} />
@@ -166,7 +180,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")}
-              className="inline-flex items-center gap-1 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--bg-green)]"
+              className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-[var(--accent)]"
             >
               Services
               <ChevronDown open={activeDropdown === "services"} />
@@ -185,7 +199,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--bg-green)]"
+              className="text-sm font-medium transition-colors hover:text-[var(--accent)]"
             >
               {item.label}
             </Link>
@@ -195,7 +209,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <a
             href={SITE.phoneHref}
-            className="hidden text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--bg-green)] lg:block"
+            className="hidden text-sm font-medium hover:text-[var(--accent)] lg:block"
           >
             {SITE.phone}
           </a>
@@ -204,7 +218,7 @@ export function Header() {
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
           >
             {open ? (

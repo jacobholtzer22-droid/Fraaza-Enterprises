@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: SITE.name,
+    default: `Hydroseeding Experts | Holland, MI | ${SITE.name}`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,

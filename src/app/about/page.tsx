@@ -7,16 +7,16 @@ import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About | Holland, MI",
+  title: "About West Michigan's Hydroseeding Experts | Holland, MI",
   description:
-    "Fraaza Enterprises is an owner-operated hydroseeding and landscaping company serving West Michigan since 2004. Specializing in hydroseeding and soil preparation for residential, commercial, and industrial projects.",
+    "Fraaza Enterprises has specialized in hydroseeding since 2004. Owner-operated by Chad Fraaza, we're West Michigan's trusted hydroseeding experts — also offering soil preparation, landscaping, and snow plowing.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About | Fraaza Enterprises",
     description:
-      "Owner-operated since 2004 — specializing in hydroseeding and soil preparation across West Michigan.",
+      "Specializing in hydroseeding since 2004 — owner-operated across West Michigan. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/about",
   },
 };
@@ -40,8 +40,8 @@ export default function AboutPage() {
             as="h1"
             light
             eyebrow="About"
-            title={`Proudly serving West Michigan since ${SITE.since}`}
-            description={`${SITE.name} is owned and operated by ${SITE.owner}. We specialize in hydroseeding and soil preparation for residential, commercial, and industrial projects.`}
+            title={`Specializing in hydroseeding since ${SITE.since}`}
+            description={`${SITE.name} is owned and operated by ${SITE.owner}. We're West Michigan's dedicated hydroseeding experts — also offering soil preparation, landscaping, and snow plowing for residential, commercial, and industrial projects.`}
           />
         </Container>
       </section>
@@ -57,10 +57,10 @@ export default function AboutPage() {
                 </h3>
                 <ul className="mt-6 space-y-4 text-sm text-[var(--text-secondary)]">
                   {[
-                    "Hydroseeding for new lawns, erosion control, and large areas",
+                    "Hydroseeding specialists — new lawns, erosion control, and large-scale projects",
+                    "20+ years of dedicated hydroseeding experience across West Michigan",
                     "Soil testing, grading, amendments, and topsoil/compost installs",
-                    "Clear communication and dependable scheduling",
-                    "Residential, commercial, and industrial experience",
+                    "Additional services: landscaping, sod, retaining walls, and snow plowing",
                     "Member of the International Association of Hydroseeding Professionals (IAHP)",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">

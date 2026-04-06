@@ -47,6 +47,7 @@ export function Footer() {
                 className="h-20 w-auto rounded-lg"
               />
               <div className="mt-4 text-sm text-white/60">{SITE.tagline}</div>
+              <p className="mt-2 text-sm text-white/50">Specializing in hydroseeding since 2004. Also offering soil preparation, landscaping, and snow plowing.</p>
               <div className="mt-6 text-sm text-white/60">
                 <div className="font-semibold text-white/80">Service area</div>
                 <div className="mt-1">{SITE.serviceArea}</div>
