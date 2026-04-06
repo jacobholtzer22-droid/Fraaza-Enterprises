@@ -83,6 +83,23 @@ export default function AboutPage() {
                   practices that protect your property and deliver consistent
                   results.
                 </p>
+                <a
+                  href="https://www.hydroseeding.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
+                >
+                  <Image
+                    src="/images/iahp-logo.jpg"
+                    alt="International Association of Hydroseeding Professionals"
+                    width={129}
+                    height={97}
+                    className="h-12 w-auto rounded"
+                  />
+                  <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
+                    Member of the International<br />Association of Hydroseeding Professionals
+                  </span>
+                </a>
                 <div className="mt-6 rounded-xl bg-[var(--bg-cream)] px-5 py-4 text-sm text-[var(--text-secondary)]">
                   <span className="font-semibold text-[var(--bg-green)]">Our motto:</span>{" "}
                   {SITE.motto}

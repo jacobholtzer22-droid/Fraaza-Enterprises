@@ -52,6 +52,24 @@ export function Footer() {
                 <div className="font-semibold text-white/80">Service area</div>
                 <div className="mt-1">{SITE.serviceArea}</div>
               </div>
+
+              <a
+                href="https://www.hydroseeding.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex items-center gap-3 group"
+              >
+                <Image
+                  src="/images/iahp-logo.jpg"
+                  alt="International Association of Hydroseeding Professionals"
+                  width={129}
+                  height={97}
+                  className="h-14 w-auto rounded bg-white/90 p-1"
+                />
+                <span className="text-xs leading-tight text-white/50 group-hover:text-white/80 transition-colors">
+                  Member of the International<br />Association of Hydroseeding<br />Professionals
+                </span>
+              </a>
             </div>
 
             <div className="text-sm text-white/60">
