@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for Fraaza Enterprises. This page will be updated with the final privacy policy language.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     title: "Privacy Policy | Fraaza Enterprises",
     description: "Privacy policy for Fraaza Enterprises.",
@@ -19,6 +22,7 @@ export default function PrivacyPolicyPage() {
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
           <SectionHeading
+            as="h1"
             eyebrow="Legal"
             title="Privacy Policy"
             description="Placeholder content — final policy language will be added."

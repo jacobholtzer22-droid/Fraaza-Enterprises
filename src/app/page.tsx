@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Hydroseeding & Landscaping | Holland, MI | Fraaza Enterprises",
   description:
     "Hydroseeding and landscaping in Holland, MI and across West Michigan. Fraaza Enterprises delivers hydroseeding, soil preparation, landscaping, and snow plowing — owner-operated since 2004.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Hydroseeding & Landscaping | Holland, MI | Fraaza Enterprises",
     description:
@@ -20,12 +23,12 @@ export const metadata: Metadata = {
 };
 
 const portfolioItems = [
-  { src: "/images/heroes/craftsman-home-hydroseeding.jpg", alt: "Craftsman home with fresh hydroseeding", category: "Hydroseeding" },
-  { src: "/images/portfolio/retaining-wall-hydroseeding.jpg", alt: "Retaining wall with hydroseeded lawn", category: "Retaining Wall" },
-  { src: "/images/heroes/new-build-landscaping.jpg", alt: "New build with complete landscaping", category: "Landscaping" },
-  { src: "/images/portfolio/river-rock-landscaping.jpg", alt: "River rock landscaping detail", category: "Landscaping" },
-  { src: "/images/services/roadside-hydroseeding.jpg", alt: "Roadside hydroseeding project", category: "Hydroseeding" },
-  { src: "/images/portfolio/lawn-growth-14-days.jpg", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding" },
+  { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home with fresh hydroseeding", category: "Hydroseeding" },
+  { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn", category: "Retaining Wall" },
+  { src: "/images/heroes/new-build-landscaping.webp", alt: "New build with complete landscaping", category: "Landscaping" },
+  { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping detail", category: "Landscaping" },
+  { src: "/images/services/roadside-hydroseeding.webp", alt: "Roadside hydroseeding project", category: "Hydroseeding" },
+  { src: "/images/portfolio/lawn-growth-14-days.webp", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding" },
 ];
 
 const whyChooseUs = [
@@ -33,25 +36,25 @@ const whyChooseUs = [
     emoji: "\u2B50",
     title: "Superior Quality",
     description: "Professional-grade equipment and premium materials for results that last.",
-    image: "/images/portfolio/premium-landscaping.jpg",
+    image: "/images/portfolio/premium-landscaping.webp",
   },
   {
     emoji: "\uD83E\uDD1D",
     title: "Owner-Operated",
     description: "Chad Fraaza is on every job — ensuring personal accountability and attention to detail.",
-    image: "/images/services/hydroseeder-truck-jobsite.jpg",
+    image: "/images/services/hydroseeder-truck-jobsite.webp",
   },
   {
     emoji: "\u23F0",
     title: "Since 2004",
     description: "Over two decades of trusted service across West Michigan communities.",
-    image: "/images/portfolio/estate-hydroseeding.jpg",
+    image: "/images/portfolio/estate-hydroseeding.webp",
   },
   {
     emoji: "\uD83D\uDEE1\uFE0F",
     title: "Licensed & Insured",
     description: "Fully licensed and insured for your peace of mind on every project.",
-    image: "/images/portfolio/commercial-site-work.jpg",
+    image: "/images/portfolio/commercial-site-work.webp",
   },
 ];
 
@@ -61,7 +64,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative min-h-[90vh] flex items-center">
         <Image
-          src="/images/heroes/luxury-home-hydroseeding.jpg"
+          src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
           fill
           priority
@@ -75,7 +78,7 @@ export default function Home() {
               <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
               Owner-operated since {SITE.since}
             </div>
-            <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
               {SITE.tagline}
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/80">
@@ -83,25 +86,25 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="/quote">Get a Free Quote</Button>
-              <Button href="/services" variant="ghost">
+              <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+              <Button href="/services" variant="ghost" className="w-full sm:w-auto">
                 <span className="text-white/80 hover:text-white">Explore Our Services &rarr;</span>
               </Button>
             </div>
 
             {/* Stats Bar */}
-            <div className="mt-12 flex gap-8 sm:gap-12 pt-8 border-t border-white/15">
+            <div className="mt-12 flex gap-6 sm:gap-12 pt-8 border-t border-white/15">
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">20+</div>
-                <div className="mt-1 text-sm text-gray-300">Years Experience</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">20+</div>
+                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Years Experience</div>
               </div>
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">500+</div>
-                <div className="mt-1 text-sm text-gray-300">Happy Clients</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">500+</div>
+                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Happy Clients</div>
               </div>
               <div>
-                <div className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white">5.0</div>
-                <div className="mt-1 text-sm text-gray-300">Average Rating</div>
+                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">5.0</div>
+                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Average Rating</div>
               </div>
             </div>
           </div>
@@ -167,11 +170,11 @@ export default function Home() {
                 title="Local, owner-operated, and built on pride"
                 description={`${SITE.name} is owned and operated by ${SITE.owner}. Since ${SITE.since}, we've helped homeowners and businesses across West Michigan establish healthy lawns and beautiful outdoor spaces.`}
               />
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="/about" variant="primary">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Button href="/about" variant="primary" className="w-full sm:w-auto">
                   Our Story
                 </Button>
-                <Button href="/contact" variant="ghost">
+                <Button href="/contact" variant="ghost" className="w-full sm:w-auto">
                   <span className="text-white/70 hover:text-white">Call {SITE.phone}</span>
                 </Button>
               </div>
@@ -181,7 +184,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/portfolio/pool-landscape-design.jpg"
+                      src="/images/portfolio/pool-landscape-design.webp"
                       alt="Pool area landscaping project"
                       width={400}
                       height={500}
@@ -190,7 +193,7 @@ export default function Home() {
                   </div>
                   <div className="overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/services/hydroseeder-truck-jobsite.jpg"
+                      src="/images/services/hydroseeder-truck-jobsite.webp"
                       alt="Hydroseeder truck on job site"
                       width={400}
                       height={300}
@@ -201,7 +204,7 @@ export default function Home() {
                 <div className="space-y-4 pt-8">
                   <div className="overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/heroes/lakefront-hydroseeding.jpg"
+                      src="/images/heroes/lakefront-hydroseeding.webp"
                       alt="Lakefront hydroseeding project"
                       width={400}
                       height={300}
@@ -210,7 +213,7 @@ export default function Home() {
                   </div>
                   <div className="overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/portfolio/natural-stone-wall.jpg"
+                      src="/images/portfolio/natural-stone-wall.webp"
                       alt="Natural stone retaining wall"
                       width={400}
                       height={500}
@@ -358,7 +361,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="relative overflow-hidden">
         <Image
-          src="/images/heroes/hydroseeding-new-home.jpg"
+          src="/images/heroes/hydroseeding-new-home.webp"
           alt="Beautiful home with hydroseeded lawn"
           fill
           className="object-cover"
@@ -375,8 +378,8 @@ export default function Home() {
                 Tell us about your project and we&apos;ll follow up with a plan and a free estimate.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button href="/quote">Get a Free Quote</Button>
-                <Button href="/services" variant="ghost">
+                <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+                <Button href="/services" variant="ghost" className="w-full sm:w-auto">
                   <span className="text-white/80 hover:text-white">View Services</span>
                 </Button>
               </div>

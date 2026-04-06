@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Landscaping | Holland, MI",
   description:
     "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
+  alternates: {
+    canonical: "/services/landscaping",
+  },
   openGraph: {
     title: "Landscaping | Holland, MI | Fraaza Enterprises",
     description:
@@ -23,7 +26,7 @@ export default function LandscapingPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
-          src="/images/portfolio/pool-landscape-design.jpg"
+          src="/images/portfolio/pool-landscape-design.webp"
           alt="Professional landscaping around pool area"
           fill
           priority
@@ -33,14 +36,15 @@ export default function LandscapingPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Services"
             title="Landscaping"
             description="From sod installs to retaining walls and planting, we build outdoor spaces that look great and hold up."
           />
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/quote">Get a Free Quote</Button>
-            <Button href="/services" variant="ghost">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+            <Button href="/services" variant="ghost" className="w-full sm:w-auto">
               <span className="text-white/80 hover:text-white">Back to services</span>
             </Button>
           </div>
@@ -53,13 +57,13 @@ export default function LandscapingPage() {
           <FadeIn>
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/portfolio/stone-retaining-wall-planting.jpg" alt="Stone retaining wall" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/portfolio/stone-retaining-wall-planting.webp" alt="Stone retaining wall" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/portfolio/natural-stone-wall.jpg" alt="Natural stone wall" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/portfolio/natural-stone-wall.webp" alt="Natural stone wall" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/portfolio/river-rock-landscaping.jpg" alt="River rock landscaping" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/portfolio/river-rock-landscaping.webp" alt="River rock landscaping" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
             </div>
           </FadeIn>
@@ -95,9 +99,9 @@ export default function LandscapingPage() {
           </FadeIn>
 
           <FadeIn>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="/contact#quote-form">Request landscaping quote</Button>
-              <Button href="/services" variant="outline">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request landscaping quote</Button>
+              <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 Back to services
               </Button>
             </div>

@@ -7,6 +7,7 @@ export function SectionHeading({
   className,
   light,
   centered,
+  as: Tag = "h2",
 }: {
   eyebrow?: string;
   title: string;
@@ -14,6 +15,7 @@ export function SectionHeading({
   className?: string;
   light?: boolean;
   centered?: boolean;
+  as?: "h1" | "h2";
 }) {
   return (
     <div className={cn("max-w-2xl", centered && "mx-auto text-center", className)}>
@@ -27,14 +29,14 @@ export function SectionHeading({
           {eyebrow}
         </div>
       ) : null}
-      <h2
+      <Tag
         className={cn(
           "mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold tracking-tight sm:text-4xl",
           light ? "text-[var(--bg-cream)]" : "text-[var(--bg-green)]",
         )}
       >
         {title}
-      </h2>
+      </Tag>
       {description ? (
         <p
           className={cn(

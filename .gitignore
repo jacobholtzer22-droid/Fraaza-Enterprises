@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# original source photos
+Website Pics/
+
+# optimization script (not needed in production)
+scripts/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

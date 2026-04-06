@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Terms",
   description:
     "Terms of service for Fraaza Enterprises. This page will be updated with the final terms language.",
+  alternates: {
+    canonical: "/terms",
+  },
   openGraph: {
     title: "Terms | Fraaza Enterprises",
     description: "Terms of service for Fraaza Enterprises.",
@@ -19,6 +22,7 @@ export default function TermsPage() {
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
           <SectionHeading
+            as="h1"
             eyebrow="Legal"
             title="Terms of Service"
             description="Placeholder content — final terms will be added."

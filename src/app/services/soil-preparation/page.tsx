@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Soil Preparation | Holland, MI",
   description:
     "Soil preparation services in Holland, MI and West Michigan including soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. Request a free quote from Fraaza Enterprises.",
+  alternates: {
+    canonical: "/services/soil-preparation",
+  },
   openGraph: {
     title: "Soil Preparation | Holland, MI | Fraaza Enterprises",
     description:
@@ -23,7 +26,7 @@ export default function SoilPreparationPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
-          src="/images/heroes/new-build-landscaping.jpg"
+          src="/images/heroes/new-build-landscaping.webp"
           alt="New build with soil preparation and landscaping"
           fill
           priority
@@ -33,14 +36,15 @@ export default function SoilPreparationPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Services"
             title="Soil Preparation"
             description="Great lawns start below the surface. We prep, grade, amend, and build the foundation your grass needs to thrive."
           />
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/quote">Get a Free Quote</Button>
-            <Button href="/services" variant="ghost">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+            <Button href="/services" variant="ghost" className="w-full sm:w-auto">
               <span className="text-white/80 hover:text-white">Back to services</span>
             </Button>
           </div>
@@ -53,10 +57,10 @@ export default function SoilPreparationPage() {
           <FadeIn>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/soil-prep-boulder-edging.jpg" alt="Soil preparation with boulder edging" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
+                <Image src="/images/services/soil-prep-boulder-edging.webp" alt="Soil preparation with boulder edging" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
               </div>
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/topsoil-delivery.jpg" alt="Topsoil delivery" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
+                <Image src="/images/services/topsoil-delivery.webp" alt="Topsoil delivery" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
               </div>
             </div>
           </FadeIn>
@@ -92,9 +96,9 @@ export default function SoilPreparationPage() {
           </FadeIn>
 
           <FadeIn>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="/contact#quote-form">Request soil prep quote</Button>
-              <Button href="/services" variant="outline">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request soil prep quote</Button>
+              <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 Back to services
               </Button>
             </div>

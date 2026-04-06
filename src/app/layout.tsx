@@ -36,6 +36,64 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Fraaza Enterprises",
+  description: SITE.description,
+  url: SITE.url,
+  telephone: SITE.phone,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Holland",
+    addressRegion: "MI",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 42.7876,
+    longitude: -86.1089,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:00",
+      closes: "17:00",
+      description: "By appointment only",
+    },
+  ],
+  areaServed: [
+    { "@type": "City", name: "Holland", addressRegion: "MI" },
+    { "@type": "City", name: "Zeeland", addressRegion: "MI" },
+    { "@type": "City", name: "Grand Haven", addressRegion: "MI" },
+    { "@type": "City", name: "Hudsonville", addressRegion: "MI" },
+    { "@type": "State", name: "West Michigan" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hydroseeding" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Landscaping" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Snow Plowing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Soil Preparation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Erosion Control" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sod Installation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Retaining Walls" } },
+    ],
+  },
+  founder: { "@type": "Person", name: SITE.owner },
+  foundingDate: `${SITE.since}`,
+  priceRange: "$$",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,6 +104,10 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} antialiased bg-background text-foreground`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div className="min-h-dvh flex flex-col">
           <Header />
           <main className="relative flex-1">{children}</main>

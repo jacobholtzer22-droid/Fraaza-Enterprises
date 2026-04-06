@@ -5,14 +5,14 @@ import { SITE } from "@/lib/site";
 import { Button } from "@/components/Button";
 
 const mosaicPhotos = [
-  { src: "/images/portfolio/stone-wall-detail.jpg", alt: "Stone wall detail" },
-  { src: "/images/gallery/backyard-patio-hydroseeding.jpg", alt: "Backyard hydroseeding" },
-  { src: "/images/portfolio/front-yard-stone-border.jpg", alt: "Front yard stone border" },
-  { src: "/images/services/hydroseeding-mulch-application.jpg", alt: "Hydroseeding application" },
-  { src: "/images/portfolio/pool-landscape-design.jpg", alt: "Pool landscape design" },
-  { src: "/images/gallery/new-retaining-wall-1.jpg", alt: "Retaining wall" },
-  { src: "/images/portfolio/river-rock-landscaping.jpg", alt: "River rock landscaping" },
-  { src: "/images/heroes/craftsman-home-hydroseeding.jpg", alt: "Craftsman home" },
+  { src: "/images/portfolio/stone-wall-detail.webp", alt: "Stone wall detail" },
+  { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard hydroseeding" },
+  { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard stone border" },
+  { src: "/images/services/hydroseeding-mulch-application.webp", alt: "Hydroseeding application" },
+  { src: "/images/portfolio/pool-landscape-design.webp", alt: "Pool landscape design" },
+  { src: "/images/gallery/new-retaining-wall-1.webp", alt: "Retaining wall" },
+  { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping" },
+  { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home" },
 ];
 
 export function Footer() {
@@ -40,7 +40,7 @@ export function Footer() {
           <div className="grid gap-12 md:grid-cols-3">
             <div>
               <Image
-                src="/images/fraaza-logo.png"
+                src="/images/fraaza-logo.webp"
                 alt={SITE.name}
                 width={324}
                 height={181}
@@ -55,11 +55,11 @@ export function Footer() {
 
             <div className="text-sm text-white/60">
               <div className="font-semibold text-white/80">Contact</div>
-              <div className="mt-3 space-y-2">
-                <a className="block hover:text-white transition-colors" href={SITE.phoneHref}>
+              <div className="mt-3 space-y-1">
+                <a className="flex items-center min-h-[44px] hover:text-white transition-colors" href={SITE.phoneHref}>
                   {SITE.phone}
                 </a>
-                <a className="block hover:text-white transition-colors" href={`mailto:${SITE.email}`}>
+                <a className="flex items-center min-h-[44px] hover:text-white transition-colors" href={`mailto:${SITE.email}`}>
                   {SITE.email}
                 </a>
                 <div className="pt-3">
@@ -78,38 +78,38 @@ export function Footer() {
 
             <div>
               <div className="text-sm font-semibold text-white/80">Explore</div>
-              <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
-                <Link className="text-white/60 hover:text-white transition-colors" href="/services">
+              <div className="mt-3 grid grid-cols-2 gap-1 text-sm">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/services">
                   Services
                 </Link>
-                <Link className="text-white/60 hover:text-white transition-colors" href="/gallery">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/gallery">
                   Gallery
                 </Link>
-                <Link className="text-white/60 hover:text-white transition-colors" href="/about">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/about">
                   About
                 </Link>
-                <Link className="text-white/60 hover:text-white transition-colors" href="/contact">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/contact">
                   Contact
                 </Link>
-                <Link className="text-white/60 hover:text-white transition-colors" href="/privacy-policy">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/privacy-policy">
                   Privacy
                 </Link>
-                <Link className="text-white/60 hover:text-white transition-colors" href="/terms">
+                <Link className="flex items-center min-h-[44px] text-white/60 hover:text-white transition-colors" href="/terms">
                   Terms
                 </Link>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 {googleReviewUrl ? (
-                  <Button href={googleReviewUrl} variant="outline">
+                  <Button href={googleReviewUrl} variant="outline" className="w-full sm:w-auto">
                     Leave Us a Review
                   </Button>
                 ) : (
-                  <Button href="/contact" variant="outline">
+                  <Button href="/contact" variant="outline" className="w-full sm:w-auto">
                     Leave Us a Review
                   </Button>
                 )}
-                <Button href="/contact" variant="ghost">
+                <Button href="/contact" variant="ghost" className="w-full sm:w-auto">
                   <span className="text-white/70 hover:text-white">Contact Us</span>
                 </Button>
               </div>

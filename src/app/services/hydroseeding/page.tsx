@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
   description:
     "Professional hydroseeding in Holland, MI and West Michigan for new lawns, erosion control, roadside projects, new development, and commercial properties. Request a free quote from Fraaza Enterprises.",
+  alternates: {
+    canonical: "/services/hydroseeding",
+  },
   openGraph: {
     title: "Hydroseeding | Holland, MI | Fraaza Enterprises",
     description:
@@ -23,7 +26,7 @@ export default function HydroseedingPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
-          src="/images/heroes/craftsman-home-hydroseeding.jpg"
+          src="/images/heroes/craftsman-home-hydroseeding.webp"
           alt="Hydroseeding application on a new home lawn"
           fill
           priority
@@ -33,14 +36,15 @@ export default function HydroseedingPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Services"
             title="Hydroseeding"
             description="A fast, even application that helps establish healthy grass — perfect for new lawns, erosion control, and large areas."
           />
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/quote">Get a Free Quote</Button>
-            <Button href="/contact" variant="ghost">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
+            <Button href="/contact" variant="ghost" className="w-full sm:w-auto">
               <span className="text-white/80 hover:text-white">Ask a question</span>
             </Button>
           </div>
@@ -89,13 +93,13 @@ export default function HydroseedingPage() {
           <FadeIn>
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/hydroseeding-mulch-application.jpg" alt="Hydroseeding application" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/services/hydroseeding-mulch-application.webp" alt="Hydroseeding application" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/hydroseeding-coverage.jpg" alt="Even hydroseeding coverage" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/services/hydroseeding-coverage.webp" alt="Even hydroseeding coverage" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
               <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/portfolio/lawn-growth-14-days.jpg" alt="Lawn growth 14 days after hydroseeding" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
+                <Image src="/images/portfolio/lawn-growth-14-days.webp" alt="Lawn growth 14 days after hydroseeding" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
             </div>
           </FadeIn>
@@ -127,9 +131,9 @@ export default function HydroseedingPage() {
           </FadeIn>
 
           <FadeIn>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="/contact#quote-form">Request hydroseeding quote</Button>
-              <Button href="/services" variant="outline">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request hydroseeding quote</Button>
+              <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 Back to services
               </Button>
             </div>

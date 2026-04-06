@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Contact | Holland, MI",
   description:
     "Contact Fraaza Enterprises for hydroseeding, landscaping, soil preparation, and snow plowing in Holland, MI and across West Michigan. Call (616) 875-2293 or request a free quote.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact | Fraaza Enterprises",
     description:
@@ -24,7 +27,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative h-64 sm:h-80 flex items-center">
         <Image
-          src="/images/portfolio/estate-hydroseeding.jpg"
+          src="/images/portfolio/estate-hydroseeding.webp"
           alt="Estate property hydroseeding project"
           fill
           priority
@@ -34,6 +37,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Contact"
             title="Let's talk about your project"
@@ -104,9 +108,7 @@ export default function ContactPage() {
             </FadeIn>
 
             <FadeIn delay={2}>
-              <div id="quote-form">
-                <ContactForm />
-              </div>
+              <ContactForm />
             </FadeIn>
           </div>
         </Container>

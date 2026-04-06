@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "About | Holland, MI",
   description:
     "Fraaza Enterprises is an owner-operated hydroseeding and landscaping company serving West Michigan since 2004. Specializing in hydroseeding and soil preparation for residential, commercial, and industrial projects.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About | Fraaza Enterprises",
     description:
@@ -24,7 +27,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
-          src="/images/services/hydroseeder-truck-jobsite.jpg"
+          src="/images/services/hydroseeder-truck-jobsite.webp"
           alt="Fraaza Enterprises hydroseeder truck"
           fill
           priority
@@ -34,6 +37,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="About"
             title={`Proudly serving West Michigan since ${SITE.since}`}
@@ -87,7 +91,7 @@ export default function AboutPage() {
 
               <div className="mt-6 overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/portfolio/macatawa-lawn-established.jpg"
+                  src="/images/portfolio/macatawa-lawn-established.webp"
                   alt="Established lawn at Macatawa Legends"
                   width={600}
                   height={400}
@@ -98,9 +102,9 @@ export default function AboutPage() {
           </div>
 
           <FadeIn>
-            <div className="mt-12 flex flex-wrap gap-4">
-              <Button href="/contact#quote-form">Request a free quote</Button>
-              <Button href="/services" variant="outline">
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request a free quote</Button>
+              <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 View services
               </Button>
             </div>

@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Hydroseeding, landscaping, soil preparation, and snow plowing services in Holland, MI and West Michigan. Explore service details and request a free quote.",
+  alternates: {
+    canonical: "/services",
+  },
   openGraph: {
     title: "Services | Fraaza Enterprises",
     description:
@@ -25,7 +28,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
-          src="/images/services/hydroseeder-landscaping-project.jpg"
+          src="/images/services/hydroseeder-landscaping-project.webp"
           alt="Fraaza Enterprises hydroseeder at work"
           fill
           priority
@@ -35,6 +38,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
         <Container className="relative z-10">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Our Services"
             title="Everything your property needs"
@@ -96,7 +100,7 @@ export default function ServicesPage() {
                   We&apos;ll assess your property and recommend the right services for your goals and budget.
                 </p>
               </div>
-              <Button href="/quote">Request a Free Quote</Button>
+              <Button href="/quote" className="w-full sm:w-auto">Request a Free Quote</Button>
             </div>
           </FadeIn>
         </Container>
