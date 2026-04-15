@@ -5,14 +5,14 @@ import { SITE } from "@/lib/site";
 import { Button } from "@/components/Button";
 
 const mosaicPhotos = [
-  { src: "/images/portfolio/stone-wall-detail.webp", alt: "Stone wall detail" },
-  { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard hydroseeding" },
-  { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard stone border" },
-  { src: "/images/services/hydroseeding-mulch-application.webp", alt: "Hydroseeding application" },
-  { src: "/images/portfolio/pool-landscape-design.webp", alt: "Pool landscape design" },
-  { src: "/images/gallery/new-retaining-wall-1.webp", alt: "Retaining wall" },
-  { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping" },
-  { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home" },
+  { src: "/images/portfolio/stone-wall-detail.webp", alt: "Stone wall detail", category: "Landscaping", title: "Stone Wall" },
+  { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard hydroseeding", category: "Hydroseeding", title: "Block Wall & Hydroseed" },
+  { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard stone border", category: "Landscaping", title: "Stone Border" },
+  { src: "/images/services/hydroseeding-mulch-application.webp", alt: "Hydroseeding application", category: "Hydroseeding", title: "Mulch Application" },
+  { src: "/images/portfolio/pool-landscape-design.webp", alt: "Pool landscape design", category: "Landscaping", title: "Pool Area Plantings" },
+  { src: "/images/gallery/new-retaining-wall-1.webp", alt: "Retaining wall", category: "Landscaping", title: "Retaining Wall" },
+  { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping", category: "Landscaping", title: "River Rock Borders" },
+  { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home", category: "Hydroseeding", title: "Craftsman Home" },
 ];
 
 export function Footer() {
@@ -23,14 +23,23 @@ export function Footer() {
       {/* Photo Mosaic Strip */}
       <div className="photo-mosaic">
         {mosaicPhotos.map((photo) => (
-          <div key={photo.src} className="relative aspect-[3/2] overflow-hidden">
+          <div key={photo.src} className="group relative aspect-[3/2] overflow-hidden">
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
               sizes="(max-width: 768px) 25vw, 12.5vw"
-              className="object-cover opacity-50 hover:opacity-90 transition-opacity duration-300"
+              className="object-cover opacity-50 group-hover:opacity-90 transition-opacity duration-300"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                {photo.category}
+              </span>
+              <span className="text-[10px] font-semibold text-white leading-tight">
+                {photo.title}
+              </span>
+            </div>
           </div>
         ))}
       </div>
