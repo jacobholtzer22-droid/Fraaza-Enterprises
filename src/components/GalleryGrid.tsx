@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { GalleryCard } from "@/components/GalleryCard";
-import { FadeIn } from "@/components/FadeIn";
 import type { GalleryItem } from "@/components/GalleryCard";
 
 const CATEGORIES = [
@@ -45,10 +44,8 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
 
       {/* Grid — all photos mixed together, each card shows its category badge */}
       <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((item, idx) => (
-          <FadeIn key={item.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-            <GalleryCard item={item} />
-          </FadeIn>
+        {visible.map((item) => (
+          <GalleryCard key={item.src} item={item} />
         ))}
       </div>
 
