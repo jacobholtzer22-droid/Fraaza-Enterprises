@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { ScissorsIcon, SproutIcon, ShieldCheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Hydroseeding Care & Watering Guide | Holland, MI | West Michigan Landscaping",
@@ -65,10 +67,10 @@ const weeklyGuide = [
   },
 ];
 
-const maintenanceTips = [
+const maintenanceTips: { title: string; icon: ReactNode; items: string[] }[] = [
   {
     title: "Mowing",
-    icon: "✂️",
+    icon: <ScissorsIcon />,
     items: [
       "First mow at 3.5–4 inches height (usually week 4–6)",
       "Never cut more than ⅓ of the grass height",
@@ -78,7 +80,7 @@ const maintenanceTips = [
   },
   {
     title: "Fertilizing",
-    icon: "🌱",
+    icon: <SproutIcon />,
     items: [
       "Starter fertilizer is included in the hydroseed mix",
       "Apply a balanced fertilizer at 6–8 weeks",
@@ -88,7 +90,7 @@ const maintenanceTips = [
   },
   {
     title: "Weed management",
-    icon: "🛡️",
+    icon: <ShieldCheckIcon />,
     items: [
       "Some weeds are normal in the first few weeks",
       "Wait until after 2–3 mowings before applying any herbicide",

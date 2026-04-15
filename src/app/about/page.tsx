@@ -49,7 +49,7 @@ export default function AboutPage() {
       {/* Content */}
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <FadeIn>
               <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
@@ -106,15 +106,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="mt-6 overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/portfolio/macatawa-lawn-established.webp"
-                  alt="Established lawn at Macatawa Legends"
-                  width={600}
-                  height={400}
-                  className="w-full object-cover aspect-[3/2]"
-                />
-              </div>
             </FadeIn>
           </div>
 

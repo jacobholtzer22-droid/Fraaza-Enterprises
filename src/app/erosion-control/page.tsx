@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import {
+  MountainIcon,
+  RouteIcon,
+  WrenchIcon,
+  BuildingIcon,
+  WavesIcon,
+  LayoutGridIcon,
+} from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Erosion Control with Hydroseeding | Holland, MI | West Michigan Landscaping",
@@ -20,42 +29,42 @@ export const metadata: Metadata = {
   },
 };
 
-const erosionApplications = [
+const erosionApplications: { title: string; description: string; icon: ReactNode }[] = [
   {
     title: "Slopes & hillsides",
     description:
       "Steep grades are the most common erosion challenge in West Michigan. Hydroseeding anchors seed in place with fiber mulch — even on slopes where traditional seeding or sod would slide or wash away.",
-    icon: "⛰️",
+    icon: <MountainIcon />,
   },
   {
     title: "Roadside & right-of-way",
     description:
       "MDOT and municipal projects require fast, reliable ground cover along roads and highways. Our hydroseeding provides compliant, even coverage for right-of-way stabilization across West Michigan.",
-    icon: "🛣️",
+    icon: <RouteIcon />,
   },
   {
     title: "Construction sites",
     description:
       "Disturbed soil from grading and excavation is highly vulnerable to erosion. Hydroseeding quickly establishes ground cover to meet stormwater management and erosion-control permit requirements.",
-    icon: "🏗️",
+    icon: <WrenchIcon />,
   },
   {
     title: "Commercial properties",
     description:
       "Retain soil, protect drainage systems, and maintain a professional appearance around parking lots, retention ponds, and building perimeters with professional hydroseeding.",
-    icon: "🏢",
+    icon: <BuildingIcon />,
   },
   {
     title: "Lakefront & waterfront",
     description:
       "West Michigan's lakefront properties face unique erosion challenges. Hydroseeding helps stabilize shoreline banks and prevent sediment runoff into waterways.",
-    icon: "🌊",
+    icon: <WavesIcon />,
   },
   {
     title: "New developments",
     description:
       "Subdivision grading leaves acres of exposed soil. Hydroseeding scales efficiently to cover large development sites quickly, reducing erosion risk before and after construction.",
-    icon: "🏘️",
+    icon: <LayoutGridIcon />,
   },
 ];
 

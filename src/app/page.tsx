@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
@@ -9,6 +10,16 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { GalleryCard } from "@/components/GalleryCard";
 import type { GalleryItem } from "@/components/GalleryCard";
 import { SITE } from "@/lib/site";
+import {
+  SproutIcon,
+  LeafIcon,
+  MountainIcon,
+  SnowflakeIcon,
+  AwardIcon,
+  UserIcon,
+  CalendarIcon,
+  ShieldCheckIcon,
+} from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises",
@@ -25,27 +36,27 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
+const services: { icon: ReactNode; title: string; href: string; image: string }[] = [
   {
-    icon: "🌱",
+    icon: <SproutIcon />,
     title: "Hydroseeding",
     href: "/services/hydroseeding",
     image: "/images/services/hydroseeding-coverage.webp",
   },
   {
-    icon: "🌿",
+    icon: <LeafIcon />,
     title: "Soil Preparation",
     href: "/services/soil-preparation",
     image: "/images/services/soil-prep-boulder-edging.webp",
   },
   {
-    icon: "🏞️",
+    icon: <MountainIcon />,
     title: "Landscaping",
     href: "/services/landscaping",
     image: "/images/portfolio/pool-landscape-design.webp",
   },
   {
-    icon: "❄️",
+    icon: <SnowflakeIcon />,
     title: "Snow Plowing",
     href: "/services/snow-plowing",
     image: "/images/services/snow-plow-truck.webp",
@@ -75,27 +86,27 @@ const portfolioItems: GalleryItem[] = [
   },
 ];
 
-const whyChooseUs = [
+const whyChooseUs: { icon: ReactNode; title: string; description: string; image: string }[] = [
   {
-    icon: "🏆",
+    icon: <AwardIcon />,
     title: "Superior Quality",
     description: "Professional-grade equipment and premium materials for results that last.",
     image: "/images/portfolio/full-property-hydroseeding.webp",
   },
   {
-    icon: "👷",
+    icon: <UserIcon />,
     title: "Owner-Operated",
     description: "Chad Fraaza is on every job — ensuring personal accountability and attention to detail.",
     image: "/images/services/hydroseeder-truck-jobsite.webp",
   },
   {
-    icon: "📅",
+    icon: <CalendarIcon />,
     title: "Since 2004",
     description: "Over two decades of trusted service across West Michigan communities.",
     image: "/images/portfolio/commercial-site-work.webp",
   },
   {
-    icon: "🛡️",
+    icon: <ShieldCheckIcon />,
     title: "Licensed & Insured",
     description: "Fully licensed and insured for your peace of mind on every project.",
     image: "/images/portfolio/new-construction-lawn.webp",

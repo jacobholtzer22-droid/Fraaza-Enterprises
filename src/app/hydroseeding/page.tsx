@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { HomeIcon, BuildingIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "What is Hydroseeding? | Holland, MI | West Michigan Landscaping",
@@ -185,7 +186,7 @@ export default function HydroseedingInfoPage() {
             <FadeIn>
               <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)] h-full">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
-                  <span className="text-2xl">🏡</span>
+                  <HomeIcon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
                   Residential hydroseeding
@@ -206,7 +207,7 @@ export default function HydroseedingInfoPage() {
             <FadeIn delay={2}>
               <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)] h-full">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
-                  <span className="text-2xl">🏢</span>
+                  <BuildingIcon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
                   Commercial hydroseeding

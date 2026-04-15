@@ -1,25 +1,35 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Container } from "@/components/Container";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/Button";
+import {
+  DropletIcon,
+  ShieldIcon,
+  HelpCircleIcon,
+  SproutIcon,
+  LeafIcon,
+  SnowflakeIcon,
+  LayersIcon,
+} from "@/components/Icons";
 
-const hydroseedingDropdown = [
-  { href: "/hydroseeding", label: "What is Hydroseeding", icon: "💧" },
-  { href: "/erosion-control", label: "Erosion Control", icon: "\u{1F6E1}\u{FE0F}" },
-  { href: "/faq", label: "FAQ", icon: "\u{2753}" },
-  { href: "/care-and-watering", label: "Care & Watering", icon: "\u{1F4A7}" },
-] as const;
+const hydroseedingDropdown: { href: string; label: string; icon: ReactNode }[] = [
+  { href: "/hydroseeding", label: "What is Hydroseeding", icon: <DropletIcon /> },
+  { href: "/erosion-control", label: "Erosion Control", icon: <ShieldIcon /> },
+  { href: "/faq", label: "FAQ", icon: <HelpCircleIcon /> },
+  { href: "/care-and-watering", label: "Care & Watering", icon: <SproutIcon /> },
+];
 
-const servicesDropdown = [
-  { href: "/services/hydroseeding", label: "Hydroseeding", icon: "💧" },
-  { href: "/services/landscaping", label: "Landscaping", icon: "🌿" },
-  { href: "/services/snow-plowing", label: "Snow Plowing", icon: "\u{2744}\u{FE0F}" },
-  { href: "/services/soil-preparation", label: "Soil Preparation", icon: "⛏️" },
-] as const;
+const servicesDropdown: { href: string; label: string; icon: ReactNode }[] = [
+  { href: "/services/hydroseeding", label: "Hydroseeding", icon: <DropletIcon /> },
+  { href: "/services/landscaping", label: "Landscaping", icon: <LeafIcon /> },
+  { href: "/services/snow-plowing", label: "Snow Plowing", icon: <SnowflakeIcon /> },
+  { href: "/services/soil-preparation", label: "Soil Preparation", icon: <LayersIcon /> },
+];
 
 const nav = [
   { href: "/gallery", label: "Gallery" },
@@ -51,7 +61,7 @@ function DesktopDropdown({
   footerHref,
   footerLabel,
 }: {
-  items: ReadonlyArray<{ href: string; label: string; icon: string }>;
+  items: ReadonlyArray<{ href: string; label: string; icon: ReactNode }>;
   onClose: () => void;
   footerHref?: string;
   footerLabel?: string;
@@ -156,6 +166,13 @@ export function Header() {
         </Link>
 
         <nav ref={navRef} className="hidden items-center gap-8 md:flex">
+          <Link
+            href="/"
+            className="text-sm font-medium transition-colors hover:text-[var(--accent)]"
+          >
+            Home
+          </Link>
+
           {/* Hydroseeding dropdown */}
           <div
             className="relative"
@@ -242,6 +259,15 @@ export function Header() {
         <div className="overflow-hidden">
           <div className="border-t border-[var(--border)] bg-[var(--bg-cream)]">
             <Container className="py-4 space-y-1">
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                tabIndex={open ? 0 : -1}
+              >
+                Home
+              </Link>
+
               {/* Mobile Hydroseeding accordion */}
               <button
                 onClick={() => setMobileHydroseedingOpen(!mobileHydroseedingOpen)}
