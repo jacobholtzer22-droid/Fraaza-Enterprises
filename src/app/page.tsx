@@ -219,6 +219,12 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/65 group-hover:via-black/25" />
+                  <div className="relative z-10 p-6">
+                    <div className="text-3xl">{service.icon}</div>
+                    <h3 className="mt-2 font-[family-name:var(--font-playfair)] text-xl font-bold text-white sm:text-2xl">
+                      {service.title}
+                    </h3>
+                  </div>
                 </Link>
               </FadeIn>
             ))}
@@ -280,7 +286,6 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/20" />
                   <div className="relative z-10 p-6 sm:p-7">
-                    <div className="text-4xl">{item.icon}</div>
                     <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white sm:text-2xl">
                       {item.title}
                     </h3>

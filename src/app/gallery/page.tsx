@@ -33,13 +33,13 @@ const galleryItems: GalleryItem[] = [
     src: "/images/portfolio/pool-landscape-design.webp",
     alt: "Pool area with professional landscape design",
     category: "Landscaping",
-    title: "Pool Area Design",
+    title: "Pool Area Plantings & Fire Pit Ring",
   },
   {
     src: "/images/heroes/craftsman-home-hydroseeding.webp",
     alt: "Craftsman home hydroseeding project",
     category: "Hydroseeding",
-    title: "Craftsman Home",
+    title: "New Hydroseeded Lawn Application",
   },
   {
     src: "/images/portfolio/stone-retaining-wall-planting.webp",
@@ -69,13 +69,13 @@ const galleryItems: GalleryItem[] = [
     src: "/images/services/hydroseeding-mulch-application.webp",
     alt: "Hydroseeding mulch application in progress",
     category: "Hydroseeding",
-    title: "Mulch Application",
+    title: "Retaining Wall & Hydroseed",
   },
   {
     src: "/images/heroes/new-build-landscaping.webp",
     alt: "New build with landscaping and stone wall",
     category: "Landscaping",
-    title: "New Build",
+    title: "New Build with Wall",
   },
   {
     src: "/images/portfolio/river-rock-landscaping.webp",
@@ -99,13 +99,13 @@ const galleryItems: GalleryItem[] = [
     src: "/images/services/hydroseeder-truck-jobsite.webp",
     alt: "Hydroseeder truck on jobsite",
     category: "Hydroseeding",
-    title: "On the Jobsite",
+    title: "Hydroseed on Jobsite",
   },
   {
     src: "/images/portfolio/estate-hydroseeding.webp",
     alt: "Large property hydroseeding",
     category: "Hydroseeding",
-    title: "Large Property",
+    title: "New Hydroseeded Lawn",
   },
   {
     src: "/images/services/snow-plow-truck.webp",
@@ -117,19 +117,19 @@ const galleryItems: GalleryItem[] = [
     src: "/images/portfolio/new-construction-lawn.webp",
     alt: "New construction lawn hydroseeding",
     category: "Hydroseeding",
-    title: "New Construction",
+    title: "Established Hydroseeded Lawn",
   },
   {
     src: "/images/gallery/backyard-patio-hydroseeding.webp",
     alt: "Backyard patio with hydroseeding",
     category: "Hydroseeding",
-    title: "Backyard Patio",
+    title: "Block Retaining Wall & Hydroseed",
   },
   {
     src: "/images/portfolio/macatawa-finished-lawn.webp",
     alt: "Finished hydroseeded lawn",
     category: "Hydroseeding",
-    title: "Finished Lawn",
+    title: "Established Hydroseeded Lawn",
   },
   {
     src: "/images/services/commercial-hydroseeding-1.webp",
@@ -150,16 +150,10 @@ const galleryItems: GalleryItem[] = [
     title: "Subdivision Install",
   },
   {
-    src: "/images/portfolio/premium-landscaping.webp",
-    alt: "Premium landscaping project",
-    category: "Landscaping",
-    title: "Premium Landscape",
-  },
-  {
     src: "/images/portfolio/full-property-hydroseeding.webp",
     alt: "Full property hydroseeding coverage",
     category: "Hydroseeding",
-    title: "Full Property",
+    title: "Retaining Wall",
   },
   {
     src: "/images/services/hydroseeder-landscaping-project.webp",
@@ -171,7 +165,7 @@ const galleryItems: GalleryItem[] = [
     src: "/images/gallery/new-retaining-wall-1.webp",
     alt: "New retaining wall installation",
     category: "Landscaping",
-    title: "Retaining Wall",
+    title: "Shed Pad Retaining Wall",
   },
   {
     src: "/images/gallery/completed-wall-project-1.webp",
@@ -184,12 +178,6 @@ const galleryItems: GalleryItem[] = [
     alt: "Topsoil delivery for site preparation",
     category: "Soil Prep",
     title: "Topsoil Delivery",
-  },
-  {
-    src: "/images/portfolio/macatawa-completed-landscape.webp",
-    alt: "Completed residential landscape",
-    category: "Landscaping",
-    title: "Completed Landscape",
   },
 ];
 

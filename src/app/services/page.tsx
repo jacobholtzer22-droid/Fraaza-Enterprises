@@ -74,7 +74,7 @@ export default function ServicesPage() {
                 title="Soil Preparation"
                 description="Soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. The right foundation for a healthy, thriving lawn."
                 href="/services/soil-preparation"
-                image="/images/portfolio/estate-hydroseeding.webp"
+                image="/images/heroes/new-build-landscaping.webp"
               />
             </div>
           </FadeIn>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                 title="Landscaping"
                 description="Sod installation, retaining walls, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
                 href="/services/landscaping"
-                image="/images/heroes/new-build-landscaping.webp"
+                image="/images/portfolio/pool-landscape-design.webp"
               />
             </FadeIn>
             <FadeIn delay={2}>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                 title="Snow Plowing"
                 description="Plowing, salting, sidewalks, loader plowing, and snow blowing. Dependable winter service to keep your property safe and accessible."
                 href="/services/snow-plowing"
-                image="/images/portfolio/commercial-site-work.webp"
+                image="/images/services/snow-plow-truck.webp"
               />
             </FadeIn>
           </div>
