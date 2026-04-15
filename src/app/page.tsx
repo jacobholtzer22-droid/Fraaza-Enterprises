@@ -120,7 +120,7 @@ const galleryFooter = [
   { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn" },
   { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard patio with hydroseeded lawn" },
   { src: "/images/gallery/ornamental-tree-planting.webp", alt: "Ornamental tree planting" },
-  { src: "/images/portfolio/macatawa-completed-landscape.webp", alt: "Macatawa completed landscape" },
+  { src: "/images/portfolio/macatawa-completed-landscape.webp", alt: "Completed residential landscape" },
   { src: "/images/gallery/completed-wall-project-1.webp", alt: "Completed wall project" },
 ];
 
@@ -219,9 +219,6 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/65 group-hover:via-black/25" />
-                  <div className="relative z-10 p-6 sm:p-7">
-                    <div className="text-4xl">{service.icon}</div>
-                  </div>
                 </Link>
               </FadeIn>
             ))}

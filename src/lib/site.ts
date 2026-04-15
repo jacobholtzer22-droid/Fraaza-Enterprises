@@ -6,7 +6,7 @@ export const SITE = {
   url: "https://fraaza-enterprises.com",
   phone: "(616) 875-2293",
   phoneHref: "tel:+16168752293",
-  email: "chad@fraaza-enterprises.com",
+  email: "chad@fraazaenterprises.com",
   serviceArea:
     "West Michigan — Holland, Zeeland, Grand Haven, Hudsonville, and surrounding areas",
   owner: "Chad Fraaza",

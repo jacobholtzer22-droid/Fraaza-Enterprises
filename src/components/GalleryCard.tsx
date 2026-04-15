@@ -33,16 +33,19 @@ export function GalleryCard({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent transition-colors duration-500 group-hover:from-black/55 group-hover:via-black/5" />
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-5">
-        {item.category && (
+        {item.category ? (
           <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
             {item.category}
           </span>
-        )}
-        <h3 className="text-base font-bold leading-snug text-white sm:text-lg">
-          {item.title}
-        </h3>
-        {item.description && (
-          <p className="text-sm leading-snug text-white/70">{item.description}</p>
+        ) : (
+          <>
+            <h3 className="text-base font-bold leading-snug text-white sm:text-lg">
+              {item.title}
+            </h3>
+            {item.description && (
+              <p className="text-sm leading-snug text-white/70">{item.description}</p>
+            )}
+          </>
         )}
       </div>
     </div>
