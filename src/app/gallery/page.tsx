@@ -99,7 +99,7 @@ const galleryItems: GalleryItem[] = [
     src: "/images/services/hydroseeder-truck-jobsite.webp",
     alt: "Hydroseeder truck on jobsite",
     category: "Hydroseeding",
-    title: "Hydroseed on Jobsite",
+    title: "Hydroseed Truck on Jobsite",
   },
   {
     src: "/images/portfolio/estate-hydroseeding.webp",
