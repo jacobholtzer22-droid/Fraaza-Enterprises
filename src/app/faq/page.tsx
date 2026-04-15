@@ -9,24 +9,19 @@ import { Accordion } from "@/components/Accordion";
 export const metadata: Metadata = {
   title: "Hydroseeding FAQ | Holland, MI | West Michigan Landscaping",
   description:
-    "Answers to frequently asked questions about hydroseeding cost, timeline, watering, best season, and slopes — for Holland, MI and West Michigan. Fraaza Enterprises — owner-operated since 2004.",
+    "Answers to frequently asked questions about hydroseeding timeline, watering, best season, and slopes — for Holland, MI and West Michigan. Fraaza Enterprises — owner-operated since 2004.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
     title: "Hydroseeding FAQ | Fraaza Enterprises",
     description:
-      "Common questions about hydroseeding cost, timing, watering, and more for West Michigan properties.",
+      "Common questions about hydroseeding timing, watering, and more for West Michigan properties.",
     url: "/faq",
   },
 };
 
 const faqs = [
-  {
-    question: "How much does hydroseeding cost in Holland, MI?",
-    answer:
-      "Hydroseeding typically costs 30–50% less than sod installation. Pricing depends on the size of the area, soil prep required, and terrain difficulty. Most residential projects in Holland and West Michigan fall between $0.08–$0.15 per square foot for the hydroseeding application itself. Contact us for a free, no-obligation estimate tailored to your property.",
-  },
   {
     question: "How long does it take for hydroseeded grass to grow?",
     answer:
@@ -94,7 +89,7 @@ export default function FAQPage() {
             light
             eyebrow="FAQ"
             title="Hydroseeding questions, answered"
-            description="Everything you need to know about hydroseeding cost, timing, watering, and more — for Holland, MI and West Michigan properties."
+            description="Everything you need to know about hydroseeding timing, watering, and more — for Holland, MI and West Michigan properties."
           />
         </Container>
       </section>
