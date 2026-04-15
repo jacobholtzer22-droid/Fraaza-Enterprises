@@ -56,30 +56,22 @@ const portfolioItems: GalleryItem[] = [
   {
     src: "/images/portfolio/estate-hydroseeding.webp",
     alt: "Estate hydroseeding project",
-    category: "Hydroseeding",
     title: "Estate Hydroseeding",
-    description: "Large estate lawn establishment with premium seed blend",
   },
   {
     src: "/images/portfolio/stone-retaining-wall-planting.webp",
     alt: "Stone retaining wall with plantings",
-    category: "Landscaping",
     title: "Stone Retaining Wall",
-    description: "Natural stone retaining wall with mixed plantings",
   },
   {
     src: "/images/portfolio/subdivision-lawn-install.webp",
     alt: "Subdivision lawn hydroseeding install",
-    category: "Hydroseeding",
     title: "Subdivision Lawn Install",
-    description: "Full subdivision hydroseeding for consistent neighborhood turf",
   },
   {
     src: "/images/portfolio/premium-landscaping.webp",
     alt: "Premium landscape design",
-    category: "Landscaping",
     title: "Premium Landscape Design",
-    description: "Complete landscape package with walls, beds, and plantings",
   },
 ];
 
@@ -131,6 +123,7 @@ export default function Home() {
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
           fill
           priority
+          quality={90}
           className="object-cover"
           sizes="100vw"
         />
@@ -210,21 +203,13 @@ export default function Home() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    quality={90}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/65 group-hover:via-black/25" />
                   <div className="relative z-10 p-6 sm:p-7">
                     <div className="text-4xl">{service.icon}</div>
-                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white sm:text-2xl">
-                      {service.title}
-                    </h3>
-                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)] transition-all duration-300 group-hover:gap-3">
-                      Learn more
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </span>
                   </div>
                 </Link>
               </FadeIn>
@@ -281,6 +266,7 @@ export default function Home() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    quality={90}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
@@ -307,6 +293,7 @@ export default function Home() {
           src="/images/heroes/hydroseeding-new-home.webp"
           alt="Professional hydroseeding in action"
           fill
+          quality={90}
           className="object-cover"
           sizes="100vw"
         />
@@ -350,6 +337,7 @@ export default function Home() {
                     src={photo.src}
                     alt={photo.alt}
                     fill
+                    quality={90}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />

@@ -57,34 +57,36 @@ function DesktopDropdown({
   footerLabel?: string;
 }) {
   return (
-    <div className="dropdown-enter absolute left-1/2 top-full z-50 mt-3 w-60 -translate-x-1/2 rounded-xl border border-[var(--border)] bg-[var(--bg-cream)] p-2 shadow-[var(--shadow-lg)]">
-      <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rotate-45 border-l border-t border-[var(--border)] bg-[var(--bg-cream)]" />
-      {items.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          onClick={onClose}
-          className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-all duration-150 hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)] hover:translate-x-0.5"
-        >
-          <span className="text-base">{item.icon}</span>
-          {item.label}
-        </Link>
-      ))}
-      {footerHref && footerLabel && (
-        <>
-          <div className="my-1.5 border-t border-[var(--border)]" />
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="dropdown-enter relative w-60 rounded-xl border border-[var(--border)] bg-[var(--bg-cream)] p-2 shadow-[var(--shadow-lg)]">
+        <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rotate-45 border-l border-t border-[var(--border)] bg-[var(--bg-cream)]" />
+        {items.map((item) => (
           <Link
-            href={footerHref}
+            key={item.href}
+            href={item.href}
             onClick={onClose}
-            className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-[var(--accent)] transition-all duration-150 hover:bg-[var(--accent)]/5"
+            className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-all duration-150 hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)] hover:translate-x-0.5"
           >
-            {footerLabel}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <span className="text-base">{item.icon}</span>
+            {item.label}
           </Link>
-        </>
-      )}
+        ))}
+        {footerHref && footerLabel && (
+          <>
+            <div className="my-1.5 border-t border-[var(--border)]" />
+            <Link
+              href={footerHref}
+              onClick={onClose}
+              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-[var(--accent)] transition-all duration-150 hover:bg-[var(--accent)]/5"
+            >
+              {footerLabel}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </>
+        )}
+      </div>
     </div>
   );
 }
