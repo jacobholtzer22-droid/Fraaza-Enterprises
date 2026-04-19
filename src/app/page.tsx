@@ -51,21 +51,21 @@ const services: { title: string; href: string; image: string }[] = [
 const portfolioItems: GalleryItem[] = [
   {
     src: "/images/portfolio/estate-hydroseeding.webp",
-    alt: "Estate hydroseeding project",
+    alt: "Large property hydroseeding",
     category: "Hydroseeding",
-    title: "Estate Hydroseeding",
+    title: "New Hydroseeded Lawn",
   },
   {
     src: "/images/portfolio/stone-retaining-wall-planting.webp",
-    alt: "Stone retaining wall with plantings",
+    alt: "Stone retaining wall with planting beds",
     category: "Landscaping",
-    title: "Stone Retaining Wall",
+    title: "Stone Wall & Beds",
   },
   {
     src: "/images/portfolio/subdivision-lawn-install.webp",
-    alt: "Subdivision lawn hydroseeding install",
+    alt: "Subdivision lawn installation",
     category: "Hydroseeding",
-    title: "Subdivision Lawn Install",
+    title: "Subdivision Install",
   },
   {
     src: "/images/portfolio/premium-landscaping.webp",
@@ -103,7 +103,7 @@ const galleryFooter: GalleryItem[] = [
   { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard with stone border", category: "Landscaping", title: "Stone Border" },
   { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping detail", category: "Landscaping", title: "River Rock Borders" },
   { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn", category: "Landscaping", title: "Wall & Lawn" },
-  { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard patio with hydroseeded lawn", category: "Hydroseeding", title: "Block Wall & Hydroseed" },
+  { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard patio with hydroseeding", category: "Hydroseeding", title: "Block Retaining Wall & Hydroseed" },
   { src: "/images/gallery/ornamental-tree-planting.webp", alt: "Ornamental tree planting", category: "Landscaping", title: "Tree Planting" },
   { src: "/images/portfolio/macatawa-completed-landscape.webp", alt: "Completed residential landscape", category: "Landscaping", title: "Completed Landscape" },
   { src: "/images/gallery/completed-wall-project-1.webp", alt: "Completed wall project", category: "Landscaping", title: "Completed Wall" },

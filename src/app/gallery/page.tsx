@@ -179,6 +179,42 @@ const galleryItems: GalleryItem[] = [
     category: "Soil Prep",
     title: "Topsoil Delivery",
   },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-1.png",
+    alt: "Macatawa Legends golf course hydroseeding with irrigation sprinklers",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-2.png",
+    alt: "Workers applying hydroseed at Macatawa Legends golf course",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-3.png",
+    alt: "Hydroseed spray application at Macatawa Legends",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-4.png",
+    alt: "Macatawa Legends golf course cart path with hydroseeding",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-5.png",
+    alt: "Hydroseeding a hillside at Macatawa Legends golf course",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
+  {
+    src: "/images/gallery/macatawa-legends-hydroseed-7.png",
+    alt: "Straw mulching operation at Macatawa Legends golf course",
+    category: "Golf Courses",
+    title: "Macatawa Legends",
+  },
 ];
 
 export default function GalleryPage() {

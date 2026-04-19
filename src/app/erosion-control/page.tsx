@@ -125,8 +125,113 @@ export default function ErosionControlPage() {
         </Container>
       </section>
 
-      {/* Applications */}
+      {/* Erosion control photo */}
       <section className="bg-[var(--bg-white)]">
+        <Container className="py-16 sm:py-24">
+          <FadeIn>
+            <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
+              <Image
+                src="/images/erosion-control-slope-hydroseeding.png"
+                alt="Hydroseeding a steep slope for erosion control in West Michigan"
+                width={1200}
+                height={900}
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 768px) 100vw, 1200px"
+              />
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* Product Resources */}
+      <section className="bg-[var(--bg-white)]">
+        <Container className="py-16 sm:py-24">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Resources"
+              title="Product information & application guides"
+              description="Download brochures and guides for the erosion control products we use — trusted, industry-leading solutions for every project."
+              centered
+            />
+          </FadeIn>
+          <div className="mt-14 grid gap-6 sm:grid-cols-3">
+            {[
+              {
+                title: "ProMatrix",
+                description:
+                  "High-performance engineered fiber matrix — a superior alternative to erosion control blankets for steep slopes and critical areas.",
+                href: "/documents/ProMatrix-Brochure.pdf",
+              },
+              {
+                title: "Flexterra",
+                description:
+                  "Flexible growth medium designed for challenging environments. Fast vegetation establishment and long-term erosion protection.",
+                href: "/documents/Flexterra-Brochure.pdf",
+              },
+              {
+                title: "Product Application Guide",
+                description:
+                  "Specifications, mix ratios, and best practices for our full erosion control product lineup.",
+                href: "/documents/Application-Guide-ET-FGM-FGM-BFM-SMM.pdf",
+              },
+            ].map((item) => (
+              <FadeIn key={item.title}>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full flex-col rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-[var(--bg-green)]"
+                    >
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="12" y1="18" x2="12" y2="12" />
+                      <polyline points="9 15 12 18 15 15" />
+                    </svg>
+                  </div>
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-[var(--text-secondary)]">
+                    {item.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--bg-green)] group-hover:underline">
+                    View
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M7 17l9.2-9.2M17 17V7H7" />
+                    </svg>
+                  </span>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Applications */}
+      <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
             <SectionHeading
