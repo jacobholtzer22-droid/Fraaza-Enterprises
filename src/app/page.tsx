@@ -29,12 +29,12 @@ const services: { title: string; href: string; image: string }[] = [
   {
     title: "Hydroseeding",
     href: "/services/hydroseeding",
-    image: "/images/services/hydroseeding-coverage.webp",
+    image: "/images/services/home-hydroseeding.png",
   },
   {
     title: "Soil Preparation",
     href: "/services/soil-preparation",
-    image: "/images/services/soil-prep-boulder-edging.webp",
+    image: "/images/bobcat-soil-conditioner.png",
   },
   {
     title: "Landscaping",

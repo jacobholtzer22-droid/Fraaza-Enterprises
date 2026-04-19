@@ -51,8 +51,8 @@ const erosionApplications: { title: string; description: string; icon: ReactNode
     description:
       "Disturbed soil from grading and excavation is highly vulnerable to erosion. Hydromulching quickly stabilizes exposed ground to meet stormwater management and erosion-control permit requirements.",
     icon: <WrenchIcon />,
-    image: "/images/services/hydroseeder-truck-jobsite.webp",
-    imageAlt: "Hydroseeder truck on a construction jobsite",
+    image: "/images/erosion-control-construction-site.png",
+    imageAlt: "Hydroseeder truck and excavator on a construction site for erosion control",
   },
   {
     title: "Commercial properties",
@@ -67,8 +67,8 @@ const erosionApplications: { title: string; description: string; icon: ReactNode
     description:
       "West Michigan's lakefront properties face unique erosion challenges. Hydromulching helps stabilize shoreline banks and prevent sediment runoff into waterways.",
     icon: <WavesIcon />,
-    image: "/images/services/hydroseeding-coverage.webp",
-    imageAlt: "Hydromulching coverage for waterfront erosion protection",
+    image: "/images/erosion-control-slope-hydromulching-2.png",
+    imageAlt: "Lakefront property slope stabilized with hydromulching in West Michigan",
   },
   {
     title: "New developments",
@@ -115,43 +115,72 @@ export default function ErosionControlPage() {
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
-            <div className="mx-auto max-w-3xl">
-              <SectionHeading
-                eyebrow="The Solution"
-                title="How hydromulching stops erosion"
-                centered
-              />
-              <div className="mt-8 space-y-5 text-base leading-7 text-[var(--text-secondary)]">
-                <p>
-                  Erosion happens when exposed soil is left unprotected from rain, wind, and runoff. In West Michigan — where spring rains and freeze-thaw cycles are common — unprotected soil can erode rapidly, causing property damage, clogged drainage, and environmental harm.
-                </p>
-                <p>
-                  Hydromulching solves this by applying a thick layer of fiber mulch, tackifier, and water as a bonded slurry directly onto exposed soil. The mulch matrix locks soil particles in place on contact, absorbs rainfall impact, and dramatically slows surface runoff — stopping erosion immediately, before any vegetation is needed.
-                </p>
-                <p>
-                  Unlike erosion blankets or straw alone, hydromulching delivers a continuous, wind-resistant protective layer that conforms to irregular terrain — covering steep slopes, ditches, and rough-graded areas in a single application.
-                </p>
+            <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+              <div>
+                <SectionHeading
+                  eyebrow="The Solution"
+                  title="How hydromulching stops erosion"
+                />
+                <div className="mt-8 space-y-5 text-base leading-7 text-[var(--text-secondary)]">
+                  <p>
+                    Erosion happens when exposed soil is left unprotected from rain, wind, and runoff. In West Michigan — where spring rains and freeze-thaw cycles are common — unprotected soil can erode rapidly, causing property damage, clogged drainage, and environmental harm.
+                  </p>
+                  <p>
+                    Hydromulching solves this by applying a thick layer of fiber mulch, tackifier, and water as a bonded slurry directly onto exposed soil. The mulch matrix locks soil particles in place on contact, absorbs rainfall impact, and dramatically slows surface runoff — stopping erosion immediately, before any vegetation is needed.
+                  </p>
+                  <p>
+                    Unlike erosion blankets or straw alone, hydromulching delivers a continuous, wind-resistant protective layer that conforms to irregular terrain — covering steep slopes, ditches, and rough-graded areas in a single application.
+                  </p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
+                <Image
+                  src="/images/erosion-control-slope-hydroseeding.png"
+                  alt="Hydromulching a steep slope for erosion control in West Michigan"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </FadeIn>
         </Container>
       </section>
 
-      {/* Erosion control photo */}
+      {/* Project photos */}
       <section className="bg-[var(--bg-white)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
-            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
-              <Image
-                src="/images/erosion-control-slope-hydroseeding.png"
-                alt="Hydromulching a steep slope for erosion control in West Michigan"
-                width={800}
-                height={600}
-                className="h-auto w-full object-cover"
-                sizes="(max-width: 768px) 100vw, 672px"
-              />
-            </div>
+            <SectionHeading
+              eyebrow="Our Work"
+              title="Erosion control in action"
+              centered
+            />
           </FadeIn>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            <FadeIn>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <Image
+                  src="/images/erosion-control-slope-hydromulching-2.png"
+                  alt="Hydromulching applied to a steep roadside slope for erosion control"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={2}>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <Image
+                  src="/images/erosion-control-hydromulching-field.png"
+                  alt="Hydroseeder truck on a large field covered with hydromulch for erosion control"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </Container>
       </section>
 

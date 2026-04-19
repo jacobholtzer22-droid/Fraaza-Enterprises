@@ -180,6 +180,12 @@ const galleryItems: GalleryItem[] = [
     title: "Topsoil Delivery",
   },
   {
+    src: "/images/bobcat-soil-conditioner.png",
+    alt: "Bobcat soil conditioner preparing ground for seeding",
+    category: "Soil Prep",
+    title: "Bobcat Soil Conditioner",
+  },
+  {
     src: "/images/gallery/macatawa-legends-hydroseed-1.png",
     alt: "Macatawa Legends golf course hydroseeding with irrigation sprinklers",
     category: "Golf Courses",
