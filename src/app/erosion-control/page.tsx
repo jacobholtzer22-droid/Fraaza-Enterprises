@@ -29,42 +29,54 @@ export const metadata: Metadata = {
   },
 };
 
-const erosionApplications: { title: string; description: string; icon: ReactNode }[] = [
+const erosionApplications: { title: string; description: string; icon: ReactNode; image: string; imageAlt: string }[] = [
   {
     title: "Slopes & hillsides",
     description:
       "Steep grades are the most common erosion challenge in West Michigan. Hydromulching bonds a protective fiber matrix directly to the soil — stabilizing slopes where traditional methods would slide or wash away.",
     icon: <MountainIcon />,
+    image: "/images/erosion-control-slope-hydroseeding.png",
+    imageAlt: "Hydromulching applied to a steep slope for erosion control",
   },
   {
     title: "Roadside & right-of-way",
     description:
       "MDOT and municipal projects require fast, reliable erosion protection along roads and highways. Our hydromulching provides compliant, even coverage for right-of-way stabilization across West Michigan.",
     icon: <RouteIcon />,
+    image: "/images/services/roadside-hydroseeding.webp",
+    imageAlt: "Roadside hydromulching for right-of-way erosion control",
   },
   {
     title: "Construction sites",
     description:
       "Disturbed soil from grading and excavation is highly vulnerable to erosion. Hydromulching quickly stabilizes exposed ground to meet stormwater management and erosion-control permit requirements.",
     icon: <WrenchIcon />,
+    image: "/images/services/hydroseeder-truck-jobsite.webp",
+    imageAlt: "Hydroseeder truck on a construction jobsite",
   },
   {
     title: "Commercial properties",
     description:
       "Retain soil, protect drainage systems, and maintain a professional appearance around parking lots, retention ponds, and building perimeters with professional hydromulching.",
     icon: <BuildingIcon />,
+    image: "/images/services/commercial-hydroseeding-1.webp",
+    imageAlt: "Commercial property hydromulching application",
   },
   {
     title: "Lakefront & waterfront",
     description:
       "West Michigan's lakefront properties face unique erosion challenges. Hydromulching helps stabilize shoreline banks and prevent sediment runoff into waterways.",
     icon: <WavesIcon />,
+    image: "/images/services/hydroseeding-coverage.webp",
+    imageAlt: "Hydromulching coverage for waterfront erosion protection",
   },
   {
     title: "New developments",
     description:
       "Subdivision grading leaves acres of exposed soil. Hydromulching scales efficiently to cover large development sites quickly, reducing erosion risk before and after construction.",
     icon: <LayoutGridIcon />,
+    image: "/images/services/hydroseeder-landscaping-project.webp",
+    imageAlt: "Hydromulching a new development landscaping project",
   },
 ];
 
@@ -164,13 +176,12 @@ export default function ErosionControlPage() {
               { src: "/images/gallery/macatawa-legends-hydroseed-7.png", alt: "Golf course hydromulching at Macatawa Legends — view 6" },
             ].map((photo) => (
               <FadeIn key={photo.src}>
-                <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <div className="relative aspect-[3/2] overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
-                    width={600}
-                    height={400}
-                    className="h-auto w-full object-cover"
+                    fill
+                    className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
@@ -281,7 +292,7 @@ export default function ErosionControlPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {erosionApplications.map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full">
+                <div className="rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full flex flex-col">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
                     <span className="text-2xl">{item.icon}</span>
                   </div>
@@ -291,6 +302,15 @@ export default function ErosionControlPage() {
                   <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
                     {item.description}
                   </p>
+                  <div className="relative mt-4 aspect-[3/2] w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
                 </div>
               </FadeIn>
             ))}
