@@ -59,24 +59,24 @@ const erosionApplications: { title: string; description: string; icon: ReactNode
     description:
       "Retain soil, protect drainage systems, and maintain a professional appearance around parking lots, retention ponds, and building perimeters with professional hydromulching.",
     icon: <BuildingIcon />,
-    image: "/images/services/commercial-hydroseeding-1.webp",
-    imageAlt: "Commercial property hydromulching application",
+    image: "/images/erosion-control-new-development.png",
+    imageAlt: "Hydroseeder truck applying hydromulch on a commercial property",
   },
   {
     title: "Lakefront & waterfront",
     description:
       "West Michigan's lakefront properties face unique erosion challenges. Hydromulching helps stabilize shoreline banks and prevent sediment runoff into waterways.",
     icon: <WavesIcon />,
-    image: "/images/erosion-control-slope-hydromulching-2.png",
-    imageAlt: "Lakefront property slope stabilized with hydromulching in West Michigan",
+    image: "/images/erosion-control-lakefront-hydromulching.png",
+    imageAlt: "Hydromulching around a retention pond at a lakefront development in West Michigan",
   },
   {
     title: "New developments",
     description:
       "Subdivision grading leaves acres of exposed soil. Hydromulching scales efficiently to cover large development sites quickly, reducing erosion risk before and after construction.",
     icon: <LayoutGridIcon />,
-    image: "/images/services/hydroseeder-landscaping-project.webp",
-    imageAlt: "Hydromulching a new development landscaping project",
+    image: "/images/erosion-control-new-development-hydromulching.png",
+    imageAlt: "Hydromulching between homes in a new residential development",
   },
 ];
 
