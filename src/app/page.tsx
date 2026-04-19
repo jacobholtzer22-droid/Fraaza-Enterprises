@@ -98,6 +98,33 @@ const whyChooseUs: { title: string; description: string; image: string }[] = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "My wife and I recently hired Fraaza Enterprises for a yard grading & hydroseeding project at our new construction home, and we couldn\u2019t be more pleased with the results. Chad was extremely professional, very knowledgeable, and punctual.",
+    name: "New Construction Homeowner",
+    location: "West Michigan",
+  },
+  {
+    quote:
+      "Chad was super helpful, timely, easy to work with, and we\u2019ve had great results. Highly recommend!",
+    name: "Homeowner",
+    location: "Zeeland, MI",
+  },
+  {
+    quote:
+      "We absolutely love the results we are getting from Fraaza. From the first call to inquire about the product, to the day of application, Chad was great. His eye for detail, knowledge, and professionalism are apparent in his workmanship.",
+    name: "Homeowner",
+    location: "West Michigan",
+  },
+  {
+    quote:
+      "We had a motocross track on our property and nobody was using it so we leveled all the dirt and hired Chad at Fraaza Enterprises. He smoothed out all the dirt and hydroseeded it and you can\u2019t even tell we ever had a track. Great job Chad!",
+    name: "Property Owner",
+    location: "Holland, MI",
+  },
+];
+
 const galleryFooter: GalleryItem[] = [
   { src: "/images/portfolio/lawn-growth-14-days.webp", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding", title: "14-Day Growth" },
   { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard with stone border", category: "Landscaping", title: "Stone Border" },
@@ -279,6 +306,63 @@ export default function Home() {
                     <p className="mt-2 text-sm leading-relaxed text-white/80">
                       {item.description}
                     </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/heroes/new-build-landscaping.webp"
+          alt="Fraaza Enterprises landscaping project"
+          fill
+          quality={90}
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/80" />
+        <Container className="relative z-10 py-24 sm:py-32">
+          <FadeIn>
+            <SectionHeading
+              light
+              eyebrow="Testimonials"
+              title="What our clients say"
+              centered
+            />
+          </FadeIn>
+
+          <FadeIn delay={1}>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="https://www.google.com/maps/place/Fraaza+Enterprises"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
+              >
+                <span className="text-amber-400">★</span>
+                4.8 on Google — 17 Reviews
+              </a>
+            </div>
+          </FadeIn>
+
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 lg:grid-cols-2">
+            {testimonials.map((t, idx) => (
+              <FadeIn key={idx} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-md sm:p-8">
+                  <blockquote className="text-sm leading-7 text-white/85 sm:text-base">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                    <div>
+                      <div className="text-sm font-semibold text-white">
+                        {t.name}
+                      </div>
+                      <div className="text-xs text-white/50">{t.location}</div>
+                    </div>
                   </div>
                 </div>
               </FadeIn>
