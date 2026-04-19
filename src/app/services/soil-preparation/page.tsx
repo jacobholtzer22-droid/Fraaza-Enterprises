@@ -65,6 +65,9 @@ export default function SoilPreparationPage() {
               <div className="overflow-hidden rounded-2xl">
                 <Image src="/images/bobcat-soil-conditioner.png" alt="Bobcat soil conditioner preparing ground for seeding" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
               </div>
+              <div className="overflow-hidden rounded-2xl">
+                <Image src="/images/gallery/soil-prep-prepared-yard.png" alt="Prepared soil in front yard ready for hydroseeding" width={600} height={400} className="w-full aspect-[3/2] object-cover" />
+              </div>
             </div>
           </FadeIn>
 

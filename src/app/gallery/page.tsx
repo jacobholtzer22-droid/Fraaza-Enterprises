@@ -186,6 +186,18 @@ const galleryItems: GalleryItem[] = [
     title: "Bobcat Soil Conditioner",
   },
   {
+    src: "/images/gallery/soil-prep-prepared-yard.png",
+    alt: "Prepared soil in front yard ready for hydroseeding",
+    category: "Soil Prep",
+    title: "Prepared Yard",
+  },
+  {
+    src: "/images/gallery/church-hydroseeding.png",
+    alt: "Church property with fresh hydroseeding application",
+    category: "Hydroseeding",
+    title: "Church Property Hydroseeding",
+  },
+  {
     src: "/images/gallery/macatawa-legends-hydroseed-1.png",
     alt: "Macatawa Legends golf course hydroseeding with irrigation sprinklers",
     category: "Golf Courses",
