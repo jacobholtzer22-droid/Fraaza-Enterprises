@@ -15,16 +15,16 @@ import {
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Erosion Control with Hydroseeding | Holland, MI | West Michigan Landscaping",
+  title: "Erosion Control with Hydromulching | Holland, MI | West Michigan Landscaping",
   description:
-    "Hydroseeding for erosion control in Holland, MI and West Michigan. Protect slopes, roadsides, construction sites, and commercial properties from soil erosion. Fraaza Enterprises — trusted since 2004.",
+    "Hydromulching for erosion control in Holland, MI and West Michigan. Protect slopes, roadsides, construction sites, and commercial properties from soil erosion. Fraaza Enterprises — trusted since 2004.",
   alternates: {
     canonical: "/erosion-control",
   },
   openGraph: {
-    title: "Erosion Control with Hydroseeding | Fraaza Enterprises",
+    title: "Erosion Control with Hydromulching | Fraaza Enterprises",
     description:
-      "Professional erosion control hydroseeding for slopes, roadsides, and commercial sites across West Michigan.",
+      "Professional erosion control hydromulching for slopes, roadsides, and commercial sites across West Michigan.",
     url: "/erosion-control",
   },
 };
@@ -33,37 +33,37 @@ const erosionApplications: { title: string; description: string; icon: ReactNode
   {
     title: "Slopes & hillsides",
     description:
-      "Steep grades are the most common erosion challenge in West Michigan. Hydroseeding anchors seed in place with fiber mulch — even on slopes where traditional seeding or sod would slide or wash away.",
+      "Steep grades are the most common erosion challenge in West Michigan. Hydromulching bonds a protective fiber matrix directly to the soil — stabilizing slopes where traditional methods would slide or wash away.",
     icon: <MountainIcon />,
   },
   {
     title: "Roadside & right-of-way",
     description:
-      "MDOT and municipal projects require fast, reliable ground cover along roads and highways. Our hydroseeding provides compliant, even coverage for right-of-way stabilization across West Michigan.",
+      "MDOT and municipal projects require fast, reliable erosion protection along roads and highways. Our hydromulching provides compliant, even coverage for right-of-way stabilization across West Michigan.",
     icon: <RouteIcon />,
   },
   {
     title: "Construction sites",
     description:
-      "Disturbed soil from grading and excavation is highly vulnerable to erosion. Hydroseeding quickly establishes ground cover to meet stormwater management and erosion-control permit requirements.",
+      "Disturbed soil from grading and excavation is highly vulnerable to erosion. Hydromulching quickly stabilizes exposed ground to meet stormwater management and erosion-control permit requirements.",
     icon: <WrenchIcon />,
   },
   {
     title: "Commercial properties",
     description:
-      "Retain soil, protect drainage systems, and maintain a professional appearance around parking lots, retention ponds, and building perimeters with professional hydroseeding.",
+      "Retain soil, protect drainage systems, and maintain a professional appearance around parking lots, retention ponds, and building perimeters with professional hydromulching.",
     icon: <BuildingIcon />,
   },
   {
     title: "Lakefront & waterfront",
     description:
-      "West Michigan's lakefront properties face unique erosion challenges. Hydroseeding helps stabilize shoreline banks and prevent sediment runoff into waterways.",
+      "West Michigan's lakefront properties face unique erosion challenges. Hydromulching helps stabilize shoreline banks and prevent sediment runoff into waterways.",
     icon: <WavesIcon />,
   },
   {
     title: "New developments",
     description:
-      "Subdivision grading leaves acres of exposed soil. Hydroseeding scales efficiently to cover large development sites quickly, reducing erosion risk before and after construction.",
+      "Subdivision grading leaves acres of exposed soil. Hydromulching scales efficiently to cover large development sites quickly, reducing erosion risk before and after construction.",
     icon: <LayoutGridIcon />,
   },
 ];
@@ -75,7 +75,7 @@ export default function ErosionControlPage() {
       <section className="relative h-72 sm:h-96 flex items-center">
         <Image
           src="/images/services/roadside-hydroseeding.webp"
-          alt="Roadside erosion control hydroseeding in West Michigan"
+          alt="Roadside erosion control hydromulching in West Michigan"
           fill
           priority
           className="object-cover"
@@ -88,25 +88,25 @@ export default function ErosionControlPage() {
             light
             eyebrow="Erosion Control"
             title="Protect your property from erosion"
-            description="Hydroseeding is the most effective way to stabilize soil, prevent washouts, and establish lasting ground cover on slopes and exposed terrain across Holland, MI and West Michigan."
+            description="Hydromulching is the most effective way to stabilize soil, prevent washouts, and protect exposed terrain on slopes and construction sites across Holland, MI and West Michigan."
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
-            <Button href="/hydroseeding" variant="ghost" className="w-full sm:w-auto">
-              <span className="text-white/80 hover:text-white">What is Hydroseeding? &rarr;</span>
+            <Button href="/hydromulching" variant="ghost" className="w-full sm:w-auto">
+              <span className="text-white/80 hover:text-white">What is Hydromulching? &rarr;</span>
             </Button>
           </div>
         </Container>
       </section>
 
-      {/* How hydroseeding solves erosion */}
+      {/* How hydromulching solves erosion */}
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
               <SectionHeading
                 eyebrow="The Solution"
-                title="How hydroseeding stops erosion"
+                title="How hydromulching stops erosion"
                 centered
               />
               <div className="mt-8 space-y-5 text-base leading-7 text-[var(--text-secondary)]">
@@ -114,10 +114,10 @@ export default function ErosionControlPage() {
                   Erosion happens when exposed soil is left unprotected from rain, wind, and runoff. In West Michigan — where spring rains and freeze-thaw cycles are common — unprotected soil can erode rapidly, causing property damage, clogged drainage, and environmental harm.
                 </p>
                 <p>
-                  Hydroseeding solves this by combining seed, fertilizer, and fiber mulch into a slurry that bonds to the soil surface. The mulch layer acts as a protective blanket: it holds soil particles in place, retains moisture for germination, and shields seeds from being washed downhill. As the grass establishes, its root system provides long-term soil stabilization.
+                  Hydromulching solves this by applying a thick layer of fiber mulch, tackifier, and water as a bonded slurry directly onto exposed soil. The mulch matrix locks soil particles in place on contact, absorbs rainfall impact, and dramatically slows surface runoff — stopping erosion immediately, before any vegetation is needed.
                 </p>
                 <p>
-                  Unlike erosion blankets or straw alone, hydroseeding delivers both immediate surface protection and a permanent vegetative solution — all in a single application.
+                  Unlike erosion blankets or straw alone, hydromulching delivers a continuous, wind-resistant protective layer that conforms to irregular terrain — covering steep slopes, ditches, and rough-graded areas in a single application.
                 </p>
               </div>
             </div>
@@ -129,17 +129,54 @@ export default function ErosionControlPage() {
       <section className="bg-[var(--bg-white)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
-            <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
+            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
               <Image
                 src="/images/erosion-control-slope-hydroseeding.png"
-                alt="Hydroseeding a steep slope for erosion control in West Michigan"
-                width={1200}
-                height={900}
+                alt="Hydromulching a steep slope for erosion control in West Michigan"
+                width={800}
+                height={600}
                 className="h-auto w-full object-cover"
-                sizes="(max-width: 768px) 100vw, 1200px"
+                sizes="(max-width: 768px) 100vw, 672px"
               />
             </div>
           </FadeIn>
+        </Container>
+      </section>
+
+      {/* Golf course hydromulching gallery */}
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-24">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Golf Course Work"
+              title="Hydromulching for golf courses"
+              description="We've partnered with golf courses across West Michigan to restore turf, stabilize slopes, and establish durable ground cover on fairways, roughs, and drainage areas."
+              centered
+            />
+          </FadeIn>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { src: "/images/gallery/macatawa-legends-hydroseed-1.png", alt: "Golf course hydromulching at Macatawa Legends — view 1" },
+              { src: "/images/gallery/macatawa-legends-hydroseed-2.png", alt: "Golf course hydromulching at Macatawa Legends — view 2" },
+              { src: "/images/gallery/macatawa-legends-hydroseed-3.png", alt: "Golf course hydromulching at Macatawa Legends — view 3" },
+              { src: "/images/gallery/macatawa-legends-hydroseed-4.png", alt: "Golf course hydromulching at Macatawa Legends — view 4" },
+              { src: "/images/gallery/macatawa-legends-hydroseed-5.png", alt: "Golf course hydromulching at Macatawa Legends — view 5" },
+              { src: "/images/gallery/macatawa-legends-hydroseed-7.png", alt: "Golf course hydromulching at Macatawa Legends — view 6" },
+            ].map((photo) => (
+              <FadeIn key={photo.src}>
+                <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={600}
+                    height={400}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </Container>
       </section>
 
@@ -237,7 +274,7 @@ export default function ErosionControlPage() {
             <SectionHeading
               eyebrow="Applications"
               title="Where we control erosion"
-              description="From steep residential slopes to large-scale commercial sites, hydroseeding provides reliable erosion protection across West Michigan."
+              description="From steep residential slopes to large-scale commercial sites, hydromulching provides reliable erosion protection across West Michigan."
               centered
             />
           </FadeIn>
@@ -261,13 +298,13 @@ export default function ErosionControlPage() {
         </Container>
       </section>
 
-      {/* Why hydroseeding beats alternatives */}
+      {/* Why hydromulching beats alternatives */}
       <section className="bg-[var(--bg-green)]">
         <Container className="py-16 sm:py-24">
           <FadeIn>
             <SectionHeading
               light
-              eyebrow="Why Hydroseeding"
+              eyebrow="Why Hydromulching"
               title="Better than blankets, straw, or sod"
               centered
             />
@@ -281,14 +318,14 @@ export default function ErosionControlPage() {
                     "The fiber mulch bonds to soil on contact, providing surface protection from the moment it's applied — no waiting for grass to grow.",
                 },
                 {
-                  title: "Permanent solution",
+                  title: "Long-lasting protection",
                   description:
-                    "Unlike straw or erosion blankets that degrade, hydroseeded grass establishes a root network that stabilizes soil for years.",
+                    "Unlike straw or erosion blankets that degrade and shift, hydromulch forms a durable, bonded layer that holds soil in place through multiple storm cycles.",
                 },
                 {
                   title: "Cost-effective at scale",
                   description:
-                    "Hydroseeding covers large, irregular, and steep areas faster and more affordably than installing erosion blankets or sod.",
+                    "Hydromulching covers large, irregular, and steep areas faster and more affordably than installing erosion blankets or sod.",
                 },
               ].map((item) => (
                 <div
@@ -322,7 +359,7 @@ export default function ErosionControlPage() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
                 <Button href="/faq" variant="outline" className="w-full sm:w-auto">
-                  Hydroseeding FAQ
+                  Hydromulching FAQ
                 </Button>
               </div>
             </div>
