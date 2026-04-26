@@ -22,9 +22,10 @@ const footerLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function Footer() {
-  const googleReviewUrl = process.env.GOOGLE_REVIEW_URL;
+const GOOGLE_REVIEW_URL =
+  "https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,1,,,,";
 
+export function Footer() {
   return (
     <>
       {/* Photo Mosaic Strip */}
@@ -71,7 +72,7 @@ export function Footer() {
             </div>
             <div className="flex gap-3">
               <Button
-                href={googleReviewUrl || "/contact"}
+                href={GOOGLE_REVIEW_URL}
                 variant="outline"
               >
                 Leave a Review
