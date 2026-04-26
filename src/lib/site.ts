@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Fraaza Enterprises",
+  name: "Fraaza Enterprises Inc.",
   tagline: "West Michigan's Hydroseeding Experts",
   description:
     "West Michigan's hydroseeding experts since 2004. Fraaza Enterprises specializes in professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, Zeeland, Grand Haven, Hudsonville, and surrounding areas.",

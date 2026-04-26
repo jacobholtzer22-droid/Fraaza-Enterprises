@@ -64,6 +64,7 @@ export function Footer() {
                 className="h-16 w-auto rounded-lg"
               />
               <div>
+                <p className="text-lg font-bold tracking-tight text-white">{SITE.name}</p>
                 <p className="text-sm font-medium text-white/80">{SITE.tagline}</p>
                 <p className="mt-1 text-xs text-white/45">Serving West Michigan since 2004</p>
               </div>

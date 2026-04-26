@@ -51,8 +51,8 @@ export default function AboutPage() {
         <Container className="py-16 sm:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <FadeIn>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+              <div className="rounded-2xl bg-card p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   What we&apos;re known for
                 </h3>
                 <ul className="mt-6 space-y-4 text-sm text-[var(--text-secondary)]">
@@ -74,8 +74,8 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={2}>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+              <div className="rounded-2xl bg-card p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   Professional standards
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
@@ -84,44 +84,44 @@ export default function AboutPage() {
                   with an A+ rating. We stay committed to best practices that
                   protect your property and deliver consistent results.
                 </p>
-                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <a
                     href="https://www.hydroseeding.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
+                    className="flex flex-col items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-6 text-center transition-shadow hover:shadow-md group"
                   >
                     <Image
                       src="/images/iahp-logo.jpg"
                       alt="International Association of Hydroseeding Professionals"
                       width={129}
                       height={97}
-                      className="h-12 w-auto rounded"
+                      className="h-14 w-auto rounded"
                     />
-                    <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
-                      Member of the International<br />Association of Hydroseeding Professionals
+                    <span className="text-xs leading-snug text-[var(--text-secondary)] group-hover:text-[var(--text-green)] transition-colors">
+                      Member of the International Association of Hydroseeding Professionals
                     </span>
                   </a>
                   <a
                     href="https://www.bbb.org/us/mi/zeeland/profile/landscape-contractors/fraaza-enterprises-inc-0372-38114728"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
+                    className="flex flex-col items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-6 text-center transition-shadow hover:shadow-md group"
                   >
                     <Image
                       src="/images/bbb-accredited.svg"
                       alt="BBB Accredited Business — A+ Rating"
                       width={200}
                       height={76}
-                      className="h-12 w-auto rounded"
+                      className="h-14 w-auto rounded"
                     />
-                    <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
-                      BBB Accredited<br />Business — A+ Rating
+                    <span className="text-xs leading-snug text-[var(--text-secondary)] group-hover:text-[var(--text-green)] transition-colors">
+                      BBB Accredited Business — A+ Rating
                     </span>
                   </a>
                 </div>
                 <div className="mt-6 rounded-xl bg-[var(--bg-cream)] px-5 py-4 text-sm text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--bg-green)]">Our motto:</span>{" "}
+                  <span className="font-semibold text-[var(--text-green)]">Our motto:</span>{" "}
                   {SITE.motto}
                 </div>
               </div>

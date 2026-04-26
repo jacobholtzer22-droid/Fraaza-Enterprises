@@ -75,7 +75,7 @@ function DesktopDropdown({
             key={item.href}
             href={item.href}
             onClick={onClose}
-            className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-all duration-150 hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)] hover:translate-x-0.5"
+            className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-all duration-150 hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)] hover:translate-x-0.5"
           >
             <span className="text-base">{item.icon}</span>
             {item.label}
@@ -154,7 +154,7 @@ export function Header() {
       }`}
     >
       <Container className="flex h-24 items-center justify-between">
-        <Link href="/" className="group inline-flex items-center gap-3 -ml-5">
+        <Link href="/" className="group inline-flex items-center gap-5 -ml-5">
           <Image
             src="/images/fraaza-logo.webp"
             alt={SITE.name}
@@ -230,12 +230,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a
-            href={SITE.phoneHref}
-            className="hidden text-base font-medium hover:text-[var(--accent)] xl:block"
-          >
-            {SITE.phone}
-          </a>
           <Button href="/quote" className="hidden sm:inline-flex">
             Free Quote
           </Button>
@@ -266,7 +260,7 @@ export function Header() {
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
-                className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Home
@@ -275,7 +269,7 @@ export function Header() {
               {/* Mobile Hydroseeding accordion */}
               <button
                 onClick={() => setMobileHydroseedingOpen(!mobileHydroseedingOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Hydroseeding
@@ -293,7 +287,7 @@ export function Header() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                         tabIndex={open && mobileHydroseedingOpen ? 0 : -1}
                       >
                         <span className="text-base">{item.icon}</span>
@@ -307,7 +301,7 @@ export function Header() {
               {/* Mobile Services accordion */}
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Services
@@ -325,7 +319,7 @@ export function Header() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                         tabIndex={open && mobileServicesOpen ? 0 : -1}
                       >
                         <span className="text-base">{item.icon}</span>
@@ -349,7 +343,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-green)]/5 hover:text-[var(--bg-green)]"
+                  className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                   tabIndex={open ? 0 : -1}
                 >
                   {item.label}
