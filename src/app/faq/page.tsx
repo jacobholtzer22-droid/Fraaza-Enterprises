@@ -70,7 +70,7 @@ const faqs = [
   {
     question: "What's in the hydroseeding mix?",
     answer:
-      "The mix includes grass seed (custom-blended for your soil and site conditions), starter fertilizer, water, wood or paper fiber mulch, a tackifier (a natural bonding agent that helps the mulch adhere to slopes), and crabgrass and broadleaf pre-emergent. All materials are environmentally safe and pet-friendly once dry.",
+      "The mix includes grass seed (custom-blended for your soil and site conditions), starter fertilizer, water, wood or paper fiber mulch, a tackifier (a natural bonding agent that helps the mulch adhere to slopes), and a crabgrass and broadleaf pre-emergent to mitigate tree intrusion. All materials are environmentally safe and pet-friendly once dry.",
   },
   {
     question: "How do I prepare my yard for hydroseeding?",
