@@ -263,7 +263,7 @@ export default function CareAndWateringPage() {
                 Care and Watering Printable Page
               </h2>
               <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
-                Prefer a hard copy? Download the original care and watering sheet from the prior site so you can keep the instructions handy while your lawn establishes.
+                Prefer a hard copy? Download the care and watering sheet as a PDF so you can keep the instructions handy while your lawn establishes.
               </p>
               <div className="mt-8 flex justify-center">
                 <a

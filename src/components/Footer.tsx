@@ -160,7 +160,7 @@ export function Footer() {
           {/* Trust Badges */}
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
             <a
-              href="https://www.hydroseeding.org/"
+              href="http://www.hydroseeding.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3"

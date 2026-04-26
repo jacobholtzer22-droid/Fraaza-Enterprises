@@ -86,7 +86,7 @@ export default function AboutPage() {
                 </p>
                 <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <a
-                    href="https://www.hydroseeding.org/"
+                    href="http://www.hydroseeding.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-6 text-center transition-shadow hover:shadow-md group"
