@@ -100,6 +100,8 @@ const maintenanceTips: { title: string; icon: ReactNode; items: string[] }[] = [
   },
 ];
 
+const printableCareGuideUrl = "/downloads/care-and-watering-printable.pdf";
+
 export default function CareAndWateringPage() {
   return (
     <div>
@@ -246,6 +248,34 @@ export default function CareAndWateringPage() {
               </FadeIn>
             ))}
           </div>
+        </Container>
+      </section>
+
+      {/* Printable guide */}
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-16 sm:py-20">
+          <FadeIn>
+            <div className="mx-auto max-w-3xl rounded-3xl border border-[var(--bg-green)]/10 bg-white p-8 text-center shadow-[var(--shadow-sm)] sm:p-10">
+              <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
+                Printable Resource
+              </div>
+              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[var(--bg-green)] sm:text-4xl">
+                Care and Watering Printable Page
+              </h2>
+              <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
+                Prefer a hard copy? Download the original care and watering sheet from the prior site so you can keep the instructions handy while your lawn establishes.
+              </p>
+              <div className="mt-8 flex justify-center">
+                <a
+                  href={printableCareGuideUrl}
+                  download="care-and-watering-printable.pdf"
+                  className="group/btn relative inline-flex min-h-[44px] items-center justify-center gap-2 overflow-hidden rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold tracking-tight text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-xl hover:shadow-[var(--accent)]/25 active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2"
+                >
+                  Download Printable Care Guide (PDF)
+                </a>
+              </div>
+            </div>
+          </FadeIn>
         </Container>
       </section>
 
