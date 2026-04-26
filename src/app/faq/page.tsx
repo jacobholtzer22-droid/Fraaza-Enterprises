@@ -68,9 +68,9 @@ const faqs = [
       "Each has its place. Hydroseeding is more cost-effective for large areas, slopes, and custom seed blends. Sod provides an instant lawn but costs significantly more and offers limited variety. Hydroseeded lawns develop deeper root systems because they grow directly in your soil. For most West Michigan properties, hydroseeding is the smarter long-term investment.",
   },
   {
-    question: "What's in the hydroseeding slurry?",
+    question: "What's in the hydroseeding mix?",
     answer:
-      "The slurry is a mix of grass seed (custom-blended for your soil and sun conditions), starter fertilizer, water, and wood or paper fiber mulch. Some applications also include a tackifier — a natural bonding agent that helps the mulch adhere to slopes. All materials are environmentally safe and pet-friendly once dry.",
+      "The mix includes grass seed (custom-blended for your soil and site conditions), starter fertilizer, water, and wood or paper fiber mulch. Some applications also include a tackifier — a natural bonding agent that helps the mulch adhere to slopes. All materials are environmentally safe and pet-friendly once dry.",
   },
   {
     question: "How do I prepare my yard for hydroseeding?",
