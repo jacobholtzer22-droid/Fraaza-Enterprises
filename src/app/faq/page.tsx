@@ -23,24 +23,44 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How long does it take for hydroseeded grass to grow?",
+    question: "When is the best time to Hydroseed?",
     answer:
-      "You'll typically see the first sprouts within 7–14 days, depending on the seed blend, weather, and watering consistency. Expect a mowable lawn within 4–6 weeks. Full establishment usually takes one growing season (roughly 8–12 weeks). Michigan's spring and early fall conditions are ideal for fast germination.",
+      "Spring (April–June) allows you the entire summer and fall to establish your new lawn. Summer (July–August) is still a great time to install your lawn, requiring a little more watering due to the hot summer weather. Fall (Sept–Oct) is an excellent time to hydroseed your lawn with less chance of any weeds invading your new seeding — any growth that is not present before winter will quickly emerge in the spring and produce a lush lawn. Late Fall (Nov–Dec) is considered dormant seeding; you can still hydroseed but will see little to no growth. The hydroseed will remain dormant until the following spring.",
   },
   {
-    question: "How often should I water my hydroseeded lawn?",
+    question: "How do I take care of my newly Hydroseeded Lawn?",
     answer:
-      "For the first 2–3 weeks, water lightly 2–3 times per day to keep the mulch moist but not saturated. After germination begins, reduce to once or twice daily with slightly longer watering sessions. By weeks 4–6, transition to deeper, less frequent watering to encourage root growth. Check out our detailed Care & Watering guide for a week-by-week schedule.",
+      "We supply each customer with a detailed care and watering sheet. Visit our Care & Watering page for full instructions.",
   },
   {
-    question: "What is the best time of year to hydroseed in Michigan?",
+    question: "How long until I see results?",
     answer:
-      "The best seasons for hydroseeding in West Michigan are spring (late April through June) and early fall (mid-August through September). These windows provide the warm soil temperatures and consistent moisture that grass seed needs to germinate. Fall is often considered ideal because weed competition is lower. Summer applications are possible but require more diligent watering.",
+      "Depending on the seed variety used on your seeding project will determine the germination rate for the grass. For example, common perennial rye grasses and fescue grasses have a germination rate of around 5–10 days, where Kentucky Blue grasses can take up to 15–23 days to germinate. Under the proper watering and weather conditions you can expect to see germination in about 5–7 days and have a lush stand of grass in about 4–5 weeks.",
   },
   {
-    question: "Can you hydroseed on hills and slopes?",
+    question: "Can I walk on my Hydroseeded lawn?",
     answer:
-      "Absolutely — slopes are one of hydroseeding's biggest strengths. The fiber mulch in the slurry bonds to the soil surface, holding seed in place even on steep grades where traditional seeding or sod would wash away. We regularly hydroseed slopes for erosion control on residential properties, roadsides, and construction sites throughout West Michigan.",
+      "Yes, but you want to be careful not to disturb the hydroseeded layer of mulch. It is best to stay off the lawn during its early growing stages.",
+  },
+  {
+    question: "Will the Hydroseed stain my siding, concrete, or landscape?",
+    answer:
+      "No, the green hydroseed is easily washed off with a garden hose or pressure washer.",
+  },
+  {
+    question: "I have weeds in my new seeding — is this common?",
+    answer:
+      "Yes, there will be some weeds in any newly seeded lawn. Unfortunately the weed seeds were already present in your soil. Preparing the soil for seed caused these weed seeds to surface, allowing them to germinate. These weeds are best left alone — most of them are annuals and will die off the next season. It's more important to establish and thicken the grass as quickly as possible, preventing the weeds from invading. Do not apply any weed killer or weed-and-feed product on your newly seeded lawn until you have mowed it at least 3 times. If these weeds are still a problem, consult your lawn care professional with any further weed problems.",
+  },
+  {
+    question: "Is there a Guarantee?",
+    answer:
+      "We use only the best materials and effective practices available to us in the industry. We guarantee our hydroseed to grow under our specific care and watering instructions. After the area is hydroseeded you will be given detailed care and watering instructions — it is your responsibility to provide the proper maintenance needed. We cannot guarantee the end results of the hydroseeded area because the care and weather conditions are beyond our control. Fraaza Enterprises Inc. is not held responsible for any damage due to severe weather conditions, but we will reapply any damaged hydroseeded area at a negotiable price less than the original amount. Contact us for full details.",
+  },
+  {
+    question: "What other services do you offer?",
+    answer:
+      "We offer a variety of other services in the industry. Please visit our Services page to see if we can assist you on your next project.",
   },
   {
     question: "Is hydroseeding better than sod?",
@@ -53,19 +73,14 @@ const faqs = [
       "The slurry is a mix of grass seed (custom-blended for your soil and sun conditions), starter fertilizer, water, and wood or paper fiber mulch. Some applications also include a tackifier — a natural bonding agent that helps the mulch adhere to slopes. All materials are environmentally safe and pet-friendly once dry.",
   },
   {
-    question: "When can I mow after hydroseeding?",
-    answer:
-      "Wait until the grass reaches 3.5–4 inches in height, typically 4–6 weeks after application. Use a sharp mower blade and never cut more than one-third of the grass height at a time. Avoid mowing when the lawn is wet, as this can pull up young seedlings.",
-  },
-  {
-    question: "Do you serve areas outside Holland, MI?",
-    answer:
-      "Yes! Fraaza Enterprises serves all of West Michigan including Zeeland, Grand Haven, Hudsonville, Jenison, Allendale, Hamilton, Saugatuck, and surrounding communities. Contact us to confirm service availability for your location.",
-  },
-  {
     question: "How do I prepare my yard for hydroseeding?",
     answer:
       "We handle the soil preparation as part of our service. This typically includes grading, removing debris, and ensuring proper drainage. If you're doing any prep yourself, avoid compacting the soil — loose, level soil gives the best results. We'll assess your property during the free estimate and recommend any additional prep needed.",
+  },
+  {
+    question: "When can I mow after hydroseeding?",
+    answer:
+      "Wait until the grass reaches 3.5–4 inches in height, typically 4–6 weeks after application. Use a sharp mower blade and never cut more than one-third of the grass height at a time. Avoid mowing when the lawn is wet, as this can pull up young seedlings.",
   },
 ];
 

@@ -338,7 +338,7 @@ export default function Home() {
           <FadeIn delay={1}>
             <div className="mt-8 flex justify-center">
               <a
-                href="https://www.google.com/maps/place/Fraaza+Enterprises"
+                href="https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,3,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
