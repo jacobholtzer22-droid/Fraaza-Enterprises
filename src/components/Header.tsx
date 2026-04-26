@@ -229,8 +229,15 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Button href="/quote" className="hidden sm:inline-flex">
+        <div className="flex items-center gap-2">
+          <Button
+            href={SITE.phoneHref}
+            variant="secondary"
+            className="hidden lg:inline-flex px-4 py-2 text-xs"
+          >
+            Call
+          </Button>
+          <Button href="/quote" className="hidden xl:inline-flex">
             Free Quote
           </Button>
           <button
@@ -349,6 +356,11 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <div className="pt-2">
+                <Button href={SITE.phoneHref} variant="secondary" className="w-full">
+                  Call Now
+                </Button>
+              </div>
               <div className="pt-2">
                 <Button href="/quote" className="w-full">
                   Get a Free Quote

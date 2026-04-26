@@ -29,14 +29,25 @@ export function Button({
   children: React.ReactNode;
 }) {
   const cls = cn(base, variants[variant], className);
-  const isExternal = href.startsWith("http");
-  if (isExternal) {
+  const isHttpExternal = href.startsWith("http");
+  const isProtocolLink = href.startsWith("tel:") || href.startsWith("mailto:");
+
+  if (isHttpExternal) {
     return (
       <a className={cls} href={href} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
   }
+
+  if (isProtocolLink) {
+    return (
+      <a className={cls} href={href}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link className={cls} href={href}>
       {children}
