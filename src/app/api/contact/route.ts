@@ -16,9 +16,9 @@ export async function POST(req: Request) {
   const message = String(body?.message || "").trim();
   const service = String(body?.service || "").trim() || undefined;
 
-  if (!name || !email || !message) {
+  if (!name || !email || !phone || !message) {
     return NextResponse.json(
-      { error: "Name, email, and message are required." },
+      { error: "Name, email, phone, and message are required." },
       { status: 400 },
     );
   }

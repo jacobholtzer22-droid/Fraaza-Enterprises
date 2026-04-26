@@ -153,22 +153,26 @@ export function Header() {
           : "border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md"
       }`}
     >
-      <Container className="flex h-18 items-center justify-between">
-        <Link href="/" className="group inline-flex items-center">
+      <Container className="flex h-24 items-center justify-between">
+        <Link href="/" className="group inline-flex items-center gap-3 -ml-5">
           <Image
             src="/images/fraaza-logo.webp"
             alt={SITE.name}
-            width={180}
-            height={100}
-            className="h-[44px] w-auto"
+            width={220}
+            height={120}
+            className="h-[56px] w-auto"
             priority
           />
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-lg font-bold tracking-tight">{SITE.name}</span>
+            <span className="text-xs text-[var(--text-muted)]">Serving West Michigan</span>
+          </div>
         </Link>
 
-        <nav ref={navRef} className="hidden items-center gap-8 md:flex">
+        <nav ref={navRef} className="hidden items-center gap-8 lg:flex">
           <Link
             href="/"
-            className="text-sm font-medium transition-colors hover:text-[var(--accent)]"
+            className="text-base font-medium transition-colors hover:text-[var(--accent)]"
           >
             Home
           </Link>
@@ -181,7 +185,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "hydroseeding" ? null : "hydroseeding")}
-              className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-[var(--accent)]"
+              className="inline-flex items-center gap-1 text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               Hydroseeding
               <ChevronDown open={activeDropdown === "hydroseeding"} />
@@ -199,7 +203,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")}
-              className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-[var(--accent)]"
+              className="inline-flex items-center gap-1 text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               Services
               <ChevronDown open={activeDropdown === "services"} />
@@ -218,7 +222,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-[var(--accent)]"
+              className="text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               {item.label}
             </Link>
@@ -228,7 +232,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <a
             href={SITE.phoneHref}
-            className="hidden text-sm font-medium hover:text-[var(--accent)] lg:block"
+            className="hidden text-base font-medium hover:text-[var(--accent)] xl:block"
           >
             {SITE.phone}
           </a>
@@ -237,7 +241,7 @@ export function Header() {
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10 lg:hidden"
             aria-label="Toggle menu"
           >
             {open ? (
@@ -251,7 +255,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${
+        className={`lg:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
         aria-hidden={!open}

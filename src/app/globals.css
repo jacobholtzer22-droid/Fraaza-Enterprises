@@ -234,10 +234,12 @@ body {
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 .header-scrolled a,
-.header-scrolled button {
+.header-scrolled button,
+.header-scrolled span {
   color: rgba(255, 255, 255, 0.8);
 }
 .header-scrolled a:hover,
-.header-scrolled button:hover {
+.header-scrolled button:hover,
+.header-scrolled span:hover {
   color: #fff;
 }

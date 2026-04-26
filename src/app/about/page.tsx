@@ -62,6 +62,7 @@ export default function AboutPage() {
                     "Soil testing, grading, amendments, and topsoil/compost installs",
                     "Additional services: landscaping, sod, retaining walls, and snow plowing",
                     "Member of the International Association of Hydroseeding Professionals (IAHP)",
+                    "BBB Accredited Business with an A+ rating",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
@@ -79,27 +80,46 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
                   We&apos;re a proud member of the International Association of
-                  Hydroseeding Professionals (IAHP) and stay committed to best
-                  practices that protect your property and deliver consistent
-                  results.
+                  Hydroseeding Professionals (IAHP) and a BBB Accredited Business
+                  with an A+ rating. We stay committed to best practices that
+                  protect your property and deliver consistent results.
                 </p>
-                <a
-                  href="https://www.hydroseeding.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
-                >
-                  <Image
-                    src="/images/iahp-logo.jpg"
-                    alt="International Association of Hydroseeding Professionals"
-                    width={129}
-                    height={97}
-                    className="h-12 w-auto rounded"
-                  />
-                  <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
-                    Member of the International<br />Association of Hydroseeding Professionals
-                  </span>
-                </a>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://www.hydroseeding.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
+                  >
+                    <Image
+                      src="/images/iahp-logo.jpg"
+                      alt="International Association of Hydroseeding Professionals"
+                      width={129}
+                      height={97}
+                      className="h-12 w-auto rounded"
+                    />
+                    <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
+                      Member of the International<br />Association of Hydroseeding Professionals
+                    </span>
+                  </a>
+                  <a
+                    href="https://www.bbb.org/us/mi/zeeland/profile/landscape-contractors/fraaza-enterprises-inc-0372-38114728"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-4 transition-shadow hover:shadow-md group"
+                  >
+                    <Image
+                      src="/images/bbb-accredited.svg"
+                      alt="BBB Accredited Business — A+ Rating"
+                      width={200}
+                      height={76}
+                      className="h-12 w-auto rounded"
+                    />
+                    <span className="text-xs leading-tight text-[var(--text-secondary)] group-hover:text-[var(--bg-green)] transition-colors">
+                      BBB Accredited<br />Business — A+ Rating
+                    </span>
+                  </a>
+                </div>
                 <div className="mt-6 rounded-xl bg-[var(--bg-cream)] px-5 py-4 text-sm text-[var(--text-secondary)]">
                   <span className="font-semibold text-[var(--bg-green)]">Our motto:</span>{" "}
                   {SITE.motto}

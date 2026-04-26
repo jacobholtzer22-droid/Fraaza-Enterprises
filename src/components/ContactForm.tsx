@@ -29,12 +29,20 @@ export function ContactForm({
   const [error, setError] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
-  function validate(fields: { name: string; email: string; message: string }) {
+  function validate(fields: {
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+    service?: string;
+  }) {
     const errors: Record<string, string> = {};
     if (!fields.name.trim()) errors.name = "Name is required.";
     if (!fields.email.trim()) errors.email = "Email is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email.trim()))
       errors.email = "Please enter a valid email.";
+    if (!fields.phone.trim()) errors.phone = "Phone number is required.";
+    if (showService && !fields.service?.trim()) errors.service = "Please select a service.";
     if (!fields.message.trim()) errors.message = "Message is required.";
     return errors;
   }
@@ -51,7 +59,7 @@ export function ContactForm({
     const message = String(fd.get("message") || "");
     const service = showService ? String(fd.get("service") || "") : undefined;
 
-    const errors = validate({ name, email, message });
+    const errors = validate({ name, email, phone, message, service });
     if (Object.keys(errors).length > 0) {
       setValidationErrors(errors);
       return;
@@ -148,8 +156,10 @@ export function ContactForm({
             <Field
               label="Phone"
               name="phone"
+              required
               placeholder="(616) 555-1234"
               dark={dark}
+              error={validationErrors.phone}
             />
             {showService && (
               <div>
@@ -159,19 +169,29 @@ export function ContactForm({
                     dark ? "text-white/70" : "text-[var(--text-secondary)]",
                   )}
                 >
-                  Service
+                  Service <span className="text-red-500">*</span>
                 </label>
                 <select
                   name="service"
-                  className={cn(inputCls, dark && "bg-white/10 border-white/15 text-white")}
-                  defaultValue="Not Sure"
+                  className={cn(
+                    inputCls,
+                    dark && "bg-white/10 border-white/15 text-white",
+                    validationErrors.service && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
+                  )}
+                  defaultValue=""
                 >
+                  <option value="" disabled>
+                    Select a service
+                  </option>
                   {SERVICE_OPTIONS.map((opt) => (
                     <option key={opt} value={opt}>
                       {opt}
                     </option>
                   ))}
                 </select>
+                {validationErrors.service && (
+                  <p className="mt-1 text-xs text-red-500">{validationErrors.service}</p>
+                )}
               </div>
             )}
           </div>
