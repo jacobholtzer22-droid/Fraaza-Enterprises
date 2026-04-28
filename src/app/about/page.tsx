@@ -24,6 +24,136 @@ export const metadata: Metadata = {
 const GOOGLE_REVIEW_URL =
   "https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,1,,,,";
 
+const whyChooseUs: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}[] = [
+  {
+    title: "Hydroseeding Specialists",
+    description:
+      "We're not a general contractor that dabbles in hydroseeding — it's our core focus and has been since 2004.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M12 2c-1 4-4 6-4 10a4 4 0 0 0 8 0c0-4-3-6-4-10Z" />
+        <path d="M12 16v6" />
+        <path d="M9 22h6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Owner-Operated",
+    description:
+      "Chad Fraaza is on every job site — you get direct communication, accountability, and pride in workmanship.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+      </svg>
+    ),
+  },
+  {
+    title: "20+ Years Experience",
+    description:
+      "Two decades of dedicated hydroseeding across West Michigan — residential, commercial, and industrial sites.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </svg>
+    ),
+  },
+  {
+    title: "Professional-Grade Equipment",
+    description:
+      "Modern hydroseeding trucks and quality materials — from premium seed blends to fertilizer and tackifier — that produce consistent, long-lasting results.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M3 17V8a1 1 0 0 1 1-1h11v10" />
+        <path d="M15 11h4l3 3v3h-7" />
+        <circle cx="7" cy="18" r="2" />
+        <circle cx="17" cy="18" r="2" />
+      </svg>
+    ),
+  },
+  {
+    title: "Trusted & Accredited",
+    description:
+      "BBB Accredited with an A+ rating and proud member of the International Association of Hydroseeding Professionals.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    title: "Honest, Free Estimates",
+    description:
+      "Clear quotes, transparent pricing, and straightforward advice — no high-pressure sales, just the right plan for your property.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z" />
+        <circle cx="8" cy="8" r="1.5" />
+      </svg>
+    ),
+  },
+];
+
 const reviews = [
   {
     quote:
@@ -183,9 +313,44 @@ export default function AboutPage() {
             </FadeIn>
           </div>
 
+        </Container>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="bg-[var(--bg-cream)] bg-texture">
+        <Container className="py-20 sm:py-28">
           <FadeIn>
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request a free quote</Button>
+            <SectionHeading
+              eyebrow="Why Choose Us"
+              title="What sets Fraaza Enterprises apart"
+              description="When you hire us, you're not getting a side-service crew — you're getting West Michigan's dedicated hydroseeding specialists with decades of hands-on experience."
+              centered
+            />
+          </FadeIn>
+
+          <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {whyChooseUs.map((item, idx) => (
+              <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <div className="flex h-full flex-col rounded-2xl bg-card p-7 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
+                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                    <span className="block h-6 w-6">{item.icon}</span>
+                  </div>
+                  <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
+                    {item.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn>
+            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">
+                Request a free quote
+              </Button>
               <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 View services
               </Button>
