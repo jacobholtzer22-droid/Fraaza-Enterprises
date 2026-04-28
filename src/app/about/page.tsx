@@ -96,7 +96,7 @@ export default function AboutPage() {
                       alt="International Association of Hydroseeding Professionals"
                       width={129}
                       height={97}
-                      className="h-14 w-auto rounded"
+                      className="h-14 w-auto rounded-lg"
                     />
                     <span className="text-xs leading-snug text-[var(--text-secondary)] group-hover:text-[var(--text-green)] transition-colors">
                       Member of the International Association of Hydroseeding Professionals
@@ -113,7 +113,7 @@ export default function AboutPage() {
                       alt="BBB Accredited Business — A+ Rating"
                       width={200}
                       height={76}
-                      className="h-14 w-auto rounded"
+                      className="h-14 w-auto rounded-lg"
                     />
                     <span className="text-xs leading-snug text-[var(--text-secondary)] group-hover:text-[var(--text-green)] transition-colors">
                       BBB Accredited Business — A+ Rating

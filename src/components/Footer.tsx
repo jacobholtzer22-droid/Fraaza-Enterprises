@@ -170,7 +170,7 @@ export function Footer() {
                 alt="International Association of Hydroseeding Professionals"
                 width={129}
                 height={97}
-                className="h-11 w-auto rounded bg-white/90 p-1"
+                className="h-11 w-auto rounded-lg bg-white/90 p-1"
               />
               <span className="hidden text-xs leading-tight text-white/45 group-hover:text-white/75 transition-colors sm:block">
                 IAHP Member
@@ -187,7 +187,7 @@ export function Footer() {
                 alt="BBB Accredited Business — A+ Rating"
                 width={200}
                 height={76}
-                className="h-11 w-auto rounded"
+                className="h-11 w-auto rounded-lg"
               />
               <span className="hidden text-xs leading-tight text-white/45 group-hover:text-white/75 transition-colors sm:block">
                 BBB A+ Rating
