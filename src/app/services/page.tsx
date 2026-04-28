@@ -91,7 +91,7 @@ export default function ServicesPage() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Landscaping"
-                description="Sod installation, retaining walls, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
+                description="Sod installation, retaining walls, drain tile and yard drainage, planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
                 href="/services/landscaping"
                 image="/images/portfolio/pool-landscape-design.webp"
               />

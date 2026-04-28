@@ -8,14 +8,14 @@ import { FadeIn } from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Landscaping | Holland, MI",
   description:
-    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
+    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, drain tile installation, yard drainage, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/landscaping",
   },
   openGraph: {
     title: "Landscaping | Holland, MI | Fraaza Enterprises",
     description:
-      "Landscaping services across West Michigan: sod, retaining walls, planting, and more.",
+      "Landscaping services across West Michigan: sod, retaining walls, drain tile installation, planting, and more.",
     url: "/services/landscaping",
   },
 };
@@ -40,7 +40,7 @@ export default function LandscapingPage() {
             light
             eyebrow="Services"
             title="Landscaping"
-            description="From sod installs to retaining walls and planting, we build outdoor spaces that look great and hold up."
+            description="From sod installs and retaining walls to drain tile and planting, we build outdoor spaces that look great, drain right, and hold up."
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
@@ -72,6 +72,8 @@ export default function LandscapingPage() {
             {[
               { title: "Sod installation", desc: "Professional sod install for quick curb appeal and an instant green lawn." },
               { title: "Retaining walls", desc: "Functional and attractive walls to manage grade changes and define spaces." },
+              { title: "Drain tile installation", desc: "Move water away from foundations, low spots, and saturated areas with properly installed drain tile." },
+              { title: "Yard drainage solutions", desc: "Catch basins, downspout tie-ins, and surface drainage to keep your lawn dry and protect hardscapes." },
               { title: "Tree planting", desc: "Planting and placement guidance for a healthier, better-looking landscape." },
               { title: "Soil prep & seeding", desc: "Prep work that sets the foundation for a strong lawn and clean finish." },
               { title: "Topsoil & bark", desc: "Delivery and installation for clean beds and healthy growing conditions." },

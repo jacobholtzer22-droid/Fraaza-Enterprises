@@ -21,6 +21,60 @@ export const metadata: Metadata = {
   },
 };
 
+const GOOGLE_REVIEW_URL =
+  "https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,1,,,,";
+
+const reviews = [
+  {
+    quote:
+      "I had my lawn put in — dirt, hydroseed and all — when purchasing my new home in 2024 by Fraaza Enterprises. I also had landscaping work done in summer of 2025 in front of my home. Each project was done so well, and Chad was excellent at communication and overall customer service. I would highly recommend Fraaza Enterprises for any work you need done outside around your home!",
+    name: "Ally LaCombe",
+    context: "Hydroseeding & Landscaping",
+    date: "1 month ago",
+    initials: "AL",
+  },
+  {
+    quote:
+      "Awesome snow removal service. Has been providing snow removal at Pine Creek Apts for close to 20 years. Super helpful and always prompt.",
+    name: "Laurie Prielipp",
+    context: "Snow Removal — Pine Creek Apts",
+    date: "4 months ago",
+    initials: "LP",
+  },
+  {
+    quote:
+      "My wife and I recently hired Fraaza Enterprises for a yard grading & hydroseeding project at our new construction home, and we couldn't be more pleased with the results. From the initial consultation to the final follow-up, Chad was extremely professional, very knowledgeable, and punctual. He spent countless hours on the skid steer making sure our yard was meticulously graded.",
+    name: "Paul Sam",
+    context: "New Construction Hydroseeding",
+    date: "6 months ago",
+    initials: "PS",
+  },
+  {
+    quote:
+      "Chad was super helpful, timely, easy to work with, and we've had great results. Highly recommend!",
+    name: "Drew Billin",
+    context: "Hydroseeding",
+    date: "6 months ago",
+    initials: "DB",
+  },
+  {
+    quote:
+      "We absolutely love the results we are getting from Fraaza. From the first call to inquire about the product, to the day of application, Chad was great. His eye for detail, knowledge, and professionalism are apparent in his workmanship. Within a week of application we had sprouts of grass — and at four weeks we had grass covering our entire property. Our dog is wildly excited to finally have a yard, as are we!",
+    name: "Jessica Jelsema",
+    context: "Residential Hydroseeding",
+    date: "2 years ago",
+    initials: "JJ",
+  },
+  {
+    quote:
+      "We had a motocross track on our property and nobody was using it, so we leveled all the dirt and hired Chad at Fraaza Enterprises. He smoothed out all the dirt and hydroseeded it — and you can't even tell we ever had a track. Great job Chad!",
+    name: "Holland Property Owner",
+    context: "Grading & Hydroseeding",
+    date: "Verified Google review",
+    initials: "HP",
+  },
+];
+
 export default function AboutPage() {
   return (
     <div>
@@ -60,7 +114,7 @@ export default function AboutPage() {
                     "Hydroseeding specialists — new lawns, erosion control, and large-scale projects",
                     "20+ years of dedicated hydroseeding experience across West Michigan",
                     "Soil testing, grading, amendments, and topsoil/compost installs",
-                    "Additional services: landscaping, sod, retaining walls, and snow plowing",
+                    "Additional services: landscaping, sod, retaining walls, drain tile installation, tree planting, and snow plowing",
                     "Member of the International Association of Hydroseeding Professionals (IAHP)",
                     "BBB Accredited Business with an A+ rating",
                   ].map((item) => (
@@ -134,6 +188,85 @@ export default function AboutPage() {
               <Button href="/contact#quote-form" className="w-full sm:w-auto">Request a free quote</Button>
               <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 View services
+              </Button>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* Reviews */}
+      <section className="relative bg-[var(--bg-green)] bg-texture">
+        <Container className="py-20 sm:py-28">
+          <FadeIn>
+            <SectionHeading
+              light
+              eyebrow="Customer Reviews"
+              title="What our customers are saying"
+              description="Real reviews from West Michigan homeowners and property managers we've had the pleasure of working with."
+              centered
+            />
+          </FadeIn>
+
+          <FadeIn delay={1}>
+            <div className="mt-8 flex justify-center">
+              <a
+                href={GOOGLE_REVIEW_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+              >
+                <span className="text-amber-400">★</span>
+                4.8 on Google — 18 Reviews
+              </a>
+            </div>
+          </FadeIn>
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((r, idx) => (
+              <FadeIn key={r.name} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-md shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
+                  <div className="flex items-center gap-1 text-amber-400" aria-label="5 out of 5 stars">
+                    <span aria-hidden>★</span>
+                    <span aria-hidden>★</span>
+                    <span aria-hidden>★</span>
+                    <span aria-hidden>★</span>
+                    <span aria-hidden>★</span>
+                  </div>
+                  <blockquote className="mt-4 flex-1 text-sm leading-7 text-white/85">
+                    &ldquo;{r.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                    <div
+                      aria-hidden
+                      className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-sm font-semibold text-white"
+                    >
+                      {r.initials}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="truncate text-sm font-semibold text-white">
+                        {r.name}
+                      </div>
+                      <div className="truncate text-xs text-white/55">
+                        {r.context} · {r.date}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn>
+            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                href={GOOGLE_REVIEW_URL}
+                variant="outline"
+                className="w-full sm:w-auto"
+              >
+                Read all reviews on Google
+              </Button>
+              <Button href="/contact#quote-form" className="w-full sm:w-auto">
+                Get your free quote
               </Button>
             </div>
           </FadeIn>
