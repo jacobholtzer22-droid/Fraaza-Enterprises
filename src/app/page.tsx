@@ -211,7 +211,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="What We Do"
               title="Our core services"
-              description="Four specialties, one owner on every job. Over 20 years of trusted work across West Michigan."
+              description="Comprehensive outdoor solutions delivered with personal attention and over 20 years of trusted craftsmanship across West Michigan."
               centered
             />
           </FadeIn>

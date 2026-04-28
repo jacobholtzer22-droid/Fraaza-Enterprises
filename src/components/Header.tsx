@@ -68,14 +68,14 @@ function DesktopDropdown({
 }) {
   return (
     <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
-      <div className="dropdown-enter relative w-60 rounded-xl border border-black/10 bg-white p-2 shadow-lg">
-        <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rotate-45 border-l border-t border-black/10 bg-white" />
+      <div className="dropdown-enter relative w-60 rounded-xl border border-[var(--border)] bg-[var(--bg-cream)] p-2 shadow-[var(--shadow-lg)]">
+        <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rotate-45 border-l border-t border-[var(--border)] bg-[var(--bg-cream)]" />
         {items.map((item) => (
           <Link
             key={item.href}
             href={item.href}
             onClick={onClose}
-            className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-neutral-700 transition-all duration-150 hover:bg-[var(--green)]/10 hover:text-[var(--green)] hover:translate-x-0.5"
+            className="relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-all duration-150 hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)] hover:translate-x-0.5"
           >
             <span className="text-base">{item.icon}</span>
             {item.label}
@@ -83,7 +83,7 @@ function DesktopDropdown({
         ))}
         {footerHref && footerLabel && (
           <>
-            <div className="my-1.5 border-t border-black/10" />
+            <div className="my-1.5 border-t border-[var(--border)]" />
             <Link
               href={footerHref}
               onClick={onClose}
@@ -147,7 +147,7 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/95 text-neutral-900 backdrop-blur-md transition-all duration-500">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500">
         <Container
           className="max-w-7xl flex h-24 items-center justify-between transition-all duration-500 lg:h-[7.5rem]"
         >
@@ -166,10 +166,10 @@ export function Header() {
             priority
           />
           <div className="hidden xl:flex flex-col leading-tight">
-            <span className="text-2xl font-bold tracking-tight text-neutral-900 transition-all duration-500">
+            <span className="text-2xl font-bold tracking-tight transition-all duration-500">
               {SITE.name}
             </span>
-            <span className="text-base text-neutral-500 transition-all duration-500">
+            <span className="text-base text-[var(--text-muted)] transition-all duration-500">
               Serving West Michigan
             </span>
           </div>
@@ -178,7 +178,7 @@ export function Header() {
         <nav ref={navRef} className="hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:gap-6">
           <Link
             href="/"
-            className="text-base font-medium text-neutral-800 transition-colors hover:text-[var(--accent)]"
+            className="text-base font-medium transition-colors hover:text-[var(--accent)]"
           >
             Home
           </Link>
@@ -191,7 +191,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "hydroseeding" ? null : "hydroseeding")}
-              className="inline-flex items-center gap-1 text-base font-medium text-neutral-800 transition-colors hover:text-[var(--accent)]"
+              className="inline-flex items-center gap-1 text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               Hydroseeding
               <ChevronDown open={activeDropdown === "hydroseeding"} />
@@ -209,7 +209,7 @@ export function Header() {
           >
             <button
               onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")}
-              className="inline-flex items-center gap-1 text-base font-medium text-neutral-800 transition-colors hover:text-[var(--accent)]"
+              className="inline-flex items-center gap-1 text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               Services
               <ChevronDown open={activeDropdown === "services"} />
@@ -228,7 +228,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-base font-medium text-neutral-800 transition-colors hover:text-[var(--accent)]"
+              className="text-base font-medium transition-colors hover:text-[var(--accent)]"
             >
               {item.label}
             </Link>
@@ -248,7 +248,7 @@ export function Header() {
           </Button>
           <button
             onClick={() => setOpen(!open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-neutral-800 hover:bg-black/5 lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10 lg:hidden"
             aria-label="Toggle menu"
           >
             {open ? (
@@ -268,12 +268,12 @@ export function Header() {
           aria-hidden={!open}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-black/10 bg-white">
+            <div className="border-t border-[var(--border)] bg-[var(--bg-cream)]">
               <Container className="py-4 space-y-1">
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
-                className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-neutral-800 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Home
@@ -282,7 +282,7 @@ export function Header() {
               {/* Mobile Hydroseeding accordion */}
               <button
                 onClick={() => setMobileHydroseedingOpen(!mobileHydroseedingOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-neutral-800 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Hydroseeding
@@ -300,7 +300,7 @@ export function Header() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-neutral-700 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                         tabIndex={open && mobileHydroseedingOpen ? 0 : -1}
                       >
                         <span className="text-base">{item.icon}</span>
@@ -314,7 +314,7 @@ export function Header() {
               {/* Mobile Services accordion */}
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-neutral-800 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                className="flex w-full items-center justify-between rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                 tabIndex={open ? 0 : -1}
               >
                 Services
@@ -332,7 +332,7 @@ export function Header() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-neutral-700 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                        className="flex items-center gap-2 rounded-lg px-4 min-h-[44px] text-sm text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                         tabIndex={open && mobileServicesOpen ? 0 : -1}
                       >
                         <span className="text-base">{item.icon}</span>
@@ -356,7 +356,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-neutral-800 hover:bg-[var(--green)]/10 hover:text-[var(--green)]"
+                  className="flex items-center rounded-lg px-4 min-h-[44px] text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--text-green)]/10 hover:text-[var(--text-green)]"
                   tabIndex={open ? 0 : -1}
                 >
                   {item.label}
