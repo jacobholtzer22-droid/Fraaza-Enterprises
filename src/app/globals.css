@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg-cream: #F5F0E8;
-  --bg-white: #FEFDFB;
+  --bg-cream: #0a0a0a;
+  --bg-white: #111111;
   --bg-dark: #1a1a1a;
+  --bg-elevated: #1a1a1a;
   --bg-green: #2D4A2D;
   --bg-green-light: #3A5C3A;
 
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a4a4a;
-  --text-muted: #7a7a7a;
-  --text-light: #F5F0E8;
+  --text-primary: #f5f5f5;
+  --text-secondary: #c4c4c4;
+  --text-muted: #9ca3af;
+  --text-light: #f5f5f5;
 
   --accent: #C8956C;
   --accent-hover: #B07E58;
@@ -19,13 +20,13 @@
   --green: #2D4A2D;
   --green-light: #3A5C3A;
 
-  --border: rgba(45, 74, 45, 0.12);
+  --border: rgba(255, 255, 255, 0.08);
   --border-light: rgba(255, 255, 255, 0.15);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.16);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.7);
 }
 
 @theme inline {
@@ -57,7 +58,7 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--green) 25%, transparent);
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
   color: var(--text-primary);
 }
 
@@ -224,19 +225,19 @@ body {
 
 /* ── Subtle texture background ── */
 .bg-texture {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D4A2D' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ── Navbar scroll state ── */
 .header-scrolled {
-  background: rgba(26, 26, 26, 0.85) !important;
+  background: rgba(10, 10, 10, 0.85) !important;
   backdrop-filter: blur(16px) saturate(180%);
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 .header-scrolled a,
 .header-scrolled button,
 .header-scrolled span {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(245, 245, 245, 0.85);
 }
 .header-scrolled a:hover,
 .header-scrolled button:hover,

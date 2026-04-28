@@ -35,7 +35,7 @@ export default function ServicesPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 to-[var(--bg-green)]/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -56,7 +56,7 @@ export default function ServicesPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-dark)]/90" />
+        <div className="pointer-events-none absolute inset-0 bg-[var(--bg-dark)]/70" />
         <Container className="relative z-10 py-16 sm:py-24">
           <FadeIn delay={1}>
             <ServiceCard
@@ -117,7 +117,7 @@ export default function ServicesPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/85" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/45 to-[var(--bg-green)]/35" />
         <Container className="relative z-10 py-16 sm:py-20">
           <FadeIn>
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">

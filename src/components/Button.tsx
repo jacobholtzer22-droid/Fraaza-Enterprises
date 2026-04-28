@@ -10,9 +10,9 @@ const variants: Record<ButtonVariant, string> = {
   primary:
     "bg-[var(--accent)] text-white shadow-md hover:bg-[var(--accent-hover)] hover:shadow-xl hover:shadow-[var(--accent)]/25 btn-shimmer overflow-hidden",
   secondary:
-    "bg-[var(--bg-green)] text-[var(--bg-cream)] shadow-md hover:bg-[var(--green-light)] hover:shadow-xl hover:shadow-[var(--bg-green)]/25 btn-shimmer overflow-hidden",
+    "bg-[var(--bg-green)] text-[var(--text-light)] shadow-md hover:bg-[var(--green-light)] hover:shadow-xl hover:shadow-[var(--bg-green)]/25 btn-shimmer overflow-hidden",
   ghost:
-    "text-[var(--bg-green)] hover:bg-[var(--bg-green)]/5",
+    "text-[var(--text-primary)] hover:bg-white/5",
   outline:
     "border-2 border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white hover:shadow-lg hover:shadow-[var(--accent)]/20",
 };

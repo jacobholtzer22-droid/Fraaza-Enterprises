@@ -33,7 +33,7 @@ export default function HydroseedingPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -55,8 +55,8 @@ export default function HydroseedingPage() {
         <Container className="py-16 sm:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <FadeIn>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   What is hydroseeding?
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
@@ -68,8 +68,8 @@ export default function HydroseedingPage() {
               </div>
             </FadeIn>
             <FadeIn delay={2}>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Benefits vs. sod
                 </h3>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--text-secondary)]">
@@ -106,8 +106,8 @@ export default function HydroseedingPage() {
 
           {/* Services list */}
           <FadeIn>
-            <div className="mt-12 rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+            <div className="mt-12 rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                 Hydroseeding services
               </h3>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -120,9 +120,9 @@ export default function HydroseedingPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-xl bg-[var(--bg-cream)] p-5 transition-shadow duration-300 hover:shadow-[var(--shadow-sm)]"
+                    className="rounded-xl bg-[var(--bg-white)] p-5 transition-shadow duration-300 hover:shadow-[var(--shadow-sm)]"
                   >
-                    <div className="text-sm font-semibold text-[var(--bg-green)]">{item.title}</div>
+                    <div className="text-sm font-semibold text-[var(--text-primary)]">{item.title}</div>
                     <div className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{item.desc}</div>
                   </div>
                 ))}

@@ -32,7 +32,7 @@ export function SectionHeading({
       <Tag
         className={cn(
           "mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold tracking-tight sm:text-4xl",
-          light ? "text-[var(--bg-cream)]" : "text-[var(--bg-green)]",
+          light ? "text-[var(--text-light)]" : "text-[var(--text-primary)]",
         )}
       >
         {title}

@@ -32,7 +32,7 @@ export default function QuotePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"

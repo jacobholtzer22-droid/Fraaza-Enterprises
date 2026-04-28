@@ -37,7 +37,7 @@ export function Footer() {
               alt={photo.alt}
               fill
               sizes="(max-width: 768px) 25vw, 12.5vw"
-              className="object-cover opacity-50 group-hover:opacity-90 transition-opacity duration-300"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -52,7 +52,7 @@ export function Footer() {
         ))}
       </div>
 
-      <footer className="bg-[var(--bg-green)] text-[var(--bg-cream)]">
+      <footer className="bg-[var(--bg-green)] text-[var(--text-light)]">
         <Container className="py-14 lg:py-16">
           {/* Top: Brand + CTA */}
           <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">

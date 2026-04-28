@@ -70,7 +70,7 @@ export default function HydroseedingInfoPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -128,11 +128,11 @@ export default function HydroseedingInfoPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((item, idx) => (
               <FadeIn key={item.step} delay={((idx % 4) + 1) as 1 | 2 | 3 | 4}>
-                <div className="rounded-2xl bg-[var(--bg-cream)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full">
+                <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--bg-green)] text-sm font-bold text-white">
                     {item.step}
                   </div>
-                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)]">
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
@@ -184,11 +184,11 @@ export default function HydroseedingInfoPage() {
         <Container className="py-16 sm:py-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <FadeIn>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)] h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)] h-full">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/20">
                   <HomeIcon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Residential hydroseeding
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
@@ -205,11 +205,11 @@ export default function HydroseedingInfoPage() {
               </div>
             </FadeIn>
             <FadeIn delay={2}>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)] h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)] h-full">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/20">
                   <BuildingIcon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Commercial hydroseeding
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
@@ -238,7 +238,7 @@ export default function HydroseedingInfoPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/30" />
         <Container className="relative z-10 py-20 sm:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">

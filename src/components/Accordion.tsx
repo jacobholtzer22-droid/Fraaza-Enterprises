@@ -20,7 +20,7 @@ function AccordionItem({
         className="flex w-full items-start justify-between gap-4 py-6 text-left"
         aria-expanded={isOpen}
       >
-        <span className="text-base font-semibold text-[var(--bg-green)]">
+        <span className="text-base font-semibold text-[var(--text-primary)]">
           {question}
         </span>
         <svg
@@ -56,7 +56,7 @@ export function Accordion({
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-[var(--shadow-sm)] sm:p-10">
+    <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] sm:p-10">
       {items.map((faq, idx) => (
         <AccordionItem
           key={idx}

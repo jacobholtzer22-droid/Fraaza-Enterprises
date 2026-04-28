@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
             title="Privacy Policy"
             description="Placeholder content — final policy language will be added."
           />
-          <div className="mt-10 rounded-2xl bg-white p-8 text-sm leading-7 text-[var(--text-secondary)] shadow-[var(--shadow-sm)]">
+          <div className="mt-10 rounded-2xl bg-[var(--bg-elevated)] p-8 text-sm leading-7 text-[var(--text-secondary)] shadow-[var(--shadow-sm)]">
             <p>
               We respect your privacy. If you submit a form on this website, we
               use the information you provide to respond to your request and

@@ -33,7 +33,7 @@ export default function SoilPreparationPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -80,8 +80,8 @@ export default function SoilPreparationPage() {
               { title: "Topsoil / compost install", desc: "Bring in quality material and spread to the right depth for success." },
             ].map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 2) + 1) as 1 | 2}>
-                <div className="rounded-2xl bg-white p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
-                  <div className="text-sm font-semibold text-[var(--bg-green)]">{item.title}</div>
+                <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                  <div className="text-sm font-semibold text-[var(--text-primary)]">{item.title}</div>
                   <div className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{item.desc}</div>
                 </div>
               </FadeIn>

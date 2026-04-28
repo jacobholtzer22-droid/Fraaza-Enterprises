@@ -115,7 +115,7 @@ export default function CareAndWateringPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -169,7 +169,7 @@ export default function CareAndWateringPage() {
           <div className="mt-14 space-y-6">
             {weeklyGuide.map((phase, idx) => (
               <FadeIn key={phase.week} delay={idx < 3 ? ((idx + 1) as 1 | 2 | 3) : undefined}>
-                <div className="rounded-2xl bg-white p-6 shadow-[var(--shadow-sm)] sm:p-8">
+                <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] sm:p-8">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
                     <div className="shrink-0">
                       <div className="inline-flex items-center rounded-full bg-[var(--bg-green)] px-4 py-2 text-sm font-bold text-white">
@@ -177,7 +177,7 @@ export default function CareAndWateringPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+                      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                         {phase.title}
                       </h3>
                       <div className="mt-4 grid gap-4 sm:grid-cols-3">
@@ -229,11 +229,11 @@ export default function CareAndWateringPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {maintenanceTips.map((tip, idx) => (
               <FadeIn key={tip.title} delay={((idx + 1) as 1 | 2 | 3)}>
-                <div className="rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] h-full">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+                <div className="rounded-2xl bg-[var(--bg-elevated)] p-7 shadow-[var(--shadow-sm)] h-full">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/20">
                     <span className="text-2xl">{tip.icon}</span>
                   </div>
-                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)]">
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {tip.title}
                   </h3>
                   <ul className="mt-4 space-y-2">
@@ -255,11 +255,11 @@ export default function CareAndWateringPage() {
       <section className="bg-[var(--bg-cream)]">
         <Container className="py-16 sm:py-20">
           <FadeIn>
-            <div className="mx-auto max-w-3xl rounded-3xl border border-[var(--bg-green)]/10 bg-white p-8 text-center shadow-[var(--shadow-sm)] sm:p-10">
+            <div className="mx-auto max-w-3xl rounded-3xl border border-[var(--border)] bg-[var(--bg-elevated)] p-8 text-center shadow-[var(--shadow-sm)] sm:p-10">
               <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
                 Printable Resource
               </div>
-              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[var(--bg-green)] sm:text-4xl">
+              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[var(--text-primary)] sm:text-4xl">
                 Care and Watering Printable Page
               </h2>
               <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
@@ -288,7 +288,7 @@ export default function CareAndWateringPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/30" />
         <Container className="relative z-10 py-20 sm:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">

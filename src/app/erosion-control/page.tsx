@@ -93,7 +93,7 @@ export default function ErosionControlPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -257,9 +257,9 @@ export default function ErosionControlPage() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full flex-col rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]"
+                  className="group flex h-full flex-col rounded-2xl bg-[var(--bg-elevated)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent)]/15">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -270,7 +270,7 @@ export default function ErosionControlPage() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-[var(--bg-green)]"
+                      className="text-[var(--accent)]"
                     >
                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                       <polyline points="14 2 14 8 20 8" />
@@ -278,13 +278,13 @@ export default function ErosionControlPage() {
                       <polyline points="9 15 12 18 15 15" />
                     </svg>
                   </div>
-                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)]">
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-6 text-[var(--text-secondary)]">
                     {item.description}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--bg-green)] group-hover:underline">
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] group-hover:underline">
                     View
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -321,11 +321,11 @@ export default function ErosionControlPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {erosionApplications.map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="rounded-2xl bg-[var(--bg-cream)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full flex flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/10">
+                <div className="rounded-2xl bg-[var(--bg-elevated)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full flex flex-col">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/20">
                     <span className="text-2xl">{item.icon}</span>
                   </div>
-                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)]">
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">

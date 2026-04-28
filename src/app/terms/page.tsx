@@ -27,7 +27,7 @@ export default function TermsPage() {
             title="Terms of Service"
             description="Placeholder content — final terms will be added."
           />
-          <div className="mt-10 rounded-2xl bg-white p-8 text-sm leading-7 text-[var(--text-secondary)] shadow-[var(--shadow-sm)]">
+          <div className="mt-10 rounded-2xl bg-[var(--bg-elevated)] p-8 text-sm leading-7 text-[var(--text-secondary)] shadow-[var(--shadow-sm)]">
             <p>
               By using this website, you agree that the content is provided for
               informational purposes and may change without notice.

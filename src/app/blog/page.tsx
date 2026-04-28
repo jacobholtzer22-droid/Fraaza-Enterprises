@@ -92,7 +92,7 @@ export default function BlogPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -120,7 +120,7 @@ export default function BlogPage() {
               </div>
               <div>
                 <div className="flex items-center gap-3">
-                  <span className="inline-block rounded-full bg-[var(--bg-green)]/10 px-3 py-1 text-xs font-semibold text-[var(--bg-green)]">
+                  <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                     {posts[0].category}
                   </span>
                   <span className="text-xs text-[var(--text-muted)]">
@@ -130,7 +130,7 @@ export default function BlogPage() {
                     {posts[0].readTime}
                   </span>
                 </div>
-                <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--bg-green)] sm:text-3xl">
+                <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--text-primary)] sm:text-3xl">
                   {posts[0].title}
                 </h2>
                 <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
@@ -167,7 +167,7 @@ export default function BlogPage() {
             {posts.map((post, idx) => (
               <FadeIn key={post.slug} delay={((idx % 3) + 1) as 1 | 2 | 3}>
                 <Link href={`#${post.slug}`} className="group block h-full">
-                  <article className="rounded-2xl bg-[var(--bg-cream)] shadow-[var(--shadow-sm)] overflow-hidden transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full flex flex-col">
+                  <article className="rounded-2xl bg-[var(--bg-elevated)] shadow-[var(--shadow-sm)] overflow-hidden transition-shadow duration-300 hover:shadow-[var(--shadow-md)] h-full flex flex-col">
                     <div className="overflow-hidden">
                       <Image
                         src={post.image}
@@ -179,14 +179,14 @@ export default function BlogPage() {
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <div className="flex items-center gap-3">
-                        <span className="inline-block rounded-full bg-[var(--bg-green)]/10 px-3 py-1 text-xs font-semibold text-[var(--bg-green)]">
+                        <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                           {post.category}
                         </span>
                         <span className="text-xs text-[var(--text-muted)]">
                           {post.readTime}
                         </span>
                       </div>
-                      <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--bg-green)] group-hover:text-[var(--accent)] transition-colors">
+                      <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
                         {post.title}
                       </h3>
                       <p className="mt-2 flex-1 text-sm leading-6 text-[var(--text-secondary)]">
@@ -212,7 +212,7 @@ export default function BlogPage() {
               <FadeIn key={post.slug}>
                 <article id={post.slug}>
                   <div className="flex items-center gap-3">
-                    <span className="inline-block rounded-full bg-[var(--bg-green)]/10 px-3 py-1 text-xs font-semibold text-[var(--bg-green)]">
+                    <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                       {post.category}
                     </span>
                     <span className="text-xs text-[var(--text-muted)]">
@@ -222,7 +222,7 @@ export default function BlogPage() {
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--bg-green)] sm:text-3xl">
+                  <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--text-primary)] sm:text-3xl">
                     {post.title}
                   </h2>
                   <div className="mt-4 overflow-hidden rounded-2xl">

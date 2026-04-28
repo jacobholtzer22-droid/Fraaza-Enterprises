@@ -34,7 +34,7 @@ export function ServiceCard({
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/65 group-hover:via-black/25" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/55 group-hover:via-black/10" />
       {featured && (
         <div className="absolute top-4 left-4 z-20 sm:top-6 sm:left-6">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg">

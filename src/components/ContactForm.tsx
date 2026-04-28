@@ -14,7 +14,7 @@ const SERVICE_OPTIONS = [
 ] as const;
 
 const inputCls =
-  "mt-2 w-full rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-sm text-[var(--text-primary)] outline-none transition-all duration-300 placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20";
+  "mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3 text-sm text-[var(--text-primary)] outline-none transition-all duration-300 placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20";
 
 export function ContactForm({
   className,
@@ -93,14 +93,14 @@ export function ContactForm({
         "rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-md)]",
         dark
           ? "bg-[var(--bg-green)] text-white"
-          : "bg-white border border-[var(--border)]",
+          : "bg-[var(--bg-white)] border border-[var(--border)]",
         className,
       )}
     >
       <div
         className={cn(
           "font-[family-name:var(--font-playfair)] text-xl font-semibold",
-          dark ? "text-white" : "text-[var(--bg-green)]",
+          dark ? "text-white" : "text-[var(--text-primary)]",
         )}
       >
         {showService ? "Request a Free Quote" : "Send Us a Message"}
@@ -117,7 +117,7 @@ export function ContactForm({
       </p>
 
       {state === "success" ? (
-        <div className="mt-6 rounded-xl border border-[var(--bg-green)]/30 bg-[var(--bg-green)]/10 px-4 py-5 text-sm text-[var(--bg-green)]">
+        <div className="mt-6 rounded-xl border border-[var(--accent)]/30 bg-[var(--accent)]/10 px-4 py-5 text-sm text-[var(--accent-light)]">
           <p className="font-semibold">Thanks! Your message was sent.</p>
           <p className="mt-1 text-[var(--text-muted)]">
             We&apos;ll be in touch soon.

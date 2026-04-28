@@ -34,7 +34,7 @@ export default function ContactPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[var(--bg-green)]/75" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
         <Container className="relative z-10">
           <SectionHeading
             as="h1"
@@ -50,8 +50,8 @@ export default function ContactPage() {
         <Container className="py-16 sm:py-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <FadeIn>
-              <div className="rounded-2xl bg-white p-8 shadow-[var(--shadow-sm)]">
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--bg-green)]">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Contact details
                 </h3>
                 <div className="mt-6 space-y-5 text-sm text-[var(--text-secondary)]">
