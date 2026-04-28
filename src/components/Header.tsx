@@ -146,30 +146,54 @@ export function Header() {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b transition-all duration-500 ${
-        scrolled
-          ? "header-scrolled"
-          : "border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md"
-      }`}
-    >
-      <Container className="flex h-24 items-center justify-between">
-        <Link href="/" className="group inline-flex items-center gap-5 -ml-5">
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
+          scrolled
+            ? "header-scrolled"
+            : "border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md"
+        }`}
+      >
+        <Container
+          className={`max-w-7xl flex items-center justify-between transition-all duration-500 ${
+            scrolled ? "h-[5.5rem] lg:h-24" : "h-24 lg:h-[7.5rem]"
+          }`}
+        >
+        <Link
+          href="/"
+          className={`group inline-flex shrink-0 items-center gap-5 transition-all duration-500 ${
+            scrolled ? "mr-2 lg:mr-3" : "mr-3 lg:mr-5"
+          }`}
+        >
           <Image
             src="/images/fraaza-logo.webp"
             alt={SITE.name}
-            width={220}
-            height={120}
-            className="h-[56px] w-auto"
+            width={320}
+            height={174}
+            className={`w-auto transition-all duration-500 ${
+              scrolled ? "h-[48px] lg:h-[56px]" : "h-[56px] lg:h-[68px]"
+            }`}
             priority
           />
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="text-lg font-bold tracking-tight">{SITE.name}</span>
-            <span className="text-xs text-[var(--text-muted)]">Serving West Michigan</span>
+          <div className="hidden xl:flex flex-col leading-tight">
+            <span
+              className={`font-bold tracking-tight transition-all duration-500 ${
+                scrolled ? "text-xl" : "text-2xl"
+              }`}
+            >
+              {SITE.name}
+            </span>
+            <span
+              className={`text-[var(--text-muted)] transition-all duration-500 ${
+                scrolled ? "text-sm" : "text-base"
+              }`}
+            >
+              Serving West Michigan
+            </span>
           </div>
         </Link>
 
-        <nav ref={navRef} className="hidden items-center gap-8 lg:flex">
+        <nav ref={navRef} className="hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:gap-6">
           <Link
             href="/"
             className="text-base font-medium transition-colors hover:text-[var(--accent)]"
@@ -229,15 +253,15 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="ml-4 flex shrink-0 items-center gap-2">
           <Button
             href={SITE.phoneHref}
             variant="secondary"
-            className="hidden lg:inline-flex px-4 py-2 text-xs"
+            className="hidden whitespace-nowrap lg:inline-flex px-4 py-2 text-xs"
           >
             Call
           </Button>
-          <Button href="/quote" className="hidden xl:inline-flex">
+          <Button href="/quote" className="hidden whitespace-nowrap xl:inline-flex">
             Free Quote
           </Button>
           <button
@@ -252,18 +276,18 @@ export function Header() {
             )}
           </button>
         </div>
-      </Container>
+        </Container>
 
-      {/* Mobile menu */}
-      <div
-        className={`lg:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${
-          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-        aria-hidden={!open}
-      >
-        <div className="overflow-hidden">
-          <div className="border-t border-[var(--border)] bg-[var(--bg-cream)]">
-            <Container className="py-4 space-y-1">
+        {/* Mobile menu */}
+        <div
+          className={`lg:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${
+            open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+          aria-hidden={!open}
+        >
+          <div className="overflow-hidden">
+            <div className="border-t border-[var(--border)] bg-[var(--bg-cream)]">
+              <Container className="py-4 space-y-1">
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
@@ -366,10 +390,15 @@ export function Header() {
                   Get a Free Quote
                 </Button>
               </div>
-            </Container>
+              </Container>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <div
+        aria-hidden="true"
+        className={`transition-all duration-500 ${scrolled ? "h-[5.5rem] lg:h-24" : "h-24 lg:h-[7.5rem]"}`}
+      />
+    </>
   );
 }
