@@ -147,23 +147,13 @@ export function Header() {
 
   return (
     <>
-      <header
-        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
-          scrolled
-            ? "header-scrolled"
-            : "border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md"
-        }`}
-      >
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500">
         <Container
-          className={`max-w-7xl flex items-center justify-between transition-all duration-500 ${
-            scrolled ? "h-[5.5rem] lg:h-24" : "h-24 lg:h-[7.5rem]"
-          }`}
+          className="max-w-7xl flex h-24 items-center justify-between transition-all duration-500 lg:h-[7.5rem]"
         >
         <Link
           href="/"
-          className={`group inline-flex shrink-0 items-center gap-5 transition-all duration-500 ${
-            scrolled ? "mr-2 lg:mr-3" : "mr-3 lg:mr-5"
-          }`}
+          className="group inline-flex shrink-0 items-center gap-5 mr-3 lg:mr-5 transition-all duration-500"
         >
           <Image
             src="/images/fraaza-logo.webp"
@@ -171,23 +161,15 @@ export function Header() {
             width={320}
             height={174}
             className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-[48px] lg:h-[56px]" : "h-[56px] lg:h-[68px]"
+              scrolled ? "h-[42px] lg:h-[50px]" : "h-[64px] lg:h-[82px]"
             }`}
             priority
           />
           <div className="hidden xl:flex flex-col leading-tight">
-            <span
-              className={`font-bold tracking-tight transition-all duration-500 ${
-                scrolled ? "text-xl" : "text-2xl"
-              }`}
-            >
+            <span className="text-2xl font-bold tracking-tight transition-all duration-500">
               {SITE.name}
             </span>
-            <span
-              className={`text-[var(--text-muted)] transition-all duration-500 ${
-                scrolled ? "text-sm" : "text-base"
-              }`}
-            >
+            <span className="text-base text-[var(--text-muted)] transition-all duration-500">
               Serving West Michigan
             </span>
           </div>
@@ -397,7 +379,7 @@ export function Header() {
       </header>
       <div
         aria-hidden="true"
-        className={`transition-all duration-500 ${scrolled ? "h-[5.5rem] lg:h-24" : "h-24 lg:h-[7.5rem]"}`}
+        className="h-24 transition-all duration-500 lg:h-[7.5rem]"
       />
     </>
   );
