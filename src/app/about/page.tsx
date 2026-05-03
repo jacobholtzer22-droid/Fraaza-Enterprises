@@ -348,7 +348,7 @@ export default function AboutPage() {
 
           <FadeIn>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href="/contact#quote-form" className="w-full sm:w-auto">
+              <Button href="/quote" className="w-full sm:w-auto">
                 Request a free quote
               </Button>
               <Button href="/services" variant="outline" className="w-full sm:w-auto">
@@ -430,7 +430,7 @@ export default function AboutPage() {
               >
                 Read all reviews on Google
               </Button>
-              <Button href="/contact#quote-form" className="w-full sm:w-auto">
+              <Button href="/quote" className="w-full sm:w-auto">
                 Get your free quote
               </Button>
             </div>

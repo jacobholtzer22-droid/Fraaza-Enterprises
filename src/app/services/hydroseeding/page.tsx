@@ -132,7 +132,7 @@ export default function HydroseedingPage() {
 
           <FadeIn>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button href="/contact#quote-form" className="w-full sm:w-auto">Request hydroseeding quote</Button>
+              <Button href="/quote" className="w-full sm:w-auto">Request hydroseeding quote</Button>
               <Button href="/services" variant="outline" className="w-full sm:w-auto">
                 Back to services
               </Button>

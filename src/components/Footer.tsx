@@ -10,7 +10,7 @@ const mosaicPhotos = [
   { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard stone border", category: "Landscaping", title: "Stone Border" },
   { src: "/images/services/hydroseeding-mulch-application.webp", alt: "Hydroseeding application", category: "Hydroseeding", title: "Mulch Application" },
   { src: "/images/portfolio/pool-landscape-design.webp", alt: "Pool landscape design", category: "Landscaping", title: "Pool Area Plantings" },
-  { src: "/images/gallery/new-retaining-wall-1.webp", alt: "Retaining wall", category: "Landscaping", title: "Retaining Wall" },
+  { src: "/images/gallery/completed-wall-project-1.webp", alt: "Shed pad retaining wall", category: "Landscaping", title: "Retaining Wall" },
   { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping", category: "Landscaping", title: "River Rock Borders" },
   { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home", category: "Hydroseeding", title: "Craftsman Home" },
 ];

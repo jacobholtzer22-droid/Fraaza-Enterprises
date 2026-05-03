@@ -162,16 +162,10 @@ const galleryItems: GalleryItem[] = [
     title: "On Location",
   },
   {
-    src: "/images/gallery/new-retaining-wall-1.webp",
-    alt: "New retaining wall installation",
+    src: "/images/gallery/completed-wall-project-1.webp",
+    alt: "Completed shed pad retaining wall installation",
     category: "Landscaping",
     title: "Shed Pad Retaining Wall",
-  },
-  {
-    src: "/images/gallery/completed-wall-project-1.webp",
-    alt: "Completed retaining wall project",
-    category: "Landscaping",
-    title: "Completed Wall",
   },
   {
     src: "/images/services/topsoil-delivery.webp",
