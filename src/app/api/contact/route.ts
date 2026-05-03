@@ -88,7 +88,7 @@ async function sendResendNotification(input: {
     from,
     to: toList,
     replyTo: input.email,
-    subject: `New Lead from ${input.name} - ${input.service}`,
+    subject: `Fraaza Enterprises Website Quote Submission from ${input.name}`,
     text: buildContactEmailText(lead, input.receivedAt),
     html: buildContactEmailHtml(lead, input.receivedAt),
   });
