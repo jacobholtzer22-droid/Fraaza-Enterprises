@@ -22,8 +22,22 @@ const LABEL_STYLE =
 const VALUE_STYLE =
   "margin:8px 0 0;padding:0;font-weight:400;font-variant:normal;text-transform:none;color:#1a1a1a;font-size:16px;line-height:1.5;font-family:Arial,Helvetica,sans-serif;";
 
+function formatReceivedAtEastern(receivedAt: Date): string {
+  return receivedAt.toLocaleString("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZoneName: "short",
+  });
+}
+
 export function buildContactEmailHtml(lead: ContactEmailLead, receivedAt: Date): string {
-  const ts = receivedAt.toISOString();
+  const ts = formatReceivedAtEastern(receivedAt);
   const mailtoSubject = encodeURIComponent("Re: Your inquiry — Fraaza Enterprises");
   const mailto = `mailto:${lead.email}?subject=${mailtoSubject}`;
   const forest = "#2d5016";
@@ -34,7 +48,7 @@ export function buildContactEmailHtml(lead: ContactEmailLead, receivedAt: Date):
     ["Email", lead.email],
     ["Phone", lead.phone],
     ["Service", lead.service],
-    ["Received (UTC)", ts],
+    ["Received", ts],
   ];
 
   const tableRows = rows
@@ -93,7 +107,7 @@ export function buildContactEmailHtml(lead: ContactEmailLead, receivedAt: Date):
 }
 
 export function buildContactEmailText(lead: ContactEmailLead, receivedAt: Date): string {
-  const ts = receivedAt.toISOString();
+  const ts = formatReceivedAtEastern(receivedAt);
   return [
     "New lead — Fraaza Enterprises",
     "",
@@ -101,7 +115,7 @@ export function buildContactEmailText(lead: ContactEmailLead, receivedAt: Date):
     `Email: ${lead.email}`,
     `Phone: ${lead.phone}`,
     `Service: ${lead.service}`,
-    `Received (UTC): ${ts}`,
+    `Received: ${ts}`,
     "",
     "Message:",
     lead.message,
