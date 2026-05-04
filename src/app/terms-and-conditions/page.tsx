@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "Terms and conditions for Fraaza Enterprises hydroseeding, landscaping, and related services.",
+    "Terms and conditions for Fraaza Enterprises hydroseeding and landscaping services.",
   alternates: {
     canonical: "/terms-and-conditions",
   },
@@ -18,27 +18,33 @@ export const metadata: Metadata = {
 
 const effectiveDate = "May 4, 2026";
 
+const linkClass =
+  "font-semibold text-[var(--accent-light)] underline underline-offset-2 transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]";
 const h1Class =
-  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[#2d5016]";
+  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-primary)]";
 const h2Class =
-  "mt-10 mb-4 text-lg sm:text-xl font-semibold text-[#2d5016]";
-const bodyClass = "text-base sm:text-lg leading-relaxed text-gray-800";
-const listClass = "list-disc space-y-2 pl-6 text-base sm:text-lg leading-relaxed text-gray-800";
+  "mt-10 mb-4 text-lg sm:text-xl font-semibold text-[var(--accent-light)]";
+const bodyClass =
+  "text-base sm:text-lg leading-relaxed text-[var(--text-secondary)] [&_strong]:font-semibold [&_strong]:text-[var(--text-primary)]";
+const listClass =
+  "list-disc space-y-2 pl-6 text-base sm:text-lg leading-relaxed text-[var(--text-secondary)] marker:text-[var(--accent)]/90";
 
 export default function TermsAndConditionsPage() {
   return (
-    <section className="bg-white">
+    <section className="bg-[var(--bg-cream)] bg-texture">
       <div className="mx-auto w-full max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className={h1Class}>Terms and Conditions</h1>
-        <p className="mt-3 text-base text-gray-500 sm:text-lg">
-          <strong className="font-semibold text-gray-600">Fraaza Enterprises Effective Date:</strong>{" "}
+        <p className="mt-3 text-base text-[var(--text-muted)] sm:text-lg">
+          <strong className="font-semibold text-[var(--text-primary)]">
+            Fraaza Enterprises Effective Date:
+          </strong>{" "}
           {effectiveDate}
         </p>
 
         <p className={`${bodyClass} mt-10`}>
           Welcome to Fraaza Enterprises! By engaging our services, you agree to the
           following Terms and Conditions. Please review them carefully before
-          proceeding with our hydroseeding, landscaping, and related services. If you do
+          proceeding with our hydroseeding and landscaping services. If you do
           not accept these terms, please refrain from using our services.
         </p>
 
@@ -50,11 +56,9 @@ export default function TermsAndConditionsPage() {
         <ul className={`${listClass} mt-4`}>
           <li>Hydroseeding and lawn establishment</li>
           <li>Landscape design and installation</li>
-          <li>Lawn care and maintenance</li>
           <li>Garden bed and mulching services</li>
-          <li>Seasonal yard cleanup</li>
           <li>Grading and soil preparation</li>
-          <li>Other related landscaping services as agreed in writing.</li>
+          <li>Additional scope as detailed and agreed in writing.</li>
         </ul>
 
         <h2 className={h2Class}>2. Service Agreement</h2>
@@ -231,7 +235,7 @@ export default function TermsAndConditionsPage() {
           <p>[STREET ADDRESS]</p>
           <p>[CITY, MI ZIP]</p>
           <p>
-            <Link className="font-semibold text-[#2d5016] underline underline-offset-2" href={SITE.phoneHref}>
+            <Link className={linkClass} href={SITE.phoneHref}>
               {SITE.phone}
             </Link>
           </p>

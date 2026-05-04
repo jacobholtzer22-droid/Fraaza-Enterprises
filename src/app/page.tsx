@@ -140,32 +140,32 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center overflow-x-hidden">
+      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center overflow-hidden">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
           fill
           priority
           quality={90}
-          className="object-cover object-[center_28%] sm:object-center"
+          className="object-cover object-[82%_14%] sm:object-[76%_16%] lg:object-[70%_18%] scale-[1.14] sm:scale-[1.17] lg:scale-[1.2]"
           sizes="100vw"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/20 max-sm:from-black/88 max-sm:via-black/55" />
         <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
           <div className="max-w-2xl min-w-0">
             <FadeIn>
-              <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm sm:px-4">
+              <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/25 bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur-sm sm:px-4 sm:bg-white/10 sm:text-white/90">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[var(--accent)] animate-pulse" />
                 Owner-operated since {SITE.since}
               </div>
             </FadeIn>
             <FadeIn delay={1}>
-              <h1 className="mt-5 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-white sm:mt-6 sm:text-5xl lg:text-7xl">
+              <h1 className="mt-5 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.65)] sm:mt-6 sm:text-5xl sm:[text-shadow:0_2px_20px_rgba(0,0,0,0.45)] lg:text-7xl">
                 {SITE.tagline}
               </h1>
             </FadeIn>
             <FadeIn delay={2}>
-              <p className="mt-5 text-base leading-7 text-white/80 sm:mt-6 sm:text-lg sm:leading-8">
+              <p className="mt-5 text-base leading-7 text-white/95 [text-shadow:0_1px_14px_rgba(0,0,0,0.75)] sm:mt-6 sm:text-lg sm:leading-8 sm:text-white/85 sm:[text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
                 Specializing in hydroseeding for new lawns, erosion control, and large-scale projects since 2004. We also offer soil preparation, landscaping, and snow plowing across West Michigan.
               </p>
             </FadeIn>
@@ -185,19 +185,19 @@ export default function Home() {
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={20} suffix="+" />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Years Experience</div>
+                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Years Experience</div>
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={500} suffix="+" />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Projects Completed</div>
+                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Projects Completed</div>
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={5.0} suffix="" decimals={1} />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Average Rating</div>
+                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Average Rating</div>
               </div>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-110 sm:object-center"
                   />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 via-black/10 to-transparent transition-opacity duration-500 group-hover:from-black/40" />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/45 max-sm:from-black/82 max-sm:via-black/35" />
                   <div className="relative z-10 flex flex-col gap-1.5 p-4 sm:p-5">
                     <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                       Service
@@ -298,12 +298,12 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-105 sm:object-center"
                   />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/82 via-black/40 to-transparent max-sm:from-black/90 max-sm:via-black/50" />
                   <div className="relative z-10 p-4 sm:p-7">
-                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold leading-tight text-white sm:text-2xl">
+                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] sm:text-2xl sm:[text-shadow:none]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-base leading-relaxed text-white/80">
+                    <p className="mt-2 text-base leading-relaxed text-white/90 max-sm:text-white/95">
                       {item.description}
                     </p>
                   </div>
@@ -324,7 +324,7 @@ export default function Home() {
           className="object-cover object-[center_25%] sm:object-center"
           sizes="100vw"
         />
-        <div className="pointer-events-none absolute inset-0 bg-black/55" />
+        <div className="pointer-events-none absolute inset-0 bg-black/60 max-sm:bg-black/68" />
         <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
@@ -341,7 +341,7 @@ export default function Home() {
                 href="https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,3,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15 sm:px-5 sm:py-2.5"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-black/45 max-sm:shadow-[0_2px_16px_rgba(0,0,0,0.45)] sm:bg-white/10 sm:hover:bg-white/15 sm:px-5 sm:py-2.5"
               >
                 <span className="text-amber-400">★</span>
                 4.8 on Google — 17 Reviews
@@ -352,8 +352,8 @@ export default function Home() {
           <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-2">
             {testimonials.map((t, idx) => (
               <FadeIn key={idx} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md sm:p-8">
-                  <blockquote className="text-base leading-7 text-white/85 break-words">
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-md max-sm:shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] sm:border-white/10 sm:bg-white/5 sm:p-8">
+                  <blockquote className="text-base leading-7 text-white/95 break-words max-sm:text-[1.05rem] max-sm:leading-8">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
@@ -361,7 +361,7 @@ export default function Home() {
                       <div className="text-sm font-semibold text-white">
                         {t.name}
                       </div>
-                      <div className="text-xs text-white/50">{t.location}</div>
+                      <div className="text-xs text-white/75 max-sm:text-white/85">{t.location}</div>
                     </div>
                   </div>
                 </div>
@@ -381,14 +381,14 @@ export default function Home() {
           className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/65 via-black/40 to-black/40" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/72 via-black/48 to-black/48 max-sm:from-[var(--bg-green)]/78 max-sm:via-black/55" />
         <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Ready to transform your property?
               </h2>
-              <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
+              <p className="mt-5 text-base leading-7 text-gray-100 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)] sm:text-lg sm:leading-8 sm:text-gray-300 sm:[text-shadow:none]">
                 Tell us about your project and we&apos;ll follow up with a plan and a free estimate.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">

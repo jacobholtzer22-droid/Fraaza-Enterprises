@@ -18,19 +18,23 @@ export const metadata: Metadata = {
 
 const effectiveDate = "May 4, 2026";
 
+const linkClass =
+  "font-semibold text-[var(--accent-light)] underline underline-offset-2 transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]";
 const h1Class =
-  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[#2d5016]";
+  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-primary)]";
 const h2Class =
-  "mt-10 mb-4 text-lg sm:text-xl font-semibold text-[#2d5016]";
-const bodyClass = "text-base sm:text-lg leading-relaxed text-gray-800";
-const listClass = "list-disc space-y-2 pl-6 text-base sm:text-lg leading-relaxed text-gray-800";
+  "mt-10 mb-4 text-lg sm:text-xl font-semibold text-[var(--accent-light)]";
+const bodyClass =
+  "text-base sm:text-lg leading-relaxed text-[var(--text-secondary)] [&_strong]:font-semibold [&_strong]:text-[var(--text-primary)]";
+const listClass =
+  "list-disc space-y-2 pl-6 text-base sm:text-lg leading-relaxed text-[var(--text-secondary)] marker:text-[var(--accent)]/90";
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="bg-white">
+    <section className="bg-[var(--bg-cream)] bg-texture">
       <div className="mx-auto w-full max-w-4xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <h1 className={h1Class}>Privacy Policy</h1>
-        <div className="mt-3 text-base text-gray-500 sm:text-lg">
+        <div className="mt-3 text-base text-[var(--text-muted)] sm:text-lg">
           <p>Fraaza Enterprises</p>
           <p className="mt-1">Effective Date: {effectiveDate}</p>
         </div>
@@ -58,8 +62,8 @@ export default function PrivacyPolicyPage() {
             is committed to protecting your privacy. This Privacy Policy describes
             how we collect, use, and safeguard your personal information when you
             interact with us through our website, mobile communications, or other
-            channels, and when you engage our hydroseeding, landscaping, and related
-            services. By using our services, you agree to the terms of this Privacy
+            channels, and when you engage our hydroseeding and landscaping services.
+            By using our services, you agree to the terms of this Privacy
             Policy. If you do not agree, please refrain from using our services.
           </p>
         </div>
@@ -85,7 +89,7 @@ export default function PrivacyPolicyPage() {
         </ul>
         <p className={`${bodyClass} mt-4`}>
           To exercise any of these rights, please contact us at{" "}
-          <Link className="font-semibold text-[#2d5016] underline underline-offset-2" href={SITE.phoneHref}>
+          <Link className={linkClass} href={SITE.phoneHref}>
             {SITE.phone}
           </Link>
           .
@@ -119,7 +123,7 @@ export default function PrivacyPolicyPage() {
           <p>[STREET ADDRESS]</p>
           <p>[CITY, MI ZIP]</p>
           <p>
-            <Link className="font-semibold text-[#2d5016] underline underline-offset-2" href={SITE.phoneHref}>
+            <Link className={linkClass} href={SITE.phoneHref}>
               {SITE.phone}
             </Link>
           </p>

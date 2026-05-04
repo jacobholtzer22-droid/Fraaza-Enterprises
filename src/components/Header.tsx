@@ -168,7 +168,7 @@ export function Header() {
     <>
       <header
         ref={headerRef}
-        className="fixed inset-x-0 top-0 z-50 overflow-x-hidden border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500"
+        className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500"
       >
         <Container
           className="max-w-7xl flex h-24 min-w-0 items-center justify-between gap-2 transition-all duration-500 lg:h-[7.5rem]"
@@ -291,7 +291,7 @@ export function Header() {
           }`}
           aria-hidden={!open}
         >
-          <div className="overflow-hidden">
+          <div className="min-h-0 overflow-hidden">
             <div className="border-t border-[var(--border)] bg-[var(--bg-cream)]">
               <Container className="py-4 space-y-1">
               <Link
@@ -317,7 +317,7 @@ export function Header() {
                   mobileHydroseedingOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
               >
-                <div className="overflow-hidden">
+                <div className="min-h-0 overflow-hidden">
                   <div className="ml-4 space-y-1 border-l-2 border-[var(--accent)]/30 pl-3">
                     {hydroseedingDropdown.map((item) => (
                       <Link
@@ -349,7 +349,7 @@ export function Header() {
                   mobileServicesOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
               >
-                <div className="overflow-hidden">
+                <div className="min-h-0 overflow-hidden">
                   <div className="ml-4 space-y-1 border-l-2 border-[var(--accent)]/30 pl-3">
                     {servicesDropdown.map((item) => (
                       <Link

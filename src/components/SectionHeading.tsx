@@ -46,8 +46,10 @@ export function SectionHeading({
       {description ? (
         <p
           className={cn(
-            "mt-4 text-base leading-7 break-words text-pretty",
-            light ? "text-white/70" : "text-[var(--text-secondary)]",
+            "mt-4 text-base leading-7 break-words text-pretty sm:text-[1.05rem] sm:leading-8",
+            light
+              ? "text-white/90 max-sm:text-white/95"
+              : "text-[var(--text-secondary)]",
           )}
         >
           {description}
