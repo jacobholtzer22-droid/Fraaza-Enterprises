@@ -24,17 +24,17 @@ export default function HydroseedingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/heroes/craftsman-home-hydroseeding.webp"
           alt="Hydroseeding application on a new home lawn"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -52,7 +52,7 @@ export default function HydroseedingPage() {
       </section>
 
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <FadeIn>
               <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
@@ -88,25 +88,52 @@ export default function HydroseedingPage() {
               </div>
             </FadeIn>
           </div>
+        </Container>
+      </section>
 
-          {/* Project photos */}
+      {/* Hydroseeding in action — mirrors erosion-control “in action” treatment */}
+      <section className="bg-[var(--bg-white)]">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
-              <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/hydroseeding-mulch-application.webp" alt="Hydroseeding application" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
-              </div>
-              <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/services/hydroseeding-coverage.webp" alt="Even hydroseeding coverage" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
-              </div>
-              <div className="overflow-hidden rounded-2xl">
-                <Image src="/images/portfolio/lawn-growth-14-days.webp" alt="Lawn growth 14 days after hydroseeding" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
-              </div>
-            </div>
+            <SectionHeading
+              eyebrow="Our Work"
+              title="Hydroseeding in action"
+              description="From new home lawns to commercial sites and roadside work, the same hydroseeding process scales to your project — even coverage, fiber mulch to hold seed and moisture, and professional equipment on every job."
+              centered
+            />
           </FadeIn>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            <FadeIn>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <Image
+                  src="/images/services/commercial-hydroseeding-1.webp"
+                  alt="Hydroseeder applying slurry on a large commercial property in West Michigan"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={2}>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                <Image
+                  src="/images/services/hydroseeding-mulch-application.webp"
+                  alt="Close-up of hydroseeding slurry being sprayed for even lawn coverage"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </Container>
+      </section>
 
+      <section className="bg-[var(--bg-cream)]">
+        <Container className="py-12 sm:py-20 lg:py-24">
           {/* Services list */}
           <FadeIn>
-            <div className="mt-12 rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+            <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
               <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                 Hydroseeding services
               </h3>

@@ -102,13 +102,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${dmSans.variable} ${playfair.variable} text-base antialiased bg-background text-foreground`}
       >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="min-h-dvh flex flex-col">
+        <div className="min-h-dvh flex flex-col overflow-x-hidden">
           <Header />
           <main className="relative flex-1">{children}</main>
           <Footer />

@@ -140,32 +140,32 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative min-h-[92vh] flex items-center">
+      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center overflow-x-hidden">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
           fill
           priority
           quality={90}
-          className="object-cover"
+          className="object-cover object-[center_28%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
-        <Container className="relative z-10 py-20">
-          <div className="max-w-2xl">
+        <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-2xl min-w-0">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
-                <span className="h-2 w-2 rounded-full bg-[var(--accent)] animate-pulse" />
+              <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm sm:px-4">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[var(--accent)] animate-pulse" />
                 Owner-operated since {SITE.since}
               </div>
             </FadeIn>
             <FadeIn delay={1}>
-              <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
+              <h1 className="mt-5 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-white sm:mt-6 sm:text-5xl lg:text-7xl">
                 {SITE.tagline}
               </h1>
             </FadeIn>
             <FadeIn delay={2}>
-              <p className="mt-6 text-lg leading-8 text-white/80">
+              <p className="mt-5 text-base leading-7 text-white/80 sm:mt-6 sm:text-lg sm:leading-8">
                 Specializing in hydroseeding for new lawns, erosion control, and large-scale projects since 2004. We also offer soil preparation, landscaping, and snow plowing across West Michigan.
               </p>
             </FadeIn>
@@ -180,24 +180,24 @@ export default function Home() {
             </FadeIn>
 
             {/* Stats Bar */}
-            <div className="mt-12 flex gap-6 sm:gap-12 pt-8 border-t border-white/15">
-              <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+            <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/15 pt-6 sm:mt-12 sm:flex sm:gap-12 sm:pt-8">
+              <div className="min-w-0 text-center sm:text-left">
+                <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={20} suffix="+" />
                 </div>
-                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Years Experience</div>
+                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Years Experience</div>
               </div>
-              <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+              <div className="min-w-0 text-center sm:text-left">
+                <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={500} suffix="+" />
                 </div>
-                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Projects Completed</div>
+                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Projects Completed</div>
               </div>
-              <div>
-                <div className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+              <div className="min-w-0 text-center sm:text-left">
+                <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={5.0} suffix="" decimals={1} />
                 </div>
-                <div className="mt-1 text-xs text-gray-300 sm:text-sm">Average Rating</div>
+                <div className="mt-1 text-[11px] leading-snug text-gray-300 sm:text-sm">Average Rating</div>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function Home() {
 
       {/* ── SERVICES ── */}
       <section className="bg-[var(--bg-cream)] bg-texture">
-        <Container className="py-24 sm:py-32">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               eyebrow="What We Do"
@@ -220,7 +220,7 @@ export default function Home() {
               <FadeIn key={service.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
                 <Link
                   href={service.href}
-                  className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl shadow-[var(--shadow-md)] transition-shadow duration-500 hover:shadow-[var(--shadow-lg)]"
+                  className="group relative flex min-h-[260px] flex-col justify-end overflow-hidden rounded-2xl shadow-[var(--shadow-md)] transition-shadow duration-500 hover:shadow-[var(--shadow-lg)] sm:min-h-[320px]"
                 >
                   <Image
                     src={service.image}
@@ -228,10 +228,10 @@ export default function Home() {
                     fill
                     quality={90}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-110 sm:object-center"
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 via-black/10 to-transparent transition-opacity duration-500 group-hover:from-black/40" />
-                  <div className="relative z-10 flex flex-col gap-1.5 p-5">
+                  <div className="relative z-10 flex flex-col gap-1.5 p-4 sm:p-5">
                     <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                       Service
                     </span>
@@ -248,7 +248,7 @@ export default function Home() {
 
       {/* ── PORTFOLIO ── */}
       <section className="bg-[var(--bg-dark)] bg-texture">
-        <Container className="py-24 sm:py-32">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               light
@@ -277,7 +277,7 @@ export default function Home() {
 
       {/* ── WHY CHOOSE US ── */}
       <section className="bg-[var(--bg-cream)] bg-texture">
-        <Container className="py-24 sm:py-32">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               eyebrow="Why Choose Us"
@@ -289,21 +289,21 @@ export default function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseUs.map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl shadow-[var(--shadow-md)]">
+                <div className="group relative flex min-h-[260px] flex-col justify-end overflow-hidden rounded-2xl shadow-[var(--shadow-md)] sm:min-h-[320px]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     quality={90}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-105 sm:object-center"
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
-                  <div className="relative z-10 p-6 sm:p-7">
-                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white sm:text-2xl">
+                  <div className="relative z-10 p-4 sm:p-7">
+                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold leading-tight text-white sm:text-2xl">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/80">
+                    <p className="mt-2 text-base leading-relaxed text-white/80">
                       {item.description}
                     </p>
                   </div>
@@ -321,11 +321,11 @@ export default function Home() {
           alt="Fraaza Enterprises landscaping project"
           fill
           quality={90}
-          className="object-cover"
+          className="object-cover object-[center_25%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-black/55" />
-        <Container className="relative z-10 py-24 sm:py-32">
+        <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               light
@@ -341,7 +341,7 @@ export default function Home() {
                 href="https://www.google.com/search?q=Fraaza+Enterprises+Inc+Reviews#lrd=0x881990e04401c901:0x694e8308491078e7,3,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15 sm:px-5 sm:py-2.5"
               >
                 <span className="text-amber-400">★</span>
                 4.8 on Google — 17 Reviews
@@ -349,11 +349,11 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 lg:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-2">
             {testimonials.map((t, idx) => (
               <FadeIn key={idx} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-md sm:p-8">
-                  <blockquote className="text-sm leading-7 text-white/85 sm:text-base">
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md sm:p-8">
+                  <blockquote className="text-base leading-7 text-white/85 break-words">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
@@ -378,17 +378,17 @@ export default function Home() {
           alt="Professional hydroseeding in action"
           fill
           quality={90}
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/65 via-black/40 to-black/40" />
-        <Container className="relative z-10 py-24 sm:py-32">
+        <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Ready to transform your property?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-gray-300">
+              <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
                 Tell us about your project and we&apos;ll follow up with a plan and a free estimate.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -404,7 +404,7 @@ export default function Home() {
 
       {/* ── PHOTO GALLERY FOOTER ── */}
       <section className="bg-[var(--bg-dark)] bg-texture">
-        <Container className="py-20 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               light
@@ -413,7 +413,7 @@ export default function Home() {
               centered
             />
           </FadeIn>
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {galleryFooter.map((item, idx) => (
               <FadeIn key={item.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
                 <GalleryCard item={item} className="aspect-square" />

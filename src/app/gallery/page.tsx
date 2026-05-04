@@ -163,9 +163,21 @@ const galleryItems: GalleryItem[] = [
   },
   {
     src: "/images/gallery/completed-wall-project-1.webp",
-    alt: "Completed shed pad retaining wall installation",
+    alt: "Completed timber retaining wall installation",
+    category: "Landscaping",
+    title: "Timber Retaining Wall",
+  },
+  {
+    src: "/images/gallery/shed-pad-retaining-wall.png",
+    alt: "Shed on gravel pad with timber border retaining the shed base",
     category: "Landscaping",
     title: "Shed Pad Retaining Wall",
+  },
+  {
+    src: "/images/gallery/new-tree-boulder-retaining-wall.png",
+    alt: "Backyard with newly planted tree, boulder retaining wall, and fresh hydroseed",
+    category: "Landscaping",
+    title: "New Tree & Boulder Retaining Wall",
   },
   {
     src: "/images/services/topsoil-delivery.webp",
@@ -233,18 +245,18 @@ export default function GalleryPage() {
   return (
     <div>
       {/* Hero banner */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/heroes/hydroseeding-new-home.webp"
           alt="Hydroseeding project by Fraaza Enterprises"
           fill
           priority
           quality={90}
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -257,7 +269,7 @@ export default function GalleryPage() {
 
       {/* Gallery grid with filters */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <GalleryGrid items={galleryItems} />
 
           <FadeIn>

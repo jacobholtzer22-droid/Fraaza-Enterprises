@@ -31,7 +31,7 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
           <button
             key={tab}
             onClick={() => setActive(tab)}
-            className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-300 ${
+            className={`min-h-[44px] rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 sm:px-5 ${
               active === tab
                 ? "bg-[var(--bg-green)] text-white shadow-md"
                 : "border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)]"

@@ -83,17 +83,17 @@ export default function BlogPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-80 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-80 sm:min-h-0 flex items-center">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="West Michigan landscaping and hydroseeding"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -106,7 +106,7 @@ export default function BlogPage() {
 
       {/* Featured post */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
               <div className="overflow-hidden rounded-2xl">
@@ -119,7 +119,7 @@ export default function BlogPage() {
                 />
               </div>
               <div>
-                <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                   <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                     {posts[0].category}
                   </span>
@@ -155,7 +155,7 @@ export default function BlogPage() {
 
       {/* All posts grid */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Recent Posts"
@@ -177,8 +177,8 @@ export default function BlogPage() {
                         className="aspect-[5/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <div className="flex flex-1 flex-col p-6">
-                      <div className="flex items-center gap-3">
+                    <div className="flex flex-1 flex-col p-4 sm:p-6">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                         <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                           {post.category}
                         </span>
@@ -206,12 +206,12 @@ export default function BlogPage() {
 
       {/* Full articles */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-3xl space-y-20">
             {posts.map((post, postIdx) => (
               <FadeIn key={post.slug}>
                 <article id={post.slug}>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                     <span className="inline-block rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent-light)]">
                       {post.category}
                     </span>
@@ -256,7 +256,7 @@ export default function BlogPage() {
 
       {/* CTA */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <SectionHeading

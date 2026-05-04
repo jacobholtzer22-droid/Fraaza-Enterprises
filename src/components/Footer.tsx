@@ -10,7 +10,7 @@ const mosaicPhotos = [
   { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard stone border", category: "Landscaping", title: "Stone Border" },
   { src: "/images/services/hydroseeding-mulch-application.webp", alt: "Hydroseeding application", category: "Hydroseeding", title: "Mulch Application" },
   { src: "/images/portfolio/pool-landscape-design.webp", alt: "Pool landscape design", category: "Landscaping", title: "Pool Area Plantings" },
-  { src: "/images/gallery/completed-wall-project-1.webp", alt: "Shed pad retaining wall", category: "Landscaping", title: "Retaining Wall" },
+  { src: "/images/gallery/completed-wall-project-1.webp", alt: "Timber retaining wall", category: "Landscaping", title: "Retaining Wall" },
   { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping", category: "Landscaping", title: "River Rock Borders" },
   { src: "/images/heroes/craftsman-home-hydroseeding.webp", alt: "Craftsman home", category: "Hydroseeding", title: "Craftsman Home" },
 ];
@@ -36,7 +36,7 @@ export function Footer() {
               src={photo.src}
               alt={photo.alt}
               fill
-              sizes="(max-width: 768px) 25vw, 12.5vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -70,14 +70,15 @@ export function Footer() {
                 <p className="mt-1 text-xs text-white/45">Serving West Michigan since 2004</p>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:w-auto sm:flex-row">
               <Button
                 href={GOOGLE_REVIEW_URL}
                 variant="outline"
+                className="w-full sm:w-auto"
               >
                 Leave a Review
               </Button>
-              <Button href="/contact" variant="primary">
+              <Button href="/contact" variant="primary" className="w-full sm:w-auto">
                 Get in Touch
               </Button>
             </div>
@@ -92,11 +93,11 @@ export function Footer() {
               <h3 className="text-xs font-semibold uppercase tracking-wider text-white/90">
                 Quick Links
               </h3>
-              <nav className="mt-4 flex flex-col gap-2.5">
+              <nav className="mt-4 flex flex-col gap-1 sm:gap-2.5">
                 {footerLinks.map((link) => (
                   <Link
                     key={link.href}
-                    className="text-white/60 hover:text-white transition-colors"
+                    className="inline-flex min-h-[44px] items-center rounded-md py-1 text-base text-white/60 transition-colors hover:text-white sm:min-h-0 sm:inline sm:py-0 sm:text-sm"
                     href={link.href}
                   >
                     {link.label}
@@ -112,7 +113,7 @@ export function Footer() {
               </h3>
               <div className="mt-4 space-y-3">
                 <a
-                  className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors"
+                  className="inline-flex min-h-[44px] max-w-full items-center gap-2.5 break-all rounded-md py-1 text-base text-white/60 transition-colors hover:text-white sm:min-h-0 sm:py-0 sm:text-sm"
                   href={SITE.phoneHref}
                 >
                   <svg className="h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -121,7 +122,7 @@ export function Footer() {
                   {SITE.phone}
                 </a>
                 <a
-                  className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors"
+                  className="inline-flex min-h-[44px] max-w-full items-center gap-2.5 break-all rounded-md py-1 text-base text-white/60 transition-colors hover:text-white sm:min-h-0 sm:py-0 sm:text-sm"
                   href={`mailto:${SITE.email}`}
                 >
                   <svg className="h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -129,7 +130,7 @@ export function Footer() {
                   </svg>
                   {SITE.email}
                 </a>
-                <div className="flex items-start gap-2.5 text-white/60">
+                <div className="inline-flex min-h-[44px] max-w-full items-start gap-2.5 break-words rounded-md py-1 text-base text-white/60 sm:min-h-0 sm:py-0 sm:text-sm">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-white/40" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
@@ -163,7 +164,7 @@ export function Footer() {
               href="http://www.hydroseeding.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3"
+              className="group flex min-h-[44px] min-w-[44px] items-center justify-center gap-3 sm:min-h-0 sm:min-w-0"
             >
               <Image
                 src="/images/iahp-logo.jpg"
@@ -180,7 +181,7 @@ export function Footer() {
               href="https://www.bbb.org/us/mi/zeeland/profile/landscape-contractors/fraaza-enterprises-inc-0372-38114728"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3"
+              className="group flex min-h-[44px] min-w-[44px] items-center justify-center gap-3 sm:min-h-0 sm:min-w-0"
             >
               <Image
                 src="/images/bbb-accredited.svg"
@@ -203,8 +204,8 @@ export function Footer() {
                 Privacy Policy
               </Link>
               <span className="text-white/20">|</span>
-              <Link className="hover:text-white/70 transition-colors" href="/terms">
-                Terms of Service
+              <Link className="hover:text-white/70 transition-colors" href="/terms-and-conditions">
+                Terms &amp; Conditions
               </Link>
               <span className="text-white/20">|</span>
               <span>

@@ -25,17 +25,17 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 sm:h-80 flex items-center">
+      <section className="relative h-56 min-h-[14rem] overflow-x-hidden sm:h-80 sm:min-h-0 flex items-center">
         <Image
           src="/images/portfolio/estate-hydroseeding.webp"
           alt="Estate property hydroseeding project"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_35%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -47,19 +47,19 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <FadeIn>
-              <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)]">
+              <div className="rounded-2xl bg-[var(--bg-elevated)] p-4 shadow-[var(--shadow-sm)] sm:p-8">
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Contact details
                 </h3>
-                <div className="mt-6 space-y-5 text-sm text-[var(--text-secondary)]">
+                <div className="mt-6 space-y-5 text-base text-[var(--text-secondary)]">
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
                       Phone
                     </div>
-                    <a className="mt-1 block text-[var(--text-primary)] font-medium hover:text-[var(--accent)] transition-colors" href={SITE.phoneHref}>
+                    <a className="mt-1 block min-h-[44px] break-all text-base font-medium text-[var(--text-primary)] transition-colors hover:text-[var(--accent)] sm:min-h-0 sm:text-sm" href={SITE.phoneHref}>
                       {SITE.phone}
                     </a>
                   </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                       Email
                     </div>
                     <a
-                      className="mt-1 block text-[var(--text-primary)] font-medium hover:text-[var(--accent)] transition-colors"
+                      className="mt-1 block min-h-[44px] break-all text-base font-medium text-[var(--text-primary)] transition-colors hover:text-[var(--accent)] sm:min-h-0 sm:text-sm"
                       href={`mailto:${SITE.email}`}
                     >
                       {SITE.email}
@@ -95,11 +95,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 overflow-hidden rounded-xl border border-[var(--border)]">
+                <div className="mt-8 max-w-full overflow-hidden rounded-xl border border-[var(--border)]">
                   <iframe
                     title="Fraaza Enterprises service area map"
                     src="https://www.google.com/maps?q=Holland%20MI&output=embed"
-                    className="h-64 w-full"
+                    className="h-56 w-full min-w-0 sm:h-64"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />

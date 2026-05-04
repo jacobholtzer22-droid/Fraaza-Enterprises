@@ -23,17 +23,17 @@ export const metadata: Metadata = {
 export default function QuotePage() {
   return (
     <div>
-      <section className="relative h-64 sm:h-80 flex items-center">
+      <section className="relative h-56 min-h-[14rem] overflow-x-hidden sm:h-80 sm:min-h-0 flex items-center">
         <Image
           src="/images/portfolio/estate-hydroseeding.webp"
           alt="Estate property hydroseeding project"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_35%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -45,10 +45,12 @@ export default function QuotePage() {
       </section>
 
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24 max-w-xl mx-auto">
-          <FadeIn>
-            <ContactForm showService />
-          </FadeIn>
+        <Container className="py-12 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-xl">
+            <FadeIn>
+              <ContactForm showService />
+            </FadeIn>
+          </div>
         </Container>
       </section>
     </div>

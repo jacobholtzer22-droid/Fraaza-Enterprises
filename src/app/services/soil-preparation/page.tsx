@@ -24,17 +24,17 @@ export default function SoilPreparationPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="New build with soil preparation and landscaping"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -52,7 +52,7 @@ export default function SoilPreparationPage() {
       </section>
 
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           {/* Photos */}
           <FadeIn>
             <div className="grid gap-4 sm:grid-cols-2">

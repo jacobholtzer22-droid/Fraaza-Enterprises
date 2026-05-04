@@ -20,7 +20,7 @@ function formatPhoneInput(raw: string): string {
 }
 
 const inputCls =
-  "mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3 text-sm text-[var(--text-primary)] outline-none transition-all duration-300 placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20";
+  "mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3 text-base text-[var(--text-primary)] outline-none transition-all duration-300 placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20";
 
 const defaultValues: ContactFormValues = {
   name: "",
@@ -96,7 +96,7 @@ export function ContactForm({
   return (
     <div
       className={cn(
-        "rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-md)]",
+        "rounded-2xl p-4 shadow-[var(--shadow-md)] sm:p-8",
         dark
           ? "bg-[var(--bg-green)] text-white"
           : "bg-[var(--bg-white)] border border-[var(--border)]",
@@ -193,6 +193,7 @@ export function ContactForm({
                     placeholder="(616) 555-1234"
                     className={cn(
                       inputCls,
+                      "min-h-[44px]",
                       dark && "bg-white/10 border-white/15 text-white placeholder:text-white/30",
                       errors.phone && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
                     )}
@@ -219,6 +220,7 @@ export function ContactForm({
                 id="contact-service"
                 className={cn(
                   inputCls,
+                  "min-h-[44px]",
                   dark && "bg-white/10 border-white/15 text-white",
                   errors.service && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
                 )}
@@ -252,7 +254,7 @@ export function ContactForm({
               placeholder="Tell us what you're looking to do, where you're located, and your timeline."
               className={cn(
                 inputCls,
-                "resize-none",
+                "min-h-[10rem] resize-none py-3",
                 dark && "bg-white/10 border-white/15 text-white placeholder:text-white/30",
                 errors.message && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
               )}
@@ -266,7 +268,7 @@ export function ContactForm({
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--accent-hover)] hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[var(--accent-hover)] hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting && (
               <svg
@@ -327,6 +329,7 @@ function Field({
         id={id}
         className={cn(
           inputCls,
+          "min-h-[44px]",
           dark && "bg-white/10 border-white/15 text-white placeholder:text-white/30",
           error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
           inputProps.className,

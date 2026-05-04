@@ -26,17 +26,17 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/services/hydroseeder-landscaping-project.webp"
           alt="Fraaza Enterprises hydroseeder at work"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -53,11 +53,11 @@ export default function ServicesPage() {
           src="/images/heroes/lakefront-hydroseeding.webp"
           alt="Project background"
           fill
-          className="object-cover"
+          className="object-cover object-[center_25%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-[var(--bg-dark)]/70" />
-        <Container className="relative z-10 py-16 sm:py-24">
+        <Container className="relative z-10 py-12 sm:py-20 lg:py-24">
           <FadeIn delay={1}>
             <ServiceCard
               title="Hydroseeding"
@@ -114,11 +114,11 @@ export default function ServicesPage() {
           src="/images/services/hydroseeder-truck-jobsite.webp"
           alt="Hydroseeder truck on location"
           fill
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/45 to-[var(--bg-green)]/35" />
-        <Container className="relative z-10 py-16 sm:py-20">
+        <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
           <FadeIn>
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
               <div className="flex-1">

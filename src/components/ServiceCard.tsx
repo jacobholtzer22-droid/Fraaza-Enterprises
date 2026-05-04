@@ -22,7 +22,7 @@ export function ServiceCard({
       href={href}
       className={cn(
         "group relative flex flex-col justify-end overflow-hidden rounded-2xl transition-shadow duration-500",
-        featured ? "min-h-[380px] sm:min-h-[420px]" : "min-h-[280px] sm:min-h-[320px]",
+        featured ? "min-h-[300px] sm:min-h-[420px]" : "min-h-[240px] sm:min-h-[320px]",
         "shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]",
         className,
       )}
@@ -32,7 +32,7 @@ export function ServiceCard({
         alt={title}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+        className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-110 sm:object-center"
       />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/55 group-hover:via-black/10" />
       {featured && (
@@ -43,7 +43,7 @@ export function ServiceCard({
           </span>
         </div>
       )}
-      <div className="relative z-10 p-6 sm:p-8">
+      <div className="relative z-10 p-4 sm:p-6 lg:p-8">
         <h3
           className={cn(
             "font-[family-name:var(--font-playfair)] font-bold text-white",

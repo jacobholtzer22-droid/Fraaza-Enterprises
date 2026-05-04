@@ -17,8 +17,13 @@ export function SectionHeading({
   centered?: boolean;
   as?: "h1" | "h2";
 }) {
+  const titleCls =
+    Tag === "h1"
+      ? "text-3xl sm:text-4xl leading-tight"
+      : "text-2xl sm:text-4xl leading-tight";
+
   return (
-    <div className={cn("max-w-2xl", centered && "mx-auto text-center", className)}>
+    <div className={cn("max-w-2xl min-w-0", centered && "mx-auto text-center", className)}>
       {eyebrow ? (
         <div
           className={cn(
@@ -31,7 +36,8 @@ export function SectionHeading({
       ) : null}
       <Tag
         className={cn(
-          "mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold tracking-tight sm:text-4xl",
+          "mt-3 font-[family-name:var(--font-playfair)] font-semibold tracking-tight break-words",
+          titleCls,
           light ? "text-[var(--text-light)]" : "text-[var(--text-primary)]",
         )}
       >
@@ -40,7 +46,7 @@ export function SectionHeading({
       {description ? (
         <p
           className={cn(
-            "mt-4 text-base leading-7",
+            "mt-4 text-base leading-7 break-words text-pretty",
             light ? "text-white/70" : "text-[var(--text-secondary)]",
           )}
         >

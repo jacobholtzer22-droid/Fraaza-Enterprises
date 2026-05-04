@@ -209,17 +209,17 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/services/hydroseeder-truck-jobsite.webp"
           alt="Fraaza Enterprises hydroseeder truck"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -232,10 +232,10 @@ export default function AboutPage() {
 
       {/* Content */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <FadeIn>
-              <div className="rounded-2xl bg-card p-8 shadow-[var(--shadow-sm)]">
+              <div className="rounded-2xl bg-card p-4 shadow-[var(--shadow-sm)] sm:p-8">
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   What we&apos;re known for
                 </h3>
@@ -258,7 +258,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={2}>
-              <div className="rounded-2xl bg-card p-8 shadow-[var(--shadow-sm)]">
+              <div className="rounded-2xl bg-card p-4 shadow-[var(--shadow-sm)] sm:p-8">
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   Professional standards
                 </h3>
@@ -318,7 +318,7 @@ export default function AboutPage() {
 
       {/* Why Choose Us */}
       <section className="bg-[var(--bg-cream)] bg-texture">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               eyebrow="Why Choose Us"
@@ -331,7 +331,7 @@ export default function AboutPage() {
           <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyChooseUs.map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <div className="flex h-full flex-col rounded-2xl bg-card p-7 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
+                <div className="flex h-full flex-col rounded-2xl bg-card p-4 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] sm:p-7">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
                     <span className="block h-6 w-6">{item.icon}</span>
                   </div>
@@ -361,7 +361,7 @@ export default function AboutPage() {
 
       {/* Reviews */}
       <section className="relative bg-[var(--bg-green)] bg-texture">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <SectionHeading
               light
@@ -378,7 +378,7 @@ export default function AboutPage() {
                 href={GOOGLE_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 sm:px-5 sm:py-2.5"
               >
                 <span className="text-amber-400">★</span>
                 4.8 on Google — 18 Reviews
@@ -389,7 +389,7 @@ export default function AboutPage() {
           <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reviews.map((r, idx) => (
               <FadeIn key={r.name} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-md shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)]">
+                <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] sm:p-7">
                   <div className="flex items-center gap-1 text-amber-400" aria-label="5 out of 5 stars">
                     <span aria-hidden>★</span>
                     <span aria-hidden>★</span>
@@ -397,7 +397,7 @@ export default function AboutPage() {
                     <span aria-hidden>★</span>
                     <span aria-hidden>★</span>
                   </div>
-                  <blockquote className="mt-4 flex-1 text-sm leading-7 text-white/85">
+                  <blockquote className="mt-4 flex-1 text-base leading-7 text-white/85 break-words">
                     &ldquo;{r.quote}&rdquo;
                   </blockquote>
                   <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">

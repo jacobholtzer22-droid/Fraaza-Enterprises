@@ -61,17 +61,17 @@ export default function HydroseedingInfoPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Professional hydroseeding application on a West Michigan property"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -90,7 +90,7 @@ export default function HydroseedingInfoPage() {
 
       {/* What is hydroseeding */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
               <SectionHeading
@@ -116,7 +116,7 @@ export default function HydroseedingInfoPage() {
 
       {/* Process */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="How It Works"
@@ -147,7 +147,7 @@ export default function HydroseedingInfoPage() {
 
       {/* Hydroseeding vs Sod */}
       <section className="bg-[var(--bg-green)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               light
@@ -181,7 +181,7 @@ export default function HydroseedingInfoPage() {
 
       {/* Residential & Commercial */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <FadeIn>
               <div className="rounded-2xl bg-[var(--bg-elevated)] p-8 shadow-[var(--shadow-sm)] h-full">
@@ -235,17 +235,17 @@ export default function HydroseedingInfoPage() {
           src="/images/heroes/hydroseeding-new-home.webp"
           alt="Freshly hydroseeded lawn in West Michigan"
           fill
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/30" />
-        <Container className="relative z-10 py-20 sm:py-28">
+        <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white sm:text-4xl">
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-white sm:text-4xl">
                 Ready to hydroseed your property?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-gray-300">
+              <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
                 Get a free estimate for your Holland, MI or West Michigan project. Owner Chad Fraaza will personally assess your property.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">

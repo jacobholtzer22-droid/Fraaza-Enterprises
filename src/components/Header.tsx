@@ -107,6 +107,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileHydroseedingOpen, setMobileHydroseedingOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -123,6 +124,24 @@ export function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [closeAll]);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleDocMouseDown(e: MouseEvent) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", handleDocMouseDown);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleDocMouseDown);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [open]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -147,21 +166,24 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500">
+      <header
+        ref={headerRef}
+        className="fixed inset-x-0 top-0 z-50 overflow-x-hidden border-b border-[var(--border)] bg-[var(--bg-cream)]/90 backdrop-blur-md transition-all duration-500"
+      >
         <Container
-          className="max-w-7xl flex h-24 items-center justify-between transition-all duration-500 lg:h-[7.5rem]"
+          className="max-w-7xl flex h-24 min-w-0 items-center justify-between gap-2 transition-all duration-500 lg:h-[7.5rem]"
         >
         <Link
           href="/"
-          className="group inline-flex shrink-0 items-center gap-5 mr-3 lg:mr-5 transition-all duration-500"
+          className="group inline-flex max-w-[min(52vw,200px)] shrink-0 items-center gap-3 sm:max-w-none sm:gap-5 mr-1 sm:mr-3 lg:mr-5 transition-all duration-500"
         >
           <Image
             src="/images/fraaza-logo.webp"
             alt={SITE.name}
             width={320}
             height={174}
-            className={`w-auto rounded-lg transition-all duration-500 ${
-              scrolled ? "h-[42px] lg:h-[50px]" : "h-[64px] lg:h-[82px]"
+            className={`w-auto max-h-full rounded-lg object-contain object-left transition-all duration-500 ${
+              scrolled ? "h-[36px] sm:h-[42px] lg:h-[50px]" : "h-[48px] sm:h-[52px] lg:h-[82px]"
             }`}
             priority
           />
@@ -247,9 +269,11 @@ export function Header() {
             Free Quote
           </Button>
           <button
+            type="button"
             onClick={() => setOpen(!open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10 lg:hidden"
+            className="inline-flex h-11 min-h-[44px] w-11 min-w-[44px] shrink-0 items-center justify-center rounded-lg hover:bg-white/10 lg:hidden"
             aria-label="Toggle menu"
+            aria-expanded={open}
           >
             {open ? (
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12" /></svg>

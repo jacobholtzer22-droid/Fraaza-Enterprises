@@ -84,17 +84,17 @@ export default function ErosionControlPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 sm:h-96 flex items-center">
+      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
         <Image
           src="/images/services/roadside-hydroseeding.webp"
           alt="Roadside erosion control hydromulching in West Michigan"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10">
+        <Container className="relative z-10 py-8 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -104,7 +104,7 @@ export default function ErosionControlPage() {
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
-            <Button href="/hydromulching" variant="ghost" className="w-full sm:w-auto">
+            <Button href="/hydroseeding" variant="ghost" className="w-full sm:w-auto">
               <span className="text-white/80 hover:text-white">What is Hydromulching? &rarr;</span>
             </Button>
           </div>
@@ -113,7 +113,7 @@ export default function ErosionControlPage() {
 
       {/* How hydromulching solves erosion */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div>
@@ -149,7 +149,7 @@ export default function ErosionControlPage() {
 
       {/* Project photos */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Our Work"
@@ -186,7 +186,7 @@ export default function ErosionControlPage() {
 
       {/* Golf course hydromulching gallery */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Golf Course Work"
@@ -222,7 +222,7 @@ export default function ErosionControlPage() {
 
       {/* Product Resources */}
       <section className="bg-[var(--bg-white)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Resources"
@@ -309,7 +309,7 @@ export default function ErosionControlPage() {
 
       {/* Applications */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Applications"
@@ -349,7 +349,7 @@ export default function ErosionControlPage() {
 
       {/* Why hydromulching beats alternatives */}
       <section className="bg-[var(--bg-green)]">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               light
@@ -396,7 +396,7 @@ export default function ErosionControlPage() {
 
       {/* CTA */}
       <section className="bg-[var(--bg-cream)]">
-        <Container className="py-20 sm:py-28">
+        <Container className="py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <SectionHeading
