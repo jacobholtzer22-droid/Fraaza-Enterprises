@@ -147,7 +147,7 @@ export default function Home() {
           fill
           priority
           quality={90}
-          className="object-cover object-[82%_14%] sm:object-[76%_16%] lg:object-[70%_18%] scale-[1.14] sm:scale-[1.17] lg:scale-[1.2]"
+          className="object-cover object-[48%_42%] scale-100 sm:object-[76%_16%] sm:scale-[1.17] lg:object-[70%_18%] lg:scale-[1.2]"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/20 max-sm:from-black/88 max-sm:via-black/55" />
