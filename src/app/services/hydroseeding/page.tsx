@@ -1,14 +1,89 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import {
+  HomeIcon,
+  BuildingIcon,
+  MountainIcon,
+  RouteIcon,
+  WrenchIcon,
+  WavesIcon,
+  LayoutGridIcon,
+} from "@/components/Icons";
+
+const hydroseedingApplications: {
+  title: string;
+  description: string;
+  icon: ReactNode;
+  image: string;
+  imageAlt: string;
+}[] = [
+  {
+    title: "Residential lawns",
+    description:
+      "New builds, renovations, and bare spots — hydroseeding gives homeowners fast, even coverage with less hand labor than sod. We match seed blends to sun, soil, and how you use the yard so the lawn establishes consistently across West Michigan.",
+    icon: <HomeIcon />,
+    image: "/images/services/home-hydroseeding.png",
+    imageAlt: "Hydroseeding application on a residential home lawn",
+  },
+  {
+    title: "Commercial properties",
+    description:
+      "Office parks, retail, industrial sites, and HOAs need turf that looks professional and holds up to traffic and weather. Hydroseeding scales efficiently for large footprints, berms, and islands — one crew, even coverage, and scheduling that fits your project timeline.",
+    icon: <BuildingIcon />,
+    image: "/images/services/commercial-hydroseeding-1.webp",
+    imageAlt: "Commercial property hydroseeding in West Michigan",
+  },
+  {
+    title: "Slopes & hillsides",
+    description:
+      "Steep grades need seed that stays put. The fiber mulch in the hydroseed slurry helps lock seed and fertilizer to the soil through rain and runoff — the same process many clients pair with dedicated erosion-control work on challenging terrain.",
+    icon: <MountainIcon />,
+    image: "/images/erosion-control-slope-hydroseeding.png",
+    imageAlt: "Hydroseeding applied to a slope for grass establishment",
+  },
+  {
+    title: "Roadside & right-of-way",
+    description:
+      "Roads, utilities, and municipal corridors need quick, reliable establishment after grading. Hydroseeding covers long linear distances and uneven shoulders with uniform application — ideal for right-of-way and roadside stabilization.",
+    icon: <RouteIcon />,
+    image: "/images/services/roadside-hydroseeding.webp",
+    imageAlt: "Roadside hydroseeding along a highway in West Michigan",
+  },
+  {
+    title: "Construction sites",
+    description:
+      "After rough grade and before final punch, disturbed soil is ready for hydroseed. We help contractors meet schedule and appearance goals — from temporary stabilization with growth to finished turf around buildings and lots.",
+    icon: <WrenchIcon />,
+    image: "/images/erosion-control-construction-site.png",
+    imageAlt: "Hydroseeding equipment on a construction site",
+  },
+  {
+    title: "Lakefront & waterfront",
+    description:
+      "Shoreline banks and pond edges benefit from vegetation that reduces sediment and runoff. Hydroseeding establishes grass and appropriate mixes on graded banks while the mulch layer protects seed during the critical germination window.",
+    icon: <WavesIcon />,
+    image: "/images/erosion-control-lakefront-hydromulching.png",
+    imageAlt: "Hydroseeding and stabilization near water in West Michigan",
+  },
+  {
+    title: "New developments",
+    description:
+      "Subdivisions and multi-lot projects need repeatable quality at scale. Hydroseeding keeps crews moving lot to lot with consistent mix, coverage, and fiber mulch — so new development turf establishes on time across entire phases.",
+    icon: <LayoutGridIcon />,
+    image: "/images/erosion-control-new-development-hydromulching.png",
+    imageAlt: "Hydroseeding in a new residential development",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
   description:
-    "Professional hydroseeding in Holland, MI and West Michigan for new lawns, erosion control, roadside projects, new development, and commercial properties. Request a free quote from Fraaza Enterprises.",
+    "Professional hydroseeding in Holland, MI and West Michigan — residential lawns, commercial sites, erosion control, roadsides, new development, and waterfront banks. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/hydroseeding",
   },
@@ -129,7 +204,45 @@ export default function HydroseedingPage() {
         </Container>
       </section>
 
+      {/* Applications — mirrors erosion-control “Applications” grid */}
       <section className="bg-[var(--bg-cream)]">
+        <Container className="py-12 sm:py-20 lg:py-24">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Applications"
+              title="Where we apply hydroseed"
+              description="From backyards to commercial campuses, roadsides, and new developments — the same professional hydroseeding process scales to your site across Holland, MI and West Michigan."
+              centered
+            />
+          </FadeIn>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {hydroseedingApplications.map((item, idx) => (
+              <FadeIn key={item.title} delay={((idx % 3) + 1) as 1 | 2 | 3}>
+                <div className="flex h-full flex-col rounded-2xl bg-[var(--bg-elevated)] p-7 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--bg-green)]/20">
+                    <span className="text-2xl">{item.icon}</span>
+                  </div>
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{item.description}</p>
+                  <div className="relative mt-4 aspect-[3/2] w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[var(--bg-white)]">
         <Container className="py-12 sm:py-20 lg:py-24">
           {/* Services list */}
           <FadeIn>
@@ -139,11 +252,12 @@ export default function HydroseedingPage() {
               </h3>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {[
-                  { title: "New lawn installation", desc: "Full prep and hydroseed application for brand-new lawns." },
-                  { title: "Erosion control", desc: "Coverage on slopes and disturbed soil to help reduce washouts." },
+                  { title: "Residential lawns", desc: "New homes, renovations, and full-yard installs with prep and hydroseed tailored to your lot." },
+                  { title: "Commercial properties", desc: "Large footprints, parking islands, and berms — even coverage and dependable scheduling." },
+                  { title: "Erosion control", desc: "Coverage on slopes and disturbed soil to help reduce washouts while grass establishes." },
                   { title: "Roadside", desc: "Hydroseeding for right-of-way and roadside stabilization." },
                   { title: "New development", desc: "Reliable scheduling and scale for subdivision and build sites." },
-                  { title: "Commercial properties", desc: "Durable, professional results for businesses and facilities." },
+                  { title: "Waterfront & banks", desc: "Graded banks and pond edges where mulch-backed seed helps protect during establishment." },
                 ].map((item) => (
                   <div
                     key={item.title}
