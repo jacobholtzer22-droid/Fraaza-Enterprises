@@ -197,3 +197,20 @@ export function LayoutGridIcon({ className }: IconProps) {
     </Svg>
   );
 }
+
+export function GolfFlagIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <path d="M6 22V3" />
+      <path d="M6 4 14 8 6 12z" />
+    </Svg>
+  );
+}
+
+export function ZapIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+    </Svg>
+  );
+}

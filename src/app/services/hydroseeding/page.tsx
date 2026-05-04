@@ -13,6 +13,8 @@ import {
   WrenchIcon,
   WavesIcon,
   LayoutGridIcon,
+  GolfFlagIcon,
+  ZapIcon,
 } from "@/components/Icons";
 
 const hydroseedingApplications: {
@@ -49,7 +51,7 @@ const hydroseedingApplications: {
   {
     title: "Roadside & right-of-way",
     description:
-      "Roads, utilities, and municipal corridors need quick, reliable establishment after grading. Hydroseeding covers long linear distances and uneven shoulders with uniform application — ideal for right-of-way and roadside stabilization.",
+      "Roads and municipal corridors need quick, reliable establishment after grading. Hydroseeding covers long linear distances and uneven shoulders with uniform application — ideal for right-of-way and roadside stabilization.",
     icon: <RouteIcon />,
     image: "/images/services/roadside-hydroseeding.webp",
     imageAlt: "Roadside hydroseeding along a highway in West Michigan",
@@ -78,12 +80,28 @@ const hydroseedingApplications: {
     image: "/images/erosion-control-new-development-hydromulching.png",
     imageAlt: "Hydroseeding in a new residential development",
   },
+  {
+    title: "Golf courses",
+    description:
+      "Fairways, roughs, cart paths, and drainage areas need turf that recovers quickly after renovation or weather events. Hydroseeding and hydromulching establish durable grass on large footprints and slopes — the same approach we've used on West Michigan courses like Macatawa Legends.",
+    icon: <GolfFlagIcon />,
+    image: "/images/gallery/macatawa-legends-hydroseed-2.png",
+    imageAlt: "Workers applying hydroseed at Macatawa Legends golf course",
+  },
+  {
+    title: "Utilities & corridors",
+    description:
+      "Gas, electric, pipeline, and telecom projects leave long strips of disturbed soil that must green up fast and stay put. Hydroseeding applies evenly over uneven trench lines and shoulders — one pass for seed, fertilizer, and mulch-backed establishment along utility right-of-way.",
+    icon: <ZapIcon />,
+    image: "/images/services/hydroseeder-truck-jobsite.webp",
+    imageAlt: "Hydroseeder truck on a utility or large-scale corridor jobsite in West Michigan",
+  },
 ];
 
 export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
   description:
-    "Professional hydroseeding in Holland, MI and West Michigan — residential lawns, commercial sites, erosion control, roadsides, new development, and waterfront banks. Request a free quote from Fraaza Enterprises.",
+    "Professional hydroseeding in Holland, MI and West Michigan — residential lawns, commercial sites, erosion control, roadsides, utilities, golf courses, new development, and waterfront banks. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/hydroseeding",
   },
@@ -211,7 +229,7 @@ export default function HydroseedingPage() {
             <SectionHeading
               eyebrow="Applications"
               title="Where we apply hydroseed"
-              description="From backyards to commercial campuses, roadsides, and new developments — the same professional hydroseeding process scales to your site across Holland, MI and West Michigan."
+              description="From backyards to commercial campuses, roadsides, utility corridors, golf courses, and new developments — the same professional hydroseeding process scales to your site across Holland, MI and West Michigan."
               centered
             />
           </FadeIn>
@@ -256,6 +274,8 @@ export default function HydroseedingPage() {
                   { title: "Commercial properties", desc: "Large footprints, parking islands, and berms — even coverage and dependable scheduling." },
                   { title: "Erosion control", desc: "Coverage on slopes and disturbed soil to help reduce washouts while grass establishes." },
                   { title: "Roadside", desc: "Hydroseeding for right-of-way and roadside stabilization." },
+                  { title: "Utilities & corridors", desc: "Trenches, shoulders, and linear ROW work after gas, electric, pipeline, or telecom installs." },
+                  { title: "Golf courses", desc: "Fairways, roughs, slopes, and course renovation areas — durable establishment at golf scale." },
                   { title: "New development", desc: "Reliable scheduling and scale for subdivision and build sites." },
                   { title: "Waterfront & banks", desc: "Graded banks and pond edges where mulch-backed seed helps protect during establishment." },
                 ].map((item) => (
