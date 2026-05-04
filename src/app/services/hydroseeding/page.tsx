@@ -166,13 +166,13 @@ export default function HydroseedingPage() {
         </Container>
       </section>
 
-      {/* Hydroseeding in action — mirrors erosion-control “in action” treatment */}
+      {/* Hydroseeding applied — mirrors erosion-control section treatment */}
       <section className="bg-[var(--bg-white)]">
         <Container className="py-12 sm:py-20 lg:py-24">
           <FadeIn>
             <SectionHeading
               eyebrow="Our Work"
-              title="Hydroseeding in action"
+              title="Hydroseeding applied"
               description="From new home lawns to commercial sites and roadside work, the same hydroseeding process scales to your project — even coverage, fiber mulch to hold seed and moisture, and professional equipment on every job."
               centered
             />
