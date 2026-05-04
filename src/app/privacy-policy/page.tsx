@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const effectiveDate = "May 4, 2026";
+const effectiveDate = "2003";
 
 const linkClass =
   "font-semibold text-[var(--accent-light)] underline underline-offset-2 transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]";
