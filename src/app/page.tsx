@@ -156,14 +156,14 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center overflow-hidden">
+      <section className="relative flex min-h-[78vh] items-center overflow-hidden sm:min-h-[92vh]">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
           fill
           priority
           quality={90}
-          className="object-cover object-[48%_42%] scale-100 sm:object-[76%_16%] sm:scale-[1.17] lg:object-[70%_18%] lg:scale-[1.2]"
+          className="object-cover object-[48%_38%] scale-100 sm:object-[76%_16%] sm:scale-[1.17] lg:object-[70%_18%] lg:scale-[1.2] max-sm:object-[center_32%]"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/20 max-sm:from-black/88 max-sm:via-black/55" />
@@ -176,7 +176,7 @@ export default function Home() {
               </div>
             </FadeIn>
             <FadeIn delay={1}>
-              <h1 className="mt-5 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.65)] sm:mt-6 sm:text-5xl sm:[text-shadow:0_2px_20px_rgba(0,0,0,0.45)] lg:text-7xl">
+              <h1 className="mt-5 hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.65)] sm:mt-6 sm:text-5xl md:text-6xl sm:[text-shadow:0_2px_20px_rgba(0,0,0,0.45)] lg:text-7xl">
                 {SITE.tagline}
               </h1>
             </FadeIn>
@@ -201,19 +201,19 @@ export default function Home() {
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={20} suffix="+" />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Years Experience</div>
+                <div className="mt-1 text-xs leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Years Experience</div>
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={500} suffix="+" />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Projects Completed</div>
+                <div className="mt-1 text-xs leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Projects Completed</div>
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={5.0} suffix="" decimals={1} />
                 </div>
-                <div className="mt-1 text-[11px] leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Average Rating</div>
+                <div className="mt-1 text-xs leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Average Rating</div>
               </div>
             </div>
           </div>
@@ -248,13 +248,13 @@ export default function Home() {
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/45 max-sm:from-black/82 max-sm:via-black/35" />
                   <div className="relative z-10 flex flex-col gap-1.5 p-4 sm:p-5">
-                    <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                    <span className="inline-block w-fit max-w-full rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                       Service
                     </span>
-                    <h3 className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    <h3 className="hyphens-auto break-words text-base font-semibold leading-snug text-white sm:text-lg">
                       {service.title}
                     </h3>
-                    <span className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1.5 text-[11px] font-semibold text-white shadow-md transition-colors duration-300 group-hover:bg-[var(--accent-hover)]">
+                    <span className="mt-2 inline-flex w-fit max-w-full min-w-0 items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1.5 text-xs font-semibold text-white shadow-md transition-colors duration-300 group-hover:bg-[var(--accent-hover)]">
                       Learn more
                       <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">
                         →
@@ -329,7 +329,7 @@ export default function Home() {
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/82 via-black/40 to-transparent max-sm:from-black/90 max-sm:via-black/50" />
                   <div className="relative z-10 p-4 sm:p-7">
-                    <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] sm:text-2xl sm:[text-shadow:none]">
+                    <h3 className="mt-3 hyphens-auto break-words font-[family-name:var(--font-playfair)] text-lg font-bold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] sm:text-2xl sm:[text-shadow:none]">
                       {item.title}
                     </h3>
                     <p className="mt-2 text-base leading-relaxed text-white/90 max-sm:text-white/95">
@@ -414,7 +414,7 @@ export default function Home() {
         <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">
                 Ready to transform your property?
               </h2>
               <p className="mt-5 text-base leading-7 text-gray-100 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)] sm:text-lg sm:leading-8 sm:text-gray-300 sm:[text-shadow:none]">
@@ -445,7 +445,7 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {galleryFooter.map((item, idx) => (
               <FadeIn key={item.src} delay={((idx % 3) + 1) as 1 | 2 | 3}>
-                <GalleryCard item={item} className="aspect-square" />
+                <GalleryCard item={item} className="aspect-[4/5] sm:aspect-square" />
               </FadeIn>
             ))}
           </div>

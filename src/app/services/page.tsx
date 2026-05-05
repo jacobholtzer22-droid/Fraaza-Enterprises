@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/services/hydroseeder-landscaping-project.webp"
           alt="Fraaza Enterprises hydroseeder at work"
@@ -36,7 +36,7 @@ export default function ServicesPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -122,7 +122,7 @@ export default function ServicesPage() {
           <FadeIn>
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
               <div className="flex-1">
-                <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white sm:text-3xl">
+                <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white sm:text-3xl">
                   Not sure what you need?
                 </h2>
                 <p className="mt-3 text-base text-white/65">

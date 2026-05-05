@@ -183,7 +183,7 @@ export function Header() {
             width={320}
             height={174}
             className={`w-auto max-h-full rounded-lg object-contain object-left transition-all duration-500 ${
-              scrolled ? "h-[36px] sm:h-[42px] lg:h-[50px]" : "h-[48px] sm:h-[52px] lg:h-[82px]"
+              scrolled ? "h-[36px] sm:h-[42px] lg:h-[50px]" : "h-[42px] sm:h-[52px] lg:h-[82px]"
             }`}
             priority
           />

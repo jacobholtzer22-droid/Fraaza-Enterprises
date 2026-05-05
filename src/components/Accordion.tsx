@@ -21,7 +21,7 @@ function AccordionItem({
         className="flex min-h-[44px] w-full items-start justify-between gap-4 py-4 text-left sm:py-6"
         aria-expanded={isOpen}
       >
-        <span className="text-base font-semibold leading-snug text-[var(--text-primary)]">
+        <span className="min-w-0 flex-1 hyphens-auto break-words text-base font-semibold leading-snug text-[var(--text-primary)]">
           {question}
         </span>
         <svg

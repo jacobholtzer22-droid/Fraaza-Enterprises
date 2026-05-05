@@ -127,7 +127,7 @@ export default function HydroseedingPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -152,7 +152,7 @@ export default function HydroseedingPage() {
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   What is hydroseeding?
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                <p className="mt-4 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-7">
                   Hydroseeding is a process where seed, fertilizer, water, and a
                   protective fiber mulch are mixed into a slurry and sprayed over
                   prepared soil. The mulch helps the seed stay in place and retain
@@ -165,7 +165,7 @@ export default function HydroseedingPage() {
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Benefits vs. sod
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-[var(--text-secondary)]">
+                <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--text-secondary)] sm:text-sm">
                   {[
                     "More cost-effective for larger areas",
                     "Even coverage and custom seed blends",
@@ -243,7 +243,7 @@ export default function HydroseedingPage() {
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{item.description}</p>
+                  <p className="mt-3 text-base leading-6 text-[var(--text-secondary)] sm:text-sm">{item.description}</p>
                   <div className="relative mt-4 aspect-[3/2] w-full overflow-hidden rounded-xl">
                     <Image
                       src={item.image}
@@ -283,8 +283,8 @@ export default function HydroseedingPage() {
                     key={item.title}
                     className="rounded-xl bg-[var(--bg-white)] p-5 transition-shadow duration-300 hover:shadow-[var(--shadow-sm)]"
                   >
-                    <div className="text-sm font-semibold text-[var(--text-primary)]">{item.title}</div>
-                    <div className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{item.desc}</div>
+                    <div className="text-base font-semibold text-[var(--text-primary)] sm:text-sm">{item.title}</div>
+                    <div className="mt-2 text-base leading-6 text-[var(--text-secondary)] sm:text-sm">{item.desc}</div>
                   </div>
                 ))}
               </div>

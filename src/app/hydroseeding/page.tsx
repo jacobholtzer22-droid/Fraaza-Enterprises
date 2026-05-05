@@ -71,7 +71,7 @@ export default function HydroseedingInfoPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -135,7 +135,7 @@ export default function HydroseedingInfoPage() {
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
+                  <p className="mt-3 text-base leading-6 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                     {item.description}
                   </p>
                 </div>
@@ -158,7 +158,8 @@ export default function HydroseedingInfoPage() {
             />
           </FadeIn>
           <FadeIn delay={2}>
-            <div className="mt-14 overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm">
+            <div className="-mx-4 mt-14 overflow-x-auto px-4 sm:mx-0 sm:overflow-x-visible sm:px-0">
+            <div className="min-w-0 overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm">
               <div className="hidden sm:grid sm:grid-cols-3 border-b border-white/10 px-6 py-4">
                 <div className="text-sm font-semibold text-[var(--accent-light)]">Feature</div>
                 <div className="text-sm font-semibold text-[var(--accent-light)]">Hydroseeding</div>
@@ -174,6 +175,7 @@ export default function HydroseedingInfoPage() {
                   <div className="text-sm text-white/60">{row.sod}</div>
                 </div>
               ))}
+            </div>
             </div>
           </FadeIn>
         </Container>
@@ -191,10 +193,10 @@ export default function HydroseedingInfoPage() {
                 <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Residential hydroseeding
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                <p className="mt-4 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-7">
                   Whether you&apos;re establishing a lawn on a new build, repairing bare patches, or re-doing your entire yard, hydroseeding delivers lush, even coverage at a fraction of the cost of sod. We work with homeowners across Holland, Zeeland, Grand Haven, Hudsonville, and surrounding West Michigan communities.
                 </p>
-                <ul className="mt-5 space-y-2 text-sm text-[var(--text-secondary)]">
+                <ul className="mt-5 space-y-2 text-base text-[var(--text-secondary)] sm:text-sm">
                   {["New construction lawns", "Full yard renovations", "Backyard and side yard coverage", "Slope stabilization around homes"].map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
@@ -212,10 +214,10 @@ export default function HydroseedingInfoPage() {
                 <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-primary)]">
                   Commercial hydroseeding
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                <p className="mt-4 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-7">
                   Hydroseeding is the go-to choice for commercial properties, new developments, and municipal projects. It scales efficiently, covers large areas quickly, and meets erosion-control requirements for construction sites and roadside stabilization.
                 </p>
-                <ul className="mt-5 space-y-2 text-sm text-[var(--text-secondary)]">
+                <ul className="mt-5 space-y-2 text-base text-[var(--text-secondary)] sm:text-sm">
                   {["Subdivision and new development sites", "Commercial property landscaping", "Roadside and right-of-way seeding", "Post-construction erosion control"].map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
@@ -242,7 +244,7 @@ export default function HydroseedingInfoPage() {
         <Container className="relative z-10 py-12 sm:py-20 lg:py-28">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight text-white sm:text-4xl">
                 Ready to hydroseed your property?
               </h2>
               <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">

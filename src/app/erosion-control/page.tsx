@@ -84,7 +84,7 @@ export default function ErosionControlPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/services/roadside-hydroseeding.webp"
           alt="Roadside erosion control hydromulching in West Michigan"
@@ -94,7 +94,7 @@ export default function ErosionControlPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -281,7 +281,7 @@ export default function ErosionControlPage() {
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-[var(--text-secondary)]">
+                  <p className="mt-3 flex-1 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                     {item.description}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] group-hover:underline">
@@ -328,7 +328,7 @@ export default function ErosionControlPage() {
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
+                  <p className="mt-3 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                     {item.description}
                   </p>
                   <div className="relative mt-4 aspect-[3/2] w-full overflow-hidden rounded-xl">
@@ -384,7 +384,7 @@ export default function ErosionControlPage() {
                   <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-white/75">
+                  <p className="mt-3 text-base leading-7 text-white/75 sm:text-sm sm:leading-6">
                     {item.description}
                   </p>
                 </div>

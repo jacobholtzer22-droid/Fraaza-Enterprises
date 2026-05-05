@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-56 min-h-[14rem] overflow-x-hidden sm:h-80 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[15rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
         <Image
           src="/images/portfolio/estate-hydroseeding.webp"
           alt="Estate property hydroseeding project"
@@ -35,7 +35,7 @@ export default function ContactPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light

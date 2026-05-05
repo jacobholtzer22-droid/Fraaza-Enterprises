@@ -113,7 +113,7 @@ export function ContactForm({
       </div>
       <p
         className={cn(
-          "mt-2 text-sm leading-6",
+          "mt-2 text-base leading-7 sm:text-sm sm:leading-6",
           dark ? "text-white/60" : "text-[var(--text-muted)]",
         )}
       >

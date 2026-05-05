@@ -24,7 +24,7 @@ export default function LandscapingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/portfolio/pool-landscape-design.webp"
           alt="Professional landscaping around pool area"
@@ -34,7 +34,7 @@ export default function LandscapingPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -80,8 +80,8 @@ export default function LandscapingPage() {
             ].map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 2) + 1) as 1 | 2}>
                 <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
-                  <div className="text-sm font-semibold text-[var(--text-primary)]">{item.title}</div>
-                  <div className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{item.desc}</div>
+                  <div className="text-base font-semibold text-[var(--text-primary)] sm:text-sm">{item.title}</div>
+                  <div className="mt-2 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">{item.desc}</div>
                 </div>
               </FadeIn>
             ))}
@@ -92,7 +92,7 @@ export default function LandscapingPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-white">
                 Built for West Michigan properties
               </h3>
-              <p className="mt-3 text-sm leading-7 text-white/65">
+              <p className="mt-3 text-base leading-7 text-white/65 sm:text-sm">
                 We tailor materials and methods to the site conditions — focusing
                 on clean prep, proper grading, and quality installation so your
                 landscape performs as good as it looks.

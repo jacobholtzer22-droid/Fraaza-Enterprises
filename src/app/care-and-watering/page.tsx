@@ -106,7 +106,7 @@ export default function CareAndWateringPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/portfolio/lawn-growth-14-days.webp"
           alt="Hydroseeded lawn growth after 14 days in West Michigan"
@@ -116,7 +116,7 @@ export default function CareAndWateringPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -185,7 +185,7 @@ export default function CareAndWateringPage() {
                           <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
                             Watering
                           </div>
-                          <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                          <p className="mt-2 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                             {phase.watering}
                           </p>
                         </div>
@@ -193,7 +193,7 @@ export default function CareAndWateringPage() {
                           <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
                             What to expect
                           </div>
-                          <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                          <p className="mt-2 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                             {phase.expectations}
                           </p>
                         </div>
@@ -201,7 +201,7 @@ export default function CareAndWateringPage() {
                           <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
                             Pro tip
                           </div>
-                          <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                          <p className="mt-2 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                             {phase.tips}
                           </p>
                         </div>
@@ -238,7 +238,7 @@ export default function CareAndWateringPage() {
                   </h3>
                   <ul className="mt-4 space-y-2">
                     {tip.items.map((item) => (
-                      <li key={item} className="flex gap-3 text-sm text-[var(--text-secondary)]">
+                      <li key={item} className="flex gap-3 text-base text-[var(--text-secondary)] sm:text-sm">
                         <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
                         {item}
                       </li>
@@ -259,7 +259,7 @@ export default function CareAndWateringPage() {
               <div className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)]">
                 Printable Resource
               </div>
-              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[var(--text-primary)] sm:text-4xl">
+              <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight text-[var(--text-primary)] sm:text-4xl">
                 Care and Watering Printable Page
               </h2>
               <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
@@ -269,7 +269,7 @@ export default function CareAndWateringPage() {
                 <a
                   href={printableCareGuideUrl}
                   download="care-and-watering-printable.pdf"
-                  className="group/btn relative inline-flex min-h-[44px] items-center justify-center gap-2 overflow-hidden rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold tracking-tight text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-xl hover:shadow-[var(--accent)]/25 active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2"
+                  className="group/btn relative inline-flex min-h-[44px] w-full max-w-md items-center justify-center gap-2 overflow-hidden rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold tracking-tight text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-xl hover:shadow-[var(--accent)]/25 active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 sm:w-auto"
                 >
                   Download Printable Care Guide (PDF)
                 </a>

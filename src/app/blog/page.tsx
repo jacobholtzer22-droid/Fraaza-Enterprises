@@ -83,7 +83,7 @@ export default function BlogPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-80 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="West Michigan landscaping and hydroseeding"
@@ -93,7 +93,7 @@ export default function BlogPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -130,7 +130,7 @@ export default function BlogPage() {
                     {posts[0].readTime}
                   </span>
                 </div>
-                <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--text-primary)] sm:text-3xl">
+                <h2 className="mt-4 hyphens-auto break-words font-[family-name:var(--font-playfair)] text-xl font-semibold leading-tight text-[var(--text-primary)] sm:text-3xl sm:leading-snug">
                   {posts[0].title}
                 </h2>
                 <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">
@@ -186,10 +186,10 @@ export default function BlogPage() {
                           {post.readTime}
                         </span>
                       </div>
-                      <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+                      <h3 className="mt-3 hyphens-auto break-words font-[family-name:var(--font-playfair)] text-lg font-semibold leading-snug text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
                         {post.title}
                       </h3>
-                      <p className="mt-2 flex-1 text-sm leading-6 text-[var(--text-secondary)]">
+                      <p className="mt-2 flex-1 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
                         {post.excerpt}
                       </p>
                       <div className="mt-4 text-xs text-[var(--text-muted)]">
@@ -222,7 +222,7 @@ export default function BlogPage() {
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--text-primary)] sm:text-3xl">
+                  <h2 className="mt-4 hyphens-auto break-words font-[family-name:var(--font-playfair)] text-xl font-semibold leading-tight text-[var(--text-primary)] sm:text-3xl sm:leading-snug">
                     {post.title}
                   </h2>
                   <div className="mt-4 overflow-hidden rounded-2xl">

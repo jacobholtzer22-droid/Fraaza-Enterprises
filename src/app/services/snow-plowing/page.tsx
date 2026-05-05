@@ -24,7 +24,7 @@ export default function SnowPlowingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/services/snow-plow-truck.webp"
           alt="Fraaza Enterprises snow plow truck in action"
@@ -34,7 +34,7 @@ export default function SnowPlowingPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -75,8 +75,8 @@ export default function SnowPlowingPage() {
             ].map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 2) + 1) as 1 | 2}>
                 <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">
-                  <div className="text-sm font-semibold text-[var(--text-primary)]">{item.title}</div>
-                  <div className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{item.desc}</div>
+                  <div className="text-base font-semibold text-[var(--text-primary)] sm:text-sm">{item.title}</div>
+                  <div className="mt-2 text-base leading-7 text-[var(--text-secondary)] sm:text-sm">{item.desc}</div>
                 </div>
               </FadeIn>
             ))}

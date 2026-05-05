@@ -209,7 +209,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/services/hydroseeder-truck-jobsite.webp"
           alt="Fraaza Enterprises hydroseeder truck"
@@ -219,7 +219,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-8 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-0">
           <SectionHeading
             as="h1"
             light
@@ -239,7 +239,7 @@ export default function AboutPage() {
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   What we&apos;re known for
                 </h3>
-                <ul className="mt-6 space-y-4 text-sm text-[var(--text-secondary)]">
+                <ul className="mt-6 space-y-4 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-relaxed">
                   {[
                     "Hydroseeding specialists — new lawns, erosion control, and large-scale projects",
                     "20+ years of dedicated hydroseeding experience across West Michigan",
@@ -262,7 +262,7 @@ export default function AboutPage() {
                 <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                   Professional standards
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                <p className="mt-4 text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-7">
                   We&apos;re a proud member of the International Association of
                   Hydroseeding Professionals (IAHP) and a BBB Accredited Business
                   with an A+ rating. We stay committed to best practices that
@@ -338,7 +338,7 @@ export default function AboutPage() {
                   <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[var(--text-green)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
+                  <p className="mt-3 text-base leading-7 text-[var(--text-secondary)] sm:text-sm">
                     {item.description}
                   </p>
                 </div>
@@ -408,10 +408,10 @@ export default function AboutPage() {
                       {r.initials}
                     </div>
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-semibold text-white">
+                      <div className="break-words text-sm font-semibold text-white">
                         {r.name}
                       </div>
-                      <div className="truncate text-xs text-white/55">
+                      <div className="break-words text-xs text-white/55 sm:text-xs">
                         {r.context} · {r.date}
                       </div>
                     </div>

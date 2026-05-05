@@ -46,13 +46,13 @@ export function ServiceCard({
       <div className="relative z-10 p-4 sm:p-6 lg:p-8">
         <h3
           className={cn(
-            "font-[family-name:var(--font-playfair)] font-bold text-white",
+            "hyphens-auto break-words font-[family-name:var(--font-playfair)] font-bold leading-tight text-white",
             featured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl",
           )}
         >
           {title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-white/80 max-w-sm">
+        <p className="mt-2 max-w-sm text-base leading-relaxed text-white/80 sm:text-sm">
           {description}
         </p>
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)] transition-all duration-300 group-hover:gap-3">

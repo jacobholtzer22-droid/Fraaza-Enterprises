@@ -21,7 +21,7 @@ const effectiveDate = "2003";
 const linkClass =
   "font-semibold text-[var(--accent-light)] underline underline-offset-2 transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]";
 const h1Class =
-  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-primary)]";
+  "font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-primary)] hyphens-auto break-words";
 const h2Class =
   "mt-10 mb-4 text-lg sm:text-xl font-semibold text-[var(--accent-light)]";
 const bodyClass =
@@ -32,7 +32,7 @@ const listClass =
 export default function TermsAndConditionsPage() {
   return (
     <section className="bg-[var(--bg-cream)] bg-texture">
-      <div className="mx-auto w-full max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto w-full max-w-4xl min-w-0 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className={h1Class}>Terms and Conditions</h1>
         <p className="mt-3 text-base text-[var(--text-muted)] sm:text-lg">
           <strong className="font-semibold text-[var(--text-primary)]">

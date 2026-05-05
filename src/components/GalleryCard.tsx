@@ -19,7 +19,8 @@ export function GalleryCard({
   return (
     <div
       className={cn(
-        "group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[var(--shadow-md)] transition-shadow duration-500 hover:shadow-[var(--shadow-xl)]",
+        "group relative overflow-hidden rounded-2xl shadow-[var(--shadow-md)] transition-shadow duration-500 hover:shadow-[var(--shadow-xl)]",
+        !className && "aspect-[4/5] sm:aspect-[4/3]",
         className,
       )}
     >
@@ -35,11 +36,11 @@ export function GalleryCard({
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/25 to-transparent transition-opacity duration-500 group-hover:from-black/45 max-sm:from-black/80 max-sm:via-black/35" />
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-5">
         {item.category && (
-          <span className="inline-block w-fit rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+          <span className="inline-block w-fit max-w-full rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
             {item.category}
           </span>
         )}
-        <h3 className="break-words text-sm font-semibold leading-snug text-white sm:text-base">
+        <h3 className="hyphens-auto break-words text-base font-semibold leading-snug text-white">
           {item.title}
         </h3>
       </div>
