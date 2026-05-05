@@ -127,13 +127,29 @@ const testimonials = [
 
 const galleryFooter: GalleryItem[] = [
   { src: "/images/portfolio/lawn-growth-14-days.webp", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding", title: "14-Day Growth" },
-  { src: "/images/portfolio/front-yard-stone-border.webp", alt: "Front yard with stone border", category: "Landscaping", title: "Stone Border" },
   { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping detail", category: "Landscaping", title: "River Rock Borders" },
   { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn", category: "Landscaping", title: "Wall & Lawn" },
   { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard patio with hydroseeding", category: "Hydroseeding", title: "Block Retaining Wall & Hydroseed" },
-  { src: "/images/gallery/ornamental-tree-planting.webp", alt: "Ornamental tree planting", category: "Landscaping", title: "Tree Planting" },
-  { src: "/images/portfolio/macatawa-completed-landscape.webp", alt: "Completed residential landscape", category: "Landscaping", title: "Completed Landscape" },
-  { src: "/images/gallery/completed-wall-project-1.webp", alt: "Completed wall project", category: "Landscaping", title: "Completed Wall" },
+  { src: "/images/gallery/ornamental-tree-planting.webp", alt: "Ornamental tree planting with mulch bed", category: "Landscaping", title: "Tree Planting" },
+  { src: "/images/gallery/completed-wall-project-1.webp", alt: "Completed timber retaining wall installation", category: "Landscaping", title: "Timber Retaining Wall" },
+  {
+    src: "/images/gallery/shed-pad-retaining-wall.png",
+    alt: "Shed on gravel pad with timber border retaining the shed base",
+    category: "Landscaping",
+    title: "Shed Pad Retaining Wall",
+  },
+  {
+    src: "/images/gallery/new-tree-boulder-retaining-wall.png",
+    alt: "Backyard with newly planted tree, boulder retaining wall, and fresh hydroseed",
+    category: "Landscaping",
+    title: "New Tree & Boulder Retaining Wall",
+  },
+  {
+    src: "/images/gallery/church-hydroseeding.png",
+    alt: "Church property with fresh hydroseeding application",
+    category: "Hydroseeding",
+    title: "Church Property Hydroseeding",
+  },
 ];
 
 export default function Home() {
@@ -243,6 +259,13 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+          <FadeIn>
+            <div className="mt-10 flex justify-center sm:hidden">
+              <Button href="/services" variant="outline" className="w-full max-w-md">
+                Learn more
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </section>
 

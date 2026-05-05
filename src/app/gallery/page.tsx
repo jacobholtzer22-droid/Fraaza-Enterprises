@@ -84,6 +84,12 @@ const galleryItems: GalleryItem[] = [
     title: "River Rock Borders",
   },
   {
+    src: "/images/gallery/river-stone-landscape-beds-with-plantings.png",
+    alt: "River stone landscape beds with plantings along a modern home",
+    category: "Landscaping",
+    title: "River Stone Landscape Beds With Plantings",
+  },
+  {
     src: "/images/services/roadside-hydroseeding.webp",
     alt: "Roadside hydroseeding project",
     category: "Hydroseeding",
