@@ -254,6 +254,12 @@ export default function Home() {
                     <h3 className="text-sm font-semibold leading-snug text-white sm:text-base">
                       {service.title}
                     </h3>
+                    <span className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1.5 text-[11px] font-semibold text-white shadow-md transition-colors duration-300 group-hover:bg-[var(--accent-hover)]">
+                      Learn more
+                      <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">
+                        →
+                      </span>
+                    </span>
                   </div>
                 </Link>
               </FadeIn>
@@ -262,7 +268,7 @@ export default function Home() {
           <FadeIn>
             <div className="mt-10 flex justify-center sm:hidden">
               <Button href="/services" variant="outline" className="w-full max-w-md">
-                Learn more
+                View all services
               </Button>
             </div>
           </FadeIn>
