@@ -232,8 +232,8 @@ export default function TermsAndConditionsPage() {
           <p>
             <strong>Fraaza Enterprises</strong>
           </p>
-          <p>[STREET ADDRESS]</p>
-          <p>[CITY, MI ZIP]</p>
+          <p>10060 Polk St</p>
+          <p>Zeeland, MI 49464</p>
           <p>
             <Link className={linkClass} href={SITE.phoneHref}>
               {SITE.phone}
