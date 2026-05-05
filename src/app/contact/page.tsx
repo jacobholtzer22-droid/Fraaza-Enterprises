@@ -97,8 +97,8 @@ export default function ContactPage() {
 
                 <div className="mt-8 max-w-full overflow-hidden rounded-xl border border-[var(--border)]">
                   <iframe
-                    title="Fraaza Enterprises service area map"
-                    src="https://www.google.com/maps?q=Holland%20MI&output=embed"
+                    title="Service area map: Holland, Zeeland, Grand Haven, Hudsonville, and surrounding West Michigan"
+                    src={SITE.serviceAreaMapEmbedUrl}
                     className="h-56 w-full min-w-0 sm:h-64"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

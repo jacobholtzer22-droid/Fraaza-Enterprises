@@ -73,6 +73,10 @@ export default function SoilPreparationPage() {
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {[
+              {
+                title: "Soil preparation",
+                desc: "Power grader raking and finish hand raking to create the perfect seed bed.",
+              },
               { title: "Soil testing", desc: "Identify nutrient needs and pH concerns so your lawn has a better start." },
               { title: "Grading & leveling", desc: "Correct drainage issues and create a smooth, mowable surface." },
               { title: "Soil amendments", desc: "Add nutrients and organic matter to support stronger growth." },

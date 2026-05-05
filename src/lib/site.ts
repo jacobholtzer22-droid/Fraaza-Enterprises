@@ -9,6 +9,8 @@ export const SITE = {
   email: "chad@fraazaenterprises.com",
   serviceArea:
     "West Michigan — Holland, Zeeland, Grand Haven, Hudsonville, and surrounding areas",
+  serviceAreaMapEmbedUrl:
+    "https://www.google.com/maps?q=42.9253,-86.047&z=10&hl=en&output=embed",
   owner: "Chad Fraaza",
   since: 2004,
   motto: "Your Satisfaction Is Our Pride",
