@@ -61,13 +61,13 @@ export default function HydroseedingInfoPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[min(52vh,30rem)] items-center overflow-x-hidden sm:min-h-0 sm:h-96">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Professional hydroseeding application on a West Michigan property"
           fill
           priority
-          className="object-cover object-[center_30%] sm:object-center"
+          className="object-cover object-center sm:object-[center_30%]"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
@@ -230,12 +230,12 @@ export default function HydroseedingInfoPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden">
+      <section className="relative min-h-[min(46vh,26rem)] overflow-hidden sm:min-h-0">
         <Image
           src="/images/heroes/hydroseeding-new-home.webp"
           alt="Freshly hydroseeded lawn in West Michigan"
           fill
-          className="object-cover object-[center_30%] sm:object-center"
+          className="object-cover object-center sm:object-[center_30%]"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/30" />

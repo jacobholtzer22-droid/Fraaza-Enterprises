@@ -28,6 +28,15 @@
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
   --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.7);
+
+  /* Matches Header: h-24 mobile, lg:h-[7.5rem] — offsets fixed header + scroll anchors */
+  --header-height: 6rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 7.5rem;
+  }
 }
 
 @theme inline {
@@ -48,14 +57,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* Fixed header: h-24 (6rem) mobile, lg:h-[7.5rem] desktop */
-  scroll-padding-top: 6rem;
-}
-
-@media (min-width: 1024px) {
-  html {
-    scroll-padding-top: 7.5rem;
-  }
+  scroll-padding-top: var(--header-height);
 }
 
 body {

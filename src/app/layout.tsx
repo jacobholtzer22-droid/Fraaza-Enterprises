@@ -110,7 +110,7 @@ export default function RootLayout({
         />
         <div className="min-h-dvh flex flex-col overflow-x-hidden">
           <Header />
-          <main className="relative flex-1">{children}</main>
+          <main className="relative flex-1 pt-[var(--header-height)]">{children}</main>
           <Footer />
         </div>
       </body>

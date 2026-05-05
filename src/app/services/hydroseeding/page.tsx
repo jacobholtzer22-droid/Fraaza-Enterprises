@@ -117,13 +117,13 @@ export default function HydroseedingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-64 min-h-[16rem] overflow-x-hidden sm:h-96 sm:min-h-0 flex items-center">
+      <section className="relative flex min-h-[min(52vh,30rem)] items-center overflow-x-hidden sm:min-h-0 sm:h-96">
         <Image
           src="/images/heroes/craftsman-home-hydroseeding.webp"
           alt="Hydroseeding application on a new home lawn"
           fill
           priority
-          className="object-cover object-[center_30%] sm:object-center"
+          className="object-cover object-center sm:object-[center_30%]"
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
