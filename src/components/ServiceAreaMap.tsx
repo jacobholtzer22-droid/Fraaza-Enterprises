@@ -41,7 +41,7 @@ export default function ServiceAreaMap() {
           pathOptions={{
             color: '#dc2626',
             fillColor: '#dc2626',
-            fillOpacity: 0,
+            fillOpacity: 0.12,
             weight: 3,
             dashArray: '8, 8',
           }}
