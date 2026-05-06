@@ -40,6 +40,7 @@ export default function LandscapingPage() {
             light
             eyebrow="Services"
             title="Landscaping"
+            description="From sod installation and drain tile to retaining walls, planting, and Bobcat work, we build outdoor spaces that look great, drain right, and hold up."
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
@@ -65,16 +66,6 @@ export default function LandscapingPage() {
                 <Image src="/images/portfolio/river-rock-landscaping.webp" alt="River rock landscaping" width={400} height={300} className="w-full aspect-[4/3] object-cover" />
               </div>
             </div>
-          </FadeIn>
-
-          <FadeIn>
-            <p className="mt-12 max-w-3xl text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
-              We pair{" "}
-              <span className="font-semibold text-[var(--text-primary)]">sod installation</span>{" "}
-              with solid grading and prep, and we handle{" "}
-              <span className="font-semibold text-[var(--text-primary)]">drain tile installation</span>{" "}
-              when standing water or foundation moisture needs a real fix — so your lawn and landscape stay usable year-round.
-            </p>
           </FadeIn>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
