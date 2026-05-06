@@ -24,7 +24,7 @@ export default function SoilPreparationPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="New build with soil preparation and landscaping"
@@ -34,7 +34,7 @@ export default function SoilPreparationPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/35 to-transparent" />
-        <Container className="relative z-10 py-10 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-12 lg:py-14">
           <SectionHeading
             as="h1"
             light

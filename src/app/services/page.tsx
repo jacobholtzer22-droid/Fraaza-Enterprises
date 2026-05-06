@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image
           src="/images/services/hydroseeder-landscaping-project.webp"
           alt="Fraaza Enterprises hydroseeder at work"
@@ -36,7 +36,7 @@ export default function ServicesPage() {
           sizes="100vw"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
-        <Container className="relative z-10 py-10 sm:py-0">
+        <Container className="relative z-10 py-10 sm:py-12 lg:py-14">
           <SectionHeading
             as="h1"
             light
