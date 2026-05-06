@@ -1,3 +1,5 @@
+import { SERVICE_AREA_CITIES } from "@/lib/service-area-map";
+
 const SERVICE_AREAS = [
   "Holland",
   "Zeeland",
@@ -15,16 +17,17 @@ const SERVICE_AREAS = [
 
 const BRAND_GREEN = "#2D4A2D";
 
-/** Address-based embed with correct pin (no clipping — full iframe so Google’s overlays aren’t cut off). */
-const MAP_EMBED_SRC =
-  "https://www.google.com/maps?q=10060+Polk+St,+Zeeland,+MI+49464&z=11&iwloc=near&output=embed&hl=en";
+const zeeland = SERVICE_AREA_CITIES.find((c) => c.name === "Zeeland")!;
+
+/** Coordinate-only embed: pin in Zeeland without a street address in the URL or Google’s place card. */
+const MAP_EMBED_SRC = `https://www.google.com/maps?q=${zeeland.lat},${zeeland.lng}&z=11&output=embed&hl=en`;
 
 export default function ServiceAreaSection() {
   return (
     <div className="w-full">
       <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-18px_rgba(0,0,0,0.65)] ring-1 ring-white/[0.1]">
         <iframe
-          title="Fraaza Enterprises - 10060 Polk St, Zeeland, MI"
+          title="Service area map — Zeeland, Michigan"
           src={MAP_EMBED_SRC}
           className="h-[380px] w-full border-0 sm:h-[430px] lg:h-[480px]"
           loading="lazy"

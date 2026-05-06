@@ -155,7 +155,7 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative flex min-h-[78vh] items-center overflow-hidden sm:min-h-[92vh]">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[78vh] items-center overflow-hidden sm:min-h-[92vh]">
         <Image
           src="/images/heroes/luxury-home-hydroseeding.webp"
           alt="Luxury home with freshly hydroseeded lawn by Fraaza Enterprises"
