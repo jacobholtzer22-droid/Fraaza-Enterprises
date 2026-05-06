@@ -15,7 +15,7 @@ const SERVICE_AREAS = [
 
 const BRAND_GREEN = "#2D4A2D";
 
-/** Address-based embed (correct pin). Top clip hides Google’s dark place strip so the map meets the rounded frame—same idea as Share → Embed. */
+/** Address-based embed with correct pin (no clipping — full iframe so Google’s overlays aren’t cut off). */
 const MAP_EMBED_SRC =
   "https://www.google.com/maps?q=10060+Polk+St,+Zeeland,+MI+49464&z=11&iwloc=near&output=embed&hl=en";
 
@@ -23,16 +23,14 @@ export default function ServiceAreaSection() {
   return (
     <div className="w-full">
       <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-18px_rgba(0,0,0,0.65)] ring-1 ring-white/[0.1]">
-        <div className="relative h-[380px] w-full overflow-hidden sm:h-[430px] lg:h-[480px]">
-          <iframe
-            title="Fraaza Enterprises - 10060 Polk St, Zeeland, MI"
-            src={MAP_EMBED_SRC}
-            className="absolute left-0 top-0 h-[calc(100%+2rem)] w-full -translate-y-8 border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
-        </div>
+        <iframe
+          title="Fraaza Enterprises - 10060 Polk St, Zeeland, MI"
+          src={MAP_EMBED_SRC}
+          className="h-[380px] w-full border-0 sm:h-[430px] lg:h-[480px]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
       </div>
 
       <div className="mt-8">

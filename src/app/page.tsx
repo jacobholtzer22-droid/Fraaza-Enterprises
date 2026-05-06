@@ -126,7 +126,6 @@ const testimonials = [
 ];
 
 const galleryFooter: GalleryItem[] = [
-  { src: "/images/portfolio/lawn-growth-14-days.webp", alt: "Lawn growth 14 days after hydroseeding", category: "Hydroseeding", title: "14-Day Growth" },
   { src: "/images/portfolio/river-rock-landscaping.webp", alt: "River rock landscaping detail", category: "Landscaping", title: "River Rock Borders" },
   { src: "/images/portfolio/retaining-wall-hydroseeding.webp", alt: "Retaining wall with hydroseeded lawn", category: "Landscaping", title: "Wall & Lawn" },
   { src: "/images/gallery/backyard-patio-hydroseeding.webp", alt: "Backyard patio with hydroseeding", category: "Hydroseeding", title: "Block Retaining Wall & Hydroseed" },
