@@ -1,19 +1,22 @@
 'use client';
 
-import { MapContainer, TileLayer, Polygon, CircleMarker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Polygon, CircleMarker, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const BRAND_GREEN = '#2d4a2d';
+/** Site brand is dark olive (#2D4A2D); map-only vibrant green for contrast on light tiles */
+const MAP_AREA_GREEN = '#16a34a';
 
 const serviceArea: [number, number][] = [
-  [42.72, -86.215],
-  [42.65, -86.215],
-  [42.65, -85.85],
-  [42.86, -85.72],
-  [43.1, -85.87],
-  [43.11, -86.22],
-  [42.96, -86.25],
-  [42.85, -86.22],
+  [42.7, -86.225],
+  [42.64, -86.18],
+  [42.64, -85.82],
+  [42.82, -85.7],
+  [43.02, -85.73],
+  [43.13, -85.87],
+  [43.15, -86.18],
+  [43.08, -86.26],
+  [42.9, -86.25],
+  [42.78, -86.23],
 ];
 
 const cities = [
@@ -27,7 +30,7 @@ export default function ServiceAreaMap() {
   return (
     <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
       <MapContainer
-        center={[42.88, -86.0]}
+        center={[42.89, -85.97]}
         zoom={9}
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
@@ -39,25 +42,27 @@ export default function ServiceAreaMap() {
         <Polygon
           positions={serviceArea}
           pathOptions={{
-            color: BRAND_GREEN,
-            fillColor: BRAND_GREEN,
-            fillOpacity: 0.35,
-            weight: 3,
+            color: MAP_AREA_GREEN,
+            fillColor: MAP_AREA_GREEN,
+            fillOpacity: 0.45,
+            weight: 4,
           }}
         />
         {cities.map((city) => (
           <CircleMarker
             key={city.name}
             center={city.pos}
-            radius={8}
+            radius={9}
             pathOptions={{
               color: '#ffffff',
-              fillColor: BRAND_GREEN,
+              fillColor: MAP_AREA_GREEN,
               fillOpacity: 1,
               weight: 2,
             }}
           >
-            <Popup>{city.name}</Popup>
+            <Tooltip permanent direction="top" offset={[0, -10]} className="city-tooltip">
+              {city.name}
+            </Tooltip>
           </CircleMarker>
         ))}
       </MapContainer>

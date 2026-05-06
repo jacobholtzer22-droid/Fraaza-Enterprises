@@ -89,7 +89,7 @@ export default function LandscapingPage() {
               { title: "Topsoil & bark", desc: "Delivery and installation for clean beds and healthy growing conditions." },
               {
                 title: "Bobcat services",
-                desc: "Dirt moving, grading, back filling, brush mowing, and excavation or trenching for drain tile — efficient machine work that keeps your project moving.",
+                desc: "Dirt moving, grading, back filling, brush mowing, driveway installations, and excavation or trenching for drain tile — efficient machine work that keeps your project moving.",
               },
             ].map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 2) + 1) as 1 | 2}>

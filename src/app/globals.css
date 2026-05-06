@@ -266,3 +266,17 @@ body {
   background: transparent !important;
   border: none !important;
 }
+
+.city-tooltip {
+  background: white !important;
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+}
+.city-tooltip::before {
+  display: none !important;
+}
