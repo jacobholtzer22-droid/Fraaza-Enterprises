@@ -75,7 +75,7 @@ export default function SoilPreparationPage() {
             {[
               {
                 title: "Soil preparation",
-                desc: "Power grader raking and finish hand raking to create the perfect seed bed.",
+                desc: "Power gill raking and finish hand raking to create the perfect seed bed.",
               },
               { title: "Soil testing", desc: "Identify nutrient needs and pH concerns so your lawn has a better start." },
               { title: "Grading & leveling", desc: "Correct drainage issues and create a smooth, mowable surface." },
@@ -95,7 +95,7 @@ export default function SoilPreparationPage() {
           <FadeIn>
             <div className="mt-10 rounded-2xl bg-[var(--bg-green)] p-8">
               <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-white">
-                The right prep makes everything easier
+                The right soil preparation is crucial for a healthy lawn
               </h3>
               <p className="mt-3 text-base leading-7 text-white/65 sm:text-sm">
                 Proper grading, clean removal, and the right soil blend reduces

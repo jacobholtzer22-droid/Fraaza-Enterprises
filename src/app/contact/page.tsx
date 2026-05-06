@@ -1,10 +1,29 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ContactForm } from "@/components/ContactForm";
 import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
+
+const ServiceAreaMap = dynamic(
+  () =>
+    import("@/components/ServiceAreaMap").then((m) => ({
+      default: m.ServiceAreaMap,
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="flex h-56 min-h-[14rem] w-full items-center justify-center bg-[var(--bg-dark)] text-sm text-[var(--text-muted)] sm:h-64"
+        role="status"
+      >
+        Loading map…
+      </div>
+    ),
+  }
+);
 
 export const metadata: Metadata = {
   title: "Contact West Michigan's Hydroseeding Experts | Holland, MI",
@@ -96,13 +115,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 max-w-full overflow-hidden rounded-xl border border-[var(--border)]">
-                  <iframe
-                    title="Service area map: Holland, Zeeland, Grand Haven, Hudsonville, and surrounding West Michigan"
-                    src={SITE.serviceAreaMapEmbedUrl}
-                    className="h-56 w-full min-w-0 sm:h-64"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+                  <div
+                    role="region"
+                    aria-label="Interactive map: West Michigan service area outline with Holland, Zeeland, Grand Haven, Hudsonville, and Spring Lake"
+                  >
+                    <ServiceAreaMap />
+                  </div>
                 </div>
               </div>
             </FadeIn>
