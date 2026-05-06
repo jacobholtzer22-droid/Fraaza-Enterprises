@@ -3,9 +3,6 @@
 import { MapContainer, TileLayer, Polygon, CircleMarker, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-/** Site brand is dark olive (#2D4A2D); map-only vibrant green for contrast on light tiles */
-const MAP_AREA_GREEN = '#16a34a';
-
 const serviceArea: [number, number][] = [
   [42.7, -86.225],
   [42.64, -86.18],
@@ -30,22 +27,23 @@ export default function ServiceAreaMap() {
   return (
     <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
       <MapContainer
-        center={[42.89, -85.97]}
-        zoom={9}
+        center={[42.88, -86.05]}
+        zoom={10}
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
           attribution="&copy; OpenStreetMap &copy; CartoDB"
         />
         <Polygon
           positions={serviceArea}
           pathOptions={{
-            color: MAP_AREA_GREEN,
-            fillColor: MAP_AREA_GREEN,
-            fillOpacity: 0.45,
-            weight: 4,
+            color: '#dc2626',
+            fillColor: '#dc2626',
+            fillOpacity: 0,
+            weight: 3,
+            dashArray: '8, 8',
           }}
         />
         {cities.map((city) => (
@@ -55,7 +53,7 @@ export default function ServiceAreaMap() {
             radius={9}
             pathOptions={{
               color: '#ffffff',
-              fillColor: MAP_AREA_GREEN,
+              fillColor: '#dc2626',
               fillOpacity: 1,
               weight: 2,
             }}
