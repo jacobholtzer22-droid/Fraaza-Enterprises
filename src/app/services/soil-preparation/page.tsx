@@ -24,7 +24,7 @@ export default function SoilPreparationPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="New build with soil preparation and landscaping"

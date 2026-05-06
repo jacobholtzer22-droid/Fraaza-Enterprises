@@ -19,8 +19,8 @@ export function SectionHeading({
 }) {
   const titleCls =
     Tag === "h1"
-      ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight hyphens-auto"
-      : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight hyphens-auto";
+      ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight hyphens-none"
+      : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight hyphens-none";
 
   return (
     <div className={cn("max-w-2xl min-w-0", centered && "mx-auto text-center", className)}>

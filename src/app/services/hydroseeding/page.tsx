@@ -117,7 +117,7 @@ export default function HydroseedingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative flex min-h-[min(52vh,30rem)] items-center overflow-x-hidden sm:min-h-0 sm:h-96">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[min(52vh,30rem)] items-center overflow-x-hidden sm:min-h-0 sm:h-96">
         <Image
           src="/images/heroes/craftsman-home-hydroseeding.webp"
           alt="Hydroseeding application on a new home lawn"

@@ -83,7 +83,7 @@ export default function BlogPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
         <Image
           src="/images/heroes/new-build-landscaping.webp"
           alt="West Michigan landscaping and hydroseeding"

@@ -106,7 +106,7 @@ export default function CareAndWateringPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/portfolio/lawn-growth-14-days.webp"
           alt="Hydroseeded lawn growth after 14 days in West Michigan"

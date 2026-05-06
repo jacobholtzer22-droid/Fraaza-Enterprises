@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/services/hydroseeder-landscaping-project.webp"
           alt="Fraaza Enterprises hydroseeder at work"

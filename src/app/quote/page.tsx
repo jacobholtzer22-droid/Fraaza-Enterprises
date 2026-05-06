@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function QuotePage() {
   return (
     <div>
-      <section className="relative flex min-h-[15rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[15rem] items-center overflow-x-hidden sm:h-80 sm:min-h-0">
         <Image
           src="/images/portfolio/estate-hydroseeding.webp"
           alt="Estate property hydroseeding project"

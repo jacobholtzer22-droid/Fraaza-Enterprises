@@ -251,7 +251,7 @@ export default function GalleryPage() {
   return (
     <div>
       {/* Hero banner */}
-      <section className="relative flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
+      <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:h-96 sm:min-h-0">
         <Image
           src="/images/heroes/hydroseeding-new-home.webp"
           alt="Hydroseeding project by Fraaza Enterprises"
