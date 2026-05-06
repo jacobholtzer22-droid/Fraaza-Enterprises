@@ -40,7 +40,6 @@ export default function LandscapingPage() {
             light
             eyebrow="Services"
             title="Landscaping"
-            description="From sod installation and drain tile to retaining walls, planting, and Bobcat work, we build outdoor spaces that look great, drain right, and hold up."
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
