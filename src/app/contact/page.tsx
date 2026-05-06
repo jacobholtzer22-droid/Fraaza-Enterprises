@@ -96,17 +96,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 max-w-full space-y-5">
-                  <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
-                      Address
-                    </div>
-                    <p className="mt-2 text-base leading-relaxed text-[var(--text-primary)]">
-                      10060 Polk St
-                      <br />
-                      Zeeland, Michigan 49464
-                    </p>
-                  </div>
+                <div className="mt-8 max-w-full">
                   <ServiceAreaSection />
                 </div>
               </div>
