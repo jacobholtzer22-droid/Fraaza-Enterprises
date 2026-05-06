@@ -1,88 +1,64 @@
-"use client";
+'use client';
 
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import { useEffect, useMemo } from "react";
-import {
-  AttributionControl,
-  GeoJSON,
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Polygon, CircleMarker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
-import { ottawaCountyMi } from "@/data/ottawa-county-mi";
-import { SERVICE_AREA_CITIES } from "@/lib/service-area-map";
+const BRAND_GREEN = '#2d4a2d';
 
-/** Matches `--green` / `--bg-green` in globals.css (primary Fraaza green). */
-const BRAND_GREEN = "#2D4A2D";
+const serviceArea: [number, number][] = [
+  [42.72, -86.215],
+  [42.65, -86.215],
+  [42.65, -85.85],
+  [42.86, -85.72],
+  [43.1, -85.87],
+  [43.11, -86.22],
+  [42.96, -86.25],
+  [42.85, -86.22],
+];
 
-export function ServiceAreaMap() {
-  useEffect(() => {
-    // Avoid broken default marker assets if any layer falls back to DivIcon defaults.
-    delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })
-      ._getIconUrl;
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
-      iconUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
-      shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-    });
-  }, []);
+const cities = [
+  { name: 'Holland', pos: [42.7875, -86.1089] as [number, number] },
+  { name: 'Zeeland', pos: [42.8125, -86.0192] as [number, number] },
+  { name: 'Grand Haven', pos: [43.0631, -86.2284] as [number, number] },
+  { name: 'Hudsonville', pos: [42.8694, -85.8636] as [number, number] },
+];
 
-  const markerIcon = useMemo(
-    () =>
-      L.divIcon({
-        className: "fraaza-leaflet-marker",
-        html: `<div style="width:11px;height:11px;background:${BRAND_GREEN};border:2px solid #ffffff;border-radius:9999px;box-shadow:0 1px 4px rgba(0,0,0,0.45)"></div>`,
-        iconSize: [15, 15],
-        iconAnchor: [7, 7],
-        popupAnchor: [0, -6],
-      }),
-    []
-  );
-
+export default function ServiceAreaMap() {
   return (
-    <div
-      className="w-full overflow-hidden rounded-2xl shadow-[var(--shadow-md)]"
-      aria-label="Map of Fraaza service area in West Michigan"
-    >
+    <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
       <MapContainer
-        center={[42.9, -86]}
-        zoom={9.5}
-        zoomSnap={0.5}
-        className="z-0 h-[400px] w-full min-w-0 sm:h-[500px] lg:h-[600px]"
+        center={[42.88, -86.0]}
+        zoom={9}
         scrollWheelZoom={false}
-        attributionControl={false}
+        style={{ height: '100%', width: '100%' }}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-          subdomains="abcd"
+          attribution="&copy; OpenStreetMap &copy; CartoDB"
         />
-        <AttributionControl prefix={false} />
-        <GeoJSON
-          data={ottawaCountyMi}
-          style={{
+        <Polygon
+          positions={serviceArea}
+          pathOptions={{
             color: BRAND_GREEN,
             fillColor: BRAND_GREEN,
-            fillOpacity: 0.28,
-            weight: 2.5,
-            opacity: 1,
-            lineJoin: "round",
+            fillOpacity: 0.35,
+            weight: 3,
           }}
         />
-        {SERVICE_AREA_CITIES.map((city) => (
-          <Marker
+        {cities.map((city) => (
+          <CircleMarker
             key={city.name}
-            position={[city.lat, city.lng]}
-            icon={markerIcon}
+            center={city.pos}
+            radius={8}
+            pathOptions={{
+              color: '#ffffff',
+              fillColor: BRAND_GREEN,
+              fillOpacity: 1,
+              weight: 2,
+            }}
           >
             <Popup>{city.name}</Popup>
-          </Marker>
+          </CircleMarker>
         ))}
       </MapContainer>
     </div>

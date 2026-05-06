@@ -7,23 +7,12 @@ import { ContactForm } from "@/components/ContactForm";
 import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
 
-const ServiceAreaMap = dynamic(
-  () =>
-    import("@/components/ServiceAreaMap").then((m) => ({
-      default: m.ServiceAreaMap,
-    })),
-  {
-    ssr: false,
-    loading: () => (
-      <div
-        className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-[var(--bg-dark)] text-sm text-[var(--text-muted)] sm:h-[500px] lg:h-[600px]"
-        role="status"
-      >
-        Loading map…
-      </div>
-    ),
-  }
-);
+const ServiceAreaMap = dynamic(() => import("@/components/ServiceAreaMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] bg-stone-100 rounded-2xl animate-pulse" />
+  ),
+});
 
 export const metadata: Metadata = {
   title: "Contact West Michigan's Hydroseeding Experts | Holland, MI",
