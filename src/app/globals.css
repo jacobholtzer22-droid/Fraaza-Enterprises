@@ -260,3 +260,9 @@ body {
 .header-scrolled span:hover {
   color: #fff;
 }
+
+/* Leaflet divIcon markers — strip default tile background from empty pin wrapper */
+.fraaza-leaflet-marker {
+  background: transparent !important;
+  border: none !important;
+}

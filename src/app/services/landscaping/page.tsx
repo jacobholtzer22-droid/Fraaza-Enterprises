@@ -8,14 +8,14 @@ import { FadeIn } from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Landscaping | Holland, MI",
   description:
-    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, drain tile installation, yard drainage, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
+    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, drain tile installation, Bobcat services (grading, dirt moving, backfill, brush mowing), yard drainage, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/landscaping",
   },
   openGraph: {
     title: "Landscaping | Holland, MI | Fraaza Enterprises",
     description:
-      "Landscaping services across West Michigan: sod, retaining walls, drain tile installation, planting, and more.",
+      "Landscaping across West Michigan: sod, drain tile, retaining walls, Bobcat grading and prep, planting, and more.",
     url: "/services/landscaping",
   },
 };
@@ -40,7 +40,7 @@ export default function LandscapingPage() {
             light
             eyebrow="Services"
             title="Landscaping"
-            description="From sod installs and retaining walls to drain tile and planting, we build outdoor spaces that look great, drain right, and hold up."
+            description="From sod installation and drain tile to retaining walls, planting, and Bobcat work, we build outdoor spaces that look great, drain right, and hold up."
           />
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/quote" className="w-full sm:w-auto">Get a Free Quote</Button>
@@ -68,15 +68,29 @@ export default function LandscapingPage() {
             </div>
           </FadeIn>
 
+          <FadeIn>
+            <p className="mt-12 max-w-3xl text-base leading-7 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
+              We pair{" "}
+              <span className="font-semibold text-[var(--text-primary)]">sod installation</span>{" "}
+              with solid grading and prep, and we handle{" "}
+              <span className="font-semibold text-[var(--text-primary)]">drain tile installation</span>{" "}
+              when standing water or foundation moisture needs a real fix — so your lawn and landscape stay usable year-round.
+            </p>
+          </FadeIn>
+
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {[
-              { title: "Sod installation", desc: "Professional sod install for quick curb appeal and an instant green lawn." },
+              { title: "Sod installation", desc: "Professional sod install on properly graded, drained soil for quick curb appeal and an instant green lawn." },
               { title: "Retaining walls", desc: "Functional and attractive walls to manage grade changes and define spaces." },
-              { title: "Drain tile installation", desc: "Move water away from foundations, low spots, and saturated areas with properly installed drain tile." },
+              { title: "Drain tile installation", desc: "Move water away from foundations, low spots, and saturated areas with correctly sloped tile and stone — often paired with grading and backfill." },
               { title: "Yard drainage solutions", desc: "Catch basins, downspout tie-ins, and surface drainage to keep your lawn dry and protect hardscapes." },
               { title: "Tree planting", desc: "Planting and placement guidance for a healthier, better-looking landscape." },
               { title: "Soil prep & seeding", desc: "Prep work that sets the foundation for a strong lawn and clean finish." },
               { title: "Topsoil & bark", desc: "Delivery and installation for clean beds and healthy growing conditions." },
+              {
+                title: "Bobcat services",
+                desc: "Dirt moving, grading, back filling, brush mowing, and excavation or trenching for drain tile — efficient machine work that keeps your project moving.",
+              },
             ].map((item, idx) => (
               <FadeIn key={item.title} delay={((idx % 2) + 1) as 1 | 2}>
                 <div className="rounded-2xl bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">

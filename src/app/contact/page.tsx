@@ -16,7 +16,7 @@ const ServiceAreaMap = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="flex h-56 min-h-[14rem] w-full items-center justify-center bg-[var(--bg-dark)] text-sm text-[var(--text-muted)] sm:h-64"
+        className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-[var(--bg-dark)] text-sm text-[var(--text-muted)] sm:h-[500px] lg:h-[600px]"
         role="status"
       >
         Loading map…
@@ -114,13 +114,12 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 max-w-full overflow-hidden rounded-xl border border-[var(--border)]">
-                  <div
-                    role="region"
-                    aria-label="Interactive map: West Michigan service area outline with Holland, Zeeland, Grand Haven, Hudsonville, and Spring Lake"
-                  >
-                    <ServiceAreaMap />
-                  </div>
+                <div className="mt-8 max-w-full space-y-3">
+                  <ServiceAreaMap />
+                  <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+                    Proudly serving Holland, Zeeland, Grand Haven, Hudsonville,
+                    and surrounding West Michigan communities.
+                  </p>
                 </div>
               </div>
             </FadeIn>
