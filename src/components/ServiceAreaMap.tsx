@@ -20,10 +20,10 @@ const serviceArea: [number, number][] = [
 ];
 
 const cities = [
-  { name: 'Holland', pos: [42.7875, -86.1089] as [number, number] },
-  { name: 'Zeeland', pos: [42.8125, -86.0192] as [number, number] },
-  { name: 'Grand Haven', pos: [43.0631, -86.2284] as [number, number] },
-  { name: 'Hudsonville', pos: [42.8694, -85.8636] as [number, number] },
+  { name: 'Holland', pos: [42.7875, -86.1089] as [number, number], dir: 'left' as const },
+  { name: 'Zeeland', pos: [42.8125, -86.0192] as [number, number], dir: 'right' as const },
+  { name: 'Grand Haven', pos: [43.0631, -86.2284] as [number, number], dir: 'top' as const },
+  { name: 'Hudsonville', pos: [42.8694, -85.8636] as [number, number], dir: 'right' as const },
 ];
 
 export default function ServiceAreaMap() {
@@ -60,7 +60,14 @@ export default function ServiceAreaMap() {
               weight: 2,
             }}
           >
-            <Tooltip permanent direction="top" offset={[0, -10]} className="city-tooltip">
+            <Tooltip
+              permanent
+              direction={city.dir}
+              offset={
+                city.dir === 'left' ? [-10, 0] : city.dir === 'right' ? [10, 0] : [0, -10]
+              }
+              className="city-tooltip"
+            >
               {city.name}
             </Tooltip>
           </CircleMarker>
