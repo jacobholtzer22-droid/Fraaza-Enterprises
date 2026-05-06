@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ContactForm } from "@/components/ContactForm";
 import { FadeIn } from "@/components/FadeIn";
+import ServiceAreaSection from "@/components/ServiceAreaSection";
 import { SITE } from "@/lib/site";
-
-const ServiceAreaMap = dynamic(() => import("@/components/ServiceAreaMap"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] bg-stone-100 rounded-2xl animate-pulse" />
-  ),
-});
 
 export const metadata: Metadata = {
   title: "Contact West Michigan's Hydroseeding Experts | Holland, MI",
@@ -103,12 +96,18 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 max-w-full space-y-3">
-                  <ServiceAreaMap />
-                  <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                    Proudly serving Holland, Zeeland, Grand Haven, Hudsonville,
-                    and surrounding West Michigan communities.
-                  </p>
+                <div className="mt-8 max-w-full space-y-5">
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
+                      Address
+                    </div>
+                    <p className="mt-2 text-base leading-relaxed text-[var(--text-primary)]">
+                      10060 Polk St
+                      <br />
+                      Zeeland, Michigan 49464
+                    </p>
+                  </div>
+                  <ServiceAreaSection />
                 </div>
               </div>
             </FadeIn>
