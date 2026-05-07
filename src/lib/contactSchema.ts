@@ -1,9 +1,10 @@
 import { z } from "zod";
 
 export const SERVICE_VALUES = [
-  "Hydroseeding",
-  "Landscaping",
-  "Mulch Installation",
+  "Hydroseed",
+  "Landscape",
+  "Soil prep",
+  "Snow plowing",
   "Other",
 ] as const;
 

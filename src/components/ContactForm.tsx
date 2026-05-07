@@ -26,7 +26,7 @@ const defaultValues: ContactFormValues = {
   name: "",
   email: "",
   phone: "",
-  service: "Hydroseeding",
+  service: "Hydroseed",
   message: "",
   website: "",
 };
