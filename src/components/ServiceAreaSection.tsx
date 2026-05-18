@@ -1,25 +1,33 @@
+// Ordered roughly by geographic proximity, clustered by region around Zeeland, MI
 const SERVICE_AREAS = [
-  "Holland",
+  // Holland / Zeeland core
   "Zeeland",
-  "Grand Haven",
-  "Hudsonville",
-  "West Olive",
-  "Spring Lake",
-  "Allendale",
-  "Jenison",
-  "Coopersville",
+  "Holland",
   "Park Township",
+  // South (Allegan County)
   "Saugatuck",
-  "Ferrysburg",
-  "Muskegon",
-  "Wyoming",
-  "Grandville",
-  "Allegan",
   "Fennville",
-  "Nunica",
-  "Walker",
+  "Hamilton",
+  "Allegan",
+  // East toward Grand Rapids
+  "Hudsonville",
+  "Jenison",
+  "Grandville",
+  "Byron Center",
+  "Wyoming",
   "Kentwood",
+  "Walker",
   "Grand Rapids",
+  // Northeast
+  "Allendale",
+  "Coopersville",
+  // North lakeshore
+  "Nunica",
+  "Spring Lake",
+  "Ferrysburg",
+  "Grand Haven",
+  "West Olive",
+  "Muskegon",
 ];
 
 const BRAND_GREEN = "#2D4A2D";
@@ -32,7 +40,18 @@ const MAP_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(MAP_PI
 export default function ServiceAreaSection() {
   return (
     <div className="w-full">
-      <div>
+      <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-18px_rgba(0,0,0,0.65)] ring-1 ring-white/[0.1]">
+        <iframe
+          title="Map — 10060 Polk St, Zeeland, Michigan"
+          src={MAP_EMBED_SRC}
+          className="h-[380px] w-full border-0 sm:h-[430px] lg:h-[480px]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
+
+      <div className="mt-8">
         <h3 className="text-lg font-semibold text-[var(--text-primary)] sm:text-xl">
           Service Areas
         </h3>
@@ -53,17 +72,6 @@ export default function ServiceAreaSection() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="mt-8 overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-18px_rgba(0,0,0,0.65)] ring-1 ring-white/[0.1]">
-        <iframe
-          title="Map — 10060 Polk St, Zeeland, Michigan"
-          src={MAP_EMBED_SRC}
-          className="h-[380px] w-full border-0 sm:h-[430px] lg:h-[480px]"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen
-        />
       </div>
     </div>
   );
