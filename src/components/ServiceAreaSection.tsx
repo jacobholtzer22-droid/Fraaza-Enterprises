@@ -6,6 +6,7 @@ const SERVICE_AREAS = [
   "Park Township",
   // South (Allegan County)
   "Saugatuck",
+  "Douglas",
   "Fennville",
   "Hamilton",
   "Allegan",
@@ -17,9 +18,11 @@ const SERVICE_AREAS = [
   "Wyoming",
   "Kentwood",
   "Walker",
+  "Standale",
   "Grand Rapids",
   // Northeast
   "Allendale",
+  "Eastmanville",
   "Coopersville",
   // North lakeshore
   "Nunica",
