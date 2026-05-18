@@ -97,7 +97,7 @@ export default function SoilPreparationPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-white">
                 The right soil preparation is crucial for a healthy lawn
               </h3>
-              <p className="mt-3 text-base leading-7 text-white/65 sm:text-sm">
+              <p className="mt-3 text-base leading-7 text-white/65 max-sm:text-white sm:text-sm">
                 Proper grading, clean removal, and the right soil blend reduces
                 headaches later — better drainage, better germination, and better
                 long-term results.

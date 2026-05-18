@@ -96,7 +96,7 @@ export default function LandscapingPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-white">
                 Built for West Michigan properties
               </h3>
-              <p className="mt-3 text-base leading-7 text-white/65 sm:text-sm">
+              <p className="mt-3 text-base leading-7 text-white/65 max-sm:text-white sm:text-sm">
                 We tailor materials and methods to the site conditions — focusing
                 on clean prep, proper grading, and quality installation so your
                 landscape performs as good as it looks.

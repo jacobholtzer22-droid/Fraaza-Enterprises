@@ -117,15 +117,15 @@ export default function ServicesPage() {
           className="object-cover object-[center_30%] sm:object-center"
           sizes="100vw"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/45 to-[var(--bg-green)]/35" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--bg-green)]/75 via-[var(--bg-green)]/45 to-[var(--bg-green)]/35 max-sm:from-[var(--bg-green)]/90 max-sm:via-[var(--bg-green)]/75 max-sm:to-[var(--bg-green)]/65" />
         <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
           <FadeIn>
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
               <div className="flex-1">
-                <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white sm:text-3xl">
+                <h2 className="hyphens-auto break-words font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white max-sm:[text-shadow:0_2px_18px_rgba(0,0,0,0.85),0_1px_3px_rgba(0,0,0,0.95)] sm:text-3xl">
                   Not sure what you need?
                 </h2>
-                <p className="mt-3 text-base text-white/65">
+                <p className="mt-3 text-base text-white/65 max-sm:text-white max-sm:[text-shadow:0_1px_12px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.95)]">
                   We&apos;ll assess your property and recommend the right services for your goals and budget.
                 </p>
               </div>
