@@ -244,6 +244,54 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+/* ── Service-area Leaflet map ── */
+.fraaza-city-tooltip.leaflet-tooltip,
+.fraaza-office-tooltip.leaflet-tooltip {
+  background: rgba(10, 10, 10, 0.85);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  white-space: nowrap;
+}
+.fraaza-city-tooltip.leaflet-tooltip::before,
+.fraaza-office-tooltip.leaflet-tooltip::before {
+  display: none;
+}
+.fraaza-office-tooltip.leaflet-tooltip {
+  border-color: rgba(200, 149, 108, 0.65);
+}
+.fraaza-office-pin {
+  background: transparent !important;
+  border: 0 !important;
+}
+/* Leaflet attribution styled for dark background */
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(10, 10, 10, 0.65);
+  color: rgba(245, 245, 245, 0.75);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px 0 0 0;
+}
+.leaflet-container .leaflet-control-attribution a {
+  color: rgba(200, 149, 108, 0.95);
+}
+/* Zoom controls on dark theme */
+.leaflet-container .leaflet-bar a {
+  background: rgba(20, 20, 20, 0.9);
+  color: #f5f5f5;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.leaflet-container .leaflet-bar a:hover {
+  background: rgba(40, 40, 40, 0.95);
+  color: var(--accent);
+}
+
 /* ── Navbar scroll state ── */
 .header-scrolled {
   background: rgba(10, 10, 10, 0.85) !important;
