@@ -77,12 +77,6 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
-                      Service area
-                    </div>
-                    <div className="mt-1 text-[var(--text-primary)]">{SITE.serviceArea}</div>
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
                       Hours
                     </div>
                     <div className="mt-2 space-y-1">
