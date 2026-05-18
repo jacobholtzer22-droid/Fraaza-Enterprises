@@ -195,18 +195,12 @@ export default function Home() {
             </FadeIn>
 
             {/* Stats Bar */}
-            <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/15 pt-6 sm:mt-12 sm:flex sm:gap-12 sm:pt-8">
+            <div className="mt-10 grid grid-cols-2 gap-3 border-t border-white/15 pt-6 sm:mt-12 sm:flex sm:gap-12 sm:pt-8">
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
                   <AnimatedCounter target={20} suffix="+" />
                 </div>
                 <div className="mt-1 text-xs leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Years Experience</div>
-              </div>
-              <div className="min-w-0 text-center sm:text-left">
-                <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
-                  <AnimatedCounter target={500} suffix="+" />
-                </div>
-                <div className="mt-1 text-xs leading-snug text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] sm:text-sm sm:text-gray-200 sm:[text-shadow:none]">Projects Completed</div>
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-white sm:text-3xl md:text-4xl">
