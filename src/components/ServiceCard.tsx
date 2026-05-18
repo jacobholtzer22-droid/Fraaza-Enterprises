@@ -34,7 +34,7 @@ export function ServiceCard({
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-110 sm:object-center"
       />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/55 group-hover:via-black/10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/55 group-hover:via-black/10 max-sm:h-3/4 max-sm:from-black/90 max-sm:via-black/55" />
       {featured && (
         <div className="absolute top-4 left-4 z-20 sm:top-6 sm:left-6">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg">
@@ -46,16 +46,16 @@ export function ServiceCard({
       <div className="relative z-10 p-4 sm:p-6 lg:p-8">
         <h3
           className={cn(
-            "hyphens-auto break-words font-[family-name:var(--font-playfair)] font-bold leading-tight text-white",
+            "hyphens-auto break-words font-[family-name:var(--font-playfair)] font-bold leading-tight text-white max-sm:[text-shadow:0_2px_14px_rgba(0,0,0,0.85),0_1px_3px_rgba(0,0,0,0.95)]",
             featured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl",
           )}
         >
           {title}
         </h3>
-        <p className="mt-2 max-w-sm text-base leading-relaxed text-white/80 sm:text-sm">
+        <p className="mt-2 max-w-sm text-base leading-relaxed text-white/80 max-sm:text-white max-sm:[text-shadow:0_1px_10px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.95)] sm:text-sm">
           {description}
         </p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)] transition-all duration-300 group-hover:gap-3">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)] transition-all duration-300 group-hover:gap-3 max-sm:[text-shadow:0_1px_8px_rgba(0,0,0,0.85)]">
           Learn more
           <svg
             width="16"

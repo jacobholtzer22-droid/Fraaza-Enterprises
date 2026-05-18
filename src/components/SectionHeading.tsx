@@ -28,7 +28,9 @@ export function SectionHeading({
         <div
           className={cn(
             "text-xs font-semibold uppercase tracking-[0.22em]",
-            light ? "text-[var(--accent-light)]" : "text-[var(--accent)]",
+            light
+              ? "text-[var(--accent-light)] max-sm:[text-shadow:0_1px_8px_rgba(0,0,0,0.85)]"
+              : "text-[var(--accent)]",
           )}
         >
           {eyebrow}
@@ -38,7 +40,9 @@ export function SectionHeading({
         className={cn(
           "mt-3 font-[family-name:var(--font-playfair)] font-semibold tracking-tight break-words [overflow-wrap:anywhere]",
           titleCls,
-          light ? "text-[var(--text-light)]" : "text-[var(--text-primary)]",
+          light
+            ? "text-[var(--text-light)] max-sm:[text-shadow:0_2px_18px_rgba(0,0,0,0.85),0_1px_3px_rgba(0,0,0,0.95)]"
+            : "text-[var(--text-primary)]",
         )}
       >
         {title}
@@ -48,7 +52,7 @@ export function SectionHeading({
           className={cn(
             "mt-4 text-base leading-7 break-words text-pretty sm:text-[1.05rem] sm:leading-8",
             light
-              ? "text-white/90 max-sm:text-white/95"
+              ? "text-white/90 max-sm:text-white max-sm:[text-shadow:0_1px_12px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.95)]"
               : "text-[var(--text-secondary)]",
           )}
         >
