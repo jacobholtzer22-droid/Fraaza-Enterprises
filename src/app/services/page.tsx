@@ -61,7 +61,6 @@ export default function ServicesPage() {
           <FadeIn delay={1}>
             <ServiceCard
               title="Hydroseeding"
-              description="Our core specialty. New lawn installation, erosion control, roadside, new development, and commercial properties. Fast, even coverage with professional-grade equipment — backed by 20+ years of dedicated experience."
               href="/services/hydroseeding"
               image="/images/heroes/craftsman-home-hydroseeding.webp"
               featured
@@ -72,7 +71,6 @@ export default function ServicesPage() {
             <div className="mt-10">
               <ServiceCard
                 title="Soil Preparation"
-                description="Soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. The right foundation for a healthy, thriving lawn."
                 href="/services/soil-preparation"
                 image="/images/heroes/new-build-landscaping.webp"
               />
@@ -91,7 +89,6 @@ export default function ServicesPage() {
             <FadeIn delay={1}>
               <ServiceCard
                 title="Landscaping"
-                description="Sod installation, drain tile and yard drainage, retaining walls, Bobcat work — dirt moving, grading, back filling, brush mowing — plus planting, soil prep and seeding, topsoil and bark. We build outdoor spaces that perform as good as they look."
                 href="/services/landscaping"
                 image="/images/portfolio/pool-landscape-design.webp"
               />
@@ -99,7 +96,6 @@ export default function ServicesPage() {
             <FadeIn delay={2}>
               <ServiceCard
                 title="Snow Plowing"
-                description="Plowing, salting, sidewalks, loader plowing, and snow blowing. Dependable winter service to keep your property safe and accessible."
                 href="/services/snow-plowing"
                 image="/images/services/snow-plow-truck.webp"
               />

@@ -11,7 +11,7 @@ export function ServiceCard({
   className,
 }: {
   title: string;
-  description: string;
+  description?: string;
   href: string;
   image: string;
   featured?: boolean;
@@ -52,9 +52,11 @@ export function ServiceCard({
         >
           {title}
         </h3>
-        <p className="mt-2 max-w-sm text-base leading-relaxed text-white/80 max-sm:text-white max-sm:[text-shadow:0_1px_10px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.95)] sm:text-sm">
-          {description}
-        </p>
+        {description && (
+          <p className="mt-2 max-w-sm text-base leading-relaxed text-white/80 max-sm:text-white max-sm:[text-shadow:0_1px_10px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.95)] sm:text-sm">
+            {description}
+          </p>
+        )}
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-light)] transition-all duration-300 group-hover:gap-3 max-sm:[text-shadow:0_1px_8px_rgba(0,0,0,0.85)]">
           Learn more
           <svg
