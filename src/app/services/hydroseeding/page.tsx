@@ -83,7 +83,7 @@ const hydroseedingApplications: {
   {
     title: "Golf courses",
     description:
-      "Fairways, roughs, cart paths, and drainage areas need turf that recovers quickly after renovation or weather events. Hydroseeding and hydromulching establish durable grass on large footprints and slopes — the same approach we've used on West Michigan courses like Macatawa Legends.",
+      "Fairways, roughs, cart paths, and drainage areas need turf that recovers quickly after renovation or weather events. Hydroseeding and hydromulching establish durable grass on large footprints and slopes — the same approach we've used on West Michigan courses like Macatawa Legends and American Dunes.",
     icon: <GolfFlagIcon />,
     image: "/images/gallery/macatawa-legends-hydroseed-2.png",
     imageAlt: "Workers applying hydroseed at Macatawa Legends golf course",

@@ -7,7 +7,8 @@ import type { GalleryItem } from "@/components/GalleryCard";
 const CATEGORIES = [
   "All Projects",
   "Hydroseeding",
-  "Golf Courses",
+  "Macatawa Legends",
+  "American Dunes",
   "Landscaping",
   "Soil Prep",
   "Snow Plowing",
