@@ -36,19 +36,10 @@ export function GalleryCard({
       />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/25 to-transparent transition-opacity duration-500 group-hover:from-black/45 max-sm:from-black/80 max-sm:via-black/35" />
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-5">
-        {(item.category || item.subCategory) && (
-          <div className="flex flex-wrap gap-1.5">
-            {item.category && (
-              <span className="inline-block w-fit max-w-full rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
-                {item.category}
-              </span>
-            )}
-            {item.subCategory && (
-              <span className="inline-block w-fit max-w-full rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[var(--bg-green)] backdrop-blur-sm">
-                {item.subCategory}
-              </span>
-            )}
-          </div>
+        {item.category && (
+          <span className="inline-block w-fit max-w-full rounded-full bg-[var(--bg-green)]/85 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+            {item.category}
+          </span>
         )}
         <h3 className="hyphens-auto break-words text-base font-semibold leading-snug text-white">
           {item.title}
