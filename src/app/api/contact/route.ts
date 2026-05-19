@@ -184,6 +184,24 @@ export async function POST(req: Request) {
       sendTelnyxSms(smsPayload),
     ]);
 
+    // Fire-and-forget CRM sync. Must never affect the user's response.
+    const mainAppUrl = process.env.MAIN_APP_URL?.trim();
+    const mainAppBusinessSlug = process.env.MAIN_APP_BUSINESS_SLUG?.trim();
+    if (mainAppUrl && mainAppBusinessSlug) {
+      void fetch(`${mainAppUrl}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          businessSlug: mainAppBusinessSlug,
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          message: data.message,
+          smsConsent: true,
+        }),
+      }).catch((err) => console.error("[CRM-Sync] failed:", err));
+    }
+
     const [emailOutcome, smsOutcome] = results;
     if (emailOutcome.status === "rejected") {
       console.error("[contact] Resend failed", {
