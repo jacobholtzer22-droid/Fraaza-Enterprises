@@ -3,6 +3,15 @@ import { contactFormSchemaWithPhone } from "@/lib/contactSchema";
 
 export const runtime = "nodejs";
 
+/**
+ * MissedCall AI CRM — the sole notifier for leads from this site (owner email +
+ * SMS are sent by the CRM, not here). Both values fall back to the known-good
+ * production settings on purpose: a missing env var must never silently disable
+ * lead delivery, which is exactly how leads were lost from May–June 2026.
+ */
+const CRM_BASE_URL = process.env.CRM_BASE_URL?.trim() || "https://www.alignandacquire.com";
+const CRM_BUSINESS_SLUG = process.env.CRM_BUSINESS_SLUG?.trim() || "fraaza-enterprises-inc";
+
 /** In-memory rate limiter: max 3 submissions per IP per 10 minutes. For production scale, move to Upstash Redis. */
 const rateBuckets = new Map<string, { count: number; resetAt: number }>();
 const RATE_WINDOW_MS = 10 * 60 * 1000;
@@ -65,20 +74,50 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    // Fire-and-forget CRM sync. Must never affect the user's response.
-    // The CRM is the sole owner notifier (email + SMS) for this lead.
-    void fetch("https://www.alignandacquire.com/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        businessSlug: "fraaza-enterprises-inc",
-        name: data.name,
-        phone: data.phone,
-        email: data.email,
-        message: `Service: ${data.service}\n\n${data.message}`,
-        smsConsent: true,
-      }),
-    }).catch((err) => console.error("[CRM-Sync] failed:", err));
+    // Forward to the CRM. This MUST be awaited: on Vercel the function freezes
+    // once the response is returned, so an unawaited fetch is killed in flight.
+    const target = `${CRM_BASE_URL}/api/contact`;
+    try {
+      const res = await fetch(target, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          businessSlug: CRM_BUSINESS_SLUG,
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          message: `Service: ${data.service}\n\n${data.message}`,
+          smsConsent: true,
+        }),
+      });
+
+      const body = await res.text().catch(() => "");
+
+      // The CRM answers 200 even when it drops a lead it can't attribute, so a
+      // status check alone is not enough — confirm it actually accepted it.
+      if (!res.ok || !body.includes('"success":true')) {
+        console.error("[CRM-Sync] lead NOT accepted", {
+          status: res.status,
+          target,
+          slug: CRM_BUSINESS_SLUG,
+          body: body.slice(0, 300),
+        });
+        return NextResponse.json(
+          { error: "We couldn't deliver your message right now. Please call us or try again shortly." },
+          { status: 502 },
+        );
+      }
+    } catch (err) {
+      console.error("[CRM-Sync] forward threw", {
+        target,
+        message: err instanceof Error ? err.message : String(err),
+        cause: err instanceof Error && err.cause ? String(err.cause) : undefined,
+      });
+      return NextResponse.json(
+        { error: "We couldn't deliver your message right now. Please call us or try again shortly." },
+        { status: 502 },
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch (e) {
