@@ -5,13 +5,13 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "Terms and conditions for Fraaza Enterprises hydroseeding and landscaping services.",
+    "Terms and conditions for Fraaza Enterprises Inc. hydroseeding and landscaping services.",
   alternates: {
     canonical: "/terms-and-conditions",
   },
   openGraph: {
-    title: "Terms and Conditions | Fraaza Enterprises",
-    description: "Terms and conditions for Fraaza Enterprises.",
+    title: "Terms and Conditions | Fraaza Enterprises Inc.",
+    description: "Terms and conditions for Fraaza Enterprises Inc.",
     url: "/terms-and-conditions",
   },
 };
@@ -36,13 +36,13 @@ export default function TermsAndConditionsPage() {
         <h1 className={h1Class}>Terms and Conditions</h1>
         <p className="mt-3 text-base text-[var(--text-muted)] sm:text-lg">
           <strong className="font-semibold text-[var(--text-primary)]">
-            Fraaza Enterprises Effective Date:
+            Fraaza Enterprises Inc. Effective Date:
           </strong>{" "}
           {effectiveDate}
         </p>
 
         <p className={`${bodyClass} mt-10`}>
-          Welcome to Fraaza Enterprises! By engaging our services, you agree to the
+          Welcome to Fraaza Enterprises Inc.! By engaging our services, you agree to the
           following Terms and Conditions. Please review them carefully before
           proceeding with our hydroseeding and landscaping services. If you do
           not accept these terms, please refrain from using our services.
@@ -50,7 +50,7 @@ export default function TermsAndConditionsPage() {
 
         <h2 className={h2Class}>1. Services Offered</h2>
         <p className={bodyClass}>
-          Fraaza Enterprises provides a range of professional services, including but
+          Fraaza Enterprises Inc. provides a range of professional services, including but
           not limited to:
         </p>
         <ul className={`${listClass} mt-4`}>
@@ -95,7 +95,7 @@ export default function TermsAndConditionsPage() {
         <h2 className={h2Class}>4. Cancellation and Rescheduling Policy</h2>
         <ul className={listClass}>
           <li>
-            Fraaza Enterprises reserves the right to cancel or reschedule services due
+            Fraaza Enterprises Inc. reserves the right to cancel or reschedule services due
             to inclement weather, safety concerns, or other unforeseen circumstances.
           </li>
         </ul>
@@ -103,7 +103,7 @@ export default function TermsAndConditionsPage() {
         <h2 className={h2Class}>5. Access to Property</h2>
         <ul className={listClass}>
           <li>
-            Clients must ensure Fraaza Enterprises has proper access to the property
+            Clients must ensure Fraaza Enterprises Inc. has proper access to the property
             during the scheduled service time.
           </li>
           <li>
@@ -115,7 +115,7 @@ export default function TermsAndConditionsPage() {
         <h2 className={h2Class}>6. Liability and Safety</h2>
         <ul className={listClass}>
           <li>
-            Fraaza Enterprises exercises care and diligence while performing services
+            Fraaza Enterprises Inc. exercises care and diligence while performing services
             but is not responsible for damage caused by pre-existing property
             conditions (e.g., hidden irrigation lines, underground cables, septic
             systems, or deteriorated structures).
@@ -125,7 +125,7 @@ export default function TermsAndConditionsPage() {
             before services are rendered.
           </li>
           <li>
-            Fraaza Enterprises is not liable for injuries caused by equipment, tools,
+            Fraaza Enterprises Inc. is not liable for injuries caused by equipment, tools,
             or property features left unattended by clients.
           </li>
         </ul>
@@ -150,7 +150,7 @@ export default function TermsAndConditionsPage() {
             Services may be delayed or rescheduled due to weather conditions, equipment
             malfunctions, or other factors outside our control.
           </li>
-          <li>Fraaza Enterprises will communicate any schedule changes promptly.</li>
+          <li>Fraaza Enterprises Inc. will communicate any schedule changes promptly.</li>
         </ul>
 
         <h2 className={h2Class}>9. Termination of Services</h2>
@@ -160,7 +160,7 @@ export default function TermsAndConditionsPage() {
             in the agreement.
           </li>
           <li>
-            Fraaza Enterprises reserves the right to terminate services immediately in
+            Fraaza Enterprises Inc. reserves the right to terminate services immediately in
             cases of non-payment, unsafe working conditions, or breach of contract.
           </li>
         </ul>
@@ -173,7 +173,7 @@ export default function TermsAndConditionsPage() {
             affecting service delivery.
           </li>
           <li>
-            Notify Fraaza Enterprises promptly of changes in service requirements or
+            Notify Fraaza Enterprises Inc. promptly of changes in service requirements or
             property conditions.
           </li>
         </ul>
@@ -181,7 +181,7 @@ export default function TermsAndConditionsPage() {
         <h2 className={h2Class}>11. Privacy Policy</h2>
         <ul className={listClass}>
           <li>
-            Fraaza Enterprises values client privacy. Information collected during
+            Fraaza Enterprises Inc. values client privacy. Information collected during
             service agreements will only be used for communication and service provision
             purposes.
           </li>
@@ -218,7 +218,7 @@ export default function TermsAndConditionsPage() {
         <h2 className={h2Class}>14. Amendments to Terms</h2>
         <ul className={listClass}>
           <li>
-            Fraaza Enterprises reserves the right to modify these Terms and Conditions
+            Fraaza Enterprises Inc. reserves the right to modify these Terms and Conditions
             at any time. Clients will be notified of significant changes in advance.
           </li>
         </ul>
@@ -230,7 +230,7 @@ export default function TermsAndConditionsPage() {
         </p>
         <div className={`${bodyClass} mt-4 space-y-1`}>
           <p>
-            <strong>Fraaza Enterprises</strong>
+            <strong>Fraaza Enterprises Inc.</strong>
           </p>
           <p>10060 Polk St</p>
           <p>Zeeland, MI 49464</p>
@@ -242,11 +242,11 @@ export default function TermsAndConditionsPage() {
         </div>
 
         <p className={`${bodyClass} mt-10`}>
-          By using the services of Fraaza Enterprises, you acknowledge that you have
+          By using the services of Fraaza Enterprises Inc., you acknowledge that you have
           read, understood, and agree to these Terms and Conditions.
         </p>
         <p className={`${bodyClass} mt-4`}>
-          Thank you for choosing Fraaza Enterprises!
+          Thank you for choosing Fraaza Enterprises Inc.!
         </p>
       </div>
     </section>

@@ -4,6 +4,8 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Snow Plowing | Holland, MI",
@@ -20,9 +22,21 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Snow Plowing",
+  serviceType: "Snow Plowing",
+  description: metadata.description,
+  url: `${SITE.url}/services/snow-plowing`,
+  provider: { "@id": `${SITE.url}/#business` },
+  areaServed: "West Michigan",
+};
+
 export default function SnowPlowingPage() {
   return (
     <div>
+      <JsonLd data={serviceSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image
