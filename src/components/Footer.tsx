@@ -18,6 +18,7 @@ const mosaicPhotos = [
 const footerLinks = [
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
