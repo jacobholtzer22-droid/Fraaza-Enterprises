@@ -210,7 +210,7 @@ export default function TermsAndConditionsPage() {
             Michigan.
           </li>
           <li>
-            Any disputes or legal actions shall be resolved in the courts of [COUNTY],
+            Any disputes or legal actions shall be resolved in the courts of Ottawa County,
             Michigan.
           </li>
         </ul>

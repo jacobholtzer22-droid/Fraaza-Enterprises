@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Landscaping | Holland, MI",
   description:
-    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, drain tile installation, Bobcat services (grading, dirt moving, backfill, brush mowing), yard drainage, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
+    "Landscaping in Holland, MI — sod, retaining walls, drain tile, Bobcat grading, drainage, and planting. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/landscaping",
   },

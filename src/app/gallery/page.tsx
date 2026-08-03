@@ -8,9 +8,9 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import type { GalleryItem } from "@/components/GalleryCard";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding Project Gallery | Holland, MI",
+  title: "Project Gallery | Holland, MI",
   description:
-    "Browse hydroseeding, soil preparation, landscaping, and retaining wall project photos from West Michigan's hydroseeding experts — Fraaza Enterprises, Holland, MI.",
+    "Hydroseeding, landscaping, and retaining wall project photos from Fraaza Enterprises in Holland, MI and West Michigan.",
   alternates: {
     canonical: "/gallery",
   },
@@ -364,7 +364,7 @@ export default function GalleryPage() {
             as="h1"
             light
             eyebrow="Gallery"
-            title="Work we're proud of"
+            title="Our hydroseeding & landscaping work"
             description="Browse our portfolio of hydroseeding, landscaping, soil preparation, and retaining wall projects across West Michigan."
           />
         </Container>

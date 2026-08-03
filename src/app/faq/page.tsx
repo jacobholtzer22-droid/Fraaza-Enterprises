@@ -8,9 +8,9 @@ import { Accordion } from "@/components/Accordion";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding FAQ | Holland, MI | West Michigan Landscaping",
+  title: "Hydroseeding FAQ | Holland, MI",
   description:
-    "Answers to frequently asked questions about hydroseeding timeline, watering, best season, and slopes — for Holland, MI and West Michigan. Fraaza Enterprises — owner-operated since 2004.",
+    "Answers to common hydroseeding questions — timing, watering, results, slopes, and more. Fraaza Enterprises, Holland, MI. Since 2004.",
   alternates: {
     canonical: "/faq",
   },

@@ -103,7 +103,7 @@ const hydroseedingApplications: {
 export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
   description:
-    "Professional hydroseeding in Holland, MI and West Michigan — residential lawns, commercial sites, erosion control, roadsides, utilities, golf courses, new development, and waterfront banks. Request a free quote from Fraaza Enterprises.",
+    "Professional hydroseeding in Holland, MI — residential lawns, commercial sites, erosion control, and more. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/hydroseeding",
   },

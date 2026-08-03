@@ -8,9 +8,9 @@ import { Button } from "@/components/Button";
 
 
 export const metadata: Metadata = {
-  title: "Hydroseeding Services & More | Holland, MI",
+  title: "Services | Holland, MI",
   description:
-    "West Michigan's hydroseeding experts. Professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, MI. Request a free quote from Fraaza Enterprises.",
+    "Hydroseeding, soil preparation, landscaping, and snow plowing in Holland, MI. Request a free quote from Fraaza Enterprises.",
   alternates: {
     canonical: "/services",
   },

@@ -8,9 +8,9 @@ import { FadeIn } from "@/components/FadeIn";
 import { posts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding & Landscaping Blog | Holland, MI | West Michigan Landscaping",
+  title: "Hydroseeding & Landscaping Blog",
   description:
-    "Tips, guides, and insights on hydroseeding, lawn care, and landscaping in Holland, MI and West Michigan. Expert advice from Fraaza Enterprises — owner-operated since 2004.",
+    "Hydroseeding and lawn care tips for West Michigan homeowners. Expert advice from Fraaza Enterprises in Holland, MI.",
   alternates: {
     canonical: "/blog",
   },

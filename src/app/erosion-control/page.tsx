@@ -15,9 +15,9 @@ import {
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Erosion Control with Hydromulching | Holland, MI | West Michigan Landscaping",
+  title: "Erosion Control | Holland, MI",
   description:
-    "Hydromulching for erosion control in Holland, MI and West Michigan. Protect slopes, roadsides, construction sites, and commercial properties from soil erosion. Fraaza Enterprises — trusted since 2004.",
+    "Erosion control and hydromulching in Holland, MI. Protect slopes, roadsides, and construction sites. Fraaza Enterprises — trusted since 2004.",
   alternates: {
     canonical: "/erosion-control",
   },

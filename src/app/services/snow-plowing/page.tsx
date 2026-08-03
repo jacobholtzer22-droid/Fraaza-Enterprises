@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Snow Plowing | Holland, MI",
   description:
-    "Snow plowing services in Holland, MI and West Michigan including plowing, salting, sidewalks, loader plowing, and snow blowing. Request a winter service quote from Fraaza Enterprises.",
+    "Snow plowing in Holland, MI — plowing, salting, sidewalks, loader plowing, and snow blowing. Winter quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/snow-plowing",
   },

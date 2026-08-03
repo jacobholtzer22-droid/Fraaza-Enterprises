@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Soil Preparation | Holland, MI",
   description:
-    "Soil preparation services in Holland, MI and West Michigan including soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. Request a free quote from Fraaza Enterprises.",
+    "Soil preparation in Holland, MI — soil testing, grading, amendments, sod removal, and topsoil installation. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/soil-preparation",
   },

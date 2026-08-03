@@ -8,9 +8,9 @@ import ServiceAreaSection from "@/components/ServiceAreaSection";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact West Michigan's Hydroseeding Experts | Holland, MI",
+  title: "Contact Us | Holland, MI",
   description:
-    "Contact Fraaza Enterprises — West Michigan's hydroseeding specialists. Call (616) 875-2293 or request a free quote for hydroseeding, soil preparation, landscaping, or snow plowing in Holland, MI.",
+    "Contact Fraaza Enterprises for hydroseeding, soil preparation, landscaping, or snow plowing in Holland, MI. Call (616) 875-2293 or request a free quote.",
   alternates: {
     canonical: "/contact",
   },

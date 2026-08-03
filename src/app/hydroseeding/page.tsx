@@ -7,9 +7,9 @@ import { FadeIn } from "@/components/FadeIn";
 import { HomeIcon, BuildingIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "What is Hydroseeding? | Holland, MI | West Michigan Landscaping",
+  title: "What is Hydroseeding? | Holland, MI",
   description:
-    "Learn what hydroseeding is, how it works, and why it's the preferred lawn establishment method in Holland, MI and West Michigan. Compare hydroseeding vs sod, see the process, and discover residential and commercial applications. Fraaza Enterprises — owner-operated since 2004.",
+    "What hydroseeding is, how it works, and why it beats sod for most properties. Fraaza Enterprises — Holland, MI hydroseeding experts since 2004.",
   alternates: {
     canonical: "/hydroseeding",
   },
