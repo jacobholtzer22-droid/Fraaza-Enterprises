@@ -5,16 +5,17 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
 import { Accordion } from "@/components/Accordion";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding FAQ | Holland, MI | West Michigan Landscaping",
+  title: "Hydroseeding FAQ | Holland, MI",
   description:
-    "Answers to frequently asked questions about hydroseeding timeline, watering, best season, and slopes — for Holland, MI and West Michigan. Fraaza Enterprises — owner-operated since 2004.",
+    "Answers to common hydroseeding questions — timing, watering, results, slopes, and more. Fraaza Enterprises, Holland, MI. Since 2004.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
-    title: "Hydroseeding FAQ | Fraaza Enterprises",
+    title: "Hydroseeding FAQ | Fraaza Enterprises Inc.",
     description:
       "Common questions about hydroseeding timing, watering, and more for West Michigan properties.",
     url: "/faq",
@@ -84,9 +85,23 @@ const faqs = [
   },
 ];
 
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function FAQPage() {
   return (
     <div>
+      <JsonLd data={faqPageSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image

@@ -15,14 +15,14 @@ import {
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Erosion Control with Hydromulching | Holland, MI | West Michigan Landscaping",
+  title: "Erosion Control | Holland, MI",
   description:
-    "Hydromulching for erosion control in Holland, MI and West Michigan. Protect slopes, roadsides, construction sites, and commercial properties from soil erosion. Fraaza Enterprises — trusted since 2004.",
+    "Erosion control and hydromulching in Holland, MI. Protect slopes, roadsides, and construction sites. Fraaza Enterprises — trusted since 2004.",
   alternates: {
     canonical: "/erosion-control",
   },
   openGraph: {
-    title: "Erosion Control with Hydromulching | Fraaza Enterprises",
+    title: "Erosion Control with Hydromulching | Fraaza Enterprises Inc.",
     description:
       "Professional erosion control hydromulching for slopes, roadsides, and commercial sites across West Michigan.",
     url: "/erosion-control",
@@ -203,13 +203,13 @@ export default function ErosionControlPage() {
               { src: "/images/gallery/macatawa-legends-hydroseed-4.png", alt: "Golf course hydromulching at Macatawa Legends — view 4" },
               { src: "/images/gallery/macatawa-legends-hydroseed-5.png", alt: "Golf course hydromulching at Macatawa Legends — view 5" },
               { src: "/images/gallery/macatawa-legends-hydroseed-7.png", alt: "Golf course hydromulching at Macatawa Legends — view 6" },
-              { src: "/images/gallery/american-dunes-hydroseed-1.jpg", alt: "Golf course hydromulching at American Dunes — view 1" },
-              { src: "/images/gallery/american-dunes-hydroseed-5.jpg", alt: "Golf course hydromulching at American Dunes — view 2" },
-              { src: "/images/gallery/american-dunes-hydroseed-2.jpg", alt: "Golf course hydromulching at American Dunes — view 3" },
-              { src: "/images/gallery/american-dunes-hydroseed-8.jpg", alt: "Golf course hydromulching at American Dunes — view 4" },
-              { src: "/images/gallery/american-dunes-hydroseed-12.jpg", alt: "Golf course hydromulching at American Dunes — view 5" },
-              { src: "/images/gallery/american-dunes-hydroseed-7.jpg", alt: "Golf course hydromulching at American Dunes — view 6" },
-              { src: "/images/gallery/american-dunes-hydroseed-13.jpg", alt: "Established fairway after hydroseeding grow-in at American Dunes — view 7" },
+              { src: "/images/gallery/american-dunes-hydroseed-1.webp", alt: "Golf course hydromulching at American Dunes — view 1" },
+              { src: "/images/gallery/american-dunes-hydroseed-5.webp", alt: "Golf course hydromulching at American Dunes — view 2" },
+              { src: "/images/gallery/american-dunes-hydroseed-2.webp", alt: "Golf course hydromulching at American Dunes — view 3" },
+              { src: "/images/gallery/american-dunes-hydroseed-8.webp", alt: "Golf course hydromulching at American Dunes — view 4" },
+              { src: "/images/gallery/american-dunes-hydroseed-12.webp", alt: "Golf course hydromulching at American Dunes — view 5" },
+              { src: "/images/gallery/american-dunes-hydroseed-7.webp", alt: "Golf course hydromulching at American Dunes — view 6" },
+              { src: "/images/gallery/american-dunes-hydroseed-13.webp", alt: "Established fairway after hydroseeding grow-in at American Dunes — view 7" },
             ].map((photo) => (
               <FadeIn key={photo.src}>
                 <div className="relative aspect-[3/2] overflow-hidden rounded-2xl shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)]">

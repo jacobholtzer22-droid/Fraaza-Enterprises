@@ -5,6 +5,8 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 import {
   HomeIcon,
   BuildingIcon,
@@ -101,21 +103,33 @@ const hydroseedingApplications: {
 export const metadata: Metadata = {
   title: "Hydroseeding | Holland, MI",
   description:
-    "Professional hydroseeding in Holland, MI and West Michigan — residential lawns, commercial sites, erosion control, roadsides, utilities, golf courses, new development, and waterfront banks. Request a free quote from Fraaza Enterprises.",
+    "Professional hydroseeding in Holland, MI — residential lawns, commercial sites, erosion control, and more. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/hydroseeding",
   },
   openGraph: {
-    title: "Hydroseeding | Holland, MI | Fraaza Enterprises",
+    title: "Hydroseeding | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Hydroseeding for new lawns and erosion control in West Michigan — residential and commercial.",
     url: "/services/hydroseeding",
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Hydroseeding",
+  serviceType: "Hydroseeding",
+  description: metadata.description,
+  url: `${SITE.url}/services/hydroseeding`,
+  provider: { "@id": `${SITE.url}/#business` },
+  areaServed: "West Michigan",
+};
+
 export default function HydroseedingPage() {
   return (
     <div>
+      <JsonLd data={serviceSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[min(52vh,30rem)] items-center overflow-x-hidden sm:min-h-96">
         <Image

@@ -8,14 +8,14 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import type { GalleryItem } from "@/components/GalleryCard";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding Project Gallery | Holland, MI",
+  title: "Project Gallery | Holland, MI",
   description:
-    "Browse hydroseeding, soil preparation, landscaping, and retaining wall project photos from West Michigan's hydroseeding experts — Fraaza Enterprises, Holland, MI.",
+    "Browse hydroseeding, landscaping, and retaining wall project photos from Fraaza Enterprises Inc. in Holland, MI and across West Michigan.",
   alternates: {
     canonical: "/gallery",
   },
   openGraph: {
-    title: "Gallery | Fraaza Enterprises",
+    title: "Gallery | Fraaza Enterprises Inc.",
     description:
       "Hydroseeding project gallery — plus landscaping, soil preparation, and retaining wall work across West Michigan.",
     url: "/gallery",
@@ -252,91 +252,91 @@ const galleryItems: GalleryItem[] = [
     title: "Macatawa Legends",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-1.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-1.webp",
     alt: "Hydromulch coverage in winding patterns across fairway and bunkers at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-2.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-2.webp",
     alt: "Worker pulling hydroseed hose beside a freshly hydromulched bunker at American Dunes",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-3.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-3.webp",
     alt: "Bunker complex with green hydromulch and American flag at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-4.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-4.webp",
     alt: "Fairway covered with green hydromulch during turf establishment at American Dunes",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-5.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-5.webp",
     alt: "Excavator working on a hydromulched fairway and pond at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-6.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-6.webp",
     alt: "Hydromulched cart path lined with pines near the clubhouse at American Dunes",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-7.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-7.webp",
     alt: "Finished fairway with mature turf and bunker after hydroseeding at American Dunes",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-8.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-8.webp",
     alt: "Hydromulch applied in patches across rough and fairway at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-9.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-9.webp",
     alt: "Tracked hydroseeding equipment on a bunker site at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-10.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-10.webp",
     alt: "Green hydromulch applied along a fairway beside a pond at American Dunes",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-11.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-11.webp",
     alt: "Reflection of hydromulched hills and pines across a pond at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-12.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-12.webp",
     alt: "Crew spray-applying hydroseed onto a sand bunker at American Dunes golf course",
     category: "Golf Courses",
     subCategory: "American Dunes",
     title: "American Dunes",
   },
   {
-    src: "/images/gallery/american-dunes-hydroseed-13.jpg",
+    src: "/images/gallery/american-dunes-hydroseed-13.webp",
     alt: "Established green fairway lined with mature trees at American Dunes golf course after hydroseeding grow-in",
     category: "Golf Courses",
     subCategory: "American Dunes",
@@ -364,7 +364,7 @@ export default function GalleryPage() {
             as="h1"
             light
             eyebrow="Gallery"
-            title="Work we're proud of"
+            title="Hydroseeding & Landscaping Project Gallery"
             description="Browse our portfolio of hydroseeding, landscaping, soil preparation, and retaining wall projects across West Michigan."
           />
         </Container>

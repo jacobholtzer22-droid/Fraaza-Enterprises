@@ -8,14 +8,14 @@ import { FadeIn } from "@/components/FadeIn";
 import { ScissorsIcon, SproutIcon, ShieldCheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding Care & Watering Guide | Holland, MI | West Michigan Landscaping",
+  title: "Hydroseeding Care & Watering Guide",
   description:
-    "Complete aftercare guide for your hydroseeded lawn in Holland, MI and West Michigan. Week-by-week watering schedule, mowing tips, fertilizing timeline, and what to expect as your new lawn grows. Fraaza Enterprises.",
+    "Week-by-week hydroseeding aftercare guide — watering schedule, mowing tips, and fertilizing for West Michigan lawns. Fraaza Enterprises.",
   alternates: {
     canonical: "/care-and-watering",
   },
   openGraph: {
-    title: "Hydroseeding Care & Watering Guide | Fraaza Enterprises",
+    title: "Hydroseeding Care & Watering Guide | Fraaza Enterprises Inc.",
     description:
       "Week-by-week aftercare guide for hydroseeded lawns — watering schedule, mowing, and fertilizing for West Michigan properties.",
     url: "/care-and-watering",

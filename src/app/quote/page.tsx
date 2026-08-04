@@ -8,12 +8,12 @@ import { FadeIn } from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Free Hydroseeding Quote | Holland, MI",
   description:
-    "Request a free quote from West Michigan's hydroseeding experts. Fraaza Enterprises specializes in hydroseeding — also offering soil preparation, landscaping, and snow plowing.",
+    "Request a free hydroseeding quote from Fraaza Enterprises in Holland, MI. Also offering soil preparation, landscaping, and snow plowing.",
   alternates: {
     canonical: "/quote",
   },
   openGraph: {
-    title: "Free Quote | Fraaza Enterprises",
+    title: "Free Quote | Fraaza Enterprises Inc.",
     description:
       "Request a free quote from West Michigan's hydroseeding specialists. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/quote",

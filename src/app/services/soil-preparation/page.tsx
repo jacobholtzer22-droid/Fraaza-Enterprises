@@ -4,25 +4,39 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Soil Preparation | Holland, MI",
   description:
-    "Soil preparation services in Holland, MI and West Michigan including soil testing, grading and leveling, soil amendments, old sod removal, and topsoil/compost installation. Request a free quote from Fraaza Enterprises.",
+    "Soil preparation in Holland, MI — soil testing, grading, amendments, sod removal, and topsoil installation. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/soil-preparation",
   },
   openGraph: {
-    title: "Soil Preparation | Holland, MI | Fraaza Enterprises",
+    title: "Soil Preparation | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Soil testing, grading, amendments, sod removal, and topsoil/compost installs across West Michigan.",
     url: "/services/soil-preparation",
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Soil Preparation",
+  serviceType: "Soil Preparation",
+  description: metadata.description,
+  url: `${SITE.url}/services/soil-preparation`,
+  provider: { "@id": `${SITE.url}/#business` },
+  areaServed: "West Michigan",
+};
+
 export default function SoilPreparationPage() {
   return (
     <div>
+      <JsonLd data={serviceSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image

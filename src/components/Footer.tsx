@@ -18,6 +18,7 @@ const mosaicPhotos = [
 const footerLinks = [
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -167,7 +168,7 @@ export function Footer() {
               className="group flex min-h-[44px] min-w-[44px] items-center justify-center gap-3 sm:min-h-0 sm:min-w-0"
             >
               <Image
-                src="/images/iahp-logo.jpg"
+                src="/images/iahp-logo.webp"
                 alt="International Association of Hydroseeding Professionals"
                 width={129}
                 height={97}

@@ -4,25 +4,39 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Landscaping | Holland, MI",
   description:
-    "Landscaping services in Holland, MI and West Michigan including sod installation, retaining walls, drain tile installation, Bobcat services (grading, dirt moving, backfill, brush mowing), yard drainage, tree planting, soil prep and seeding, and topsoil/bark. Request a free quote from Fraaza Enterprises.",
+    "Landscaping in Holland, MI — sod, retaining walls, drain tile, Bobcat grading, drainage, and planting. Free quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/landscaping",
   },
   openGraph: {
-    title: "Landscaping | Holland, MI | Fraaza Enterprises",
+    title: "Landscaping | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Landscaping across West Michigan: sod, drain tile, retaining walls, Bobcat grading and prep, planting, and more.",
     url: "/services/landscaping",
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Landscaping",
+  serviceType: "Landscaping",
+  description: metadata.description,
+  url: `${SITE.url}/services/landscaping`,
+  provider: { "@id": `${SITE.url}/#business` },
+  areaServed: "West Michigan",
+};
+
 export default function LandscapingPage() {
   return (
     <div>
+      <JsonLd data={serviceSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image

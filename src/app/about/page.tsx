@@ -7,14 +7,14 @@ import { FadeIn } from "@/components/FadeIn";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About West Michigan's Hydroseeding Experts | Holland, MI",
+  title: "About Fraaza Enterprises | Holland, MI",
   description:
-    "Fraaza Enterprises has specialized in hydroseeding since 2004. Owner-operated by Chad Fraaza, we're West Michigan's trusted hydroseeding experts — also offering soil preparation, landscaping, and snow plowing.",
+    "Owner-operated hydroseeding specialists since 2004. Fraaza Enterprises serves Holland, MI and West Michigan with hydroseeding, landscaping, and more.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About | Fraaza Enterprises",
+    title: "About | Fraaza Enterprises Inc.",
     description:
       "Specializing in hydroseeding since 2004 — owner-operated across West Michigan. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/about",
@@ -276,7 +276,7 @@ export default function AboutPage() {
                     className="flex flex-col items-center gap-3 rounded-xl bg-[var(--bg-cream)] px-5 py-6 text-center transition-shadow hover:shadow-md group"
                   >
                     <Image
-                      src="/images/iahp-logo.jpg"
+                      src="/images/iahp-logo.webp"
                       alt="International Association of Hydroseeding Professionals"
                       width={129}
                       height={97}

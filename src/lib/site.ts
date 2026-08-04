@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "West Michigan's Hydroseeding Experts",
   description:
     "West Michigan's hydroseeding experts since 2004. Fraaza Enterprises specializes in professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, Zeeland, Grand Haven, Hudsonville, and surrounding areas.",
-  url: "https://fraaza-enterprises.com",
+  url: "https://www.fraazaenterprises.com",
   phone: "(616) 875-2293",
   phoneHref: "tel:+16168752293",
   email: "chad@fraazaenterprises.com",

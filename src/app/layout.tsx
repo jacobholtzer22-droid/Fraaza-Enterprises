@@ -3,6 +3,7 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
 const dmSans = DM_Sans({
@@ -36,23 +37,24 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Fraaza Enterprises",
+  "@id": `${SITE.url}/#business`,
+  name: SITE.name,
   description: SITE.description,
   url: SITE.url,
   telephone: SITE.phone,
+  email: SITE.email,
+  logo: `${SITE.url}/images/fraaza-logo.webp`,
+  image: `${SITE.url}/images/fraaza-logo.webp`,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Holland",
+    streetAddress: "10060 Polk St",
+    addressLocality: "Zeeland",
     addressRegion: "MI",
+    postalCode: "49464",
     addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 42.7876,
-    longitude: -86.1089,
   },
   openingHoursSpecification: [
     {
@@ -61,20 +63,13 @@ const jsonLd = {
       opens: "08:00",
       closes: "17:00",
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:00",
-      closes: "17:00",
-      description: "By appointment only",
-    },
   ],
   areaServed: [
     { "@type": "City", name: "Holland", addressRegion: "MI" },
     { "@type": "City", name: "Zeeland", addressRegion: "MI" },
     { "@type": "City", name: "Grand Haven", addressRegion: "MI" },
     { "@type": "City", name: "Hudsonville", addressRegion: "MI" },
-    { "@type": "State", name: "West Michigan" },
+    "West Michigan",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -92,6 +87,19 @@ const jsonLd = {
   founder: { "@type": "Person", name: SITE.owner },
   foundingDate: `${SITE.since}`,
   priceRange: "$$",
+  sameAs: [
+    "https://www.bbb.org/us/mi/zeeland/profile/landscape-contractors/fraaza-enterprises-inc-0372-38114728",
+    "http://www.hydroseeding.org/",
+    "https://www.yelp.com/biz/fraaza-enterprises-zeeland-2",
+    "https://reviews.birdeye.com/fraaza-enterprises-inc-165739723117877",
+  ],
+};
+
+const webSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  url: SITE.url,
 };
 
 export default function RootLayout({
@@ -104,10 +112,8 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} text-base antialiased bg-background text-foreground`}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={localBusiness} />
+        <JsonLd data={webSite} />
         <div className="min-h-dvh flex flex-col overflow-x-hidden">
           <Header />
           <main className="relative flex-1 pt-[var(--header-height)]">{children}</main>

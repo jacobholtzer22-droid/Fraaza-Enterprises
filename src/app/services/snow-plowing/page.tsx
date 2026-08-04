@@ -4,25 +4,39 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Snow Plowing | Holland, MI",
   description:
-    "Snow plowing services in Holland, MI and West Michigan including plowing, salting, sidewalks, loader plowing, and snow blowing. Request a winter service quote from Fraaza Enterprises.",
+    "Snow plowing in Holland, MI — plowing, salting, sidewalks, loader plowing, and snow blowing. Winter quotes from Fraaza Enterprises.",
   alternates: {
     canonical: "/services/snow-plowing",
   },
   openGraph: {
-    title: "Snow Plowing | Holland, MI | Fraaza Enterprises",
+    title: "Snow Plowing | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Plowing, salting, sidewalks, loader plowing, and snow blowing across West Michigan.",
     url: "/services/snow-plowing",
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Snow Plowing",
+  serviceType: "Snow Plowing",
+  description: metadata.description,
+  url: `${SITE.url}/services/snow-plowing`,
+  provider: { "@id": `${SITE.url}/#business` },
+  areaServed: "West Michigan",
+};
+
 export default function SnowPlowingPage() {
   return (
     <div>
+      <JsonLd data={serviceSchema} />
       {/* Hero */}
       <section className="relative -mt-[var(--header-height)] pt-[var(--header-height)] flex min-h-[17rem] items-center overflow-x-hidden sm:min-h-96">
         <Image

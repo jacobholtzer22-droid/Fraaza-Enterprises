@@ -11,14 +11,14 @@ import type { GalleryItem } from "@/components/GalleryCard";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises",
+  title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises Inc.",
   description:
-    "West Michigan's hydroseeding specialists since 2004. Fraaza Enterprises delivers professional hydroseeding and soil preparation — plus landscaping and snow plowing — in Holland, MI. Owner-operated.",
+    "Professional hydroseeding in Holland, MI since 2004. Fraaza Enterprises — hydroseeding, soil preparation, landscaping, and snow plowing.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises",
+    title: "Hydroseeding Experts | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "West Michigan's hydroseeding specialists since 2004. Professional hydroseeding, soil preparation, and more — owner-operated in Holland, MI.",
     url: "/",

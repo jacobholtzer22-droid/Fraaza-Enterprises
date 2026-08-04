@@ -5,13 +5,13 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for Fraaza Enterprises — how we collect, use, and safeguard your personal information.",
+    "Privacy policy for Fraaza Enterprises Inc. — how we collect, use, and safeguard your personal information.",
   alternates: {
     canonical: "/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy | Fraaza Enterprises",
-    description: "Privacy policy for Fraaza Enterprises.",
+    title: "Privacy Policy | Fraaza Enterprises Inc.",
+    description: "Privacy policy for Fraaza Enterprises Inc.",
     url: "/privacy-policy",
   },
 };
@@ -35,18 +35,18 @@ export default function PrivacyPolicyPage() {
       <div className="mx-auto w-full max-w-4xl min-w-0 px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <h1 className={h1Class}>Privacy Policy</h1>
         <div className="mt-3 text-base text-[var(--text-muted)] sm:text-lg">
-          <p>Fraaza Enterprises</p>
+          <p>Fraaza Enterprises Inc.</p>
           <p className="mt-1">Effective Date: {effectiveDate}</p>
         </div>
 
         <div className="mt-10 space-y-6">
           <p className={bodyClass}>
-            Fraaza Enterprises collects opt-in consent verbally from our customers.
+            Fraaza Enterprises Inc. collects opt-in consent verbally from our customers.
             Customers can opt in to receive text messages either in person at our
             location or over the phone when they call our business. Our staff is
             trained to use the following script when collecting consent: By providing
             your phone number and agreeing to receive texts, you consent to receive
-            text messages from Fraaza Enterprises regarding service updates,
+            text messages from Fraaza Enterprises Inc. regarding service updates,
             scheduling, and customer care. Consent is not a condition of purchase.
             Message frequency varies based on communication needs. Message and data
             rates may apply. You can reply STOP to unsubscribe at any time or HELP for
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <p className={bodyClass}>
-            Fraaza Enterprises (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;)
+            Fraaza Enterprises Inc. (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;)
             is committed to protecting your privacy. This Privacy Policy describes
             how we collect, use, and safeguard your personal information when you
             interact with us through our website, mobile communications, or other
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className={h2Class}>3. Changes to this Privacy Policy</h2>
         <p className={bodyClass}>
-          Fraaza Enterprises reserves the right to update this Privacy Policy at any
+          Fraaza Enterprises Inc. reserves the right to update this Privacy Policy at any
           time. Any changes will take effect upon posting the updated policy to our
           website. Significant changes will be communicated to you directly when
           applicable.
@@ -118,7 +118,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <div className={`${bodyClass} mt-4 space-y-1`}>
           <p>
-            <strong>Fraaza Enterprises</strong>
+            <strong>Fraaza Enterprises Inc.</strong>
           </p>
           <p>10060 Polk St</p>
           <p>Zeeland, MI 49464</p>
@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage() {
 
         <p className={`${bodyClass} mt-10`}>
           By using our services, you acknowledge that you have read, understood, and
-          agreed to this Privacy Policy. Thank you for choosing Fraaza Enterprises!
+          agreed to this Privacy Policy. Thank you for choosing Fraaza Enterprises Inc.!
         </p>
       </div>
     </section>
