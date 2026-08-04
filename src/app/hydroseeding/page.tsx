@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "/hydroseeding",
   },
   openGraph: {
-    title: "What is Hydroseeding? | Holland, MI | Fraaza Enterprises",
+    title: "What is Hydroseeding? | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Hydroseeding explained — process, benefits vs sod, and residential and commercial uses for West Michigan properties.",
     url: "/hydroseeding",

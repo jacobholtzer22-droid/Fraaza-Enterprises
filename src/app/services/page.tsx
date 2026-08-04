@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/services",
   },
   openGraph: {
-    title: "Hydroseeding Experts | Fraaza Enterprises",
+    title: "Hydroseeding Experts | Fraaza Enterprises Inc.",
     description:
       "Professional hydroseeding specialists in Holland, MI and West Michigan. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/services",

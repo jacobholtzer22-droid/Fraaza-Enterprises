@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/faq",
   },
   openGraph: {
-    title: "Hydroseeding FAQ | Fraaza Enterprises",
+    title: "Hydroseeding FAQ | Fraaza Enterprises Inc.",
     description:
       "Common questions about hydroseeding timing, watering, and more for West Michigan properties.",
     url: "/faq",

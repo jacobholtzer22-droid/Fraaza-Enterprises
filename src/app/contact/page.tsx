@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact | Fraaza Enterprises",
+    title: "Contact | Fraaza Enterprises Inc.",
     description:
       "Contact West Michigan's hydroseeding experts. Request a free quote for hydroseeding, soil preparation, and more.",
     url: "/contact",

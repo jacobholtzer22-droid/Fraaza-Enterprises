@@ -5,13 +5,13 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for Fraaza Enterprises — how we collect, use, and safeguard your personal information.",
+    "Privacy policy for Fraaza Enterprises Inc. — how we collect, use, and safeguard your personal information.",
   alternates: {
     canonical: "/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy | Fraaza Enterprises",
-    description: "Privacy policy for Fraaza Enterprises.",
+    title: "Privacy Policy | Fraaza Enterprises Inc.",
+    description: "Privacy policy for Fraaza Enterprises Inc.",
     url: "/privacy-policy",
   },
 };

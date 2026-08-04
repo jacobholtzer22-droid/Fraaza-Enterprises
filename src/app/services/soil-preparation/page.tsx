@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/services/soil-preparation",
   },
   openGraph: {
-    title: "Soil Preparation | Holland, MI | Fraaza Enterprises",
+    title: "Soil Preparation | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Soil testing, grading, amendments, sod removal, and topsoil/compost installs across West Michigan.",
     url: "/services/soil-preparation",

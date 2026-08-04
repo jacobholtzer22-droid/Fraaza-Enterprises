@@ -10,12 +10,12 @@ import { posts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "Hydroseeding & Landscaping Blog",
   description:
-    "Hydroseeding and lawn care tips for West Michigan homeowners. Expert advice from Fraaza Enterprises in Holland, MI.",
+    "Hydroseeding, erosion control, and lawn care tips for West Michigan homeowners. Expert advice from Fraaza Enterprises Inc. in Holland, MI.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Hydroseeding & Landscaping Blog | Fraaza Enterprises",
+    title: "Hydroseeding & Landscaping Blog | Fraaza Enterprises Inc.",
     description:
       "Expert hydroseeding and lawn care tips for West Michigan homeowners and businesses.",
     url: "/blog",

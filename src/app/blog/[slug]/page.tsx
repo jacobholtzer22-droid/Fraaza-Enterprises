@@ -21,12 +21,12 @@ export function generateMetadata({
   const post = getPostBySlug(params.slug);
   if (!post) return {};
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.metaTitle,
+    description: post.metaDescription,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: `${post.title} | ${SITE.name}`,
-      description: post.excerpt,
+      title: `${post.metaTitle} | ${SITE.name}`,
+      description: post.metaDescription,
       url: `/blog/${post.slug}`,
       type: "article",
     },

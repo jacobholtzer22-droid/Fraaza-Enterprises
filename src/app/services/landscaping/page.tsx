@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/services/landscaping",
   },
   openGraph: {
-    title: "Landscaping | Holland, MI | Fraaza Enterprises",
+    title: "Landscaping | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Landscaping across West Michigan: sod, drain tile, retaining walls, Bobcat grading and prep, planting, and more.",
     url: "/services/landscaping",

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/care-and-watering",
   },
   openGraph: {
-    title: "Hydroseeding Care & Watering Guide | Fraaza Enterprises",
+    title: "Hydroseeding Care & Watering Guide | Fraaza Enterprises Inc.",
     description:
       "Week-by-week aftercare guide for hydroseeded lawns — watering schedule, mowing, and fertilizing for West Michigan properties.",
     url: "/care-and-watering",

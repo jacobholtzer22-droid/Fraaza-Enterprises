@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "Terms and conditions for Fraaza Enterprises Inc. hydroseeding and landscaping services.",
+    "Terms and conditions governing hydroseeding, landscaping, and snow plowing services provided by Fraaza Enterprises Inc. in West Michigan.",
   alternates: {
     canonical: "/terms-and-conditions",
   },

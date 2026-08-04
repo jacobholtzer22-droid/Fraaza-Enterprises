@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/services/snow-plowing",
   },
   openGraph: {
-    title: "Snow Plowing | Holland, MI | Fraaza Enterprises",
+    title: "Snow Plowing | Holland, MI | Fraaza Enterprises Inc.",
     description:
       "Plowing, salting, sidewalks, loader plowing, and snow blowing across West Michigan.",
     url: "/services/snow-plowing",

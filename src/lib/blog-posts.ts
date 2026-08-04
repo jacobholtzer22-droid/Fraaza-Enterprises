@@ -1,6 +1,8 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  metaTitle: string;
+  metaDescription: string;
   excerpt: string;
   image: string;
   date: string;
@@ -13,6 +15,8 @@ export const posts: BlogPost[] = [
   {
     slug: "best-time-to-hydroseed-in-michigan",
     title: "The Best Time to Hydroseed in Michigan: Spring vs. Fall",
+    metaTitle: "Best Time to Hydroseed in Michigan",
+    metaDescription: "Spring or fall? Learn the best hydroseeding windows for Holland, MI and West Michigan — plus what to expect from summer applications.",
     excerpt:
       "Timing is everything when it comes to hydroseeding. Michigan's climate offers two ideal windows — spring and fall — but each has distinct advantages. Here's how to choose the right season for your project.",
     image: "/images/heroes/craftsman-home-hydroseeding.webp",
@@ -32,6 +36,8 @@ export const posts: BlogPost[] = [
     slug: "hydroseeding-vs-sod-west-michigan",
     title:
       "Hydroseeding vs. Sod: Which is Right for Your West Michigan Property?",
+    metaTitle: "Hydroseeding vs. Sod | Holland, MI",
+    metaDescription: "Hydroseeding or sod — which is better for your West Michigan lawn? An honest cost, timeline, and terrain comparison from 20+ years of experience.",
     excerpt:
       "Deciding between hydroseeding and sod? Both establish a lawn, but the best choice depends on your budget, timeline, property size, and terrain. Here's an honest comparison from 20+ years of experience.",
     image: "/images/services/hydroseeding-mulch-application.webp",
@@ -51,6 +57,8 @@ export const posts: BlogPost[] = [
   {
     slug: "erosion-control-tips-michigan-homeowners",
     title: "5 Erosion Control Tips Every Michigan Homeowner Should Know",
+    metaTitle: "5 Erosion Control Tips | Michigan",
+    metaDescription: "From hydroseeding slopes to smart grading, five proven ways to prevent erosion damage on West Michigan properties during spring thaw and heavy rain.",
     excerpt:
       "Spring thaw and heavy rain can wreak havoc on West Michigan yards. From hydroseeding slopes to smart grading, here are five proven ways to protect your property from erosion damage.",
     image: "/images/services/roadside-hydroseeding.webp",

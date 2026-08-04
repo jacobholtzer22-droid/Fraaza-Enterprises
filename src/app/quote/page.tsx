@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "/quote",
   },
   openGraph: {
-    title: "Free Quote | Fraaza Enterprises",
+    title: "Free Quote | Fraaza Enterprises Inc.",
     description:
       "Request a free quote from West Michigan's hydroseeding specialists. Also offering soil preparation, landscaping, and snow plowing.",
     url: "/quote",
