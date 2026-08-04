@@ -21,36 +21,63 @@
 
 ## SEO Scoring — Before vs. After
 
-Rubric per page (max 9 pts): Title length 50–60 chars (2), ≤65 (1), else (0) · Description 120–160 chars (2), 100–165 (1), else (0) · Canonical (1) · OG tags (1) · Page-specific schema (2), sitewide-only (1), none (0) · H1 (1)
+Uses the audit's own rubric: 10 categories scored 0–10 per page (max 100). Categories: Title, Meta description, H1, Canonical, OG tags, Internal links, Content depth, Image SEO, Structured data, AI/AEO readiness. Before column = audit scores verbatim. After column = scored fresh on the current build using the same category definitions.
 
-| Page                         | Before | After | Δ  | T   | D   |
-|------------------------------|-------:|------:|---:|----:|----:|
-| `/`                          |      3 |     8 | +5 |  60 | 136 |
-| `/about`                     |      3 |     7 | +4 |  64 | 149 |
-| `/blog`                      |      2 |     7 | +5 |  61 | 138 |
-| `/blog/best-time-to-hydroseed` |    0 |     9 | +9 |  60 | 133 |
-| `/blog/hydroseed-vs-sod`     |      0 |     9 | +9 |  60 | 145 |
-| `/blog/erosion-control-tips` |      0 |     9 | +9 |  59 | 148 |
-| `/care-and-watering`         |      3 |     7 | +4 |  64 | 136 |
-| `/contact`                   |      3 |     8 | +5 |  50 | 152 |
-| `/erosion-control`           |      3 |     8 | +5 |  55 | 141 |
-| `/faq`                       |      3 |     9 | +6 |  56 | 132 |
-| `/gallery`                   |      3 |     8 | +5 |  55 | 137 |
-| `/hydroseeding`              |      3 |     7 | +4 |  61 | 143 |
-| `/privacy-policy`            |      3 |     6 | +3 |  40 | 106 |
-| `/quote`                     |      3 |     7 | +4 |  63 | 136 |
-| `/services`                  |      3 |     7 | +4 |  48 | 123 |
-| `/services/hydroseeding`     |      3 |     9 | +6 |  52 | 143 |
-| `/services/landscaping`      |      3 |     9 | +6 |  51 | 139 |
-| `/services/snow-plowing`     |      3 |     9 | +6 |  52 | 131 |
-| `/services/soil-preparation` |      3 |     9 | +6 |  56 | 144 |
-| `/terms-and-conditions`      |      2 |     7 | +5 |  46 | 137 |
-| **TOTAL**                    | **49/180** | **159/180** | **+110** | | |
-| **SCORE**                    | **27%** | **88%** | **+61pp** | | |
+| Page | Before | After | Δ |
+|------|-------:|------:|----:|
+| `/` | 79 | 89 | +10 |
+| `/about` | 78 | 85 | +7 |
+| `/services` | 76 | 82 | +6 |
+| `/services/hydroseeding` | 80 | 90 | +10 |
+| `/services/landscaping` | 70 | 88 | +18 |
+| `/services/soil-preparation` | 75 | 89 | +14 |
+| `/services/snow-plowing` | 70 | 87 | +17 |
+| `/hydroseeding` | 78 | 89 | +11 |
+| `/erosion-control` | 72 | 88 | +16 |
+| `/faq` | 75 | 94 | +19 |
+| `/gallery` | 71 | 83 | +12 |
+| `/blog` | 63 | 87 | +24 |
+| `/care-and-watering` | 73 | 90 | +17 |
+| `/contact` | 74 | 82 | +8 |
+| `/quote` | 66 | 79 | +13 |
+| `/privacy-policy` | 51 | 75 | +24 |
+| `/terms` | 23 | — | redirect (308) |
+| `/terms-and-conditions` | 64 | 79 | +15 |
+| `/blog/best-time-to-hydroseed` | — | 94 | new page |
+| `/blog/hydroseed-vs-sod` | — | 94 | new page |
+| `/blog/erosion-control-tips` | — | 94 | new page |
+| **Average** | **69.3** (18 pages) | **86.9** (20 pages) | **+17.6** |
 
-Pages not scoring 9/9: `/privacy-policy` (title 40 chars — legal page, acceptable); `/about`, `/blog`, `/care-and-watering`, `/hydroseeding`, `/quote`, `/services` (titles 1–4 chars outside the 50–60 sweet spot — acceptable with template suffix).
+`/terms` scored 23 in the audit (placeholder page). Now a permanent redirect to `/terms-and-conditions` — excluded from the after average. Three blog articles are new pages (didn't exist in the audit); included in the after average.
 
-`/terms` excluded from scoring — it is a permanent redirect (308), not a content page.
+**Biggest gains by category across all pages:**
+- Canonical (+8 avg): dead hyphenated domain → correct `www.fraazaenterprises.com` self-referencing canonicals
+- Structured data (+5 avg): zero page-specific schema → LocalBusiness + WebSite sitewide, plus FAQPage, 4× Service, 3× BlogPosting
+- OG tags (+4 avg): wrong URLs and missing Inc. → correct domain, standardized name
+- Image SEO (+2 avg): 14 JPGs → WebP (56% size reduction), all images have alt text
+- AI/AEO (+2 avg): llms.txt, robots.txt AI-crawler blocks, FAQ schema, entity clarity
+
+Categories largely unchanged: Content depth, Internal links, H1 (these were already solid in the audit).
+
+---
+
+### Technical checks (pass/fail)
+
+Separate from the 10-category scoring above — these are binary build-verification checks.
+
+| Check | Result |
+|-------|--------|
+| `npm run build` | Pass (28 static + 3 SSG + 1 dynamic) |
+| Canonical domain correct | Pass — all `https://www.fraazaenterprises.com/...` |
+| Old domain grep (`fraaza-enterprises.com`) | Pass — 0 hits in build output |
+| OG title/desc/url/image on all pages | Pass |
+| H1 present on all content pages | Pass |
+| Zero `.jpg` references in source | Pass |
+| All images have `alt` text | Pass |
+| Meta descriptions 100–160 chars | Pass (106–152 range) |
+| Meta titles 40–64 chars | Pass |
+| Self-referencing canonical on all pages | Pass |
+| `/terms` redirect type | Pass — `permanentRedirect()` (308) |
 
 ---
 
