@@ -103,7 +103,15 @@ export default function PrivacyPolicyPage() {
           information.
         </p>
 
-        <h2 className={h2Class}>3. Changes to this Privacy Policy</h2>
+        <h2 className={h2Class}>3. Cookies and analytics</h2>
+        <p className={bodyClass}>
+          We count visits to this site without cookies: we log the page viewed, the site that linked here, ad campaign tags and an approximate location (country, region and city), and we never store your IP address.
+        </p>
+        <p className={bodyClass}>
+          If you click OK on the cookie banner, we also use PostHog to record how you use this site (clicks, scrolling and a replay of your visit, with anything you type hidden); you can change your choice at any time with the Cookie settings link at the bottom of every page, and if your browser sends a Global Privacy Control signal we leave this off.
+        </p>
+
+        <h2 className={h2Class}>4. Changes to this Privacy Policy</h2>
         <p className={bodyClass}>
           Fraaza Enterprises Inc. reserves the right to update this Privacy Policy at any
           time. Any changes will take effect upon posting the updated policy to our
@@ -111,7 +119,7 @@ export default function PrivacyPolicyPage() {
           applicable.
         </p>
 
-        <h2 className={h2Class}>4. Contact Information</h2>
+        <h2 className={h2Class}>5. Contact Information</h2>
         <p className={bodyClass}>
           For questions, concerns, or requests related to this Privacy Policy, please
           contact us:

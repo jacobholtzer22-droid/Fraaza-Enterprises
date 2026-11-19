@@ -109,6 +109,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script defer src="https://www.alignandacquire.com/t/s/fraaza-enterprises-inc.js"></script>
+      </head>
       <body
         className={`${dmSans.variable} ${playfair.variable} text-base antialiased bg-background text-foreground`}
       >
