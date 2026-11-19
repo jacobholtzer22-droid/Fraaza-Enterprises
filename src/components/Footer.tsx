@@ -204,7 +204,6 @@ export function Footer() {
               <Link className="hover:text-white/70 transition-colors" href="/privacy-policy">
                 Privacy Policy
               </Link>
-              <span className="text-white/20">|</span>
               <a className="hover:text-white/70 transition-colors" href="#" data-aa-cookie-settings hidden>
                 Cookie settings
               </a>
